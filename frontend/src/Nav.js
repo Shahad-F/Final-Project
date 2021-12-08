@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './components/Home';
 import Contact from './components/Contact'
 import About from './components/About'
+import Login from './components/admin/Login'
 import './CSS/Home.css'
  
 import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
@@ -26,6 +27,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route exact path ='/' element={<Home/>}/>
     <Route  path ='/About' element={<About/>}/>
     <Route  path ='/Contact' element={<Contact/>}/>
+    <Route path ='/LoginAdmin' element={<Login/>}/>
 </Routes>
 
          </Router>
