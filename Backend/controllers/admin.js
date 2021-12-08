@@ -53,17 +53,41 @@ authenticate:(req,res,next)=>{
         }
     })(req,res,next)
 },
+
 delete:(req,res)=>{
 
     let _id=req.params.uid
 
-    Admin.findByIdAndRemove(_id)
-    .than(()=>{
+    Admin.findOneAndDelete(_id)
+    .then(()=>{
         res.json({message:"This Admin is Remove !"})
     })
     .catch(error =>{
         res.json({error:error})
     })
+
+
+   
 },
+
+update:(req,res)=>{
+    let _id = req.params.uid
+
+    let admininfo={
+            name:req.body.name, 
+            email:req.body.email,
+            password:req.body.password
+
+    }
+
+    Admin.findByIdAndUpdate(_id,{$set:admininfo})
+    .then(admin=>{
+        res.json({message:"Author Information is updated"})
+    })
+    .catch(error =>{
+        res.json({error:error})  
+    })
+}
+
 
 }

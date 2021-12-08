@@ -11,4 +11,6 @@ router.post('/login',AdminController.authenticate)
 
 router.delete('/:uid/delete',AdminController.delete)
 
+router.put('/:uid/update',AdminController.update)
+
 module.exports = router
