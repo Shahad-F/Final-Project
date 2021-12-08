@@ -1,13 +1,15 @@
 
-import{useNavigate} from 'react-router-dom'
+import{useNavigate ,useParams} from 'react-router-dom'
 import {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert';
 import { Button,Form } from 'react-bootstrap';
 
-function AddNewAdmin() {
+function AddNewAdmin({data}) {
 
+    const {_id} =useParams();
 const navigate=useNavigate()
 
 const[admin ,setAdmin]=useState([])
@@ -21,6 +23,22 @@ const [Password,setPassword]=useState()
 
 // ....................
 
+let decodedData;
+
+const storedToken = localStorage.getItem('token');
+
+if(storedToken){
+decodedData =jwt_decode(storedToken,{payload :true});
+console.log(decodedData);
+
+let expirationDate = decodedData.exp;
+var current_time = Date.now() / 1000;
+if(expirationDate < current_time){
+    localStorage.removeItem('token');
+}
+}
+// ..................
+
 useEffect(()=>{ 
     axios.get('http://localhost:3030/admins')
     .then((res)=>{
@@ -31,8 +49,7 @@ useEffect(()=>{
 },[newAdmin])
 
 
-
-
+// ....................
 
     const handelBack=()=>{ 
        
@@ -44,9 +61,10 @@ useEffect(()=>{
 
     axios.post('http://localhost:3030/admins/create', 
     {name:Name,email:Email,password:Password})
+     
 
  .then((res)=>{
-
+     
     console.log(res)
 if(res.data.error=== "Email is taken"){
 
@@ -58,14 +76,14 @@ if(res.data.error=== "Email is taken"){
       })  
 }else{
     setNewAdmin(res.data)
+     
+    
     swal({
         title: Name+' is admin too now',
         icon:'success'
       })
 }
-setName('')
-setEmail('')
-setPassword('')
+ 
  })
 
 }
@@ -126,8 +144,20 @@ const handelDelete=(id)=>{
             <h3> Name :<span>{get.name}</span> </h3>
             <h3>Email :<span>{get.email}</span> </h3>
 
+    {(function(){
+
+    if(decodedData!=undefined){
+
+        if(decodedData.data == _id){
+
+            return(<>
             <button className='deletebtn' onClick={()=>handelDelete(get._id)}> Delete</button>
-        </div>
+    
+            </>)
+        }
+    }
+    })()}
+             </div>
 })}
 
     </div>
