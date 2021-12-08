@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+.parent{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.child-1,.child-2{ 
+    /* border: 1px solid rgb(110, 7, 7);
+    border-width: 2px;
+    margin: 9ch;
+    padding: 4ch;
+    border-radius: 8px;
+    background:rgba(165, 42, 42, 0.637); */
+    
+}
+
+.parent button{
+    border: 1px solid rgb(110, 7, 7);
+    border-width: 2px;
+    margin: 9ch;
+    padding: 7ch;
+    border-radius: 8px;
+    background:rgba(165, 42, 42, 0.637);
+    color: rgb(110, 7, 7);
+    font-weight: bolder;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 120%;
+}
+
+.BACKbtn{
+    padding: 2ch;
+    border-radius: 8px;
+    background:rgb(199, 55, 55);
+    color: rgb(238, 234, 229);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 100%;
+}
+.child-2{ 
+     
+}

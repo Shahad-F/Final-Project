@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Contact from './components/Contact'
 import About from './components/About'
 import Login from './components/admin/Login'
+import AdminHome from './components/admin/AdminHome'
 import './CSS/Home.css'
  
 import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
@@ -28,6 +29,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route  path ='/About' element={<About/>}/>
     <Route  path ='/Contact' element={<Contact/>}/>
     <Route path ='/LoginAdmin' element={<Login/>}/>
+    <Route path ='/AdminHome' element={<AdminHome/>}/>
 </Routes>
 
          </Router>

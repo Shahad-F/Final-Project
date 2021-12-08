@@ -129,3 +129,39 @@ h1{
     color:beige;
     font-size: 2ch;
 }
+.loginForm{ 
+    border: 1px solid black;
+    margin: 7ch;
+    margin-left: 40ch;
+    margin-right: 40ch;
+    padding: 1ch;
+    border-radius: 16px;
+    background:rgba(228, 60, 60, 0.363);
+}
+
+.loginForm input{
+
+    padding: 1.2ch;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 100%;
+    color:rgb(185, 26, 26);
+    font-weight: bold;
+    margin: 2ch;
+    border-radius: 8px;
+    width: 80%;
+}
+.loginForm h1{ 
+    font-weight: bolder;
+    color:rgb(109, 20, 20);
+    
+}
+
+.LOGIN{
+    padding: 2ch;
+    border-radius: 8px;
+    background:rgb(199, 55, 55);
+    color: rgb(238, 234, 229);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 100%;
+
+}
