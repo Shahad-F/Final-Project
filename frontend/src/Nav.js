@@ -6,6 +6,7 @@ import Login from './components/admin/Login'
 import AdminHome from './components/admin/AdminHome'
 import AddNewAdmin from './components/admin/AddNewAdmin'
 import AddNewService from './components/admin/AddNewService'
+import Service from './components/Service'
 import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
@@ -37,6 +38,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <li><Link exact to='/'>Home</Link></li>
     <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
+    <li><Link to='/Service'>Service</Link></li>
 </ul>
 
 
@@ -46,10 +48,12 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route exact path ='/' element={<Home/>}/>
     <Route  path ='/About' element={<About/>}/>
     <Route  path ='/Contact' element={<Contact/>}/>
+    <Route  path ='/Service' element={<Service/>}/>
     <Route path ='/LoginAdmin' element={<Login/>}/>
     <Route path ='/AdminHome' element={<AdminHome/>}/>
     <Route path ='/AddNewAdmin' element={<AddNewAdmin />}/>
     <Route path ='/AddNewService' element={<AddNewService />}/>
+    
 </Routes>
 
          </Router>
