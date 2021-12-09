@@ -13,6 +13,13 @@
     padding: 3ch;
     background:rgb(49, 47, 47);
 }
+.footer p{
+    color:wheat;
+    font-size: 100%;
+    /* margin-right: 100ch; */
+}
 .footer h2{
     color:wheat;
+    font-weight: bolder;
+    font-size: 200%;
 }

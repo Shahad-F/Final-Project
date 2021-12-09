@@ -13,7 +13,9 @@ function App() {
        <Nav />
 
     <div className='footer'>
-<h2>Footer</h2>
+      <h2>CALL me</h2>
+<p>&copy; Copyright 2021 CALL me  </p>
+
     </div>
     </>
   );
