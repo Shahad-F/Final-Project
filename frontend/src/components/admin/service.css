@@ -23,3 +23,20 @@
 
     padding-top: 2ch;
 }
+.editbtn{
+    margin: 1ch;
+    
+    border-radius: 8px;
+    background:rgba(128, 129, 31, 0.945);
+    color: rgb(214, 197, 197);
+    font-weight: bolder;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 120%;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+.editbtn:hover{
+    background:rgba(235, 238, 39, 0.945);
+    color: rgb(37, 53, 8);
+}

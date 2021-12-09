@@ -56,6 +56,23 @@ const handelAddNewService =()=>{
           })
     })
     }
+    // ....................................................................
+    // edit service
+
+    const handelEditService =(id)=>{
+        axios.put(`http://localhost:3030/services/${id}/update`,
+        {nameOfService:name,image:Image })
+     .then((res)=>{
+        console.log(res.data)
+        setNewService(res.data)
+     })
+     swal({
+        title: "  Service is updateed .",
+        icon:'success', 
+         button: "ok "
+      }) 
+
+    }
     // ................
     if(loading){
     return(<p>Loading</p>)
@@ -85,7 +102,7 @@ onChange={ e=>setImage(e.target.value)}/>
        
        <img src={item.image} alt='' width={200}/>
        <h2>{item.nameOfService}</h2>
-       
+       <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
        <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
 
         </div>
