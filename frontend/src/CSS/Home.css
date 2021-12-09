@@ -120,7 +120,7 @@ h1{
 .homebtn button{
      
     margin-top: 2ch;
-    margin-left: 42ch;
+    margin-left: 2ch;
     padding: 2ch;
     border-radius: 16px;
     font-family: 'Fuzzy Bubbles', cursive;
@@ -131,12 +131,21 @@ h1{
 }
 .subject{
   color:rgb(194, 65, 65);
-  font-size: 400%;
+  font-size: 300%;
+  margin-top: 3ch;
    
 }
 .subject h1{
   font-weight: bolder;
-  background:burlywood;
+  margin-left: 2ch;
+  text-decoration: underline;
+}
+.subject span{
+  color: rgb(235, 23, 23);
+}
+.parent{
+  display: grid;
+  grid-template-columns: 1fr  1fr
 }
 .loginForm{ 
     border: 1px solid black;

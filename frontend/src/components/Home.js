@@ -13,14 +13,16 @@ const handelAdmin=()=>{
 
 }
     return (  <>
+    <div className="parent"> 
     <div className="subject">
-        <h1>My Car</h1></div>
+        <h1>My <span>Car</span> </h1></div>
      
     
         <div className="homebtn">
             <button onClick={handelAdmin}>Admin</button><br></br>
             <button >Employee</button><br></br>
             <button >User</button><br></br>
+        </div>
         </div>
     </>);
 }
