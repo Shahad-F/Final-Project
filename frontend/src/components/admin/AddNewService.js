@@ -12,6 +12,9 @@ export default function AddNewService () {
     const [service,setService]=useState();
     const [newService,setNewService]=useState({});
     const [loading,setLoading] = useState(true);
+
+    const [name,setName] = useState();
+    const [Image,setImage]=useState();
     // i want to display all information in screen 
     useEffect(()=>{ 
 
@@ -23,7 +26,36 @@ export default function AddNewService () {
    })
     },[newService])
 
+// add new service to
+const handelAddNewService =()=>{
 
+    axios.post('http://localhost:3030/services/create', {
+        nameOfService:name,image:Image})
+
+        .then((res)=>{
+            console.log(res.data)
+            setNewService(res.data)
+             
+        })
+        swal({
+            title: "New Service is Added .",
+            icon:'success', 
+             button: "ok "
+          }) 
+}
+
+// delete service
+
+    const handelDeleteService =(id)=>{
+    axios.delete(`http://localhost:3030/services/${id}/delete`)
+    .then((res)=>{
+        setNewService(res.data)
+        swal({
+            title:'Service is deleted ',
+            icon:'success'
+          })
+    })
+    }
     // ................
     if(loading){
     return(<p>Loading</p>)
@@ -31,12 +63,30 @@ export default function AddNewService () {
 
     return ( <>
 
+<form className='NewForm'>
+
+<h1>Add New Service</h1>
+
+<input type='text' name='name'
+placeholder='Enter name of service'
+onChange={ e=>setName(e.target.value)}/>
+
+<input type='text' name='image'
+placeholder='Enter image of service'
+onChange={ e=>setImage(e.target.value)}/>
+
+<button className="addbtn" onClick={(e)=>handelAddNewService(e)}>Add</button>
+</form>
+
+
 <div className="bigBox">
     {service.map((item ,index)=>{
         return <div key={index} className="box">
        
        <img src={item.image} alt='' width={200}/>
        <h2>{item.nameOfService}</h2>
+       
+       <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
 
         </div>
     })}
