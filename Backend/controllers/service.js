@@ -21,13 +21,12 @@ create:(req,res)=>{
         image:req.body.image
     })
     console.log(newService)
-Service.push(newService)
-.then(service => {
-res.json({message:'Add new Service .!'})
 
-})
-.catch(error =>{
+    newService.save((error)=>{
+    if(error) 
     res.json({error:error})
+    else
+    res.json({message:"New service inserted ."})
 })
 },
 
