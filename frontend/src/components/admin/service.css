@@ -17,7 +17,7 @@
 }
 
 .box img{
-    border-radius: 100px;
+    /* border-radius: 100px; */
     /*  */
     filter: grayscale();
 	width: 200px;
