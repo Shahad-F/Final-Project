@@ -35,7 +35,7 @@ export default function AddNewService () {
     {service.map((item ,index)=>{
         return <div key={index} className="box">
        
-       <img src={item.image} alt='' width={290}/>
+       <img src={item.image} alt='' width={200}/>
        <h2>{item.nameOfService}</h2>
 
         </div>
