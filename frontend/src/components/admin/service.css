@@ -1,0 +1,23 @@
+.bigBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3ch;
+    border: solid black;
+}
+.box{
+    border: solid ;
+    margin: 2ch;
+    padding: 2ch;
+    
+    background:rgba(222, 184, 135, 0.562);
+    border-radius: 18px;
+}
+
+.box img{
+    border-radius: 100px;
+}
+.box h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: brown;
+    font-weight: bolder;
+}

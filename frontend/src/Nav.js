@@ -5,6 +5,7 @@ import About from './components/About'
 import Login from './components/admin/Login'
 import AdminHome from './components/admin/AdminHome'
 import AddNewAdmin from './components/admin/AddNewAdmin'
+import AddNewService from './components/admin/AddNewService'
 import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
@@ -48,6 +49,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route path ='/LoginAdmin' element={<Login/>}/>
     <Route path ='/AdminHome' element={<AdminHome/>}/>
     <Route path ='/AddNewAdmin' element={<AddNewAdmin />}/>
+    <Route path ='/AddNewService' element={<AddNewService />}/>
 </Routes>
 
          </Router>

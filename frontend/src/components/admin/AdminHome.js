@@ -15,6 +15,10 @@ export default  function AdminHome () {
     const handelAddNewAdmin =()=>{
 navigate('/AddNewAdmin')
     }
+
+    const handelAddNewService=()=>{
+        navigate('/AddNewService')
+    }
     return ( <>
     
 
@@ -24,7 +28,7 @@ navigate('/AddNewAdmin')
 
         <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> 
          
-        <button className='btn'>Add new Service</button>
+        <button className='btn' onClick={handelAddNewService}>Add new Service</button>
     </div>
 
 
