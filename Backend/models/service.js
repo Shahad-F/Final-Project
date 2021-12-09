@@ -20,4 +20,4 @@ image:{
 })
 
 
-module.exports =mongoose.model('Service',nameOfService)
+module.exports =mongoose.model('Service',ServiceSchema)
