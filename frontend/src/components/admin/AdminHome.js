@@ -22,19 +22,21 @@ navigate('/AddNewAdmin')
     return ( <>
     
 
-    <h2>Welcome</h2>
-
+    
+<div className="Parent"> 
     <div className='child-1'>
 
-        <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> 
-         
+        <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> <br></br>
         <button className='btn' onClick={handelAddNewService}>Add new Service</button>
     </div>
 
+<div>
 
+    <img src='https://www.pngkit.com/png/full/1-19431_pngpix-com-blue-ferrari-california-t-car-png.png' alt ='' width={550}/>
+</div>
     
 
-     
+</div> 
     <button className='BACKbtn' onClick={handelBack}>Back</button>
     </> );
 }
