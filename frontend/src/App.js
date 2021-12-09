@@ -9,14 +9,11 @@ import Nav from './Nav'
 function App() {
   return (
     <>
-    <div className="header">
-       
-    
-    <Nav />
-    
-    </div>
-    <div className='footer'>
+      
+       <Nav />
 
+    <div className='footer'>
+<h2>Footer</h2>
     </div>
     </>
   );

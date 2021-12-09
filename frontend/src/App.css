@@ -1,15 +1,18 @@
-body{
-    /* background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/p90411246-highres-1611606321.jpg?crop=0.796xw:0.597xh;0.128xw,0.344xh&resize=640:*') */
-
-}
-.header{
-    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/p90411246-highres-1611606321.jpg?crop=0.796xw:0.597xh;0.128xw,0.344xh&resize=640:*') ;
-    background-color: #cccccc;
-height:200px;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
  
-  background-attachment: fixed;
+.header{
+     
+    background-repeat: no-repeat;
+    margin-left: 3ch;
+    margin-right: 3ch;
+    opacity: 0.7;
+  
+}
+
+.footer{
+    margin-top: 3ch;
+    padding: 3ch;
+    background:rgb(49, 47, 47);
+}
+.footer h2{
+    color:wheat;
 }

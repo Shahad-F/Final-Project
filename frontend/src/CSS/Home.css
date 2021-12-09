@@ -51,6 +51,7 @@
 }
 /* Main styles */
 body {
+  background: rgb(238, 232, 224);
   margin-top: 1rem;
   /* color: #999; */
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
@@ -121,9 +122,9 @@ h1{
 }
 .homebtn button{
      
-    margin-top: 4ch;
+    margin-top: 2ch;
     margin-left: 2ch;
-    padding: 2ch;
+    padding: 1ch;
     border-radius: 16px;
     font-family: 'Fuzzy Bubbles', cursive;
     cursor: pointer;
@@ -134,16 +135,18 @@ h1{
 .subject{
   color:rgb(194, 65, 65);
   font-size: 300%;
-  margin-top: 3ch;
+  margin-top: 2ch;
    
 }
 .subject h1{
   font-weight: bolder;
-  margin-left: 2ch;
+  /* margin-left: 2ch; */
+  
   text-decoration: underline;
 }
 .subject span{
   color: rgb(235, 23, 23);
+  font-size: 100%;
 }
 .parent{
   display: grid;
