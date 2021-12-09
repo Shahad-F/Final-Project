@@ -12,19 +12,19 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
 
 
  export default function Nav  () {
-    const [admin,setAdmin]=useState([]);
-    const [newAdmin,setNewAdmin]= useState({});
+    // const [admin,setAdmin]=useState([]);
+    // const [newAdmin,setNewAdmin]= useState({});
 
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        axios.get('http://localhost:3030/authors')
-        .then((res)=>{
-            // console.log(res.data)
-            setAdmin(res.data)
-        })
+    //     axios.get('http://localhost:3030/authors')
+    //     .then((res)=>{
+    //         // console.log(res.data)
+    //         setAdmin(res.data)
+    //     })
   
-    },[newAdmin])
+    // },[newAdmin])
 
     return (
         <>
@@ -47,7 +47,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route  path ='/Contact' element={<Contact/>}/>
     <Route path ='/LoginAdmin' element={<Login/>}/>
     <Route path ='/AdminHome' element={<AdminHome/>}/>
-    <Route path ='/AddNewAdmin' element={<AddNewAdmin data={admin}/>}/>
+    <Route path ='/AddNewAdmin' element={<AddNewAdmin />}/>
 </Routes>
 
          </Router>
