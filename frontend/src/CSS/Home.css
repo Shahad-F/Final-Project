@@ -93,7 +93,7 @@ li{
 li a{
      color: rgb(136, 20, 20);
      font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-    font-size:30px;
+    font-size:20px;
     margin: 2ch;
     /* margin-left: 13ch; */
     display: block;
@@ -113,7 +113,11 @@ h1{
     font-size:250%;
 }
 
-
+h2{
+  color:brown;
+  font-weight: bolder;
+  font-size: 300%;
+}
 .contact a{
     color: red;
     font-weight: bolder;

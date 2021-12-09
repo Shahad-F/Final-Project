@@ -11,7 +11,9 @@
     border: 1px solid rgb(110, 7, 7);
     border-width: 2px;
     margin: 7ch;
-    padding: 3ch;
+    margin-left: 15ch;
+    margin-right: 15ch;
+    padding: 1ch;
     border-radius: 8px;
     background:rgba(165, 42, 42, 0.637);
     color: rgb(110, 7, 7);
