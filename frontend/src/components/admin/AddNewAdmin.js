@@ -14,7 +14,7 @@ const navigate=useNavigate()
 
 const[admin ,setAdmin]=useState([])
 const [newAdmin,setNewAdmin]=useState({})
-const [loading,setLoading] = useState(true);
+// const [loading,setLoading] = useState(true);
 
 
 const [Name ,setName]=useState();
@@ -44,7 +44,7 @@ useEffect(()=>{
     .then((res)=>{
         console.log(res.data)
         setAdmin(res.data)
-        setLoading(false)
+        // setLoading(false)
     })
 },[newAdmin])
 
@@ -90,6 +90,7 @@ if(res.data.error=== "Email is taken"){
 // .....................
 
 const handelDelete=(id,name)=>{ 
+
     swal({
         title:'Admin is deleted ',
         icon:'success'
@@ -98,15 +99,16 @@ const handelDelete=(id,name)=>{
 
     axios.delete(`http://localhost:3030/admins/${id}/delete`)
     .then((res)=>{ 
+
       setNewAdmin(res.data)
        
     })
 
 }
 
-if(loading){
-    return(<p>Loading</p>)
-}
+// if(loading){
+//     return(<p>Loading</p>)
+// }
     return (
         
      <>
@@ -132,22 +134,19 @@ if(loading){
          onChange={e=>setPassword(e.target.value)}/>                         
          {/* <br/> */}
           
-         {/* <Button variant="success">Add</Button>{' '} */}
+        
           <button className='addbtn' onClick={(e)=>handelAdd(e)}>Add</button>
 
     </form>
 
         <div className='container'>
 
-        {admin.map((get)=>{
-        return <div className='card'>
+        {admin.map((get,index)=>{
+        return <div key={index} className='card'>
 
             <h3> Name :<span>{get.name}</span> </h3>
             <h3>Email :<span>{get.email}</span> </h3>
-
-     
-                <button className='deletebtn' onClick={()=>handelDelete(get._id,get.name)}> Delete</button>
-
+         <button className='deletebtn' onClick={()=>handelDelete(get._id,get.name)}> Delete</button>
              </div>
 })}
 

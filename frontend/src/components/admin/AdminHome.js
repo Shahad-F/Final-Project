@@ -24,7 +24,7 @@ navigate('/AddNewAdmin')
 
         <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> 
          
-        <button className='btn'>Add new product</button>
+        <button className='btn'>Add new Service</button>
     </div>
 
 

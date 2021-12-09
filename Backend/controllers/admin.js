@@ -58,7 +58,7 @@ delete:(req,res)=>{
 
     let _id=req.params.uid
 
-    Admin.findOneAndDelete(_id)
+    Admin.findByIdAndDelete(_id)
     .then(()=>{
         res.json({message:"This Admin is Remove !"})
     })
