@@ -21,7 +21,7 @@ const handelAdmin=()=>{
         <div className="homebtn">
             <button onClick={handelAdmin}>Admin</button><br></br>
             <button >Employee</button><br></br>
-            <button >User</button><br></br>
+            {/* <button >User</button><br></br> */}
         </div>
         </div>
     </>);

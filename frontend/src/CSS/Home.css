@@ -105,6 +105,8 @@ li a{
 li a:hover{ 
     color: rgb(233, 131, 131);
     font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color:rgb(109, 20, 20) ;
 }
 h1{
     font-size:250%;
@@ -119,7 +121,7 @@ h1{
 }
 .homebtn button{
      
-    margin-top: 2ch;
+    margin-top: 4ch;
     margin-left: 2ch;
     padding: 2ch;
     border-radius: 16px;
