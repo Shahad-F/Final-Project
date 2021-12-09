@@ -87,7 +87,8 @@ update:(req,res)=>{
     .catch(error =>{
         res.json({error:error})  
     })
-}
+},
+
 
 
 }
