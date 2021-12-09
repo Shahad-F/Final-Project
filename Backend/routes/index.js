@@ -1,10 +1,10 @@
 const router =require('express').Router(),
 
 AdminRouter =require('./admin')
-ServiceRouter= require('./services')
+ServiceRouter= require('./service')
 
 router.use('/admins',AdminRouter)
-router.use('/services')
+router.use('/services',ServiceRouter)
 
 
 module.exports = router

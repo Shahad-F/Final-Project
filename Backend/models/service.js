@@ -7,12 +7,12 @@ const ServiceSchema = new Schema({
 nameOfService:{
     type:String,
     required:[true,"Name of service is required ."],
-    unique:true
+    // unique:true
 },
 image:{
     type:String,
     required:[true,"Image is required"],
-    unique:true
+    // unique:true
 }
 
 // object of service.
