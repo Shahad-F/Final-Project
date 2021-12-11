@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const Schema =mongoose.Schema
+const providerSchema = require('./ProvidorS')
 
 const ServiceSchema = new Schema({
 
@@ -13,8 +14,9 @@ image:{
     type:String,
     required:[true,"Image is required"],
     // unique:true
-}
+},
 
+providers:[providerSchema]
 // object of service.
     
 })
