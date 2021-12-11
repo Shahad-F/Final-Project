@@ -17,6 +17,7 @@ const AdminSchema = new Schema ({
         unique:true
     },
      
+    
 })
 
 AdminSchema.plugin(passportLocalMongoose,{ 

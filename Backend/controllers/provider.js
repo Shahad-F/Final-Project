@@ -1,6 +1,8 @@
-const Provider = require('../models/ProvidorS')
 
+
+const Provider = require('../models/ProvidorS')
 const Service = require('../models/Service')
+
 module.exports ={
 
     index:(req, res, ) =>{
