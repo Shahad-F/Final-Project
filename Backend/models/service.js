@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const Schema =mongoose.Schema
-const providerSchema = require('./ProvidorS')
+const providerSchema = require('./ProvidorS').schema
 
 const ServiceSchema = new Schema({
 
@@ -17,6 +17,7 @@ image:{
 },
 
 providers:[providerSchema]
+
 // object of service.
     
 })
