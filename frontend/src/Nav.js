@@ -7,6 +7,8 @@ import AdminHome from './components/admin/AdminHome'
 import AddNewAdmin from './components/admin/AddNewAdmin'
 import AddNewService from './components/admin/AddNewService'
 import Service from './components/Service'
+import ProviderSignUp  from './components/Provider/SignupProvider'
+import ProviderLogin from './components/Provider/LoginProvider'
  import Logo from './logo'
 import './CSS/Home.css'
 // import axios from "axios"
@@ -41,6 +43,7 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
+     
    
    <li>  <div className="header">
     <Logo/>
@@ -60,7 +63,8 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route path ='/AdminHome' element={<AdminHome/>}/>
     <Route path ='/AddNewAdmin' element={<AddNewAdmin />}/>
     <Route path ='/AddNewService' element={<AddNewService />}/>
-    
+    <Route path ='/ProviderSignUp' element={<ProviderSignUp />}/>
+    <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
 </Routes>
 
          </Router>

@@ -14,7 +14,7 @@ const handelAdmin=()=>{
 }
 
 const handelProvider=()=>{
-    
+    navigate('/ProviderSignUp')
 }
     return (  <>
     <div className="parent"> 
