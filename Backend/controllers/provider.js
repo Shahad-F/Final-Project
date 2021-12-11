@@ -21,6 +21,7 @@ create: async(req,res)=>{
     const service = await Service.findOne({_id})
 
     let newPrivider = new Provider({
+
         firstName:req.body.firstName,
         lastName:req.body.lastName,
         phone:req.body.phone,
