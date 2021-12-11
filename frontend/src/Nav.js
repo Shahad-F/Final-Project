@@ -41,12 +41,13 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
-        
+   
+   <li>  <div className="header">
+    <Logo/>
+    </div></li>
 </ul>
  
-{/* <div className="header">
-<img src={logo} alt='Logo'/>
-</div> */}
+ 
 
 
 <Routes>

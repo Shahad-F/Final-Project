@@ -124,35 +124,44 @@ h2{
     margin: 2ch;
     font-size: 150%;
 }
+ 
 .homebtn button{
-     
-    margin-top: 2ch;
+  margin: 1ch;
+    /* margin-top: 1ch; */
     margin-left: 2ch;
-    padding: 1ch;
+    /* padding: 1ch; */
     border-radius: 16px;
     font-family: 'Fuzzy Bubbles', cursive;
     cursor: pointer;
     background:rgb(185, 26, 26);
     color:beige;
     font-size: 2ch;
+    
+
+}
+.btnAdimn ,.btnService{
+  width: 35%;
 }
 .subject{
   color:rgb(194, 65, 65);
   font-size: 300%;
-  margin-top: 2ch;
-   
 }
 .subject h1{
+    margin-top: 1.5ch;
   font-weight: bolder;
-  /* margin-left: 2ch; */
-  
   text-decoration: underline;
+  /* border: 1px solid black; */
 }
 .subject span{
   color: rgb(235, 23, 23);
   font-size: 100%;
 }
+.carImage{
+  margin-top:10ch;
+  /* border: 1px solid black; */
+}
 .parent{
+  /* border: 1px solid black; */
   display: grid;
   grid-template-columns: 1fr  1fr
 }
@@ -195,6 +204,28 @@ h2{
 Button{
   padding: 1ch;
 }
-/* .Logo{
-  background-image: url(../../../image/Picture1.png);
-} */
+.logo-main >img{
+  /* border-radius: 50px; */
+  border-radius: 28px ;
+  height: 200%;
+ 
+  margin-left: 60ch;
+  
+}
+ .About{
+   background:rgb(245, 220, 188);
+   margin: 8ch;
+   padding: 2ch;
+   border-radius: 8px;
+ }
+ .About h3{
+   text-align: left;
+   font-family: 'Fuzzy Bubbles', cursive;
+   font-size:200%;
+   padding: 2ch;
+   color:brown;
+ }
+.About h1{
+  font-family: 'Fuzzy Bubbles', cursive;
+  padding: 1ch;
+}

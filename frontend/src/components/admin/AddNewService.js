@@ -9,7 +9,8 @@ export default function AddNewService () {
 
     
     const navigate=useNavigate()
-    const [service,setService]=useState();
+
+    const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading] = useState(true);
 
