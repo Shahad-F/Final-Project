@@ -12,6 +12,10 @@ const handelAdmin=()=>{
     navigate('/LoginAdmin')
 
 }
+
+const handelProvider=()=>{
+    
+}
     return (  <>
     <div className="parent"> 
 
@@ -36,7 +40,7 @@ const handelAdmin=()=>{
     
         <div className="homebtn">
             <button className='btnAdimn' onClick={handelAdmin}>Admin</button><br></br>
-            <button className='btnService' >Service Providor</button>
+            <button className='btnService' onClick={handelProvider} >Service Providor</button>
              
         </div>
         </div>
