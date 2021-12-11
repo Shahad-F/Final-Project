@@ -7,9 +7,10 @@ import AdminHome from './components/admin/AdminHome'
 import AddNewAdmin from './components/admin/AddNewAdmin'
 import AddNewService from './components/admin/AddNewService'
 import Service from './components/Service'
+ import Logo from './logo'
 import './CSS/Home.css'
-import axios from "axios"
-import { useEffect, useState } from "react";
+// import axios from "axios"
+// import { useEffect, useState } from "react";
 import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
 
 
@@ -40,10 +41,12 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
-
+        
 </ul>
  
-<div className="header"> </div>
+{/* <div className="header">
+<img src={logo} alt='Logo'/>
+</div> */}
 
 
 <Routes>
