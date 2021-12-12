@@ -8,6 +8,7 @@
 function AddProviderService({data}) {
     
     const {_id} =useParams();
+    console.log(_id+"heee")
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
@@ -28,16 +29,16 @@ function AddProviderService({data}) {
 },[])
 // 
 const handelAdd=(e)=>{
-    e.preventDefault();
+    e.preventDefault()
 
-    axios.post('localhost:3030/providers/provider',{
-        userName:UserName,phone:Phone,price:Price
-    })
+    axios.post(`http://localhost:3030/providers/provider/${_id}`,
+    { userName:UserName,phone:Phone,price:Price})
+
     .then((res)=>{
         console.log(res.data)
-        setNewService(res.data)
-         
+        setService(res.data)
     })
+
     swal({
         title: "New Service is Added .",
         icon:'success', 
@@ -54,16 +55,16 @@ const handelAdd=(e)=>{
     
     <div>
          <form>
-<input type='text' placeholder='Enter userName..'
-onChange ={e=>setUserName(e.target.value)}/>
+    <input type='text' placeholder='Enter userName..'
+    onChange ={e=>setUserName(e.target.value)}/>
 
-<input type='text' placeholder='Enter Phone..'
-onChange ={e=>setPhone(e.target.value)} />
+    <input type='text' placeholder='Enter Phone..'
+    onChange ={e=>setPhone(e.target.value)} />
 
-<input type='text' placeholder='Enter Price..'
-onChange ={e=>setPrice(e.target.value)} />
+    <input type='text' placeholder='Enter Price..'
+    onChange ={e=>setPrice(e.target.value)} />
 
-<button onClick={(e)=>handelAdd(e)}>Add</button>
+    <button onClick={(e)=>handelAdd(e)}>Add</button>
          </form>
      </div>
     
