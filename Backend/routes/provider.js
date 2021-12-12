@@ -5,7 +5,7 @@ ProviderController = require("../controllers/provider")
 
 router.get('/',ProviderController.index)
 
-// router.post('/provider/:uid',ProviderController.create)
+router.post('/provider/:uid',ProviderController.create)
 
 router.put('/update/:uid',ProviderController.update)
 router.delete('/delete/:uid',ProviderController.delete)

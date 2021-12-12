@@ -6,13 +6,13 @@ const TypeOfService = new Schema({
 
 userName: {
     type:String,
-    required:[true,"userNameis required ."],
+    required:[true,"userName is required ."],
 },
-Phone: {
+phone: {
     type:Number,
     required:[true,"Phone is required ."],
 },
-Price: {
+price: {
     type:String,
     required:[true,"Price is required ."],
 },

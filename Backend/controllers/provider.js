@@ -2,7 +2,7 @@
 const passport = require('passport');
 const jsonWebToken = require('jsonwebtoken');
  
-const Provider = require('../models/ProvidorS')
+const Provider = require('../models/TypeOfServicer')
 const Service = require('../models/Service')
 
 module.exports ={
@@ -35,17 +35,22 @@ show:(req,res)=>{
 
 create: async(req,res)=>{
 
-    const _id =req.params.uid;
-    const service = await Service.findOne({_id})
-
+    console.log("id")
+    const id =req.params.uid;
+    const service = await Service.findOne({id})
+    
     let newPrivider = new Provider({
-
+        
         userName:req.body.userName,
         phone:req.body.phone,
         price:req.body.price,
-         
+        
     })
-    console.log(service)
+    console.log("username "+ req.body.userName)
+    console.log("phine "+ req.body.phone)
+    console.log("price "+ req.body.price)
+
+    console.log("fffff "+newPrivider)
     service.providers.push(newPrivider);
 
     try{
