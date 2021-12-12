@@ -5,7 +5,10 @@
  import axios from "axios";
  import swal from 'sweetalert';
  import './provider.css'
- import { Button,Form } from 'react-bootstrap';
+ 
+ import 'bootstrap/dist/css/bootstrap.min.css';
+ import Button from 'react-bootstrap/Button';
+ import { Form ,Col,Image} from 'react-bootstrap';
 
 function AddProviderService({data}) {
     
@@ -73,9 +76,10 @@ const handelAdd=(e)=>{
   </Form.Group>
 
   <Form.Group className="mb-3" >
+
       <Form.Control type="text" placeholder="Price" 
       onChange ={e=>setPrice(e.target.value)} />
-      
+
   </Form.Group>
 
   <Button variant="outline-success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
@@ -92,8 +96,11 @@ const handelAdd=(e)=>{
              
              <h2>{service.nameOfService}</h2>  
              
-             <img src={service.image} alt='' width={400}/>
-    
+            
+             <Col xs={6} md={4}>
+            <Image src={service.image} rounded  width={400}/>
+             </Col>
+
              
             </div>
      
