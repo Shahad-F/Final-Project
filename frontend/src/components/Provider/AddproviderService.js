@@ -3,6 +3,7 @@
  import React, { useEffect ,useState} from "react";
  import { useParams,useNavigate } from "react-router-dom";
  import axios from "axios";
+ import swal from 'sweetalert';
 
 function AddProviderService({data}) {
     
@@ -10,6 +11,9 @@ function AddProviderService({data}) {
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
+    const[UserName,setUserName]=useState();
+    const[Phone,setPhone]=useState();
+    const[Price,setPrice]=useState();
 
 
     useEffect(()=>{
@@ -22,6 +26,24 @@ function AddProviderService({data}) {
          
 })
 },[])
+// 
+const handelAdd=(e)=>{
+    e.preventDefault();
+
+    axios.post('localhost:3030/providers/provider',{
+        userName:UserName,phone:Phone,price:Price
+    })
+    .then((res)=>{
+        console.log(res.data)
+        setNewService(res.data)
+         
+    })
+    swal({
+        title: "New Service is Added .",
+        icon:'success', 
+         button: "ok "
+      }) 
+}
 
     if(loading){
     return(<p>Loading </p>);
@@ -30,7 +52,20 @@ function AddProviderService({data}) {
     
     <h2>Do you want to add something</h2>
     
-    
+    <div>
+         <form>
+<input type='text' placeholder='Enter userName..'
+onChange ={e=>setUserName(e.target.value)}/>
+
+<input type='text' placeholder='Enter Phone..'
+onChange ={e=>setPhone(e.target.value)} />
+
+<input type='text' placeholder='Enter Price..'
+onChange ={e=>setPrice(e.target.value)} />
+
+<button onClick={(e)=>handelAdd(e)}>Add</button>
+         </form>
+     </div>
     
          <div  className="box">
              
@@ -40,6 +75,7 @@ function AddProviderService({data}) {
 
          
         </div>
+        
      <div>
 
          {service.providers.map((item)=>{
@@ -54,6 +90,7 @@ function AddProviderService({data}) {
              </div>
          })}
      </div>
+      
     
     
     </> );
