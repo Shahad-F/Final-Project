@@ -29,7 +29,7 @@ create: async(req,res)=>{
         phone:req.body.phone,
         image:req.body.image,
         city:req.body.city,
-        price:req.body.price
+        // price:req.body.price
     })
     console.log(service)
     service.providers.push(newPrivider);
@@ -53,7 +53,7 @@ let newPrivider = new Provider({
         email:req.body.email,
         image:req.body.image,
         city:req.body.city,
-        price:req.body.price
+        // price:req.body.price
 })
 
 Provider.register(newPrivider, req.body.password,(error,provider)=>{
@@ -120,7 +120,7 @@ update:(req,res)=>{
             email:req.body.email,
             image:req.body.image,
             city:req.body.city,
-            price:req.body.price,
+            // price:req.body.price,
             password:req.body.password
 
     }
