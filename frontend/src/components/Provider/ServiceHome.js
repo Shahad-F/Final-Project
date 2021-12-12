@@ -21,6 +21,13 @@ function ServiceHome() {
              
         })
          },[newService])
+
+        //  
+
+        const handelAddservice=(id,image)=>{
+
+
+        }
     return ( <>
     
     <h2>Service Home</h2>
@@ -32,6 +39,8 @@ function ServiceHome() {
        <img src={item.image} alt='' width={200}/>
        <div className="title">{item.nameOfService}</div>
       
+
+      <button onClick={handelAddservice(item._id,item.image)}>Add</button>see more</button>
       {/* <div> 
         <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
        <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
