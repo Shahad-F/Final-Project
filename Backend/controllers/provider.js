@@ -7,6 +7,21 @@ const Service = require('../models/Service')
 
 module.exports ={
 
+show:(req,res)=>{
+
+    let _id =req.params.uid
+
+    Provider.findById(_id)
+    .then(provider=>{
+        res.json({provider})
+    })
+    .catch(error=>{
+
+        res.json({error:error})
+    })
+
+},
+
     index:(req, res, ) =>{
 
         Provider.find({})
