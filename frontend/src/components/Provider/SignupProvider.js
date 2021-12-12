@@ -24,14 +24,15 @@ const [Password,setPassword]=useState()
 const SignUp =(e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/providers/signUp',{
-firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
+axios.post('http://localhost:3030/providers/signUp',
+{firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
 
 .then((res)=>{
     console.log(res)
 
     if(res.data.error === 'Email is taken'){
-            swal({
+          
+        swal({
             title: "Your password or email is taken",
             icon:'error', 
             button: "Try again "
