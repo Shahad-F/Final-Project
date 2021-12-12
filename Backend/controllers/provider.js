@@ -46,10 +46,6 @@ create: async(req,res)=>{
         price:req.body.price,
         
     })
-    console.log("username "+ req.body.userName)
-    console.log("phine "+ req.body.phone)
-    console.log("price "+ req.body.price)
-
     console.log("fffff "+newPrivider)
     service.providers.push(newPrivider);
 

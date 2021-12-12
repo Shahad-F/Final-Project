@@ -45,11 +45,11 @@ function AddProviderService({data}) {
          {service.providers.map((item)=>{
 
              return<div>
-                 <p>{item.firstName}</p>
-                 <p>{item.lastName}</p>
+                 <p>{item.userName}</p>
+                 
                  <p>{item.phone}</p>
-                 <p>{item.image}</p>
-                 <p>{item.city}</p>
+                  
+                 
                  <p>{item.price}</p>
              </div>
          })}
