@@ -87,9 +87,9 @@ const handelAdd=(e)=>{
 
             <div  className="imgBox">
              
-             <Col xs={6} md={4} className="rounded mx-auto d-block">
+             <Col xs={6} md={4}  >
               
-             <Image src={service.image} width={430} />
+             <Image src={service.image} roundedCircle width={430} />
              </Col>
  
             </div>

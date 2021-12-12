@@ -8,7 +8,7 @@
  
  
 .imgBox{
-    margin-right: 22ch;
+    margin-left: 11ch;
     padding: 1ch;
 }
 .imgBox img{
@@ -20,7 +20,7 @@ Form{
     margin: 2ch;
     padding: 3ch;
     border-radius: 8px;
-    background:rgba(235, 213, 184, 0.507);
+    background:rgba(128, 128, 128, 0.445); 
     font-family: 'Fuzzy Bubbles', cursive;
 }
  
