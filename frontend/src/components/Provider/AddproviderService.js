@@ -39,13 +39,21 @@ function AddProviderService({data}) {
          <img src={service.image} alt='' width={200}/>
 
          
-        
-        
-           
-           
-    
         </div>
-     
+     <div>
+
+         {service.providers.map((item)=>{
+
+             return<div>
+                 <p>{item.firstName}</p>
+                 <p>{item.lastName}</p>
+                 <p>{item.phone}</p>
+                 <p>{item.image}</p>
+                 <p>{item.city}</p>
+                 <p>{item.price}</p>
+             </div>
+         })}
+     </div>
     
     
     </> );
