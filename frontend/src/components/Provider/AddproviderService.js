@@ -57,7 +57,7 @@ const handelAdd=(e)=>{
     return ( <>
     
      
-    
+    <h1>{service.nameOfService}</h1>  
     <div className="ServiceParent">
         
 <Form>
@@ -83,12 +83,12 @@ const handelAdd=(e)=>{
 </Form>
 
 
-    {/* </div> */}
+   
 
             <div  className="imgBox">
              
              <Col xs={6} md={4} className="rounded mx-auto d-block">
-             <h2>{service.nameOfService}</h2>  
+              
              <Image src={service.image} width={430} />
              </Col>
  
