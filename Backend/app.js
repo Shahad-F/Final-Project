@@ -9,6 +9,8 @@ const router = require('./routes/index')
 app.use(cors())
 
 const Admin = require('./models/Admen')
+const Provider = require('./models/ProvidorS')
+
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
 const passport = require('passport')
@@ -36,6 +38,11 @@ app.use(passport.session())
 passport.use(Admin.createStrategy())
 passport.serializeUser(Admin.serializeUser())
 passport.deserializeUser(Admin.deserializeUser())
+// 
+passport.use(Provider.createStrategy())
+passport.serializeUser(Provider.serializeUser())
+passport.deserializeUser(Provider.deserializeUser())
+// 
 
 app.use(express.json())
 app.use('/',router)

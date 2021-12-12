@@ -80,8 +80,9 @@ authenticate:(req,res,next)=>{
                 exp:new Date().setDate(new Date().getDate()+1)
             },'Locorbi86');
 
-            res.json({success:true,
-            token:signedToken
+            res.json({
+                success:true,
+                token:signedToken
         });
         console.log(provider)
         }else{
