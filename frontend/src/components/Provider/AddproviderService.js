@@ -17,7 +17,7 @@ function AddProviderService({data}) {
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
          console.log(res.data)
-        setService(res.data)
+        setService(res.data.service)
         setLoading(false)
          
 })
@@ -33,7 +33,7 @@ function AddProviderService({data}) {
     
          <div  className="box">
              
-         <h4>{service.nameOfService}</h4>  
+         <h2>{service.nameOfService}</h2>  
          
          <img src={service.image} alt='' width={200}/>
 
