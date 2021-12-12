@@ -26,7 +26,12 @@ function ServiceHome() {
 
         const handelAddservice=(id,image)=>{
 
-
+             //navigate('/AddProviderService')
+            console.log(id)
+            
+             
+             
+             
         }
     return ( <>
     
@@ -40,7 +45,7 @@ function ServiceHome() {
        <div className="title">{item.nameOfService}</div>
       
 
-      <button onClick={handelAddservice(item._id,item.image)}>Add</button>see more</button>
+      <button onClick={handelAddservice(item._id,item.image)}>see more</button>
       {/* <div> 
         <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
        <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
