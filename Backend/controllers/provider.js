@@ -53,7 +53,7 @@ create: async(req,res)=>{
         res.status(201).send(service)
     }
     catch(e){
-        console.log(e)
+        console.error(e)
     }
 
 },
