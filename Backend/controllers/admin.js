@@ -82,7 +82,7 @@ update:(req,res)=>{
 
     Admin.findByIdAndUpdate(_id,{$set:admininfo})
     .then(admin=>{
-        res.json({message:"Author Information is updated"})
+        res.json({message:"Admin Information is updated"})
     })
     .catch(error =>{
         res.json({error:error})  

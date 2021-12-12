@@ -95,4 +95,43 @@ authenticate:(req,res,next)=>{
     })(req,res,next)
 },
 
+delete:(req,res)=>{
+    let _id=req.params.uid
+
+    Provider.findByIdAndDelete(_id)
+
+    .then(()=>{
+        res.json({message:"This Provider is Remove !"})
+    })
+.catch(error=>{
+    res.json({error:error})
+
+})
+},
+
+update:(req,res)=>{
+    let _id = req.params.uid
+
+    let providerinfo={
+
+            firstName:req.body.firstName,
+            lastName:req.body.lastName,
+            phone:req.body.phone,
+            email:req.body.email,
+            image:req.body.image,
+            city:req.body.city,
+            price:req.body.price,
+            password:req.body.password
+
+    }
+
+    Provider.findByIdAndUpdate(_id,{$set:providerinfo})
+    .then(provider=>{
+        res.json({message:"Provider Information is updated"})
+    })
+    .catch(error =>{
+        res.json({error:error})  
+    })
+}
+
 }
