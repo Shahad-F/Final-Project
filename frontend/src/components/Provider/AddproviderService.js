@@ -4,6 +4,7 @@
  import { useParams,useNavigate } from "react-router-dom";
  import axios from "axios";
  import swal from 'sweetalert';
+ import './provider.css'
 
 function AddProviderService({data}) {
     
@@ -51,31 +52,35 @@ const handelAdd=(e)=>{
    }
     return ( <>
     
-    <h2>Do you want to add something</h2>
+     
     
-    <div>
-         <form>
+    <div className="ServiceParent">
+         <form className='serviceForm'>
+         <h2>Do you want to add something</h2>
     <input type='text' placeholder='Enter userName..'
-    onChange ={e=>setUserName(e.target.value)}/>
+    onChange ={e=>setUserName(e.target.value)}/><br></br>
 
     <input type='text' placeholder='Enter Phone..'
-    onChange ={e=>setPhone(e.target.value)} />
+    onChange ={e=>setPhone(e.target.value)} /><br></br>
 
     <input type='text' placeholder='Enter Price..'
-    onChange ={e=>setPrice(e.target.value)} />
+    onChange ={e=>setPrice(e.target.value)} /><br></br>
 
     <button onClick={(e)=>handelAdd(e)}>Add</button>
          </form>
+     {/*  */}
+         <div  className="imgBox">
+             
+             <h2>{service.nameOfService}</h2>  
+             
+             <img src={service.image} alt='' width={400}/>
+    
+             
+            </div>
+     
      </div>
     
-         <div  className="box">
-             
-         <h2>{service.nameOfService}</h2>  
          
-         <img src={service.image} alt='' width={200}/>
-
-         
-        </div>
         
      <div>
 
