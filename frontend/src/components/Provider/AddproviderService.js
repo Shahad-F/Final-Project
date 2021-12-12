@@ -31,6 +31,7 @@ function AddProviderService({data}) {
     <h2>Do you want to add something</h2>
     
     
+    
          <div  className="box">
              
          <h2>{service.nameOfService}</h2>  
