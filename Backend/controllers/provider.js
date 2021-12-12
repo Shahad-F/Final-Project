@@ -1,5 +1,7 @@
 
-
+const passport = require('passport');
+const jsonWebToken = require('jsonwebtoken');
+ 
 const Provider = require('../models/ProvidorS')
 const Service = require('../models/Service')
 
@@ -65,6 +67,31 @@ Provider.register(newPrivider, req.body.password,(error,provider)=>{
 })
 
 
+},
+
+authenticate:(req,res,next)=>{
+
+    passport.authenticate('local',(error,provider)=>{
+
+        if(provider){
+            let signedToken = jsonWebToken.sign({
+
+                data:provider._id,
+                exp:new Date().setDate(new Date().getDate()+1)
+            },'Locorbi86');
+
+            res.json({success:true,
+            token:signedToken
+        });
+        console.log(provider)
+        }else{
+            res.json({
+                success:false, 
+                message:"Could not authenticate provider"  
+            });
+             
+        }
+    })(req,res,next)
 },
 
 }
