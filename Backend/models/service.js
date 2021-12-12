@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
 const Schema =mongoose.Schema
-const providerSchema = require('./ProvidorS').schema
 
+// const providerSchema = require('./ProvidorS').schema
+const providerSchema = require('./TypeOfServicer').schema
 const ServiceSchema = new Schema({
 
 nameOfService:{
