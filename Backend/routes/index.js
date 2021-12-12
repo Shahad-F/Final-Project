@@ -8,7 +8,7 @@ ProviderRouter = require('./provider')
 router.use('/admins',AdminRouter)
 router.use('/services',ServiceRouter)
 
-router.use('/services',ProviderRouter)
+router.use('/providers',ProviderRouter)
 
 
 module.exports = router
