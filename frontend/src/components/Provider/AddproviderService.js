@@ -9,16 +9,22 @@ function AddProviderService({data}) {
     const {_id} =useParams();
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
+    const [loading,setLoading]=useState(true);
 
     useEffect(()=>{
 
-        axios.get(`http://localhost:3030/providers/${_id}`)
+        axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
          
         setService(res.data)
+        setLoading(false)
          
 })
 },[])
+
+    if(loading){
+    return(<p>Loading </p>);
+   }
     return ( <>
     
     <h2>Do you want to add something</h2>

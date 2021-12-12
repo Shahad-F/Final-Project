@@ -2,6 +2,20 @@ const Service = require('../models/Service')
 
 module.exports ={
 
+    show:(req,res)=>{
+
+        let _id =req.params.uid
+    
+        Provider.findById(_id)
+        .then(service=>{
+            res.json({service})
+        })
+        .catch(error=>{
+    
+            res.json({error:error})
+        })
+    
+    },
 // show all services in mongoose
 index:(req,res)=>{
 Service.find({})
