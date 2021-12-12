@@ -18,6 +18,13 @@ const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
 
  
+// functions 
+// signUp for provider
+
+const SignUp =(e)=>{
+    e.preventDefault();
+    
+}
 
     return ( <>
     <form className='Psignup'> 
