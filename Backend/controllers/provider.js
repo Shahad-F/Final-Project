@@ -34,8 +34,8 @@ show:(req,res)=>{
     },
 
 create: async(req,res)=>{
-    
-    const _id =req.params.id;
+
+    const _id =req.params.uid;
     const service = await Service.findOne({_id})
 
     let newPrivider = new Provider({
@@ -43,12 +43,7 @@ create: async(req,res)=>{
         userName:req.body.userName,
         phone:req.body.phone,
         price:req.body.price,
-        // firstName:req.body.firstName,
-        // lastName:req.body.lastName,
-        // phone:req.body.phone,
-        // image:req.body.image,
-        // city:req.body.city,
-        // price:req.body.price
+         
     })
     console.log(service)
     service.providers.push(newPrivider);
