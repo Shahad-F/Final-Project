@@ -25,16 +25,16 @@ background:rgba(226, 199, 164, 0.575);
    color:rgb(109, 20, 20);
 }
 .SignForm button{
-    padding: 1ch;
+    /* padding: 1ch;
     margin: 1ch;
     border-radius: 8px;
     background:rgba(223, 95, 36, 0.945);
     color: rgb(110, 7, 7);
     font-weight: bolder;
     font-weight: bolder;
-    /* font-family: 'Fuzzy Bubbles', cursive; */
+     
     font-size: 120%;
-    cursor: pointer;
+    cursor: pointer; */
 }
 .SignForm p{
     color:black;

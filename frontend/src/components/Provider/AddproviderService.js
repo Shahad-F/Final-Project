@@ -5,6 +5,7 @@
  import axios from "axios";
  import swal from 'sweetalert';
  import './provider.css'
+ import { Button,Form } from 'react-bootstrap';
 
 function AddProviderService({data}) {
     
@@ -55,19 +56,37 @@ const handelAdd=(e)=>{
      
     
     <div className="ServiceParent">
-         <form className='serviceForm'>
-         <h2>Do you want to add something</h2>
-    <input type='text' placeholder='Enter userName..'
-    onChange ={e=>setUserName(e.target.value)}/><br></br>
+    
+    <div className="mb-3">
 
-    <input type='text' placeholder='Enter Phone..'
-    onChange ={e=>setPhone(e.target.value)} /><br></br>
+    
+<Form>
 
-    <input type='text' placeholder='Enter Price..'
-    onChange ={e=>setPrice(e.target.value)} /><br></br>
+<Form.Group className="mb-3" >
+      <Form.Control type="text" placeholder="UserName" 
+     onChange ={e=>setUserName(e.target.value)} />
+  </Form.Group>
 
-    <button onClick={(e)=>handelAdd(e)}>Add</button>
-         </form>
+  <Form.Group className="mb-3" >
+      <Form.Control type="text" placeholder="Phone number" 
+    onChange ={e=>setPhone(e.target.value)} />
+  </Form.Group>
+
+  <Form.Group className="mb-3" >
+      <Form.Control type="text" placeholder="Price" 
+      onChange ={e=>setPrice(e.target.value)} />
+      
+  </Form.Group>
+
+  <Button variant="outline-success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
+
+</Form>
+
+    </div>
+    
+
+     
+         
      {/*  */}
          <div  className="imgBox">
              

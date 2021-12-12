@@ -3,7 +3,7 @@
 .child-1{
 
      
-    /* margin-right: 60%; */
+     
 
 }
 .Parent{
@@ -17,8 +17,7 @@ margin-top: 11ch;
     border: 1px solid rgb(7, 22, 110);
     border-width: 2px;
     margin: 1ch;
-    /* margin-left: 15ch;
-    margin-right: 15ch; */
+    
     padding: 1ch;
     border-radius: 8px;
     background:rgba(13, 52, 156, 0.637);
@@ -45,9 +44,7 @@ margin-top: 11ch;
  border:solid rgb(109, 89, 63);
  margin: 2ch;
  margin-top: 9ch;
-/* padding: 1ch; */
-/* margin-left: 30%;
-margin-right:30% ; */
+
 border-radius: 8px;
 background:rgba(222, 184, 135, 0.575);
  }

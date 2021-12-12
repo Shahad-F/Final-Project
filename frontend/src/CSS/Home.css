@@ -54,7 +54,7 @@ body {
   background: rgb(238, 232, 224);
   margin-top: 1rem;
   /* color: #999; */
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  /* font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif; */
   text-align: center;
   /* img size is 50x50 */
   /* background:rgb(231, 137, 137); */
@@ -126,16 +126,16 @@ h2{
 }
  
 .homebtn button{
-  margin: 1ch;
-    /* margin-top: 1ch; */
+  /* margin: 1ch;
+     
     margin-left: 2ch;
-    /* padding: 1ch; */
+    
     border-radius: 16px;
     font-family: 'Fuzzy Bubbles', cursive;
     cursor: pointer;
     background:rgb(185, 26, 26);
     color:beige;
-    font-size: 2ch;
+    font-size: 2ch; */
     
 
 }
