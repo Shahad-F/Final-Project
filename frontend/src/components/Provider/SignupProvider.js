@@ -4,8 +4,9 @@ import {useState,useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert';
 import './sign.css'
+import{useNavigate} from 'react-router-dom'
 function SignUp() {
-
+    const navigate=useNavigate()
     const [provider,setProvider]=useState([])
     const[newProvider,setNewProvider]=useState({})
 
@@ -44,6 +45,7 @@ axios.post('http://localhost:3030/providers/signUp',
             title: 'Welcome '+ FName,
             icon:'success'
           })
+          navigate('/ServiceHome')
     }
 })
 
