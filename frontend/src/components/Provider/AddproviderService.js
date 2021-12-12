@@ -11,11 +11,12 @@ function AddProviderService({data}) {
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
 
+
     useEffect(()=>{
 
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
-         
+         console.log(res.data)
         setService(res.data)
         setLoading(false)
          
@@ -29,16 +30,21 @@ function AddProviderService({data}) {
     
     <h2>Do you want to add something</h2>
     
-    {service.map((item ,index)=>{
-        return <div key={index} className="box">
-       
-       <img src={item.image} alt='' width={200}/>
-       {/* <div className="title"> */}
-          <h3>{item.nameOfService}</h3>  
-           {/* </div> */}
+    
+         <div  className="box">
+             
+         <h4>{service.nameOfService}</h4>  
+         
+         <img src={service.image} alt='' width={200}/>
+
+         
+        
+        
+           
+           
     
         </div>
-    })}
+     
     
     
     </> );
