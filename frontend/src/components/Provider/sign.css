@@ -1,0 +1,42 @@
+.SignForm{
+    border:solid rgb(214, 188, 155);
+ margin: 4ch;
+ margin-top: 9ch;
+ text-align: center;
+ margin-left: 32ch;
+ width: 50%;
+border-radius: 8px;
+background:rgba(226, 199, 164, 0.575);
+
+}
+.SignForm input{ 
+    padding: 1.2ch;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 100%;
+    color:rgb(185, 26, 26);
+    font-weight: bold;
+    margin: 2ch;
+    border-radius: 8px;
+    width: 55%;
+ }
+ .SignForm h2{
+    padding: 1ch;
+   font-weight: bolder;
+   color:rgb(109, 20, 20);
+}
+.SignForm button{
+    padding: 1ch;
+    margin: 1ch;
+    border-radius: 8px;
+    background:rgba(223, 95, 36, 0.945);
+    color: rgb(110, 7, 7);
+    font-weight: bolder;
+    font-weight: bolder;
+    /* font-family: 'Fuzzy Bubbles', cursive; */
+    font-size: 120%;
+    cursor: pointer;
+}
+.SignForm p{
+    color:black;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
