@@ -41,5 +41,30 @@ create: async(req,res)=>{
     }
 
 },
+signUp:(req,res)=>{
+
+let newPrivider = new Provider({
+
+        firstName:req.body.firstName,
+        lastName:req.body.lastName,
+        phone:req.body.phone,
+        email:req.body.email,
+        image:req.body.image,
+        city:req.body.city,
+        price:req.body.price
+})
+
+Provider.register(newPrivider, req.body.password,(error,provider)=>{
+
+    if(provider){
+        res.json({message:"Provider inserted successfully !"})
+    }else{
+        res.json({error:'Email is taken'})
+        console.log(error)
+    }
+})
+
+
+},
 
 }
