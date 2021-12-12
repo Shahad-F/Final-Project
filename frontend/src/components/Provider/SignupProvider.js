@@ -25,7 +25,7 @@ const SignUp =(e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/providers/signUp',{
-fname:FName ,lname:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
+firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
 
 .then((res)=>{
     console.log(res)
@@ -38,8 +38,9 @@ fname:FName ,lname:LName ,phone:Phone ,image:Image ,city:City ,email:Email,passw
           })
     }else {
         setNewProvider(res.data)
+
         swal({
-            title: 'Welcome '+FName,
+            title: 'Welcome '+ FName,
             icon:'success'
           })
     }
