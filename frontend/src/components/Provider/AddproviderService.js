@@ -8,7 +8,7 @@
  
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col,Image} from 'react-bootstrap';
+ import { Form ,Col,Image,Card} from 'react-bootstrap';
 
 function AddProviderService({data}) {
     
@@ -59,12 +59,8 @@ const handelAdd=(e)=>{
      
     
     <div className="ServiceParent">
-    
-    <div className="mb-3">
-
-    
+        
 <Form>
-
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
      onChange ={e=>setUserName(e.target.value)} />
@@ -86,40 +82,33 @@ const handelAdd=(e)=>{
 
 </Form>
 
-    </div>
-    
 
-     
-         
-     {/*  */}
-         <div  className="imgBox">
+    {/* </div> */}
+
+            <div  className="imgBox">
              
+             <Col xs={6} md={4} className="rounded mx-auto d-block">
              <h2>{service.nameOfService}</h2>  
-             
-            
-             <Col xs={6} md={4}>
-            <Image src={service.image} rounded  width={400}/>
+             <Image src={service.image} width={430} />
              </Col>
-
-             
+ 
             </div>
      
      </div>
     
          
         
-     <div>
+     <div className="container">
 
          {service.providers.map((item)=>{
 
-             return<div>
-                 <p>{item.userName}</p>
+             return<Card style={{width:"20rem"}}>
+                 <Card.Title>Name Of Provider:{item.userName}</Card.Title>
                  
-                 <p>{item.phone}</p>
+                 <Card.Text>Phone Number:{item.phone}</Card.Text>
                   
-                 
-                 <p>{item.price}</p>
-             </div>
+                 <Card.Text>Price :{item.price}</Card.Text>
+             </Card>
          })}
      </div>
       
