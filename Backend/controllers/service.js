@@ -6,7 +6,7 @@ module.exports ={
 
         let _id =req.params.uid
     
-        Provider.findById(_id)
+        Service.findById(_id)
         .then(service=>{
             res.json({service})
         })
