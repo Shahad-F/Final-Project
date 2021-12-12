@@ -13,25 +13,26 @@ import ServiceHome from './components/Provider/ServiceHome'
 import AddProviderService from './components/Provider/AddproviderService';
  import Logo from './logo'
 import './CSS/Home.css'
-// import axios from "axios"
-// import { useEffect, useState } from "react";
+import axios from "axios"
+import { useEffect, useState } from "react";
 import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
 
 
  export default function Nav  () {
-    // const [admin,setAdmin]=useState([]);
-    // const [newAdmin,setNewAdmin]= useState({});
+
+    const [service,setService]=useState([]);
+    const [newService,setNewService]=useState({});
 
 
-    // useEffect(()=>{
+    useEffect(()=>{
 
-    //     axios.get('http://localhost:3030/authors')
-    //     .then((res)=>{
-    //         // console.log(res.data)
-    //         setAdmin(res.data)
-    //     })
+        axios.get('http://localhost:3030/services')
+        .then((res)=>{
+            // console.log(res.data)
+            setService(res.data)
+        })
   
-    // },[newAdmin])
+    },[newService])
 
     return (
         <>
@@ -67,8 +68,8 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <Route path ='/AddNewService' element={<AddNewService />}/>
     <Route path ='/ProviderSignUp' element={<ProviderSignUp />}/>
     <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
-    <Route path ='/ServiceHome' element={<ServiceHome />}/>
-    <Route path ='/AddProviderService' element={<AddProviderService />}/>
+    <Route path ='/ServiceHome' element={<ServiceHome  />}/>
+    <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
 
 
 </Routes>

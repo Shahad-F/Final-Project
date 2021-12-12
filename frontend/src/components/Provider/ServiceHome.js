@@ -2,10 +2,12 @@ import { useNavigate } from "react-router-dom"
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert';
+import {Link} from 'react-router-dom'
 import '../admin/service.css'
 
 
 function ServiceHome() {
+
     const navigate=useNavigate()
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
@@ -24,15 +26,7 @@ function ServiceHome() {
 
         //  
 
-        const handelAddservice=(id,image)=>{
-
-             //navigate('/AddProviderService')
-            console.log(id)
-            
-             
-             
-             
-        }
+        
     return ( <>
     
     <h2>Service Home</h2>
@@ -42,14 +36,12 @@ function ServiceHome() {
         return <div key={index} className="box">
        
        <img src={item.image} alt='' width={200}/>
-       <div className="title">{item.nameOfService}</div>
+       <div className="title">{item.nameOfService}
+       
+       </div>
       
-
-      <button onClick={handelAddservice(item._id,item.image)}>see more</button>
-      {/* <div> 
-        <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
-       <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
-       </div> */}
+<h2><Link to={`/AddProviderService/${item._id}`}>See More</Link></h2>
+       
 
         </div>
     })}
