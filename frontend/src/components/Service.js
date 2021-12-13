@@ -9,7 +9,7 @@
     const [loading,setLoading] = useState(true);
 
     useEffect(()=>{ 
-
+console.log('hgghjjj')
         axios.get('http://localhost:3030/services')
         .then((res)=>{
             console.log(res.data)

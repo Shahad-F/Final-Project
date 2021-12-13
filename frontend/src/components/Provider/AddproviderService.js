@@ -45,7 +45,7 @@ const[UserId,setUserId]=useState(decodedData.data);
 
 // display all cards
     useEffect(()=>{
-
+console.log('nsdhfhjdbfhj')
 
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
