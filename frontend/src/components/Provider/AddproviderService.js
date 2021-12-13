@@ -122,15 +122,17 @@ const habdeldelete =(id)=>{
              
          
 <Form className='ServiceParent'
-style={{backgroundImage:`url(${service.image})`,
-backgroundRepeat: 'no-repeat',
-// width: "100%",
-height: "300px",
-backgroundPosition: 'center',
-backgroundSize: 'cover',
-backgroundAttachment: 'fixed',
- }} >
-
+// style={{backgroundImage:`url(${service.image})`,
+// backgroundRepeat: 'no-repeat',
+// // width: "100%",
+// height: "300px",
+// backgroundPosition: 'center',
+// backgroundSize: 'cover',
+// backgroundAttachment: 'fixed',
+//  }} >
+>
+<Card.Img variant="top" src={service.image} />
+<Card.Body>   
      <Form> 
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
@@ -152,6 +154,7 @@ backgroundAttachment: 'fixed',
   <Button variant="success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
   
   </Form>
+  </Card.Body>
 </Form>
 
       
