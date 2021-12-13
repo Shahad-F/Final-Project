@@ -4,24 +4,41 @@
  }
 .header{
     
-     
     width: 25%;
     margin-top: 1ch;
 }
  
 .footer{
     margin-top: 6ch;
-   font-family: 'Exo';
-    padding: 1ch;
+    font-family: 'Exo';
+     padding: 1ch;
     background:rgb(49, 47, 47);
+    
 }
 .footer p{
     color:wheat;
     font-size: 100%;
-    /* margin-right: 100ch; */
+    
 }
 .footer h2{
     color:wheat;
     font-weight: bolder;
     font-size: 200%;
+}
+
+/* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+    
+    .footer{
+        /* width: 127%; */
+    }
+     
+}
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+
+    .footer{
+        /* width: 230%; */
+    }
 }

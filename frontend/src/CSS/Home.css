@@ -8,14 +8,12 @@
 ul{
     /* width: 80%; */
     list-style-type: none;
-    overflow: hidden;
-   
-   
+    overflow: hidden;  
 }
 
 li{
     float:left;
-     
+ 
 }
 
 li a{
@@ -23,7 +21,6 @@ li a{
      font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
     font-size:15px;
     margin: 2ch;
-    
     display: block;
     text-align: center;
     text-decoration: none;
@@ -91,7 +88,7 @@ h2{
   
 }
 .parent{
-  /* border: 1px solid black; */
+   
   display: grid;
   grid-template-columns: 1fr  1fr
 }
@@ -135,7 +132,7 @@ Button{
   padding: 1ch;
 }
 .logo-main >img{
-  /* border-radius: 50px; */
+   
   border-radius: 28px ;
   height: 200%;
  
@@ -158,4 +155,56 @@ Button{
 .About h1{
   font-family: 'Fuzzy Bubbles', cursive;
   padding: 1ch;
+}
+
+
+/* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+    
+  .subject h1{   
+     font-size:100%;  
+ }
+ .subject span{
+   color: rgb(235, 23, 23);
+   font-size: 100%;
+  
+}
+.carImage{
+  margin-top:15ch;
+  margin-right: 14ch;
+  border: solid black;
+}
+.carImage >img{
+  width: 150%;
+}
+.homeBTN > Button{
+   
+  border: solid black;
+   /* width: 20ch; */
+ }
+ .homeBTN{
+  border: solid black;
+  margin-left: 4ch;
+ }
+}
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+  .subject h1{   
+    font-size:100%;  
+}
+.subject span{
+   font-size:100%;
+}
+.carImage >img{
+  width: 100%;
+}
+.homeBTN >Button{
+    
+  width: 25ch;
+}
+ 
+ .homeBTN{
+  border: solid black;
+ }
 }
