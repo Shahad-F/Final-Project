@@ -92,7 +92,7 @@ if(!service){
 }
 
 await service.providers.pull({_id: Pid});
-await service.providers.save()
+await service.save()
 res.status(200).send(service)
 console.log(service)
 },
