@@ -121,7 +121,8 @@ const habdeldelete =(id)=>{
      
              
          
-<Form className='ServiceParent'
+<Form 
+// className='ServiceParent'
 // style={{backgroundImage:`url(${service.image})`,
 // backgroundRepeat: 'no-repeat',
 // // width: "100%",
@@ -132,7 +133,12 @@ const habdeldelete =(id)=>{
 //  }} >
 >
 <Card.Img variant="top" src={service.image} />
-<Card.Body>   
+
+<Card.Body>
+<Card.Text>
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </Card.Text>
      <Form> 
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
