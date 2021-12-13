@@ -75,16 +75,19 @@ onChange={e=>setEmail(e.target.value)}/>
 <Form.Control type="password" placeholder="your password"
 onChange={e=>setPassword(e.target.value)} />
 </Col>
-
+<Button variant="outline-dark"
+ onClick={(e)=>SignUp(e)}>Sign up</Button>
+<p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
+ 
 </Row>
 
      
 
      
 
-<button onClick={(e)=>SignUp(e)}>Sign Up</button>
+{/* <button onClick={(e)=>SignUp(e)}>Sign Up</button> */}
 
-<p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
+{/* <p>I have account <Link to={`/ProviderLogin`}>Login</Link></p> */}
      
      
 
