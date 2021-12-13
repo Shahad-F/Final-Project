@@ -58,10 +58,26 @@ const habdeledit=(id)=>{
         title:'Your service is edited ',
         icon:'success'
       })
-    axios.post(`http://localhost:3030/providers/provider/${_id}/${id}`,
+    axios.put(`http://localhost:3030/providers/provider/${_id}/${id}`,
     { userName:UserName,phone:Phone,price:Price})
     .then((res=>{
+        console.log(res.data)
         setService(res.data)
+
+    }))
+}
+// 
+const habdeldelete =(id)=>{
+
+    swal({
+        title:'Your service is delete ',
+        icon:'error'
+      })
+    axios.delete(`http://localhost:3030/providers/provider/${_id}/${id}`)
+    .then((res=>{
+        console.log(res.data)
+        setService(res.data)
+
     }))
 }
     if(loading){
@@ -126,8 +142,8 @@ backgroundAttachment: 'fixed',
                  <Card.Text>Price :{item.price}</Card.Text>
 
                  <div>
-                 <Button variant="outline-warning" onClick={()=habdeledit(item._id)}>Update</Button>{' '}
-                 {/* <Button variant="outline-danger" onClick={()=habdeldelete(item._id)}>Delete</Button>{' '} */}
+                 <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
+                 <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '}
 
                  </div>
              </Card>
