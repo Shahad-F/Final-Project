@@ -61,6 +61,12 @@ let token = localStorage.getItem("token");
         </>
     ) : null }
      
+     {!token ? (
+         <>
+         <li><Link to='/ProviderSignUp'>SignUp</Link></li>
+         <li><Link to='/ProviderLogin'>Login</Link></li>
+         </>
+     ) : null}
    
    <li>  <div className="header">
     <Logo/>
