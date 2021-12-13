@@ -3,6 +3,7 @@ const passport = require('passport');
 const jsonWebToken = require('jsonwebtoken');
  
 const Provider = require('../models/TypeOfServicer')
+const ProviderofService=require('../models/ProvidorS')
 const Service = require('../models/Service')
 
 module.exports ={
@@ -99,7 +100,7 @@ console.log(service)
 
 signUp:(req,res)=>{
 
-let newPrivider = new Provider({
+let newPrivider = new ProviderofService({
 
         firstName:req.body.firstName,
         lastName:req.body.lastName,
@@ -110,7 +111,7 @@ let newPrivider = new Provider({
         
 })
 
-Provider.register(newPrivider, req.body.password,(error,provider)=>{
+ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
 
     if(provider){
         res.json({message:"Provider inserted successfully !"})
