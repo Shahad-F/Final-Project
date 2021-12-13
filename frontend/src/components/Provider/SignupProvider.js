@@ -5,6 +5,10 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import './sign.css'
 import{useNavigate} from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+ import Button from 'react-bootstrap/Button';
+ import { Form ,Col ,Row} from 'react-bootstrap';
 function SignUp() {
     const navigate=useNavigate()
     const [provider,setProvider]=useState([])
@@ -52,42 +56,36 @@ axios.post('http://localhost:3030/providers/signUp',
 }
 
     return ( <>
-    <form className='SignForm'> 
 
-    <h2>SignUp</h2>
+<Row className="SignForm">
+<h2>SignUp</h2>
+<Col md>
+<Form.Control type="text" placeholder="first name" 
+onChange={e=>setFName(e.target.value)}/>
+<Form.Control type="text" placeholder="last name"
+onChange={e=>setLName(e.target.value)} />
+<Form.Control type="text" placeholder="phone number"
+onChange={e=>setPhone(e.target.value)} />
+<Form.Control type="text" placeholder="image"
+onChange={e=>setImage(e.target.value)} />
+<Form.Control type="text" placeholder="your city" 
+onChange={e=>setCity(e.target.value)}/>
+<Form.Control type="email" placeholder="name@gmail.com" 
+onChange={e=>setEmail(e.target.value)}/>
+<Form.Control type="password" placeholder="your password"
+onChange={e=>setPassword(e.target.value)} />
+</Col>
 
-<input type='text' name='first name'
-placeholder='First Name' 
-onChange={e=>setFName(e.target.value)}/><br></br>
+</Row>
 
-<input type='text' name='last name'
-placeholder='Last Name' 
-onChange={e=>setLName(e.target.value)} /><br></br>
+     
 
-<input type='text' name='phone'
-placeholder='Phone Number' 
-onChange={e=>setPhone(e.target.value)} /><br></br>
-
-<input type='text' name='image'
-placeholder='put your image' 
-onChange={e=>setImage(e.target.value)}/><br></br>
-
-<input type='text' name='city'
-placeholder='your city' 
-onChange={e=>setCity(e.target.value)}/><br></br>
-
-<input type='text' name='email'
-placeholder='your Email' 
-onChange={e=>setEmail(e.target.value)}/><br></br>
-
-<input type='password' name='password'
-placeholder='password' 
-onChange={e=>setPassword(e.target.value)}/><br></br>
+     
 
 <button onClick={(e)=>SignUp(e)}>Sign Up</button>
 
 <p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
-    </form>
+     
      
 
     </> );
