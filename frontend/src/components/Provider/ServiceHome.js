@@ -5,7 +5,10 @@ import swal from 'sweetalert';
 import {Link} from 'react-router-dom'
 import '../admin/service.css'
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+ import Button from 'react-bootstrap/Button';
+ import { Form ,Col,Image,Card} from 'react-bootstrap';
+ 
 function ServiceHome() {
 
     const navigate=useNavigate()
@@ -35,12 +38,14 @@ function ServiceHome() {
     {service.map((item ,index)=>{
         return <div key={index} className="box">
        
-       <img src={item.image} alt='' width={200}/>
-       <h6 className="title">{item.nameOfService}
-       
-       </h6>
+       <img src={item.image} alt=''  />
+       <h6 className="title">{item.nameOfService}</h6>
       
-<p><Link to={`/AddProviderService/${item._id}`}>See More</Link></p>
+       <Button variant="outline-primary">
+        <Link to={`/AddProviderService/${item._id}`}>See More</Link></Button>{' '}
+
+
+{/* <p><Link to={`/AddProviderService/${item._id}`}>See More</Link></p> */}
        
 
         </div>

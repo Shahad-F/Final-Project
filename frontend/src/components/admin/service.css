@@ -17,11 +17,10 @@
 }
 
 .box img{
-    /* border-radius: 100px; */
-    /*  */
+     
     filter: grayscale();
-	width: 200px;
-	height: 200px;
+	width: 340px;
+	height: 300px;
 	border-radius: 50%;
 	border: 6px solid whitesmoke;
 	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
@@ -60,7 +59,7 @@
 }
 
  
-.editbtn{
+/* .editbtn{
     width: 40%;
     margin: 1ch;
     border-radius: 8px;
@@ -75,7 +74,7 @@
 .editbtn:hover{
     background:rgba(235, 238, 39, 0.945);
     color: rgb(37, 53, 8);
-}
+} */
 h1{
     color: rgb(90, 14, 14);
     font-weight: bolder;
