@@ -16,9 +16,7 @@ image:{
     required:[true,"Image is required"],
     // unique:true
 },
-userId:{
-    type:Schema.Types.ObjectId,ref:'Provider'
-},
+ 
 
 providers:[providerSchema]
 
