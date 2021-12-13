@@ -108,7 +108,7 @@ onChange={ e=>setImage(e.target.value)}/>
         <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
        <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
        </div>
-
+        
         </div>
     })}
 </div>

@@ -50,7 +50,12 @@ const handelAdd=(e)=>{
          button: "ok "
       }) 
 }
+// functions 
 
+const habdeledit(id)=>{
+
+    
+}
     if(loading){
     return(<p>Loading </p>);
    }
@@ -111,6 +116,12 @@ backgroundAttachment: 'fixed',
                  <Card.Text>Phone Number:{item.phone}</Card.Text>
                   
                  <Card.Text>Price :{item.price}</Card.Text>
+
+                 <div>
+                 <Button variant="outline-warning" onClick={()=habdeledit(item._id)}>Update</Button>{' '}
+                 <Button variant="outline-danger" onClick={()=habdeldelete(item._id)}>Delete</Button>{' '}
+
+                 </div>
              </Card>
          })}
      </div>
