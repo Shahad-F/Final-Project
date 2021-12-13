@@ -30,6 +30,7 @@ function AddProviderService({data}) {
 
 // display all cards
     useEffect(()=>{
+        
 
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
