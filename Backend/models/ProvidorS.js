@@ -31,10 +31,7 @@ city:{
     type:String,
     required:[true,'city should be provided'],
 },
-// price:{
-//     type:String,
-//     required:[true,'price should be provided'],
-// }
+ 
 
 })
 

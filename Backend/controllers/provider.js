@@ -96,6 +96,7 @@ await service.save()
 res.status(200).send(service)
 console.log(service)
 },
+
 signUp:(req,res)=>{
 
 let newPrivider = new Provider({
@@ -106,7 +107,7 @@ let newPrivider = new Provider({
         email:req.body.email,
         image:req.body.image,
         city:req.body.city,
-        // price:req.body.price
+        
 })
 
 Provider.register(newPrivider, req.body.password,(error,provider)=>{
