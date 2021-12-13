@@ -114,25 +114,25 @@ const habdeldelete =(id)=>{
     return ( <>
     
      
-    <h1>{service.nameOfService}</h1>
+    <h1 className='lineTitle'>{service.nameOfService}</h1>
 
     <div  >
     
      
              
          
-<Form 
-// className='ServiceParent'
-// style={{backgroundImage:`url(${service.image})`,
+<Form className='ServiceParent'
+// style={{backgroundImage:
+    
 // backgroundRepeat: 'no-repeat',
-// // width: "100%",
+//  width: "100%",}}
 // height: "300px",
 // backgroundPosition: 'center',
 // backgroundSize: 'cover',
 // backgroundAttachment: 'fixed',
 //  }} >
 >
-<Card.Img variant="top" src={service.image} />
+<Card.Img variant="top" src={service.image} width={100} />
 
 <Card.Body>
 <Card.Text>

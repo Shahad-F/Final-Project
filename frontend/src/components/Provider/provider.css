@@ -3,8 +3,9 @@
 
  
 .ServiceParent{
-    display: grid;
-    grid-template-columns: 1fr  1fr;
+    /* display: grid;
+    grid-template-columns: 1fr  1fr; */
+    width: 60%;
     margin: 4ch;
     padding: 3ch;
     border-radius: 8px;
@@ -19,5 +20,10 @@ Button{
  .container{
      display:grid;
      grid-template-columns: 1fr 1fr 1fr
+ }
+ .lineTitle{
+     font-family: 'Fuzzy Bubbles', curs;
+     text-align: center;
+     color:rgb(180, 117, 117);
  }
   
