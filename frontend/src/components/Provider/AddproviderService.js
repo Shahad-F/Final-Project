@@ -52,9 +52,17 @@ const handelAdd=(e)=>{
 }
 // functions 
 
-const habdeledit(id)=>{
+const habdeledit=(id)=>{
 
-    
+    swal({
+        title:'Your service is edited ',
+        icon:'success'
+      })
+    axios.post(`http://localhost:3030/providers/provider/${_id}/${id}`,
+    { userName:UserName,phone:Phone,price:Price})
+    .then((res=>{
+        setService(res.data)
+    }))
 }
     if(loading){
     return(<p>Loading </p>);
@@ -119,7 +127,7 @@ backgroundAttachment: 'fixed',
 
                  <div>
                  <Button variant="outline-warning" onClick={()=habdeledit(item._id)}>Update</Button>{' '}
-                 <Button variant="outline-danger" onClick={()=habdeldelete(item._id)}>Delete</Button>{' '}
+                 {/* <Button variant="outline-danger" onClick={()=habdeldelete(item._id)}>Delete</Button>{' '} */}
 
                  </div>
              </Card>
