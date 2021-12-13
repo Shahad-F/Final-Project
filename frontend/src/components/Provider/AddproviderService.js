@@ -68,12 +68,23 @@ const handelAdd=(e)=>{
       }}>ffff</div> */}
              
          
-<Form className='ServiceParent'>
-<div style={{backgroundImage:`url(${service.image})`,
+<Form className='ServiceParent'
+style={{backgroundImage:`url(${service.image})`,
+backgroundRepeat: 'no-repeat',
+width: "100%",
+height: "400px",
+backgroundPosition: 'center',
+backgroundSize: 'cover',
+ 
+  }} >
+
+{/* <div style={{backgroundImage:`url(${service.image})`,
     backgroundRepeat: 'no-repeat',
-    width: "400%",
+    width: "100%",
     height: "400px",
-      }}>ffff</div>
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+      }}>ffff</div> */}
       <Form> 
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
