@@ -1,8 +1,14 @@
+
+Row{
+
+    
+}
 .SignForm{
-    border:solid rgb(214, 188, 155);
- margin: 4ch;
+
+ border:solid rgb(214, 188, 155);
+ margin: 6ch;
  margin-top: 9ch;
- text-align: center;
+ /* text-align: center; */
  margin-left: 32ch;
  /* width: 50%; */
 border-radius: 8px;

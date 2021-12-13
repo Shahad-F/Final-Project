@@ -81,16 +81,6 @@ onChange={e=>setPassword(e.target.value)} />
  
 </Row>
 
-     
-
-     
-
-{/* <button onClick={(e)=>SignUp(e)}>Sign Up</button> */}
-
-{/* <p>I have account <Link to={`/ProviderLogin`}>Login</Link></p> */}
-     
-     
-
     </> );
 }
 
