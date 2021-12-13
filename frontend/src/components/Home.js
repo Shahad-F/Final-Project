@@ -32,6 +32,12 @@ const handelProvider=()=>{
 
         <h1>CALL <span>me</span></h1>
 
+        <div className="homeBTN">
+
+<Button variant="outline-danger" onClick={handelAdmin}>Admin</Button>{' '}<br></br>
+<Button variant="outline-danger" onClick={handelProvider}>Service Providor</Button>{' '}
+
+</div>
         </div>
 
         <div className='carImage'>
@@ -42,19 +48,10 @@ const handelProvider=()=>{
         
          {/* <img src='https://www.pngkit.com/png/full/970-9708324_antique-classic-car-green-vintage-mosaic-clipart-car.png' alt='' width={500}/> */}
          {/* <img src='https://www.pngkit.com/png/full/79-795919_old-car-style-cars-public-domain-vintage-car.png' alt='' width={500}/> */}
-
-    
+ 
      </div>
     
-        <div className="homeBTN">
-
-        <Button variant="outline-danger" onClick={handelAdmin}>Admin</Button>{' '}<br></br>
-        <Button variant="outline-danger" onClick={handelProvider}>Service Providor</Button>{' '}
-
-            {/* <button className='btnAdimn' onClick={handelAdmin}>Admin</button><br></br>
-            <button className='btnService' onClick={handelProvider} >Service Providor</button>
-              */}
-        </div>
+        
         </div>
     </>);
 }
