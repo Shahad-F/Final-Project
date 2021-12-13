@@ -41,7 +41,7 @@ function ServiceHome() {
        <img src={item.image} alt=''  />
        <h6 className="title">{item.nameOfService}</h6>
       
-       <Button variant="outline-primary">
+       <Button variant="outline-dark" className='link'>
         <Link to={`/AddProviderService/${item._id}`}>See More</Link></Button>{' '}
 
 
