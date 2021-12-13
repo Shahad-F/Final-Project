@@ -22,49 +22,49 @@ function AddProviderService({data}) {
     const[UserName,setUserName]=useState();
     const[Phone,setPhone]=useState();
     const[Price,setPrice]=useState();
-// ................................................................................................................................
+    // ................................................................................................................................
+    
+    console.log(data ) 
+    
+    let decodedData;
 
+    const storedToken = localStorage.getItem("token");
+    if(storedToken){
+        decodedData = jwt_decode(storedToken ,{payload:true});
+    console.log(decodedData);
 
- 
+    let expirationDate = decodedData.exp;
+    var current_time = Date.now() / 1000;
+    
+    if(expirationDate < current_time){
+        localStorage.removeItem("token")
+    }
+}
 
+const[UserId,setUserId]=useState(decodedData.data);
 
 // display all cards
     useEffect(()=>{
-        
+
 
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
          console.log(res.data)
         setService(res.data.service)
-        setLoading(false)
+     setLoading(false)
          
 })
 
 },[])
 
 
-let decodedData;
-
-const storedToken = localStorage.getItem("token");
-if(storedToken){
-    decodedData = jwt_decode(storedToken ,{payload:true});
-    console.log(decodedData);
-
-    let expirationDate = decodedData.exp;
-    var current_time = Date.now() / 1000;
-
-    if(expirationDate < current_time){
-        localStorage.removeItem("token")
-    }
-
-}
 
 // add new card
 const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { userName:UserName,phone:Phone,price:Price})
+    { userName:UserName,phone:Phone,price:Price ,userId:UserId})
 
     .then((res)=>{
         console.log(res.data)
@@ -174,7 +174,10 @@ backgroundAttachment: 'fixed',
     {(function(){
 
     if(decodedData != undefined){
-        if(decodedData.data == _id){
+        console.log("decodedData "+UserId)
+        console.log("decodedData "+item.userId)
+        if(UserId === item.userId){
+            console.log("decodedData")
     return(<>
 
        <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
