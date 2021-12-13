@@ -57,10 +57,24 @@ const handelAdd=(e)=>{
     return ( <>
     
      
-    <h1>{service.nameOfService}</h1>  
-    <div className="ServiceParent">
-        
-<Form>
+    <h1>{service.nameOfService}</h1>
+
+    <div  >
+    
+    {/* <div style={{backgroundImage:`url(${service.image})`,
+    backgroundRepeat: 'no-repeat',
+    width: "400%",
+    height: "400px",
+      }}>ffff</div> */}
+             
+         
+<Form className='ServiceParent'>
+<div style={{backgroundImage:`url(${service.image})`,
+    backgroundRepeat: 'no-repeat',
+    width: "400%",
+    height: "400px",
+      }}>ffff</div>
+      <Form> 
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
      onChange ={e=>setUserName(e.target.value)} />
@@ -79,7 +93,7 @@ const handelAdd=(e)=>{
   </Form.Group>
 
   <Button variant="outline-success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
-
+  </Form>
 </Form>
 
 
@@ -87,15 +101,16 @@ const handelAdd=(e)=>{
 
             <div  className="imgBox">
              
-             <Col xs={6} md={4}  >
+             
+             {/* <Col xs={6} md={4}  >
               
              <Image src={service.image} roundedCircle width={430} />
-             </Col>
+             </Col> */}
  
             </div>
+      
+            </div>
      
-     </div>
-    
          
         
      <div className="container">

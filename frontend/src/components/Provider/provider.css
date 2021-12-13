@@ -1,9 +1,5 @@
 
-.ServiceParent{
-
-    display: grid;
-    grid-template-columns: 1fr  1fr;
-}
+ 
 
  
  
@@ -16,7 +12,9 @@
 }
 
  
-Form{
+.ServiceParent{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
     margin: 2ch;
     padding: 3ch;
     border-radius: 8px;
