@@ -1,6 +1,14 @@
 
  import '../CSS/Home.css'
  import { useNavigate } from "react-router-dom"; 
+
+
+ import 'bootstrap/dist/css/bootstrap.min.css';
+ import Button from 'react-bootstrap/Button';
+ import { Form ,Col,Image,Card} from 'react-bootstrap';
+ 
+
+
  export default function Home() {
      
 
@@ -38,10 +46,14 @@ const handelProvider=()=>{
     
      </div>
     
-        <div className="homebtn">
-            <button className='btnAdimn' onClick={handelAdmin}>Admin</button><br></br>
+        <div className="homeBTN">
+
+        <Button variant="outline-danger" onClick={handelAdmin}>Admin</Button>{' '}<br></br>
+        <Button variant="outline-danger" onClick={handelProvider}>Service Providor</Button>{' '}
+
+            {/* <button className='btnAdimn' onClick={handelAdmin}>Admin</button><br></br>
             <button className='btnService' onClick={handelProvider} >Service Providor</button>
-             
+              */}
         </div>
         </div>
     </>);
