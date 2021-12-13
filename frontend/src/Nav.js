@@ -17,10 +17,7 @@ import axios from "axios"
 import { useEffect, useState } from "react";
 import {BrowserRouter as Router ,Routes,Route,Link,useNavigate} from 'react-router-dom'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
- //import Navbar from 'react-bootstrap/Button';
-import {Container,Navbar} from 'react-bootstrap';
- 
+  
  export default function Nav  () {
 
     const [service,setService]=useState([]);
@@ -48,16 +45,12 @@ let token = localStorage.getItem("token");
         <>
     
           
-    <Navbar bg="light" variant="light">
+     
  
-    <Container>
-{/* <ul > */}
+<ul >
 
-    <Navbar.Brand><Link exact to='/'>Home</Link></Navbar.Brand>
-    <Nav className="me-auto"> 
-    
-    <Nav.Link><Link to='/About'>About</Link></Nav.Link>
-        
+    <li><Link exact to='/'>Home</Link></li>
+    <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
 
@@ -75,13 +68,12 @@ let token = localStorage.getItem("token");
          </>
      ) : null}
    
-   <li>  <div className="header">
+   <li>  
+    <div className="header">
     <Logo/>
-    </div></li>
-    </Nav>
-    </Container>
-    </Navbar>
-{/* </ul> */}
+    </div>
+    </li>
+</ul>
  
  
  

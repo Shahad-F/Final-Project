@@ -1,6 +1,6 @@
   
 import './App.css';
-import Nav from './Nav'
+import Navi from './Nav'
  
 
  
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       
-       <Nav />
+       <Navi />
 
     <div className='footer'>
       <h2>CALL me</h2>
