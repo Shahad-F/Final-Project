@@ -33,7 +33,7 @@ create:(req,res)=>{
 
         nameOfService:req.body.nameOfService,
         image:req.body.image,
-        userId:req.body.userId
+         
     })
     console.log(newService)
 

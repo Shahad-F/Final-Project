@@ -45,6 +45,7 @@ create: async(req,res)=>{
         userName:req.body.userName,
         phone:req.body.phone,
         price:req.body.price,
+        userId:req.body.userId
         
     })
     console.log(newPrivider)
