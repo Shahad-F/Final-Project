@@ -15,14 +15,15 @@ import AddProviderService from './components/Provider/AddproviderService';
 import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
-import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
+import {BrowserRouter as Router ,Routes,Route,Link,useNavigate} from 'react-router-dom'
 
 
  export default function Nav  () {
 
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
-
+    const navigate=useNavigate()
+let token = localStorage.getItem("token");
 
     useEffect(()=>{
 
@@ -33,6 +34,12 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
         })
   
     },[newService])
+    // 
+    const logOut=(e)=>{
+        e.preventDefault()
+        localStorage.removeItem("token")
+        navigate('/')
+    }
 
     return (
         <>
@@ -46,6 +53,13 @@ import {BrowserRouter as Router ,Routes,Route,Link} from 'react-router-dom'
     <li><Link to='/About'>About</Link></li>
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
+
+    {token ? (
+        <>
+        <li><Link to='/'onClick={(e)=>logOut(e)}>
+            LogOut</Link></li>
+        </>
+    ) : null }
      
    
    <li>  <div className="header">
