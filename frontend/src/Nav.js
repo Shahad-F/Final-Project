@@ -44,7 +44,7 @@ let token = localStorage.getItem("token");
     return (
         <>
     
-         <Router>
+          
 
  
 <ul >
@@ -88,7 +88,7 @@ let token = localStorage.getItem("token");
 
 </Routes>
 
-         </Router>
+         
         
         </>
       );
