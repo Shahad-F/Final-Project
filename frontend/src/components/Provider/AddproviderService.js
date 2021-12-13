@@ -14,7 +14,7 @@
 function AddProviderService({data}) {
     
     const {_id} =useParams();
-    console.log(_id+"heee")
+     
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
@@ -22,6 +22,22 @@ function AddProviderService({data}) {
     const[Phone,setPhone]=useState();
     const[Price,setPrice]=useState();
 // ................................................................................................................................
+
+
+ 
+
+
+// display all cards
+    useEffect(()=>{
+
+        axios.get(`http://localhost:3030/services/${_id}`)
+       .then((res)=>{
+         console.log(res.data)
+        setService(res.data.service)
+        setLoading(false)
+         
+})
+},[])
 
 
 let decodedData;
@@ -39,19 +55,6 @@ if(storedToken){
     }
 
 }
-
-
-// display all cards
-    useEffect(()=>{
-
-        axios.get(`http://localhost:3030/services/${_id}`)
-       .then((res)=>{
-         console.log(res.data)
-        setService(res.data.service)
-        setLoading(false)
-         
-})
-},[])
 // add new card
 const handelAdd=(e)=>{
     e.preventDefault()
@@ -178,17 +181,6 @@ backgroundAttachment: 'fixed',
         }}
 
     })()}
-
-
-
-                 <div>
-                 {/* <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
-                 <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '} */}
-
-                 </div>
-
-
-
              </Card>
          })}
      </div>
