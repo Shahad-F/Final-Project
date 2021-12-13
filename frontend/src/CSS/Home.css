@@ -6,10 +6,10 @@
   
 
 ul{
-    width: 80%;
+    /* width: 80%; */
     list-style-type: none;
     overflow: hidden;
-    border: 1px solid black;
+   
    
 }
 
@@ -86,7 +86,7 @@ h2{
   font-size: 100%;
 }
 .carImage{
-  margin-top:10ch;
+  margin-top:15ch;
   margin-left: 9ch;
   
 }

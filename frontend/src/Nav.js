@@ -73,8 +73,10 @@ let token = localStorage.getItem("token");
  
   
     
-   <div className="header"><Logo/> 
+       <div className="header">
+           <Logo/> 
        </div>  
+
        </nav>
      
  

@@ -1,13 +1,17 @@
- 
+ nav{
+     display:grid;
+     grid-template-columns: 1fr  1fr;
+ }
 .header{
-    width: 10%;
-    /* margin-left: 23ch; */
-    border: solid black;
+    
+     
+    width: 25%;
+    margin-top: 1ch;
 }
  
 .footer{
     margin-top: 6ch;
-   
+   font-family: 'Exo';
     padding: 1ch;
     background:rgb(49, 47, 47);
 }
