@@ -1,7 +1,8 @@
  
 .header{
-    
-    margin-left: 23ch;
+    width: 10%;
+    /* margin-left: 23ch; */
+    border: solid black;
 }
  
 .footer{

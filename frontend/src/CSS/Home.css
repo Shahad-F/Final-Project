@@ -6,7 +6,7 @@
   
 
 ul{
-    width: 98%;
+    width: 80%;
     list-style-type: none;
     overflow: hidden;
     border: 1px solid black;
@@ -15,6 +15,7 @@ ul{
 
 li{
     float:left;
+     
 }
 
 li a{

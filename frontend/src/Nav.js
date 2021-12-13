@@ -45,7 +45,7 @@ let token = localStorage.getItem("token");
         <>
     
           
-     
+     <nav> 
  
 <ul >
 
@@ -68,14 +68,15 @@ let token = localStorage.getItem("token");
          </>
      ) : null}
    
-   <li>  
-    <div className="header">
-    <Logo/>
-    </div>
-    </li>
+    
 </ul>
  
- 
+  
+    
+   <div className="header"><Logo/> 
+       </div>  
+       </nav>
+     
  
 
 
