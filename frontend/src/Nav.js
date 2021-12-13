@@ -53,8 +53,11 @@ let token = localStorage.getItem("token");
     <Container>
 {/* <ul > */}
 
-    <li><Link exact to='/'>Home</Link></li>
-    <li><Link to='/About'>About</Link></li>
+    <Navbar.Brand><Link exact to='/'>Home</Link></Navbar.Brand>
+    <Nav className="me-auto"> 
+    
+    <Nav.Link><Link to='/About'>About</Link></Nav.Link>
+        
     <li><Link  to='/Contact'>Contact</Link></li>
     <li><Link to='/Service'>Service</Link></li>
 
@@ -75,6 +78,7 @@ let token = localStorage.getItem("token");
    <li>  <div className="header">
     <Logo/>
     </div></li>
+    </Nav>
     </Container>
     </Navbar>
 {/* </ul> */}
