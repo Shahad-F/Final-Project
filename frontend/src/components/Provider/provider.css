@@ -24,6 +24,8 @@ Button{
  .lineTitle{
      font-family: 'Fuzzy Bubbles', curs;
      text-align: center;
-     color:rgb(180, 117, 117);
+     color:rgb(190, 68, 68);
+     font-weight: bolder;
+     font-size: 300%;
  }
   

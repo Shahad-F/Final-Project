@@ -29,18 +29,18 @@ function ServiceHome() {
         
     return ( <>
     
-    <h2>Service Home</h2>
+    <h2 className="lineTitle">Service Home</h2>
 
     <div className="bigBox">
     {service.map((item ,index)=>{
         return <div key={index} className="box">
        
        <img src={item.image} alt='' width={200}/>
-       <div className="title">{item.nameOfService}
+       <h6 className="title">{item.nameOfService}
        
-       </div>
+       </h6>
       
-<h2><Link to={`/AddProviderService/${item._id}`}>See More</Link></h2>
+<p><Link to={`/AddProviderService/${item._id}`}>See More</Link></p>
        
 
         </div>

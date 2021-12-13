@@ -23,7 +23,7 @@ console.log('hgghjjj')
         }
 
     return ( <>
-    <h1>All services</h1>
+    <h1 className="lineTitle">All services</h1>
     <div className="bigBox"> 
     {service.map((item ,index)=>{
         return <div key={index} className="box">
