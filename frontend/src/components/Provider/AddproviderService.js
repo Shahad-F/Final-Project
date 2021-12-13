@@ -3,6 +3,7 @@
  import React, { useEffect ,useState} from "react";
  import { useParams,useNavigate } from "react-router-dom";
  import axios from "axios";
+ import jwt_decode from 'jwt-decode' 
  import swal from 'sweetalert';
  import './provider.css'
  
@@ -20,8 +21,27 @@ function AddProviderService({data}) {
     const[UserName,setUserName]=useState();
     const[Phone,setPhone]=useState();
     const[Price,setPrice]=useState();
+// ................................................................................................................................
 
 
+let decodedData;
+
+const storedToken = localStorage.getItem("token");
+if(storedToken){
+    decodedData = jwt_decode(storedToken ,{payload:true});
+    console.log(decodedData);
+
+    let expirationDate = decodedData.exp;
+    var current_time = Date.now() / 1000;
+
+    if(expirationDate < current_time){
+        localStorage.removeItem("token")
+    }
+
+}
+
+
+// display all cards
     useEffect(()=>{
 
         axios.get(`http://localhost:3030/services/${_id}`)
@@ -32,7 +52,7 @@ function AddProviderService({data}) {
          
 })
 },[])
-// 
+// add new card
 const handelAdd=(e)=>{
     e.preventDefault()
 
@@ -51,6 +71,7 @@ const handelAdd=(e)=>{
       }) 
 }
 // functions 
+// edit card
 
 const habdeledit=(id)=>{
 
@@ -66,7 +87,7 @@ const habdeledit=(id)=>{
 
     }))
 }
-// 
+// delete card
 const habdeldelete =(id)=>{
 
     swal({
@@ -142,11 +163,32 @@ backgroundAttachment: 'fixed',
                   
                  <Card.Text>Price :{item.price}</Card.Text>
 
+
+    {(function(){
+
+    if(decodedData != undefined){
+        if(decodedData.data == _id){
+    return(<>
+
+       <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
+       <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '}
+
+
+    </>)
+        }}
+
+    })()}
+
+
+
                  <div>
-                 <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
-                 <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '}
+                 {/* <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
+                 <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '} */}
 
                  </div>
+
+
+
              </Card>
          })}
      </div>
