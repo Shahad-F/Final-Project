@@ -61,31 +61,20 @@ const handelAdd=(e)=>{
 
     <div  >
     
-    {/* <div style={{backgroundImage:`url(${service.image})`,
-    backgroundRepeat: 'no-repeat',
-    width: "400%",
-    height: "400px",
-      }}>ffff</div> */}
+     
              
          
 <Form className='ServiceParent'
 style={{backgroundImage:`url(${service.image})`,
 backgroundRepeat: 'no-repeat',
-width: "100%",
-height: "400px",
+// width: "100%",
+height: "600px",
 backgroundPosition: 'center',
 backgroundSize: 'cover',
- 
-  }} >
+backgroundAttachment: 'fixed',
+ }} >
 
-{/* <div style={{backgroundImage:`url(${service.image})`,
-    backgroundRepeat: 'no-repeat',
-    width: "100%",
-    height: "400px",
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-      }}>ffff</div> */}
-      <Form> 
+     <Form> 
 <Form.Group className="mb-3" >
       <Form.Control type="text" placeholder="UserName" 
      onChange ={e=>setUserName(e.target.value)} />
@@ -107,18 +96,6 @@ backgroundSize: 'cover',
   </Form>
 </Form>
 
-
-   
-
-            <div  className="imgBox">
-             
-             
-             {/* <Col xs={6} md={4}  >
-              
-             <Image src={service.image} roundedCircle width={430} />
-             </Col> */}
- 
-            </div>
       
             </div>
      
