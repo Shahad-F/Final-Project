@@ -87,7 +87,7 @@ const habdeledit=(id)=>{
         icon:'success'
       })
     axios.put(`http://localhost:3030/providers/provider/${_id}/${id}`,
-    { userName:UserName,phone:Phone,price:Price})
+    { userName:UserName,phone:Phone,price:Price,userId:UserId})
     .then((res=>{
         console.log(res.data)
         setService(res.data)
