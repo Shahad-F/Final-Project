@@ -58,12 +58,13 @@ create: async(req,res)=>{
     }
 
 },
-update: async(req,res)=>{
+edit: async(req,res)=>{
+
 
 const Pid = req.params.Pid;
 const service = await Service.findById(req.params.Sid)
 
-let editService = new Book({
+let editService = new Provider({
 
         userName:req.body.userName,
         phone:req.body.phone,
@@ -72,13 +73,28 @@ let editService = new Book({
 if(!service){
     return res.status(404).send()
 }
-console(service)
-await service.providers.pull({_id:Pid});
+console.log(service)
+
+await service.providers.pull({_id: Pid});
 await service.providers.push(editService);
 await service.save()
 res.status(200).send(service)
+console.log(service)
 
+},
+remove: async(req, res)=>{
 
+const Pid = req.params.Pid;
+const service = await Service.findById(req.params.Sid)
+
+if(!service){
+    return res.status(404).send()
+}
+
+await service.providers.pull({_id: Pid});
+await service.providers.save()
+res.status(200).send(service)
+console.log(service)
 },
 signUp:(req,res)=>{
 
