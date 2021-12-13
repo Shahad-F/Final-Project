@@ -70,7 +70,8 @@ let editService = new Provider({
 
         userName:req.body.userName,
         phone:req.body.phone,
-        price:req.body.price
+        price:req.body.price,
+        userId:req.body.userId
 })
 if(!service){
     return res.status(404).send()
