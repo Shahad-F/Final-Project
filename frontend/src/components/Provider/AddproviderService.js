@@ -97,7 +97,7 @@ const habdeldelete =(id)=>{
 style={{backgroundImage:`url(${service.image})`,
 backgroundRepeat: 'no-repeat',
 // width: "100%",
-height: "600px",
+height: "300px",
 backgroundPosition: 'center',
 backgroundSize: 'cover',
 backgroundAttachment: 'fixed',
@@ -121,7 +121,8 @@ backgroundAttachment: 'fixed',
 
   </Form.Group>
 
-  <Button variant="outline-success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
+  <Button variant="success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
+  
   </Form>
 </Form>
 
