@@ -10,6 +10,7 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
  import { Form ,Col,Image,Card} from 'react-bootstrap';
+ 
 
 function AddProviderService({data}) {
     
