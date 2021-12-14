@@ -147,7 +147,7 @@ onClick={(e)=>handelAddNewService(e)}
       
 <br></br>
 
-       <div className="BTN"> 
+       <div  > 
 
        <Button variant="outline-warning" className="Cardbtn-1" 
         onClick={()=>handelEditService(item._id)}>Updae</Button>{' '}

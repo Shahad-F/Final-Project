@@ -1,15 +1,36 @@
 
 .ServiceParent{
-    /* display: grid;
-    grid-template-columns: 1fr  1fr; */
-    width: 60%;
+    width: 50%;
     margin: 4ch;
     padding: 3ch;
     border-radius: 8px;
-    background:rgba(128, 128, 128, 0.445); 
+    background:rgba(185, 144, 144, 0.445); 
     font-family: 'Fuzzy Bubbles', cursive;
 }
- 
+ .addBTN{
+     width: 35%;
+     padding: 1ch;
+     font-size:100%;
+     margin:1ch;
+     margin-left:8ch;
+ }
+ label{
+     font-family: exo;
+     color:rgba(17, 1, 1, 0.952);
+     font-weight: bolder;
+ }
+ .INPUT{
+     width: 80%;
+     color:brown;
+     
+ }
+ .BOX{
+     margin-left: 8ch;
+ }
+.BTN{
+    margin: 1ch;
+margin-left: 9ch;
+}
  
  .container{
      display:grid;

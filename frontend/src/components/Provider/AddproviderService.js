@@ -119,19 +119,68 @@ const habdeldelete =(id)=>{
     <div  >
     
      
-             
-         
-<Form className='ServiceParent'
-// style={{backgroundImage:
+    <Form  style={{
+    backgroundImage:
+     `url(${service.image})`,
     
-// backgroundRepeat: 'no-repeat',
-//  width: "100%",}}
-// height: "300px",
-// backgroundPosition: 'center',
-// backgroundSize: 'cover',
-// backgroundAttachment: 'fixed',
-//  }} >
->
+     backgroundSize: 'cover',
+      width: "100%",
+      height: "600px",
+        backgroundPosition: 'center',
+         
+        // backgroundAttachment: 'fixed'
+        }}>
+
+        </Form>
+
+
+        <Form  className="loginForm"> 
+
+     <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="text"
+       placeholder="UserName"
+       onChange ={e=>setUserName(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">UserName</label>
+   
+   </Form.Floating>
+
+   <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="email"
+       placeholder="Phone number" 
+       onChange ={e=>setPhone(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">Enter your phone number</label>
+   
+   </Form.Floating>
+
+   <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="email"
+       placeholder="Price"
+       onChange ={e=>setPrice(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">Enter your price</label>
+   
+   </Form.Floating>
+
+   <Button variant="outline-danger" 
+onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
+</Form>
+
+
+             {/*  */}
+         
+<Form className='ServiceParent'>
+
 <Card.Img variant="top" src={service.image} width={100} />
 
 <Card.Body>
@@ -139,26 +188,36 @@ const habdeldelete =(id)=>{
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </Card.Text>
-     <Form> 
-<Form.Group className="mb-3" >
-      <Form.Control type="text" placeholder="UserName" 
+     <Form className="BOX"> 
+
+   <Form.Floating className="mb-3" >
+      <Form.Control className="INPUT" type="text" placeholder="UserName" 
      onChange ={e=>setUserName(e.target.value)} />
-  </Form.Group>
+     <label htmlFor="floatingInputCustom">UserName</label>
 
-  <Form.Group className="mb-3" >
-      <Form.Control type="text" placeholder="Phone number" 
+  </Form.Floating >
+
+
+  <Form.Floating className="mb-3" >
+      <Form.Control className="INPUT" type="text" placeholder="Phone number" 
     onChange ={e=>setPhone(e.target.value)} />
-  </Form.Group>
+    <label htmlFor="floatingInputCustom">Enter your phone number</label>
 
-  <Form.Group className="mb-3" >
+  </Form.Floating>
 
-      <Form.Control type="text" placeholder="Price" 
+  <Form.Floating className="mb-3" >
+
+      <Form.Control className="INPUT" type="text" placeholder="Price" 
       onChange ={e=>setPrice(e.target.value)} />
+     <label htmlFor="floatingInputCustom">Enter your price</label>
 
-  </Form.Group>
+  </Form.Floating>
 
-  <Button variant="success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
+  {/* <Button variant="success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '} */}
   
+  <Button variant="outline-danger" className="addBTN" onClick={(e)=>handelAdd(e)}
+  >Add</Button>{' '}
+
   </Form>
   </Card.Body>
 </Form>
@@ -168,16 +227,17 @@ const habdeldelete =(id)=>{
      
          
         
-     <div className="container">
+            <Card border="light" className="BigCard">
 
          {service.providers.map((item)=>{
 
-             return<Card style={{width:"20rem"}}>
-                 <Card.Title>Name Of Provider:{item.userName}</Card.Title>
+             return<Card  border="danger"  style={{ width: '20rem' }}className="smallCard">
+
+                 <Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header>
                  
-                 <Card.Text>Phone Number:{item.phone}</Card.Text>
+                 <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
                   
-                 <Card.Text>Price :{item.price}</Card.Text>
+                 <Card.Text className='text'>Price :{item.price}</Card.Text>
 
 
     {(function(){
@@ -188,10 +248,10 @@ const habdeldelete =(id)=>{
         if(UserId === item.userId){
             console.log("decodedData")
     return(<>
-
-       <Button variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
+<div className="BTN" > 
+       <Button  variant="outline-warning" onClick={()=>habdeledit(item._id)}>Update</Button>{' '}
        <Button variant="outline-danger" onClick={()=>habdeldelete(item._id)}>Delete</Button>{' '}
-
+       </div>
 
     </>)
         }}
@@ -199,7 +259,7 @@ const habdeldelete =(id)=>{
     })()}
              </Card>
          })}
-     </div>
+     </Card>
       
     
     
