@@ -34,23 +34,24 @@ function ServiceHome() {
     
     <h2 className="lineTitle">Service Home</h2>
 
-    <div className="bigBox">
+    <Card className="BigCard">
     {service.map((item ,index)=>{
-        return <div key={index} className="box">
+        return <Card key={index} className="box">
        
-       <img src={item.image} alt=''  />
-       <h6 className="title">{item.nameOfService}</h6>
+       <Image src={item.image} alt='' width={200} roundedCircle />
+       <Card.Body className="title">{item.nameOfService} </Card.Body>
       
-       <Button variant="outline-dark" className='link'>
+      <br></br>
+       <Button variant="link" className='link'>
         <Link to={`/AddProviderService/${item._id}`}>See More</Link></Button>{' '}
 
 
 {/* <p><Link to={`/AddProviderService/${item._id}`}>See More</Link></p> */}
        
 
-        </div>
+        </Card>
     })}
-</div>
+</Card>
 
 
     </> );
