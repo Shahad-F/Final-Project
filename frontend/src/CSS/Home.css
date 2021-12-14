@@ -196,11 +196,8 @@ Button{
 /* Phone */
 @media screen and ( max-width: 767px ) {
   
-  .parent{
-position: relative;
-text-align: center;
-  }
   
+   
   .subject h1{   
     font-size:100%;  
 }
@@ -213,10 +210,8 @@ text-align: center;
   width: 18ch;
 }
  
- .homeBTN{
   
- }
- .image {
+ /* .image {
   border: solid black;
    margin: 2ch;
     
@@ -226,5 +221,5 @@ text-align: center;
    width: 90%;
  
    left: 10%;
- }
+ } */
 }
