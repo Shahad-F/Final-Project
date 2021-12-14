@@ -32,27 +32,28 @@ navigate('/AddNewAdmin')
     
 {/*  */}
 
-<Container className="Parent-"> 
+<Card.Body className="Parent"> 
 
-<Card style={{ width: '20rem' }} className="child">
+<Card style={{ width: '20rem' }} className="child-1">
   <Card.Img variant="top" src="https://www.totaljobs.com/advice/wp-content/uploads/administrator-job-description-1024x576.jpg" />
   {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9BXk0vX11XIFxR64R4fe0afcHbpMMZQAmg&usqp=CAU */}
   {/* https://www.totaljobs.com/advice/wp-content/uploads/administrator-job-description-1024x576.jpg */}
   <Card.Body>
-    <Card.Title> Add New Admin</Card.Title>
+    <Card.Title className="text"> Add New Admin</Card.Title>
      
     <Button variant="primary" onClick={handelAddNewAdmin}>Click here</Button>
   </Card.Body>
 </Card>
-<Card style={{ width: '20rem' }}  className="child">
-  <Card.Img variant="top" src="https://previews.123rf.com/images/ayax/ayax1406/ayax140600193/29202216-auto-service-icons.jpg" />
+
+<Card style={{ width: '20rem' }}  className="child-2">
+  <Card.Img  variant="top"src="https://previews.123rf.com/images/ayax/ayax1406/ayax140600193/29202216-auto-service-icons.jpg" />
   <Card.Body>
-    <Card.Title> Add New Service</Card.Title>
+    <Card.Title className="text"> Add New Service</Card.Title>
      
     <Button variant="primary" onClick={handelAddNewService}>Click here</Button>
   </Card.Body>
 </Card>
-</Container>
+</Card.Body>
 
 {/*  */}
 
