@@ -56,9 +56,9 @@ const handelLogin =(e)=>{
 
     return (  <>
 
-<Form style={{
+<Form  style={{
     backgroundImage:
-     `url(${image})`, 
+     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
      backgroundSize: 'cover',
       width: "100%",
       height: "600px",
@@ -66,7 +66,7 @@ const handelLogin =(e)=>{
         opacity: 0.8,
         // backgroundAttachment: 'fixed'
         }}>
-         hhhhh
+          
 
 </Form>
  
@@ -75,16 +75,17 @@ const handelLogin =(e)=>{
      <h1>Login</h1>
     <Form.Floating className="mb-3">
      
-    <Form.Control
+    <Form.Control className="Input"
       id="floatingInputCustom"
       type="email"
       placeholder="name@gmail.com"
       onChange={e=>setEmail(e.target.value)}
     />
     <label htmlFor="floatingInputCustom">Email address</label>
+  
   </Form.Floating>
   <Form.Floating>
-    <Form.Control
+    <Form.Control  className="Input"
       id="floatingPasswordCustom"
       type="password"
       placeholder="Password"

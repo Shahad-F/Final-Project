@@ -92,35 +92,46 @@ h2{
   grid-template-columns: 1fr  1fr
 }
 .loginForm{ 
-  /* border: 1px solid black;
+  position: absolute;
+ 
   margin: 5ch;
   padding: 5ch;
-  margin-left: 44ch;
-  margin-right: 44ch;
+  top: 15%;
+   width: 35%;
+  
   border-radius: 20px;
-  background-color: rgba(222, 184, 135, 0.534); */
+  background-color: rgba(222, 135, 135, 0.281);
 
     
 }
 
-.loginForm input{
-
-    /* padding: 1.2ch;
+.loginForm .Input{
+    padding: 1.2ch;
     font-family: 'Fuzzy Bubbles', cursive;
     font-size: 100%;
     color:rgb(185, 26, 26);
     font-weight: bold;
     margin: 2ch;
     border-radius: 8px;
-    width: 80%; */
+    width: 90%;
+}
+.loginForm label{
+  font-family: 'Fuzzy Bubbles', cursive;
+   color:rgb(207, 97, 97);
+  font-weight: bold;
+  margin-left: 2ch;
 }
 .loginForm h1{ 
     font-weight: bolder;
-    color:rgb(207, 97, 97);
+    font-size: 300%;
+    color:rgb(194, 24, 24); 
     font-family: "Exo";
     text-align: center;
     padding-bottom: 1ch;
     
+}
+.loginForm Button{
+  margin-left: 14ch;
 }
 
 .LOGIN{
@@ -175,9 +186,13 @@ Button{
  }
  .subject span{
    color: rgb(235, 23, 23);
-   font-size: 100%;
+   font-size: 100%;}
+
+   .loginForm{
+  border: solid black;
+   }
   
-}
+
  
 .homeBTN  Button{
   
