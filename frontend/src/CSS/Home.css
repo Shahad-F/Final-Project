@@ -196,8 +196,6 @@ Button{
 /* Phone */
 @media screen and ( max-width: 767px ) {
   
-  
-   
   .subject h1{   
     font-size:100%;  
 }
@@ -211,15 +209,12 @@ Button{
 }
  
   
- /* .image {
-  border: solid black;
+ .image {
+   border: solid black;
    margin: 2ch;
-    
-   width: 100%;
  }
  .image Image{
-   width: 90%;
- 
-   left: 10%;
- } */
+    
+    right: 20%;
+ }
 }
