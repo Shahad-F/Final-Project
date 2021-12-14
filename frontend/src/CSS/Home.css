@@ -189,7 +189,9 @@ Button{
    font-size: 100%;}
 
    .loginForm{
-  border: solid black;
+   
+  width: 55%;
+  top:45%
    }
   
 
@@ -234,4 +236,13 @@ Button{
     
     right: 20%;
  }
+ .loginForm{
+   
+  width: 75%;
+  top: 55%;
+   }
+   .loginForm .Input{
+     width: 90%;
+     margin-right: 4ch;
+   }
 }
