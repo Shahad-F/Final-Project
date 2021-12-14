@@ -26,7 +26,7 @@ navigate('/AddNewAdmin')
     }
     return ( <>
     
-    <Button variant="outline-secondary"
+    <Button variant="outline-secondary" className='back'
     onClick={handelBack}
     >Back to home page</Button>{' '}
     

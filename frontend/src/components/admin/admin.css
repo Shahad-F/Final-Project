@@ -19,7 +19,10 @@
  background-color: rgba(226, 195, 185, 0.76);
  margin-left: 12ch;  
 }
- 
+ .back{
+     margin: 2ch;
+     margin-left: 12ch;
+ }
 .btn{
      
 }
