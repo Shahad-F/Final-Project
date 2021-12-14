@@ -11,8 +11,10 @@ So this website will help her.
 ## User Stories.
 
 ### Admin
-##### Login: As an admin, I can log in on the platform so that I can use the website to make edits it.<br />
-##### Add New AdminAs an admin, I can add a new admin.<br />
+#### Login:<br />
+ As an admin, I can log in on the platform so that I can use the website to make edits it.<br />
+#### Add New Admin <br />
+As an admin, I can add a new admin.<br />
 -**Add New Service :**As an admin, I can add new services.<br />
 -**Delete Admin :**As an admin, I can delete an admin.<br />
 -**Delete Service :**As an admin, I can delete a service. <br />
