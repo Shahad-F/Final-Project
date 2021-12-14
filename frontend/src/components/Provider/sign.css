@@ -1,21 +1,18 @@
 
-Row{
+ 
+.signupForm{
 
-    
+    position: absolute;
+    margin: 5ch;
+    padding: 5ch;
+    top: 15%;
+     width: 50%;
+      
+    border-radius: 20px;
+    background-color: rgba(222, 135, 135, 0.281);
 }
-.SignForm{
-
- border:solid rgb(214, 188, 155);
- margin: 6ch;
- margin-top: 9ch;
- /* text-align: center; */
- margin-left: 32ch;
- /* width: 50%; */
-border-radius: 8px;
-background:rgba(226, 199, 164, 0.575);
-
-}
-.SignForm input{ 
+.signupForm input{ 
+     
     padding: 1.2ch;
     font-family: 'Fuzzy Bubbles', cursive;
     font-size: 100%;
@@ -23,15 +20,30 @@ background:rgba(226, 199, 164, 0.575);
     font-weight: bold;
     margin: 2ch;
     border-radius: 8px;
-    width: 55%;
+    width: 90%;
  }
- .SignForm h2{
-    padding: 1ch;
-   font-weight: bolder;
-   color:rgb(109, 20, 20);
+ .signupForm label{
+    font-family: 'Fuzzy Bubbles', cursive;
+    color:rgb(207, 97, 97);
+   font-weight: bold;
+   margin-left: 2ch;
+ }
+
+
+ .signupForm h1{
+    font-weight: bolder;
+    font-size: 300%;
+    color:rgb(194, 24, 24); 
+    font-family: "Exo";
+    text-align: center;
+    padding-bottom: 1ch;
 }
- 
-.SignForm p{
+ .signupForm Button{
+    margin-left: 22ch;
+ }
+.signupForm p{
     color:black;
+    font-weight: bolder;
+    font-size: 130%;
     font-family: 'Fuzzy Bubbles', cursive;
 }

@@ -8,7 +8,7 @@ import{useNavigate} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col ,Row} from 'react-bootstrap';
+ import { Form ,Col ,Row ,FloatingLabel} from 'react-bootstrap';
 function SignUp() {
     const navigate=useNavigate()
     const [provider,setProvider]=useState([])
@@ -57,29 +57,101 @@ axios.post('http://localhost:3030/providers/signUp',
 
     return ( <>
 
-<Row className="SignForm">
-<h2>SignUp</h2>
-<Col md>
-<Form.Control type="text" placeholder="first name" 
+<Form  style={{
+    backgroundImage:
+     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
+     backgroundSize: 'cover',
+      width: "100%",
+      height: "1000px",
+        backgroundPosition: 'center',
+        opacity: 0.8,
+        // backgroundAttachment: 'fixed'
+        }}>
+          
+
+</Form>
+{/*  */}
+ 
+
+<Form className="signupForm">
+
+<h1>SignUp</h1>
+<Row> 
+  <Col md> 
+
+<Form.Floating className="mb-3">
+<Form.Control type="text"  id="fname" 
+placeholder="first name" 
 onChange={e=>setFName(e.target.value)}/>
-<Form.Control type="text" placeholder="last name"
-onChange={e=>setLName(e.target.value)} />
-<Form.Control type="text" placeholder="phone number"
-onChange={e=>setPhone(e.target.value)} />
-<Form.Control type="text" placeholder="image"
-onChange={e=>setImage(e.target.value)} />
-<Form.Control type="text" placeholder="your city" 
-onChange={e=>setCity(e.target.value)}/>
-<Form.Control type="email" placeholder="name@gmail.com" 
-onChange={e=>setEmail(e.target.value)}/>
-<Form.Control type="password" placeholder="your password"
-onChange={e=>setPassword(e.target.value)} />
+
+<label htmlFor="fname">First Name</label> 
+ </Form.Floating>
+
+ </Col>
+
+ <Col md>
+<Form.Floating> 
+<Form.Control type="text"  id='lname'
+onChange={e=>setLName(e.target.value)} 
+placeholder="last name" />
+<label htmlFor="lname">Last Name</label>
+</Form.Floating>
 </Col>
-<Button variant="outline-dark"
+</Row>
+<Row> 
+<Col md-1> 
+<Form.Floating> 
+<Form.Control type="text"  id="phone"
+onChange={e=>setPhone(e.target.value)}
+placeholder="Phone number"  />
+<label htmlFor="phone">Phone Number</label>
+</Form.Floating>
+</Col>
+<Col md-1> 
+<Form.Floating> 
+<Form.Control type="text"  id='city'
+onChange={e=>setCity(e.target.value)}
+placeholder="Your City" />
+<label htmlFor="city">Your City</label>
+</Form.Floating>
+</Col>
+</Row>
+
+<Form.Floating> 
+<Form.Control type="text"  id='image'
+onChange={e=>setImage(e.target.value)} 
+placeholder="fYour image" />
+<label htmlFor="image">Image</label>
+</Form.Floating>
+
+
+ 
+
+
+<Form.Floating> 
+<Form.Control type="email" id='email'
+onChange={e=>setEmail(e.target.value)}
+placeholder="Email address" />
+<label htmlFor="email">Email address</label>
+</Form.Floating>
+
+
+<Form.Floating> 
+<Form.Control type="password" id='password' 
+onChange={e=>setPassword(e.target.value)} 
+placeholder="pasword" />
+
+<label htmlFor="password">Password</label>
+</Form.Floating>
+
+ 
+
+<Button variant="outline-danger"
  onClick={(e)=>SignUp(e)}>Sign up</Button>
 <p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
- 
-</Row>
+
+
+</Form>
 
     </> );
 }
