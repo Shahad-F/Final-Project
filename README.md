@@ -34,7 +34,7 @@ As an admin, I can edit the service.<br/>
 
 > ***Signup:***
  As a service provider, I can sign up on the platform so that I can use the website.<br/>
-> *** Login:***
+> ***Login:***
  As a service provider, I can log in to the website so that I can use the website.<br/>
 > ***Logout:***
 As a user, I can log out from the website.<br/>
