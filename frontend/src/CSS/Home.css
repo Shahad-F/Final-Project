@@ -1,25 +1,21 @@
 
- 
- 
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
   
 
 ul{
-    /* width: 80%; */
     list-style-type: none;
     overflow: hidden;  
 }
 
 li{
     float:left;
- 
 }
 
 li a{
      color: rgb(136, 20, 20);
      font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-    font-size:15px;
+     font-size:15px;
     margin: 2ch;
     display: block;
     text-align: center;
@@ -31,6 +27,7 @@ li a{
 li a:hover{ 
     color: rgb(233, 131, 131);
     font-weight: bolder;
+    
     text-decoration: underline;
     text-decoration-color:rgb(109, 20, 20) ;
 }
@@ -51,7 +48,7 @@ h2{
 }
   .homeBTN{
     margin-top: 3ch;
-    /* border: 1px solid black; */
+    
   }
  .homeBTN Button{
     
@@ -70,7 +67,7 @@ h2{
 }
 .image{
   /* border: 1px solid black; */
-  margin-top: 7ch;
+  margin-top: 11ch;
 
 }
  
@@ -90,7 +87,7 @@ h2{
 }
  
 .parent{
-  border: 1px solid black;
+  
   display: grid;
   grid-template-columns: 1fr  1fr
 }
