@@ -10,7 +10,7 @@ So this website will help her.
 
 ## User Stories.
 
-*** Admin*** 
+**Admin**
 -**Signup** As a user I can sign up 
 
 
