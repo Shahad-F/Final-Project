@@ -13,12 +13,12 @@ So this website will help her.
 ### Admin
 #### Login:<br />
  As an admin, I can log in on the platform so that I can use the website to make edits it.<br />
-#### Add New Admin <br />
+### Add New Admin <br />
 As an admin, I can add a new admin.<br />
--**Add New Service :**As an admin, I can add new services.<br />
--**Delete Admin :**As an admin, I can delete an admin.<br />
--**Delete Service :**As an admin, I can delete a service. <br />
--**Edit Service :**As an admin, I can edit the service.<br />
+-**Add New Service :**As an admin, I can add new services.
+-**Delete Admin :**As an admin, I can delete an admin.
+-**Delete Service :**As an admin, I can delete a service. 
+-**Edit Service :**As an admin, I can edit the service.
 
 
 
