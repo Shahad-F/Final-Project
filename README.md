@@ -15,15 +15,19 @@ So this website will help her.
 > ***Login:***
  As an admin, I can log in on the platform so that I can use the website to make edits it.
 
-> Add New Admin 
+> ***Add New Admin:*** 
 As an admin, I can add a new admin.<br/>
->Add New Service:
+
+>***Add New Service:***
 As an admin, I can add new services.<br/>
->Delete Admin:
+
+>***Delete Admin:***
  As an admin, I can delete an admin.<br/>
->Delete Service:
+
+>***Delete Service:***
  As an admin, I can delete a service. <br/>
->Edit Service:
+
+>***Edit Service:***
 As an admin, I can edit the service.<br/>
 ---
 
