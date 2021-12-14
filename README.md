@@ -18,16 +18,12 @@ So this website will help her.
 As an admin, I can log out from the website.<br/>
 > ***Add New Admin:*** 
 As an admin, I can add a new admin.<br/>
-
 >***Add New Service:***
 As an admin, I can add new services.<br/>
-
 >***Delete Admin:***
  As an admin, I can delete an admin.<br/>
-
 >***Delete Service:***
  As an admin, I can delete a service. <br/>
-
 >***Edit Service:***
 As an admin, I can edit the service.<br/>
 ---
