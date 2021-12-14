@@ -5,7 +5,7 @@ import{useNavigate} from 'react-router-dom'
 import jwt from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert'
-import image from '../../img/image/Picture2.png'
+import image from '../../img/carLogin.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col ,Card,Row,FloatingLabel,Button,Form,Image} from 'react-bootstrap';
  
@@ -56,16 +56,22 @@ const handelLogin =(e)=>{
 
     return (  <>
 
-<div style={{
+<Form style={{
     backgroundImage:
-     `url("https://cdn.wallpapersafari.com/87/91/AiZjEv.jpg" )`, 
-     backgroundSize: 'cover'}}>
+     `url(${image})`, 
+     backgroundSize: 'cover',
+      width: "100%",
+      height: "600px",
+        backgroundPosition: 'center',
+        opacity: 0.8,
+        // backgroundAttachment: 'fixed'
+        }}>
          hhhhh
 
-</div>
+</Form>
  
     {/*  */}
-    {/* <Form  className="loginForm"> 
+    <Form  className="loginForm"> 
      <h1>Login</h1>
     <Form.Floating className="mb-3">
      
@@ -91,24 +97,9 @@ const handelLogin =(e)=>{
   onClick={(e)=>handelLogin(e)}
   >Login</Button>{' '}
 
-</Form> */}
+</Form>
  
-    {/* <form className="loginForm">
-        
-        <input type='email'
-        placeholder='Enter your email address.'
-        onChange={e=>setEmail(e.target.value)}
-        /> */}
-{/* <br/>
-
-<input type='password'
-        placeholder='Enter your password.'
-        onChange={e=>setPassword(e.target.value)}
-        /> */}
-
-
-{/* <button className='LOGIN'
-  > Login</button> */}
+     
  
      
      
