@@ -6,10 +6,19 @@
     margin-left: 10ch;
     margin-right: 10ch;
     border: solid rgb(199, 44, 44);
-    background-color: black;
+     
 }
 .smallCard{
-     
+     border-radius:10px;
     margin: 2ch;
-     
+}
+.Header{
+    font-family: "Exo";
+    color:black;
+    font-weight:bolder;
+    font-size: 130%;
+}
+.Cardbtn{
+    margin-left: 13ch;
+    margin-top: 2ch;
 }

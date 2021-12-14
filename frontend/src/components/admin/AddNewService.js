@@ -3,7 +3,9 @@ import {useState,useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert';
 import './service.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card,Button,Container,Form,CardGroup,Row} from 'react-bootstrap';
+ 
 
 export default function AddNewService () {
 
@@ -81,25 +83,61 @@ const handelAddNewService =()=>{
 
     return ( <>
 
-<form className='NewForm'>
 
-<h1>Add New Service</h1>
+<Form  style={{
+    backgroundImage:
+     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
+     backgroundSize: 'cover',
+      width: "100%",
+      height: "600px",
+        backgroundPosition: 'center',
+        opacity: 0.8,
+        // backgroundAttachment: 'fixed'
+        }}>
 
-<input type='text' name='name'
-placeholder='Enter name of service'
-onChange={ e=>setName(e.target.value)}/>
+        </Form>
 
-<input type='text' name='image'
-placeholder='Enter image of service'
-onChange={ e=>setImage(e.target.value)}/>
+{/*  */}
 
-<button className="addbtn" onClick={(e)=>handelAddNewService(e)}>Add</button>
-</form>
+<Form  className="loginForm"> 
+     <h1>Add New Service</h1>
+
+     <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="text"
+       placeholder='Enter name of service'
+       onChange={ e=>setName(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">Enter name of service</label>
+   
+   </Form.Floating>
 
 
-<div className="bigBox">
+   <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="email"
+       placeholder='Enter image of service'
+       onChange={ e=>setImage(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">Enter image of service</label>
+   
+   </Form.Floating>
+
+   <Button variant="outline-danger" 
+onClick={(e)=>handelAddNewService(e)}
+  >Add</Button>{' '}
+   </Form>
+
+ 
+
+
+<Card className="bigBox">
     {service.map((item ,index)=>{
-        return <div key={index} className="box">
+        return <Card key={index} className="box">
        
        <img src={item.image} alt='' width={200}/>
        <div className="title">{item.nameOfService}</div>
@@ -109,9 +147,9 @@ onChange={ e=>setImage(e.target.value)}/>
        <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
        </div>
         
-        </div>
+        </Card>
     })}
-</div>
+</Card>
 
     </> );
 }

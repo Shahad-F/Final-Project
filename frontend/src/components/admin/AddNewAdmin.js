@@ -185,18 +185,17 @@ onClick={(e)=>handelAdd(e)}
         <Card border="light"   className="BigCard"  >
 
         {admin.map((get,index)=>{
-        return <Card key={index} style={{ width: '20rem' }}className="smallCard" >
-        <Card.Header>Name : {get.name}</Card.Header>
+        return <Card key={index} border="danger"  style={{ width: '20rem' }}className="smallCard" >
+        <Card.Header className='Header' >Name : {get.name}</Card.Header>
         
         <Card.Body>
-      <Card.Title> {get.email}</Card.Title>
+      <Card.Title className='text'> {get.email}</Card.Title>
        
-      <Button variant="outline-danger" 
+      <Button variant="outline-danger" className="Cardbtn" 
 onClick={()=>handelDelete(get._id,get.name)}
   >Delete</Button>{' '}
       </Card.Body>
 
-            
              </Card>
 })}
 
