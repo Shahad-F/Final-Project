@@ -86,7 +86,9 @@ const handelAddNewService =()=>{
 
 <Form  style={{
     backgroundImage:
-     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
+     `url("https://d1p2fuior9l0tb.cloudfront.net/wp-content/uploads/2020/02/26075319/LEDE-1.-Bentley-FS_6.jpg")`, 
+    
+    
      backgroundSize: 'cover',
       width: "100%",
       height: "600px",
@@ -136,7 +138,7 @@ onClick={(e)=>handelAddNewService(e)}
 
 
 <Card className="BigCard">
-    
+
     {service.map((item ,index)=>{
         return <Card key={index} className="box">
        

@@ -2,6 +2,11 @@
   import {useState,useEffect} from 'react'
   import axios from 'axios'
   import '../components/admin/service.css'
+
+  import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card,Button,Container,Form,CardGroup,Row,Image} from 'react-bootstrap';
+ 
+
   export default  function Service () {
 
     const [service,setService]=useState();
@@ -9,7 +14,7 @@
     const [loading,setLoading] = useState(true);
 
     useEffect(()=>{ 
-console.log('hgghjjj')
+ 
         axios.get('http://localhost:3030/services')
         .then((res)=>{
             console.log(res.data)
@@ -24,16 +29,19 @@ console.log('hgghjjj')
 
     return ( <>
     <h1 className="lineTitle">All services</h1>
-    <div className="bigBox"> 
+
+
+    <Card className="BigCard">
     {service.map((item ,index)=>{
-        return <div key={index} className="box">
+
+        return <Card key={index} className="box">
        
-       <img src={item.image} alt='' width={200}/>
-       <div className="title">{item.nameOfService}</div>
+       <Image src={item.image} alt='' width={200}/>
+       <Card.Body className="title">{item.nameOfService}</Card.Body>
        
-        </div>
+        </Card>
     })}
-    </div>
+    </Card>
     </> );
 }
 
