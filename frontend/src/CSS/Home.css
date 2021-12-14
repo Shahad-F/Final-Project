@@ -189,28 +189,42 @@ Button{
    
  }
  .image Image{
-  
   width: 80%;
  }
 }
 
 /* Phone */
 @media screen and ( max-width: 767px ) {
+  
+  .parent{
+position: relative;
+text-align: center;
+  }
+  
   .subject h1{   
     font-size:100%;  
 }
 .subject span{
    font-size:100%;
 }
-.carImage >img{
-  width: 100%;
-}
+ 
 .homeBTN >Button{
-    
-  width: 25ch;
+    margin: 1ch;
+  width: 18ch;
 }
  
  .homeBTN{
+  
+ }
+ .image {
   border: solid black;
+   margin: 2ch;
+    
+   width: 100%;
+ }
+ .image Image{
+   width: 90%;
+ 
+   left: 10%;
  }
 }
