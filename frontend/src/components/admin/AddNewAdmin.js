@@ -182,7 +182,7 @@ onClick={(e)=>handelAdd(e)}
      {/*  */}
  
      
-        <Card border="light"   className="BigCard"  >
+        <Card border="light"  className="BigCard"  >
 
         {admin.map((get,index)=>{
         return <Card key={index} border="danger"  style={{ width: '20rem' }}className="smallCard" >
@@ -192,8 +192,8 @@ onClick={(e)=>handelAdd(e)}
       <Card.Title className='text'> {get.email}</Card.Title>
        
       <Button variant="outline-danger" className="Cardbtn" 
-onClick={()=>handelDelete(get._id,get.name)}
-  >Delete</Button>{' '}
+       onClick={()=>handelDelete(get._id,get.name)}
+       >Delete</Button>{' '}
       </Card.Body>
 
              </Card>

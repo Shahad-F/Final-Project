@@ -4,7 +4,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import './service.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card,Button,Container,Form,CardGroup,Row} from 'react-bootstrap';
+import { Card,Button,Container,Form,CardGroup,Row,Image} from 'react-bootstrap';
  
 
 export default function AddNewService () {
@@ -17,7 +17,7 @@ export default function AddNewService () {
     const [loading,setLoading] = useState(true);
 
     const [name,setName] = useState();
-    const [Image,setImage]=useState();
+    const [IMage,setImage]=useState();
     // i want to display all information in screen 
     useEffect(()=>{ 
 
@@ -33,7 +33,7 @@ export default function AddNewService () {
 const handelAddNewService =()=>{
 
     axios.post('http://localhost:3030/services/create', {
-        nameOfService:name,image:Image})
+        nameOfService:name,image:IMage})
 
         .then((res)=>{
             console.log(res.data)
@@ -64,7 +64,7 @@ const handelAddNewService =()=>{
 
     const handelEditService =(id)=>{
         axios.put(`http://localhost:3030/services/${id}/update`,
-        {nameOfService:name,image:Image })
+        {nameOfService:name,image:IMage })
      .then((res)=>{
         console.log(res.data)
         setNewService(res.data)
@@ -135,18 +135,25 @@ onClick={(e)=>handelAddNewService(e)}
  
 
 
-<Card className="bigBox">
+<Card className="BigCard">
+    
     {service.map((item ,index)=>{
         return <Card key={index} className="box">
        
-       <img src={item.image} alt='' width={200}/>
-       <div className="title">{item.nameOfService}</div>
+       <Image src={item.image} alt='' width={200} roundedCircle/>
+       <Card.Body className="title">{item.nameOfService} </Card.Body>
       
-      <div> 
-        <button className="editbtn" onClick={()=>handelEditService(item._id)}>Updae</button>
-       <button className='deletebtn' onClick={()=>handelDeleteService(item._id)}> Delete</button>
-       </div>
-        
+<br></br>
+
+       <div className="BTN"> 
+
+       <Button variant="outline-warning" className="Cardbtn-1" 
+        onClick={()=>handelEditService(item._id)}>Updae</Button>{' '}
+       
+       <Button variant="outline-danger" className="Cardbtn-1" 
+      onClick={()=>handelDeleteService(item._id)}>Delete</Button>{' '}
+</div>
+
         </Card>
     })}
 </Card>

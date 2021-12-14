@@ -5,7 +5,8 @@
     margin: 3ch;
     margin-left: 10ch;
     margin-right: 10ch;
-    border: solid rgb(199, 44, 44);
+    border:none;
+     
      
 }
 .smallCard{
@@ -21,4 +22,27 @@
 .Cardbtn{
     margin-left: 13ch;
     margin-top: 2ch;
+}
+
+/* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+
+    .BigCard{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        margin: 3ch;
+    }
+}
+
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+    .BigCard{
+       
+        display: grid;
+        grid-template-columns: 1fr  ;
+        margin: 3ch;
+    }
+
 }
