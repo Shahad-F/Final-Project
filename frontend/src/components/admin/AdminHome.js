@@ -28,7 +28,7 @@ navigate('/AddNewAdmin')
     
     <Button variant="outline-secondary" className='back'
     onClick={handelBack}
-    >Back to home page</Button>{' '}
+    >Back to Homepage</Button>{' '}
     
 {/*  */}
 
@@ -41,7 +41,7 @@ navigate('/AddNewAdmin')
   <Card.Body>
     <Card.Title className="text"> Add New Admin</Card.Title>
      
-    <Button variant="primary" onClick={handelAddNewAdmin}>Click here</Button>
+    <Button className="Clickbtn" variant="outline-danger" onClick={handelAddNewAdmin}>Click here</Button>
   </Card.Body>
 </Card>
 
@@ -50,7 +50,7 @@ navigate('/AddNewAdmin')
   <Card.Body>
     <Card.Title className="text"> Add New Service</Card.Title>
      
-    <Button variant="primary" onClick={handelAddNewService}>Click here</Button>
+    <Button className="Clickbtn"variant="outline-danger" onClick={handelAddNewService}>Click here</Button>
   </Card.Body>
 </Card>
 </Card.Body>

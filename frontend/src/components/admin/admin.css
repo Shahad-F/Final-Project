@@ -3,8 +3,11 @@
  
 .Parent{
      margin: 3ch;
+     padding: 5ch;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-left: 6ch;
+  
 }
 .text{
     font-family: 'Fuzzy Bubbles', cursive;
@@ -13,7 +16,10 @@
     text-align: center;
     margin-top: 2ch;
 }
- 
+ .Clickbtn{
+     font-family: 'Fuzzy Bubbles', cursive;
+     margin-left: 7ch;
+ }
 .child-1, .child-2{
    
  background-color: rgba(226, 195, 185, 0.76);
@@ -22,6 +28,7 @@
  .back{
      margin: 2ch;
      margin-left: 12ch;
+     border:block;
  }
 .btn{
      
