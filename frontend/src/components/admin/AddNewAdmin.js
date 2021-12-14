@@ -183,19 +183,27 @@ onClick={(e)=>handelAdd(e)}
      {/*  */}
  
     
-        <div className='container'>
+        <Card border="light" style={{ width: '18rem' }}>
 
         {admin.map((get,index)=>{
-        return <div key={index} className='card'>
+        return <Card key={index} >
+        <Card.Header>Name : {get.name}</Card.Header>
+         
 
-            <h3> Name :<span>{get.name}</span> </h3>
-            <h3>Email :<span>{get.email}</span> </h3>
-         <button className='deletebtn' onClick={()=>handelDelete(get._id,get.name)}> Delete</button>
-             </div>
+        <Card.Body>
+      <Card.Title> {get.email}</Card.Title>
+       
+      <Button variant="outline-danger" 
+onClick={()=>handelDelete(get._id,get.name)}
+  >Delete</Button>{' '}
+      </Card.Body>
+
+            
+             </Card>
 })}
 
-    </div>
-
+    {/* </div> */}
+</Card>
     </> );
 }
 
