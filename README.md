@@ -13,8 +13,9 @@ So this website will help her.
 ### 1. Admin
 
 > ***Login:***
- As an admin, I can log in on the platform so that I can use the website to make edits it.
-
+ As an admin, I can log in on the platform so that I can use the website to make edits it.<br/>
+> ***Logout:***
+As an admin, I can log out from the website.<br/>
 > ***Add New Admin:*** 
 As an admin, I can add a new admin.<br/>
 
@@ -37,12 +38,20 @@ As an admin, I can edit the service.<br/>
 > ***Login:***
  As a service provider, I can log in to the website so that I can use the website.<br/>
 > ***Logout:***
-As a user, I can log out from the website.<br/>
+As a service provider, I can log out from the website.<br/>
 >***Add type his service***
 As a service provider, I can add my services to the website.<br/>
-
 >***Edit type his service***
 As a service provider, I can Edit my services to the website.<br/>
 >***Delete type his service***
 As a service provider, I can delete my services to the website.<br/>
+---
+### 3. User
+> ***Signup:***
+As a user, I can sign up on the website so that I can use it when I need it.
+> ***Login:***
+As a user, I can log in on the website so that I can use it when I need it.
+> ***Logout:***
+As a user, I can log out from the website.
+
 ---
