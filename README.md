@@ -30,6 +30,19 @@ As an admin, I can add new services.<br/>
 >***Edit Service:***
 As an admin, I can edit the service.<br/>
 ---
+### 2. Service Provider 
 
+> ***Signup:***
+ As a service provider, I can sign up on the platform so that I can use the website.<br/>
+> *** Login:***
+ As a service provider, I can log in to the website so that I can use the website.<br/>
+> ***Logout:***
+As a user, I can log out from the website.<br/>
+>***Add type his service***
+As a service provider, I can add my services to the website.<br/>
 
-
+>***Edit type his service***
+As a service provider, I can Edit my services to the website.<br/>
+>***Delete type his service***
+As a service provider, I can delete my services to the website.<br/>
+---
