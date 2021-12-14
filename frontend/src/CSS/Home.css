@@ -53,7 +53,7 @@ h2{
     margin-top: 3ch;
     /* border: 1px solid black; */
   }
- .homeBTN >Button{
+ .homeBTN Button{
     
     margin: 2ch;
     margin-left: 15ch;
@@ -69,12 +69,13 @@ h2{
   margin: 1ch;
 }
 .image{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-top: 7ch;
 
 }
+ 
 .subject h1{   
-  border: 1px solid black;
+  /* border: 1px solid black; */
    margin-top: 1ch;
     margin-left: 1ch;
   font-weight: bolder;
@@ -161,31 +162,35 @@ Button{
 
 /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
-    
+   
+  .parent{
+    width: 94%;
+  }
   .subject h1{   
      font-size:100%;  
+      margin-left: 2ch;
+     /* border: solid black; */
  }
  .subject span{
    color: rgb(235, 23, 23);
    font-size: 100%;
   
 }
-.carImage{
-  margin-top:15ch;
-  margin-right: 14ch;
-  border: solid black;
-}
-.carImage >img{
-  width: 150%;
-}
-.homeBTN > Button{
-   
-  border: solid black;
-   /* width: 20ch; */
+ 
+.homeBTN  Button{
+  
+   width: 15ch;
+   margin: 1ch;
+   margin-left: 6ch;
  }
  .homeBTN{
-  border: solid black;
-  margin-left: 4ch;
+  /* border: solid black; */
+  width: 100%;
+   
+ }
+ .image Image{
+  
+  width: 80%;
  }
 }
 
