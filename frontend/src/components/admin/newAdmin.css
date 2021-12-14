@@ -1,14 +1,15 @@
 .BigCard{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding:3ch;
     margin: 3ch;
     margin-left: 10ch;
     margin-right: 10ch;
-    border: solid black;
+    border: solid rgb(199, 44, 44);
+    background-color: black;
 }
 .smallCard{
      
     margin: 2ch;
-    border: solid black;
+     
 }

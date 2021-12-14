@@ -7,7 +7,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import './newAdmin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card,Button,Container,Form} from 'react-bootstrap';
+import { Card,Button,Container,Form,CardGroup,Row} from 'react-bootstrap';
  
 function AddNewAdmin() {
 
@@ -181,14 +181,13 @@ onClick={(e)=>handelAdd(e)}
 
      {/*  */}
  
-    <Card className="BigCard"> 
-        <Card border="light" style={{ width: '18rem' }}   >
+     
+        <Card border="light"   className="BigCard"  >
 
         {admin.map((get,index)=>{
-        return <Card key={index} className="smallCard" >
+        return <Card key={index} style={{ width: '20rem' }}className="smallCard" >
         <Card.Header>Name : {get.name}</Card.Header>
-         
-
+        
         <Card.Body>
       <Card.Title> {get.email}</Card.Title>
        
@@ -203,7 +202,7 @@ onClick={()=>handelDelete(get._id,get.name)}
 
      
 </Card>
-</Card>
+ 
     </> );
 }
 
