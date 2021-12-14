@@ -5,9 +5,9 @@ import{useNavigate} from 'react-router-dom'
 import jwt from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert'
-
+import image from '../../img/image/Picture2.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col ,Row,FloatingLabel,Button,Form} from 'react-bootstrap';
+import { Col ,Card,Row,FloatingLabel,Button,Form,Image} from 'react-bootstrap';
  
 
 
@@ -55,7 +55,17 @@ const handelLogin =(e)=>{
 
 
     return (  <>
-    <Form  className="loginForm"> 
+
+<div style={{
+    backgroundImage:
+     `url("https://cdn.wallpapersafari.com/87/91/AiZjEv.jpg" )`, 
+     backgroundSize: 'cover'}}>
+         hhhhh
+
+</div>
+ 
+    {/*  */}
+    {/* <Form  className="loginForm"> 
      <h1>Login</h1>
     <Form.Floating className="mb-3">
      
@@ -81,7 +91,8 @@ const handelLogin =(e)=>{
   onClick={(e)=>handelLogin(e)}
   >Login</Button>{' '}
 
-</Form>
+</Form> */}
+ 
     {/* <form className="loginForm">
         
         <input type='email'

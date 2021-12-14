@@ -92,20 +92,15 @@ h2{
   grid-template-columns: 1fr  1fr
 }
 .loginForm{ 
-  border: 1px solid black;
+  /* border: 1px solid black;
   margin: 5ch;
   padding: 5ch;
   margin-left: 44ch;
   margin-right: 44ch;
   border-radius: 20px;
-  background-color: rgba(222, 184, 135, 0.534);
-    /* border: 1px solid black;
-    margin: 7ch;
-    margin-left: 40ch;
-    margin-right: 40ch;
-    padding: 1ch;
-    border-radius: 16px;
-    background:rgba(228, 60, 60, 0.363); */
+  background-color: rgba(222, 184, 135, 0.534); */
+
+    
 }
 
 .loginForm input{
