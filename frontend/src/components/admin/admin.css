@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 
-.child-1{
-
-     
-     
-
-}
-.Parent{
-margin-top: 11ch;
+ 
+.Parent-{
+    margin: 5ch;
+    /* position: relative;
+    left: 3ch; */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
+     
 }
  
-
+.child{
+   
+ background-color: rgb(226, 195, 185);
+     /* margin-left: 12ch; */
+     left: 17ch;
+}
+ 
 .btn{
     /* border: 1px solid rgb(7, 22, 110);
     border-width: 2px;
@@ -100,7 +105,7 @@ background:rgba(222, 184, 135, 0.575);
      padding: 3ch;
      border-radius: 8px;
      width: 90%;
-     background:antiquewhite;
+     /* background:antiquewhite; */
  }
  .card h3{
      color:brown;
@@ -110,3 +115,23 @@ background:rgba(222, 184, 135, 0.575);
  .card span{
     font-family: 'Fuzzy Bubbles', cursive;;
  }
+
+ /* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+
+
+    .Parent-{
+
+        border:solid 1px black;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+
+
+}

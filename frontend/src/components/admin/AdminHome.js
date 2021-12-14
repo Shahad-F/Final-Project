@@ -3,7 +3,7 @@ import './admin.css'
 import{useNavigate} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
  
- import { Card,Button,Col} from 'react-bootstrap';
+ import { Card,Button,Container} from 'react-bootstrap';
  
 
 
@@ -32,42 +32,31 @@ navigate('/AddNewAdmin')
     
 {/*  */}
 
-<Card className="Parent"> 
+<Container className="Parent-"> 
 
-<Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src="https://i.pinimg.com/originals/07/cf/df/07cfdf825b9b50d3413309a14c9e4ed6.jpg" />
+<Card style={{ width: '20rem' }} className="child">
+  <Card.Img variant="top" src="https://www.totaljobs.com/advice/wp-content/uploads/administrator-job-description-1024x576.jpg" />
+  {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9BXk0vX11XIFxR64R4fe0afcHbpMMZQAmg&usqp=CAU */}
+  {/* https://www.totaljobs.com/advice/wp-content/uploads/administrator-job-description-1024x576.jpg */}
   <Card.Body>
     <Card.Title> Add New Admin</Card.Title>
      
     <Button variant="primary" onClick={handelAddNewAdmin}>Click here</Button>
   </Card.Body>
 </Card>
-<Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src="https://a-static.besthdwallpaper.com/black-audi-r8-vehicle-on-road-between-trees-during-daytime-wallpaper-1280x1024-26154_32.jpg" />
+<Card style={{ width: '20rem' }}  className="child">
+  <Card.Img variant="top" src="https://previews.123rf.com/images/ayax/ayax1406/ayax140600193/29202216-auto-service-icons.jpg" />
   <Card.Body>
     <Card.Title> Add New Service</Card.Title>
      
     <Button variant="primary" onClick={handelAddNewService}>Click here</Button>
   </Card.Body>
 </Card>
-</Card>
+</Container>
 
 {/*  */}
 
-
-{/* <div className="Parent"> 
-
-    <div className='child-1'>
-
-        <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> <br></br>
-        <button className='btn' onClick={handelAddNewService}>Add new Service</button>
-    </div> */}
-
-
-{/* <div>
-
-    <img src='https://www.pngkit.com/png/full/1-19431_pngpix-com-blue-ferrari-california-t-car-png.png' alt ='' width={550}/>
-</div> */}
+ 
     
 
  
