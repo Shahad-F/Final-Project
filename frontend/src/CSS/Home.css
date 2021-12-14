@@ -92,29 +92,39 @@ h2{
   grid-template-columns: 1fr  1fr
 }
 .loginForm{ 
-    border: 1px solid black;
+  border: 1px solid black;
+  margin: 5ch;
+  padding: 5ch;
+  margin-left: 44ch;
+  margin-right: 44ch;
+  border-radius: 20px;
+  background-color: rgba(222, 184, 135, 0.534);
+    /* border: 1px solid black;
     margin: 7ch;
     margin-left: 40ch;
     margin-right: 40ch;
     padding: 1ch;
     border-radius: 16px;
-    background:rgba(228, 60, 60, 0.363);
+    background:rgba(228, 60, 60, 0.363); */
 }
 
 .loginForm input{
 
-    padding: 1.2ch;
+    /* padding: 1.2ch;
     font-family: 'Fuzzy Bubbles', cursive;
     font-size: 100%;
     color:rgb(185, 26, 26);
     font-weight: bold;
     margin: 2ch;
     border-radius: 8px;
-    width: 80%;
+    width: 80%; */
 }
 .loginForm h1{ 
     font-weight: bolder;
-    color:rgb(109, 20, 20);
+    color:rgb(207, 97, 97);
+    font-family: "Exo";
+    text-align: center;
+    padding-bottom: 1ch;
     
 }
 

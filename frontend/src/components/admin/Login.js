@@ -6,6 +6,9 @@ import jwt from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Col ,Row,FloatingLabel,Button,Form} from 'react-bootstrap';
+ 
 
 
 export default function Login() {
@@ -52,28 +55,51 @@ const handelLogin =(e)=>{
 
 
     return (  <>
-    
+    <Form  className="loginForm"> 
+     <h1>Login</h1>
+    <Form.Floating className="mb-3">
+     
+    <Form.Control
+      id="floatingInputCustom"
+      type="email"
+      placeholder="name@gmail.com"
+      onChange={e=>setEmail(e.target.value)}
+    />
+    <label htmlFor="floatingInputCustom">Email address</label>
+  </Form.Floating>
+  <Form.Floating>
+    <Form.Control
+      id="floatingPasswordCustom"
+      type="password"
+      placeholder="Password"
+      onChange={e=>setPassword(e.target.value)}
+    />
+    <label htmlFor="floatingPasswordCustom">Password</label>
+  </Form.Floating>
 
-    <form className="loginForm">
+  <Button variant="outline-danger" 
+  onClick={(e)=>handelLogin(e)}
+  >Login</Button>{' '}
+
+</Form>
+    {/* <form className="loginForm">
         
-    <h1>Login</h1>
-
         <input type='email'
         placeholder='Enter your email address.'
         onChange={e=>setEmail(e.target.value)}
-        />
-<br/>
+        /> */}
+{/* <br/>
 
 <input type='password'
         placeholder='Enter your password.'
         onChange={e=>setPassword(e.target.value)}
-        />
-<br/>
+        /> */}
 
-<button className='LOGIN'
- onClick={(e)=>handelLogin(e)}> Login</button>
+
+{/* <button className='LOGIN'
+  > Login</button> */}
  
-    </form>
+     
      
 
     </>);
