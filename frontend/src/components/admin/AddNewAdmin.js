@@ -5,6 +5,9 @@ import {useState,useEffect} from 'react'
 // import jwt_decode from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+  import { Card,Button,Container,Form} from 'react-bootstrap';
 // import { Button,Form } from 'react-bootstrap';
 
 function AddNewAdmin() {
@@ -113,32 +116,73 @@ const handelDelete=(id,name)=>{
         
      <>
     
+    <Button variant="outline-secondary" className='back'
+    onClick={handelBack}
+    >Back to Homepage</Button>{' '}
      
-    <button className='BACKbtn' onClick={handelBack}>Back</button>
 
-    <form className='NewForm'>
-        <h1>New Admin</h1>
 
-        <input type="text" name="name"
-        placeholder='Enter name.'
-        onChange={e=>setName(e.target.value)}/>
-        {/* <br></br> */}
-
-        <input type="email" name="email"
-        placeholder='Enter name.'
-        onChange={e=>setEmail(e.target.value)}/>
-        {/* <br></br> */}
-        
-        <input type="password" name="password"
-         placeholder='Enter Your Password.'
-         onChange={e=>setPassword(e.target.value)}/>                         
-         {/* <br/> */}
+     <Form  style={{
+    backgroundImage:
+     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
+     backgroundSize: 'cover',
+      width: "100%",
+      height: "600px",
+        backgroundPosition: 'center',
+        opacity: 0.8,
+        // backgroundAttachment: 'fixed'
+        }}>
           
-        
-          <button className='addbtn' onClick={(e)=>handelAdd(e)}>Add</button>
+           
+     
+</Form>
 
-    </form>
+<Form  className="loginForm"> 
+     <h1>New Admin</h1>
 
+     <Form.Floating className="mb-3">
+     
+     <Form.Control className="Input"
+       id="floatingInputCustom"
+       type="text"
+       placeholder='Enter name.'
+       onChange={e=>setName(e.target.value)}
+     />
+     <label htmlFor="floatingInputCustom">Admin name</label>
+   
+   </Form.Floating>
+
+   <Form.Floating className="mb-3">
+     
+    <Form.Control className="Input"
+      id="floatingInputCustom"
+      type="email"
+      placeholder="name@gmail.com"
+      onChange={e=>setEmail(e.target.value)}
+    />
+    <label htmlFor="floatingInputCustom">Email address</label>
+  
+  </Form.Floating>
+
+
+  <Form.Floating>
+    <Form.Control  className="Input"
+      id="floatingPasswordCustom"
+      type="password"
+      placeholder="Password"
+      onChange={e=>setPassword(e.target.value)}
+    />
+    <label htmlFor="floatingPasswordCustom">Password</label>
+  </Form.Floating>
+
+  <Button variant="outline-danger" 
+onClick={(e)=>handelAdd(e)}
+  >Add</Button>{' '}
+     </Form>
+
+     {/*  */}
+ 
+    
         <div className='container'>
 
         {admin.map((get,index)=>{
