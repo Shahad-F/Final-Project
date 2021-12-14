@@ -52,6 +52,7 @@ h2{
   }
  .homeBTN Button{
     
+    width: 35%;
     margin: 2ch;
     margin-left: 15ch;
     height: 5ch;
@@ -196,14 +197,14 @@ Button{
   
 
  
-.homeBTN  Button{
-  
-   width: 15ch;
+.homeBTN Button{
+   
+   width: 20ch;
    margin: 1ch;
    margin-left: 6ch;
  }
  .homeBTN{
-  /* border: solid black; */
+  
   width: 100%;
    
  }

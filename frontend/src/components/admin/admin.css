@@ -30,14 +30,14 @@ margin-top: 11ch;
  
 
 .BACKbtn{
-    margin-right: 80%;
+    /* margin-right: 80%;
     margin-top: 2ch;
     padding: 1ch;
     border-radius: 8px;
     background:rgb(199, 55, 55);
     color: rgb(238, 234, 229);
     font-family: 'Fuzzy Bubbles', cursive;
-    font-size: 100%;
+    font-size: 100%; */
 }
  .NewForm{
 
@@ -64,17 +64,17 @@ background:rgba(222, 184, 135, 0.575);
     color:rgb(109, 20, 20);
  }
  .addbtn{
-    padding: 1ch;
+    /* padding: 1ch;
     border-radius: 8px;
     background:rgba(8, 151, 108, 0.945);
     color: rgb(110, 7, 7);
     font-weight: bolder;
     font-family: 'Fuzzy Bubbles', cursive;
     font-size: 120%;
-    cursor: pointer;  
+    cursor: pointer;   */
  }
  .deletebtn{
-    padding: 1ch;
+    /* padding: 1ch;
     border-radius: 8px;
     background:rgba(124, 53, 53, 0.945);
     color: rgb(214, 197, 197);
@@ -83,11 +83,11 @@ background:rgba(222, 184, 135, 0.575);
     font-size: 100%;
     width: 40%;
     text-align: center;
-    cursor: pointer;  
+    cursor: pointer;   */
  }
  .deletebtn:hover{
-     background-color: red;
-     color: black;
+     /* background-color: red;
+     color: black; */
  }
  .container{
      display: grid;

@@ -1,7 +1,4 @@
 
- 
-
- 
 .ServiceParent{
     /* display: grid;
     grid-template-columns: 1fr  1fr; */
@@ -14,8 +11,8 @@
 }
  
 Button{
-      
-     width:35%;
+    
+     /* width:35%; */
  }
  .container{
      display:grid;

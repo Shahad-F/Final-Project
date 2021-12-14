@@ -24,6 +24,7 @@ navigate('/AddNewAdmin')
 
     
 <div className="Parent"> 
+
     <div className='child-1'>
 
         <button className='btn' onClick={handelAddNewAdmin} >Add new Admin</button> <br></br>

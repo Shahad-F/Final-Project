@@ -38,7 +38,7 @@ const handelLogin =(e)=>{
 
                 swal({
                     title:'Welcome .'+Email,
-                    icon:'success'
+                    icon:'success',
                   })
                     navigate('/AdminHome');
             }
@@ -47,7 +47,7 @@ const handelLogin =(e)=>{
                     title: "Your password or email is incorrect",
                    
                     icon:'error', 
-                     button: "Try again "
+                     button: "Try again ",
                   })  
             }
         })
