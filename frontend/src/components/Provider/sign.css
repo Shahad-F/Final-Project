@@ -1,13 +1,9 @@
-
- 
 .signupForm{
-
     position: absolute;
     margin: 5ch;
     padding: 5ch;
     top: 15%;
-     width: 50%;
-      
+     width: 50%; 
     border-radius: 20px;
     background-color: rgba(222, 135, 135, 0.281);
 }
@@ -21,6 +17,7 @@
     margin: 2ch;
     border-radius: 8px;
     width: 90%;
+ 
  }
  .signupForm label{
     font-family: 'Fuzzy Bubbles', cursive;
@@ -28,7 +25,6 @@
    font-weight: bold;
    margin-left: 2ch;
  }
-
 
  .signupForm h1{
     font-weight: bolder;
@@ -46,4 +42,35 @@
     font-weight: bolder;
     font-size: 130%;
     font-family: 'Fuzzy Bubbles', cursive;
+}
+
+
+/* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+
+    .signupForm{
+        
+        width: 70%;
+        margin-left: 13ch;
+        top: 35%
+    }
+    .signupForm Button{
+
+        margin-left: 16ch;
+    }
+
+}
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+    .signupForm{
+       
+       width: 87%;
+       top: 50%
+        
+    }
+    .signupForm Button{
+
+        margin-left: 15ch;
+    }
 }
