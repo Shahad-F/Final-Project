@@ -1,6 +1,11 @@
 
 import './admin.css'
 import{useNavigate} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
+ import { Container ,Row,Image,Button,Col} from 'react-bootstrap';
+ 
+
 
 export default  function AdminHome () {
     const navigate=useNavigate()
@@ -21,7 +26,9 @@ navigate('/AddNewAdmin')
     }
     return ( <>
     
-
+    <Button variant="outline-secondary"
+    onClick={handelBack}
+    >Back to home page</Button>{' '}
     
 <div className="Parent"> 
 
@@ -31,6 +38,7 @@ navigate('/AddNewAdmin')
         <button className='btn' onClick={handelAddNewService}>Add new Service</button>
     </div>
 
+
 <div>
 
     <img src='https://www.pngkit.com/png/full/1-19431_pngpix-com-blue-ferrari-california-t-car-png.png' alt ='' width={550}/>
@@ -38,7 +46,6 @@ navigate('/AddNewAdmin')
     
 
 </div> 
-    <button className='BACKbtn' onClick={handelBack}>Back</button>
-    </> );
+     </> );
 }
 
