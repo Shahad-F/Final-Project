@@ -5,11 +5,10 @@ import {useState,useEffect} from 'react'
 // import jwt_decode from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert';
-
+import './newAdmin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-  import { Card,Button,Container,Form} from 'react-bootstrap';
-// import { Button,Form } from 'react-bootstrap';
-
+import { Card,Button,Container,Form} from 'react-bootstrap';
+ 
 function AddNewAdmin() {
 
 // const {_id} =useParams();
@@ -182,11 +181,11 @@ onClick={(e)=>handelAdd(e)}
 
      {/*  */}
  
-    
-        <Card border="light" style={{ width: '18rem' }}>
+    <Card className="BigCard"> 
+        <Card border="light" style={{ width: '18rem' }}   >
 
         {admin.map((get,index)=>{
-        return <Card key={index} >
+        return <Card key={index} className="smallCard" >
         <Card.Header>Name : {get.name}</Card.Header>
          
 
@@ -202,7 +201,8 @@ onClick={()=>handelDelete(get._id,get.name)}
              </Card>
 })}
 
-    {/* </div> */}
+     
+</Card>
 </Card>
     </> );
 }
