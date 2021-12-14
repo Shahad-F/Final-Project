@@ -48,10 +48,10 @@ As a service provider, I can delete my services to the website.<br/>
 ---
 ### 3. User
 > ***Signup:***
-As a user, I can sign up on the website so that I can use it when I need it.
+As a user, I can sign up on the website so that I can use it when I need it.<br/>
 > ***Login:***
-As a user, I can log in on the website so that I can use it when I need it.
+As a user, I can log in on the website so that I can use it when I need it.<br/>
 > ***Logout:***
-As a user, I can log out from the website.
+As a user, I can log out from the website.<br/>
 
 ---
