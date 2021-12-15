@@ -10,7 +10,7 @@ So this website will help her.
 
 ## User Stories.
 
-### 1. Admin
+#### 1. Admin
 
 > ***Login:***
  As an admin, I can log in on the platform so that I can use the website to make edits it.<br/>
@@ -27,7 +27,7 @@ As an admin, I can add new services.<br/>
 >***Edit Service:***
 As an admin, I can edit the service.<br/>
 ---
-### 2. Service Provider 
+#### 2. Service Provider 
 
 > ***Signup:***
  As a service provider, I can sign up on the platform so that I can use the website.<br/>
@@ -42,7 +42,7 @@ As a service provider, I can Edit my services to the website.<br/>
 >***Delete type his service***
 As a service provider, I can delete my services to the website.<br/>
 ---
-### 3. User
+#### 3. User
 > ***Signup:***
 As a user, I can sign up on the website so that I can use it when I need it.<br/>
 > ***Login:***
@@ -52,7 +52,7 @@ As a user, I can log out from the website.<br/>
 
 ---
 
-## Backlog.
+### Backlog.
 write here
 ## Client / frontend
 write here
@@ -63,10 +63,11 @@ write here
 -About.<br/>
 -Contact.<br/>
 ***Admin***<br/>
+-Login.<br/>
 -AddNewAdmin.<br/>
 -AddNewService.<br/>
 -AdminHome.<br/>
--Login.<br/>
+ 
 ***Provider***<br/>
 -SignupProvider.<br/>
 -LoginProvider.<br/>
@@ -74,3 +75,7 @@ write here
 -ServiceHome.<br/>
 ***User***<br/>
 -Service.<br/>
+
+## services
+write here
+
