@@ -4,6 +4,20 @@ const jsonWebToken = require('jsonwebtoken');
 const User = require('../models/User')
 
 module.exports={
+
+
+// display all users
+    index:(req,res)=>{
+
+User.find({})
+.then(user=>{
+    res.json(user);
+})
+.catch(error =>{
+    res.json({error:error})
+})
+
+    },
 // Signup
 signUp: (req,res)=>{
 
