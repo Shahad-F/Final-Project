@@ -9,7 +9,7 @@ UserRouter = require('./user')
 router.use('/admins',AdminRouter)
 router.use('/services',ServiceRouter)
 router.use('/providers',ProviderRouter)
-router.use('/Users',UserRouter)
+router.use('/users',UserRouter)
 
 
 module.exports = router

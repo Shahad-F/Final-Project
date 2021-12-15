@@ -5,7 +5,7 @@ const User = require('../models/User')
 
 module.exports={
 
-siginUp: (res,req)=>{
+signUp: (req,res)=>{
 
 
     let newUser = new User({
