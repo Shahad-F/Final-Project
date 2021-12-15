@@ -11,7 +11,7 @@ import ProviderSignUp  from './components/Provider/SignupProvider'
 import ProviderLogin from './components/Provider/LoginProvider'
 import ServiceHome from './components/Provider/ServiceHome'
 import AddProviderService from './components/Provider/AddproviderService';
- import Logo from './logo'
+import logo from './img/Picture2.png'
 import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
@@ -52,22 +52,29 @@ let token = localStorage.getItem("token");
      {/* <nav>  */}
  
 {/* <ul > */}
-<Navbar bg="light" variant="light">
+<Navbar bg="light" expand="lg">
  
-<Container>
+<Container fluid>
  
- 
-<Nav className="me-auto"> 
-<Nav.Link href="#home"><Link exact to='/'>Home</Link></Nav.Link>
+<Navbar.Brand href="#"><img src={logo} alt='' width={100}/></Navbar.Brand>
+<Navbar.Toggle aria-controls="navbarScroll" />
 
+<Navbar.Collapse id="navbarScroll">
+
+<Nav
+  className="me-auto my-2 my-lg-0"
+  style={{ maxHeight: '100px' }}
+   navbarScroll>
+
+<Nav.Link href="#home"><Link exact to='/'>Home</Link></Nav.Link>
 <Nav.Link href="#home">  <Link to='/About'>About</Link></Nav.Link>
 <Nav.Link href="#home">  <Link  to='/Contact'>Contact</Link></Nav.Link>
 <Nav.Link href="#home">  <Link to='/Service'>Service</Link></Nav.Link>
 
+
     {token ? (
         <>
-   <Nav.Link href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>
-            LogOut</Link></Nav.Link>
+   <Nav.Link href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>LogOut</Link></Nav.Link>
         </>
     ) : null }
      
@@ -77,10 +84,11 @@ let token = localStorage.getItem("token");
          <Nav.Link href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
          </>
      ) : null}
-   
-   <Navbar.Brand href="#home"><Logo/></Navbar.Brand> 
-    
+
    </Nav>
+   {/* <Navbar.Brand href="#home"><Logo/></Navbar.Brand>  */}
+    
+   </Navbar.Collapse>
 {/* </ul> */}
 </Container>
 </Navbar>
