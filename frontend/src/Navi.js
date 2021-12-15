@@ -80,6 +80,7 @@ let token = localStorage.getItem("token");
          <>
          <Nav.Link className="nav" href="#home"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
          <Nav.Link className="nav" href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
+        
          </>
      ) : null}
 
