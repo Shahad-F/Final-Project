@@ -125,3 +125,23 @@ price: { type:String,required:[true,"Price is required ."],},
 userId:{  type:Schema.Types.ObjectId,ref:'Provider'},
 }
 ```
+## Backend router 
+
+## Links 
+
+### Terello 
+### Git 
+
+[Client repository Link]<br/>
+[Server repository Link]<br/>
+[Deployed App Link]<br/>
+
+### Slides
+
+[Slides Link]
+
+### Wireframe
+[Figma Link]
+
+
+
