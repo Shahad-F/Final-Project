@@ -41,8 +41,8 @@ h2{
   .homeBTN{
     width: 100%;
     margin-top: 3ch;
-    margin-left:2ch;
-    border: 1px solid black;
+    margin-left:1ch;
+    /* border: 1px solid black; */
   }
  .homeBTN Button{
     
@@ -61,7 +61,7 @@ h2{
   margin: 1ch;
 }
 .image{
- border: 1px solid black;
+ /* border: 1px solid black; */
   margin-top: 21ch;
   margin-left: 33ch;
   width:400px;
@@ -150,7 +150,6 @@ Button{
    
   border-radius: 28px ;
   height: 200%;
- 
   margin-left: 60ch;
   
 }
@@ -178,6 +177,7 @@ Button{
    
   .parent{
     /* width: 94%; */
+    /* border:solid black; */
   }
   .subject h1{   
      font-size:100%;  
@@ -200,17 +200,18 @@ Button{
    
    width: 20ch;
    margin: 1ch;
-   margin-left: 6ch;
+   margin-left: 1ch;
  }
  .homeBTN{
-  
+  margin-left: 1ch;
   width: 100%;
-   
+ /* border:solid black; */
  }
  .image {
    /* border:solid black; */
-  width: 250px;
+  width: 450px;
   margin-left: 11ch;
+  margin-top: 0;
  }
 }
 
@@ -231,6 +232,9 @@ Button{
 .homeBTN >Button{
     margin: 1ch;
   width: 18ch;
+}
+.homeBTN{
+  margin-left: 0;
 }
  
   
