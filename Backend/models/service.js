@@ -8,8 +8,7 @@ const ServiceSchema = new Schema({
 
 nameOfService:{
     type:String,
-    required:[true,"Name of service is required ."],
-     
+    required:[true,"Name of service is required ."],   
 },
 image:{
     type:String,
