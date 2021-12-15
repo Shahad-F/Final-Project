@@ -157,7 +157,7 @@ onClick={(e)=>handelAddNewService(e)}
        
        <Image src={item.image} alt='' width={200} roundedCircle/>
        <Card.Body className="title">{item.nameOfService} </Card.Body>
-       <Card.Text className="text">{item.description}</Card.Text>
+       <Card.Text className="texterea">{item.description}</Card.Text>
 <br></br>
 
        <div  > 

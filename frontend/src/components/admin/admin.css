@@ -16,6 +16,14 @@
     text-align: center;
     margin-top: 2ch;
 }
+.texterea{
+    /* border: solid black; */
+    /* width: 60%; */
+    padding: 2ch;
+    font-family: cursive;
+    color:rgb(129, 98, 98);
+
+}
  .Clickbtn{
      font-family: 'Fuzzy Bubbles', cursive;
      margin-left: 7ch;
