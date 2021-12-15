@@ -5,6 +5,8 @@
     padding: 2ch;
     border-radius: 8px;
     font-family: 'Fuzzy Bubbles', cursive;
+    background:rgba(241, 224, 224, 0.445);
+
      
 }
 .imageBox{
@@ -14,7 +16,7 @@
     grid-template-columns: 1fr 1fr;
     margin-bottom: 5ch;
     background:rgba(241, 224, 224, 0.445);
-}
+ }
 .des{
      
     text-align: left;
@@ -43,18 +45,17 @@
  }
  .INPUT{
      width: 80%;
-     color:brown;
-     
+     color:brown; 
  }
  .BOX{
      margin-left: 11ch;
+       
  }
 .BTN{
     margin: 1ch;
 margin-left: 9ch;
  
 }
- 
  .container{
      display:grid;
      grid-template-columns: 1fr 1fr 1fr
@@ -66,4 +67,28 @@ margin-left: 9ch;
      font-weight: bolder;
      font-size: 300%;
  }
-  
+  /* Tablet */
+@media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+    .imageBox{
+        grid-template-columns: 1fr;
+    }
+    .BOX{
+        margin-left: 2ch;
+          
+    }
+}
+
+
+/* Phone */
+@media screen and ( max-width: 767px ) {
+    .ServiceParent{
+        margin: 1ch;
+    }
+    .imageBox{
+        grid-template-columns: 1fr;
+    }
+    .BOX{
+        margin-left: 3ch;
+         
+    }
+}

@@ -31,14 +31,7 @@
      border:block;
       
  }
-.btn{
-     
-}
  
-
-.BACKbtn{
-    
-}
  .NewForm{
 
  border:solid rgb(109, 89, 63);
@@ -63,34 +56,8 @@ background:rgba(222, 184, 135, 0.575);
     font-weight: bolder;
     color:rgb(109, 20, 20);
  }
- .addbtn{
-     
- }
- .deletebtn{
-    
- }
- .deletebtn:hover{
-     /* background-color: red;
-     color: black; */
- }
- .container{
-     /* display: grid;
-     grid-template-columns: 1fr  1fr;
-     margin-left: 9ch; */
-      
- }
- .card{
-     /* margin: 4ch;
-     padding: 3ch;
-     border-radius: 8px;
-     width: 90%; */
-     /* background:antiquewhite; */
- }
- .card h3{
-     /* color:brown;
-     font-weight: bolder;
-     background:antiquewhite; */
- }
+  
+  
  .card span{
     font-family: 'Fuzzy Bubbles', cursive;;
  }

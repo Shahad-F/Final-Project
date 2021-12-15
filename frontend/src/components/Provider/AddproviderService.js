@@ -113,7 +113,7 @@ const habdeldelete =(id)=>{
    }
     return ( <>
     
-     
+     <br/>
     <h1 className='lineTitle'>{service.nameOfService}</h1>
 
     {/* <div  > */}
@@ -186,10 +186,11 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
     <Card.Img variant="top" src={service.image}     />
     <Card.Text className='des'> <span>Description:</span> {service.description}</Card.Text>
-      </Card>
-
+       
+    </Card>
 
       <Card.Body>
+
      <Form className="BOX"> 
 
    <Form.Floating className="mb-3" >
@@ -220,7 +221,9 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
   </Form>
   </Card.Body>
+   
 </Form>
+ 
 
      
             {/* </div> */}
