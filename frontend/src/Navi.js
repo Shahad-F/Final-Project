@@ -55,7 +55,7 @@ let token = localStorage.getItem("token");
 <Navbar bg="light" variant="light">
  
 <Container>
-<Navbar.Brand href="#home"><Logo/></Navbar.Brand> 
+ 
  
 <Nav className="me-auto"> 
 <Nav.Link href="#home"><Link exact to='/'>Home</Link></Nav.Link>
@@ -78,7 +78,7 @@ let token = localStorage.getItem("token");
          </>
      ) : null}
    
-
+   <Navbar.Brand href="#home"><Logo/></Navbar.Brand> 
     
    </Nav>
 {/* </ul> */}
