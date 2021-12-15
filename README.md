@@ -53,17 +53,24 @@ As a user, I can log out from the website.<br/>
 ---
 
 ## Backlog.
-write hera
+write here
 ## Client / frontend
-write hera
+write here
 ## React Router Routes (React App)
-write hera
+write here
 ## Components 
-
+-Home.<br/>
+-About.<br/>
+-Contact.<br/>
 ***Admin***<br/>
--AddNewAdmin
--AddNewService
--AdminHome
--Login
-***Service Provider***<br/>
+-AddNewAdmin.<br/>
+-AddNewService.<br/>
+-AdminHome.<br/>
+-Login.<br/>
+***Provider***<br/>
+-SignupProvider.<br/>
+-LoginProvider.<br/>
+-AddorividerService.<br/>
+-ServiceHome.<br/>
 ***User***<br/>
+-Service.<br/>
