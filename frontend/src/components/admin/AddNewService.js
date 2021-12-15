@@ -18,6 +18,8 @@ export default function AddNewService () {
 
     const [name,setName] = useState();
     const [IMage,setImage]=useState();
+    const [Description,setDescription] = useState();
+
     // i want to display all information in screen 
     useEffect(()=>{ 
 
@@ -33,7 +35,7 @@ export default function AddNewService () {
 const handelAddNewService =()=>{
 
     axios.post('http://localhost:3030/services/create', {
-        nameOfService:name,image:IMage})
+        nameOfService:name,image:IMage,description:Description})
 
         .then((res)=>{
             console.log(res.data)
@@ -64,7 +66,7 @@ const handelAddNewService =()=>{
 
     const handelEditService =(id)=>{
         axios.put(`http://localhost:3030/services/${id}/update`,
-        {nameOfService:name,image:IMage })
+        {nameOfService:name,image:IMage ,description:Description})
      .then((res)=>{
         console.log(res.data)
         setNewService(res.data)
@@ -117,17 +119,27 @@ const handelAddNewService =()=>{
    </Form.Floating>
 
 
-   <Form.Floating className="mb-3">
+     <Form.Floating className="mb-3">
      
      <Form.Control className="Input"
-       id="floatingInputCustom"
+       id="floatingInput1Custom"
        type="email"
        placeholder='Enter image of service'
        onChange={ e=>setImage(e.target.value)}
      />
-     <label htmlFor="floatingInputCustom">Enter image of service</label>
+     <label htmlFor="floatingInput1Custom">Enter image of service</label>
    
    </Form.Floating>
+
+   <Form.Floating controlId="floatingTextarea2" label="Comments">
+    <Form.Control className="Input"
+      as="textarea"
+      placeholder="Add Description"
+      style={{ height: '100px' }}
+    />
+<label htmlFor="floatingTextarea2">Enter Descrption</label>
+
+  </Form.Floating>
 
    <Button variant="outline-danger" 
 onClick={(e)=>handelAddNewService(e)}
