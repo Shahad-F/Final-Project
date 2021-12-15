@@ -67,8 +67,9 @@ h2{
   margin: 1ch;
 }
 .image{
-  /* border: 1px solid black; */
-  margin-top: 11ch;
+ 
+  margin-top: 21ch;
+  margin-left: 22ch;
   width:500px;
 
 }
@@ -89,7 +90,7 @@ h2{
 }
  
 .parent{
-  
+   
   display: flex;
   flex-wrap: wrap;
   /* grid-template-columns: 1fr  1fr */
@@ -213,14 +214,19 @@ Button{
    
  }
  .image {
-   
-  width: 400px;
+   /* border:solid black; */
+  width: 250px;
+  margin-left: 11ch;
  }
 }
 
 /* Phone */
 @media screen and ( max-width: 767px ) {
   
+  .subject{
+    /* border: solid black; */
+    margin-left: 5ch;
+  }
   .subject h1{   
     font-size:100%;  
 }
@@ -235,11 +241,11 @@ Button{
  
   
  .image {
-   /* border: solid black; */
-   /* margin: 2ch; */
-   /* border:black solid; */
-   width: 300px;
-
+    
+   width: 450px;
+   margin-left: 1ch;
+   margin-top: 2ch;
+/* border: solid black;  */
  }
   
  .loginForm{
