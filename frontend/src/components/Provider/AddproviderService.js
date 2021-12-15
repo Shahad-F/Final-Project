@@ -119,7 +119,7 @@ const habdeldelete =(id)=>{
     {/* <div  > */}
     
      
-    <Form  style={{
+    {/* <Form  style={{
     backgroundImage:
      `url(${service.image})`,
     
@@ -128,7 +128,7 @@ const habdeldelete =(id)=>{
       height: "600px",
         backgroundPosition: 'center',
          
-        // backgroundAttachment: 'fixed'
+         
         }}>
 
         </Form>
@@ -174,7 +174,7 @@ const habdeldelete =(id)=>{
 
    <Button variant="outline-danger" 
 onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
-</Form>
+</Form> */}
 
 
              {/*  */}
@@ -184,7 +184,7 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
       <Card className="imageBox"> 
 
-    <Card.Img variant="top" src={service.image} width={200}   />
+    <Card.Img variant="top" src={service.image}     />
     <Card.Text className='des'> <span>Description:</span> {service.description}</Card.Text>
       </Card>
 
@@ -215,8 +215,6 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
   </Form.Floating>
 
-  {/* <Button variant="success" onClick={(e)=>handelAdd(e)}>Add</Button>{' '} */}
-  
   <Button variant="outline-danger" className="addBTN" onClick={(e)=>handelAdd(e)}
   >Add</Button>{' '}
 

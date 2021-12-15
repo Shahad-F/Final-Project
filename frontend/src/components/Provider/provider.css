@@ -1,27 +1,28 @@
 
 .ServiceParent{
-    /* width: 50%; */
-    margin: 4ch;
-    padding: 3ch;
+     
+    margin: 9ch;
+    padding: 2ch;
     border-radius: 8px;
-    background:rgba(241, 224, 224, 0.445); 
     font-family: 'Fuzzy Bubbles', cursive;
      
 }
 .imageBox{
     margin: 2ch;
-    border: solid black;
+     padding: 2ch;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 5ch;
+    background:rgba(241, 224, 224, 0.445);
 }
 .des{
+     
     text-align: left;
     margin: 4ch;
     margin-left: 5ch;
     margin-right: 5ch;
     margin-top: 5ch;
-     margin-bottom: 5ch;
-     border: solid black;
+     padding-bottom: 1ch; 
 }
 .des span{
     color:crimson;
@@ -29,11 +30,11 @@
     font-size:150%
 }
  .addBTN{
-     width: 35%;
+     width: 20%;
      padding: 1ch;
      font-size:100%;
      margin:1ch;
-     margin-left:8ch;
+     
  }
  label{
      font-family: exo;
@@ -46,11 +47,12 @@
      
  }
  .BOX{
-     margin-left: 8ch;
+     margin-left: 11ch;
  }
 .BTN{
     margin: 1ch;
 margin-left: 9ch;
+ 
 }
  
  .container{
