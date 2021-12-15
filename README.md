@@ -63,12 +63,16 @@ As a user, I can log out from the website.<br/>
 |`/About`  | AboutPage | public      | what the idea of website|
 |`/Contact`|ContactPage| public      | social media of website |
 |`/Service`|ServicePage|  puplic     |display all services     |
+ 
+### 1. Admin
 
-
+| Path            |      Component      |  Permissions  |   Behavior                                        |
+|-----------------|---------------------|---------------|---------------------------------------------------|
+|`/LoginAdmin`    |Login Admin Page     |  Admin only   | login form ,navigate to admin homepage after login|
+|`/AdminHome`     | admin home page     |  admin only   |                                                   |
+|`/AddNewAdmin`   |add New Admin Page   |  admin only   | add admin ,list of all admins                     |
+|`/AddNewService `|add new servrice Page|  admin only   | add service,list of all service                   |
 |
-|
-
-
 
 
 
