@@ -35,8 +35,8 @@ const handelProvider=()=>{
 
         <div className="homeBTN">
 
-<Button variant="outline-danger" onClick={handelAdmin}>Admin</Button>{' '}<br></br>
-<Button variant="outline-danger" onClick={handelProvider}>Service Providor</Button>{' '}
+<Button variant="danger" onClick={handelAdmin}>Admin</Button>{' '}
+<Button variant="secondary" onClick={handelProvider}>Service Providor</Button>{' '}
 
 </div>
         </div>

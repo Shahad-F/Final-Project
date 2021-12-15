@@ -39,14 +39,16 @@ h2{
     font-size: 150%;
 }
   .homeBTN{
+    width: 100%;
     margin-top: 3ch;
-    
+    margin-left:2ch;
+    border: 1px solid black;
   }
  .homeBTN Button{
     
-    width: 35%;
+    width: 40%;
     margin: 2ch;
-    margin-left: 15ch;
+    margin-left: 1ch;
     height: 5ch;
     font-family: 'Fuzzy Bubbles', cursive;
     font-weight: bolder;
@@ -59,10 +61,10 @@ h2{
   margin: 1ch;
 }
 .image{
- 
+ border: 1px solid black;
   margin-top: 21ch;
-  margin-left: 22ch;
-  width:500px;
+  margin-left: 33ch;
+  width:400px;
 
 }
  
