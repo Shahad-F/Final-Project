@@ -97,4 +97,12 @@ write here
 ***Provider***
 
 ```
+{
+   firstName:{ type:String, required:[true,'firstName should be provided']},
+   lastName:{ type:String, required:[true,'lasttName should be provided']},
+   phone:{ type:Number, required:[true,'phone should be provided']},
+   email:{type:String, required:[true,'Admin email should be provided'],unique:true},
+   image:{ type:String, required:[true,'image should be provided']},
+   city:{ type:String, required:[true,'city should be provided'],},
+}
 ```
