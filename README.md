@@ -74,6 +74,12 @@ As a user, I can log out from the website.<br/>
 |`/AddNewService `|add new servrice Page|  admin only   | add service,list of all service                   |
 |
 
+### 2. Service Provider
+| Path            | Component |Permissions    | Behavior   |
+|-----------------|-----------|---------------|------------|
+|`/ProviderSignUp`|SignupPage | only provider | signup form,link to login ,navigate to Service Home after signup|
+|`/ProviderLogin`|LoginPage | only provider   | login form ,link to signup ,navigate to Service Home after login|
+
 
 
 
