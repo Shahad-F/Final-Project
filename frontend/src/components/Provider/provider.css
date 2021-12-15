@@ -9,9 +9,21 @@
      
 }
 .imageBox{
+    margin: 2ch;
     border: solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.des{
+    text-align: left;
+    margin: 4ch;
+    margin-left: 3ch;
+    margin-top: 5ch;
+    background:azure;
+    border: solid rgb(95, 88, 88);
+    border-radius:10px;
+    border-width: 10px;
+    text-decoration: underline;
 }
  .addBTN{
      width: 35%;
