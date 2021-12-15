@@ -106,3 +106,12 @@ write here
    city:{ type:String, required:[true,'city should be provided'],},
 }
 ```
+***Service***
+
+```
+{
+  nameOfService:{ type:String, required:[true,"Name of service is required ."],},
+  image:{ type:String, required:[true,"Image is required"],},
+  providers:[providerSchema]  
+}
+```
