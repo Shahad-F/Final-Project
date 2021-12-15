@@ -72,7 +72,6 @@ As a user, I can log out from the website.<br/>
 |`/AdminHome`     | admin home page     |  admin only   |                                                   |
 |`/AddNewAdmin`   |add New Admin Page   |  admin only   | add admin ,list of all admins                     |
 |`/AddNewService `|add new servrice Page|  admin only   | add service,list of all service                   |
-|
 
 ### 2. Service Provider
 | Path                     | Component               |Permissions          | Behavior   |
