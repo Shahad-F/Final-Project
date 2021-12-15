@@ -1,6 +1,6 @@
   
 import './App.css';
-import Navi from './Nav'
+import Navi from './Navi'
  
 
  

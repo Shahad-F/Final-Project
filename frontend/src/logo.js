@@ -6,6 +6,7 @@
  import logo from './img/Picture2.png'
  function Logo() {
      return (  <div className='logo-main'>
+         
      <img src= {logo} alt='' width={100}/>
  </div>);
  }

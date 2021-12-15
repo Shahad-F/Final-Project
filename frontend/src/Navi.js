@@ -16,9 +16,13 @@ import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
 import {BrowserRouter as Router ,Routes,Route,Link,useNavigate} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
+ import { Container ,Navbar,Nav,Button,Col} from 'react-bootstrap';
+ 
 
   
- export default function Nav  () {
+ export default function Navi  () {
 
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
@@ -45,39 +49,46 @@ let token = localStorage.getItem("token");
         <>
     
           
-     <nav> 
+     {/* <nav>  */}
  
-<ul >
+{/* <ul > */}
+<Navbar bg="light" variant="light">
+ 
+<Container>
+<Navbar.Brand href="#home"><Logo/></Navbar.Brand> 
+ 
+<Nav className="me-auto"> 
+<Nav.Link href="#home"><Link exact to='/'>Home</Link></Nav.Link>
 
-    <li><Link exact to='/'>Home</Link></li>
-    <li><Link to='/About'>About</Link></li>
-    <li><Link  to='/Contact'>Contact</Link></li>
-    <li><Link to='/Service'>Service</Link></li>
+<Nav.Link href="#home">  <Link to='/About'>About</Link></Nav.Link>
+<Nav.Link href="#home">  <Link  to='/Contact'>Contact</Link></Nav.Link>
+<Nav.Link href="#home">  <Link to='/Service'>Service</Link></Nav.Link>
 
     {token ? (
         <>
-        <li><Link to='/'onClick={(e)=>logOut(e)}>
-            LogOut</Link></li>
+   <Nav.Link href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>
+            LogOut</Link></Nav.Link>
         </>
     ) : null }
      
      {!token ? (
          <>
-         <li><Link to='/ProviderSignUp'>SignUp</Link></li>
-         <li><Link to='/ProviderLogin'>Login</Link></li>
+         <Nav.Link href="#home"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
+         <Nav.Link href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
          </>
      ) : null}
    
+
     
-</ul>
- 
+   </Nav>
+{/* </ul> */}
+</Container>
+</Navbar>
   
     
-       <div className="header">
-           <Logo/> 
-       </div>  
+       {/* <div className="header"> <Logo/>  </div>   */}
 
-       </nav>
+       {/* </nav> */}
      
  
 

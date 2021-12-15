@@ -42,13 +42,11 @@ const handelProvider=()=>{
         </div>
         
         
-        <Container className="image">
-          <Row>
-          <Col xs={6} md={4}>
-        <Image src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt='' width="500" />
-        </Col>
-        </Row>
-       </Container>
+        <div>
+         
+        <Image className="image" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
+        
+       </div>
          
       
     

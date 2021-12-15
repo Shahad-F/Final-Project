@@ -52,8 +52,7 @@ As a user, I can log out from the website.<br/>
 
 ---
 
-### Backlog.
-write here
+ 
 ## Client / frontend
 write here
 ### React Router Routes (React App)
@@ -79,8 +78,7 @@ ServiceHome.<br/>
 > ***User***<br/>
 Service.<br/>
 
-### services
-write here
+ 
 
 ## Server / Backend 
 

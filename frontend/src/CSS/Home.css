@@ -69,6 +69,7 @@ h2{
 .image{
   /* border: 1px solid black; */
   margin-top: 11ch;
+  width:500px;
 
 }
  
@@ -89,8 +90,9 @@ h2{
  
 .parent{
   
-  display: grid;
-  grid-template-columns: 1fr  1fr
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr  1fr */
 }
 .loginForm{ 
   position: absolute;
@@ -180,7 +182,7 @@ Button{
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
    
   .parent{
-    width: 94%;
+    /* width: 94%; */
   }
   .subject h1{   
      font-size:100%;  
@@ -210,8 +212,9 @@ Button{
   width: 100%;
    
  }
- .image Image{
-  width: 80%;
+ .image {
+   
+  width: 400px;
  }
 }
 
@@ -232,13 +235,13 @@ Button{
  
   
  .image {
-   border: solid black;
-   margin: 2ch;
+   /* border: solid black; */
+   /* margin: 2ch; */
+   /* border:black solid; */
+   width: 300px;
+
  }
- .image Image{
-    
-    right: 20%;
- }
+  
  .loginForm{
    
   width: 75%;
