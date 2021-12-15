@@ -9,7 +9,7 @@
  
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col,Image,Card} from 'react-bootstrap';
+ import { Form ,Col,Image,Card, Container} from 'react-bootstrap';
  
 
 function AddProviderService({data}) {
@@ -116,7 +116,7 @@ const habdeldelete =(id)=>{
      
     <h1 className='lineTitle'>{service.nameOfService}</h1>
 
-    <div  >
+    {/* <div  > */}
     
      
     <Form  style={{
@@ -179,16 +179,17 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
              {/*  */}
          
+       
 <Form className='ServiceParent'>
 
-<Card.Img variant="top" src={service.image} width={100} />
+      <Card className="imageBox"> 
 
-<Card.Body>
-<Card.Text>
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </Card.Text>
-      
+    <Card.Img variant="top" src={service.image} width={200}   />
+    <Card.Text>{service.description}</Card.Text>
+      </Card>
+
+
+      <Card.Body>
      <Form className="BOX"> 
 
    <Form.Floating className="mb-3" >
@@ -223,8 +224,8 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
   </Card.Body>
 </Form>
 
-      
-            </div>
+     
+            {/* </div> */}
      
          
         

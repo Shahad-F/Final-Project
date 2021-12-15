@@ -1,11 +1,17 @@
 
 .ServiceParent{
-    width: 50%;
+    /* width: 50%; */
     margin: 4ch;
     padding: 3ch;
     border-radius: 8px;
-    background:rgba(185, 144, 144, 0.445); 
+    background:rgba(241, 224, 224, 0.445); 
     font-family: 'Fuzzy Bubbles', cursive;
+     
+}
+.imageBox{
+    border: solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
  .addBTN{
      width: 35%;
