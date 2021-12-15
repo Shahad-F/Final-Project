@@ -145,7 +145,7 @@ authenticate:(req,res,next)=>{
         }else{
             res.json({
                 success:false, 
-                message:"Could not authenticate provider"  
+                message:"Your passwor or email is not correct. Please try again"  
             });
              
         }
