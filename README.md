@@ -57,9 +57,18 @@ As a user, I can log out from the website.<br/>
  
 ### React Router Routes (React App)
 
-| Path | Component | Permissions | Behavior |
-|------|-----------|-------------|----------|
-|  `/` | SplashPage|  public     | HomePage|
+| Path     | Component | Permissions | Behavior                |
+|----------|-----------|-------------|-------------------------|
+|  `/`     | SplashPage| public      | HomePage                |
+|`/About`  | AboutPage | public      | what the idea of website|
+|`/Contact`|ContactPage| public      | social media of website |
+|`/Service`|ServicePage|  puplic     |display all services     |
+
+
+|
+|
+
+
 
 
 
