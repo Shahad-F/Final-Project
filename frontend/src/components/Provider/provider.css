@@ -5,20 +5,21 @@
     padding: 2ch;
     border-radius: 8px;
     font-family: 'Fuzzy Bubbles', cursive;
-    background:rgba(241, 224, 224, 0.445);
+    background:rgba(241, 240, 240, 0.918);
 
      
 }
 .imageBox{
+    border:none;
     margin: 2ch;
      padding: 2ch;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 5ch;
-    background:rgba(241, 224, 224, 0.445);
+    background:rgba(241, 240, 240, 0.918);
  }
+
 .des{
-     
     text-align: left;
     margin: 4ch;
     margin-left: 5ch;
