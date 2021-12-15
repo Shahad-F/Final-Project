@@ -115,3 +115,13 @@ write here
   providers:[providerSchema]  
 }
 ```
+***TypeOfService***
+
+```
+{
+userName: { type:String,required:[true,"userName is required ."],},
+phone: {type:Number,required:[true,"Phone is required ."],},
+price: { type:String,required:[true,"Price is required ."],},
+userId:{  type:Schema.Types.ObjectId,ref:'Provider'},
+}
+```
