@@ -135,6 +135,7 @@ const handelAddNewService =()=>{
     <Form.Control className="Input"
       as="textarea"
       placeholder="Add Description"
+      onChange={ e=>setDescription(e.target.value)}
       style={{ height: '100px' }}
     />
 <label htmlFor="floatingTextarea2">Enter Descrption</label>
@@ -156,7 +157,7 @@ onClick={(e)=>handelAddNewService(e)}
        
        <Image src={item.image} alt='' width={200} roundedCircle/>
        <Card.Body className="title">{item.nameOfService} </Card.Body>
-      
+       <Card.Text className="text">{item.description}</Card.Text>
 <br></br>
 
        <div  > 
