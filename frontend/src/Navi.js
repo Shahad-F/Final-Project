@@ -49,15 +49,12 @@ let token = localStorage.getItem("token");
         <>
     
           
-     {/* <nav>  */}
- 
-{/* <ul > */}
+      
 <Navbar bg="light" expand="lg">
  
 <Container fluid>
  
-<Navbar.Brand href="#"><img src={logo} alt='' width={100}/></Navbar.Brand>
-<Navbar.Toggle aria-controls="navbarScroll" />
+ <Navbar.Toggle aria-controls="navbarScroll" />
 
 <Navbar.Collapse id="navbarScroll">
 
@@ -86,20 +83,13 @@ let token = localStorage.getItem("token");
      ) : null}
 
    </Nav>
-   {/* <Navbar.Brand href="#home"><Logo/></Navbar.Brand>  */}
     
    </Navbar.Collapse>
-{/* </ul> */}
-</Container>
+   <Navbar.Brand href="#"><img src={logo} alt='' width={90}/></Navbar.Brand>
+
+ </Container>
 </Navbar>
   
-    
-       {/* <div className="header"> <Logo/>  </div>   */}
-
-       {/* </nav> */}
-     
- 
-
 
 <Routes>
 
