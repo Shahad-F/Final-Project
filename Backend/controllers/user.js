@@ -17,7 +17,15 @@ siginUp: (res,req)=>{
         image:req.body.image,
         city:req.body.city,
     })
-    
+    User.register(newUser ,req.body.password,(error,user)=>{
+
+        if(user){
+            res.json({message:"new User inserted successfully !"})
+        }else{
+            res.json({error:error})
+            console.log(error)
+        }
+    })
 }, 
 
 }
