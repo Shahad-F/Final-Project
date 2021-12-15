@@ -35,9 +35,14 @@
     padding-bottom: 1ch;
 }
  .signupForm Button{
-    margin-left: 22ch;
+    margin: 2ch;
+    padding: 1ch;
+    margin-left: 15ch;
+    width: 30%;
+     font-family: 'Fuzzy Bubbles', cursive;
  }
 .signupForm p{
+    margin: 1ch;
     color:black;
     font-weight: bolder;
     font-size: 130%;
@@ -56,7 +61,7 @@
     }
     .signupForm Button{
 
-        margin-left: 16ch;
+        margin-left: 14ch;
     }
 
 }
@@ -71,6 +76,6 @@
     }
     .signupForm Button{
 
-        margin-left: 15ch;
+        margin-left: 10ch;
     }
 }

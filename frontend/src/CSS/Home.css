@@ -132,8 +132,9 @@ h2{
     
 }
 .loginForm Button{
-  margin-left: 16ch;
+  margin-left: 12ch;
   width: 25%;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
 .LOGIN{
@@ -246,5 +247,9 @@ Button{
    .loginForm .Input{
      width: 90%;
      margin-right: 4ch;
+   }
+   .loginForm Button{
+     margin-left: 8ch;
+     width: 30%;
    }
 }

@@ -144,11 +144,10 @@ placeholder="pasword" />
 <label htmlFor="password">Password</label>
 </Form.Floating>
 
- 
-
 <Button variant="outline-danger"
  onClick={(e)=>SignUp(e)}>Sign up</Button>
-<p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
+  
+<p >I have account <Link to={`/ProviderLogin`}>Login</Link></p>
 
 
 </Form>

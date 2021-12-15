@@ -1,7 +1,8 @@
   
   import {useState,useEffect} from 'react'
   import axios from 'axios'
-  import '../components/admin/service.css'
+  // import '../components/admin/service.css'
+  import '../admin/service.css'
 
   import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card,Button,Container,Form,CardGroup,Row,Image} from 'react-bootstrap';
