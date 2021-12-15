@@ -59,22 +59,24 @@ write here
 ### React Router Routes (React App)
 write here
 ### Components 
--Home.<br/>
--About.<br/>
--Contact.<br/>
-***Admin***<br/>
--Login.<br/>
--AddNewAdmin.<br/>
--AddNewService.<br/>
--AdminHome.<br/>
+Home.<br/>
+About.<br/>
+Contact.<br/>
+
+> ***Admin***<br/>
+Login.<br/>
+AddNewAdmin.<br/>
+AddNewService.<br/>
+AdminHome.<br/>
  
-***Provider***<br/>
--SignupProvider.<br/>
--LoginProvider.<br/>
--AddorividerService.<br/>
--ServiceHome.<br/>
-***User***<br/>
--Service.<br/>
+> ***Provider***<br/>
+SignupProvider.<br/>
+LoginProvider.<br/>
+AddorividerService.<br/>
+ServiceHome.<br/>
+
+> ***User***<br/>
+Service.<br/>
 
 ### services
 write here
