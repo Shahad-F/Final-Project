@@ -184,7 +184,7 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
       <Card className="imageBox"> 
 
-    <Card.Img variant="top" src={service.image}     />
+    <Card.Img variant="top" src={service.image}    />
     <Card.Text className='des'> <span>Description:</span> {service.description}</Card.Text>
        
     </Card>
