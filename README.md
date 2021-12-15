@@ -59,7 +59,7 @@ write here
 ### React Router Routes (React App)
 write here
 ### Components 
->
+
 > Home.<br/>
 > About.<br/>
  >Contact.<br/>
@@ -83,3 +83,18 @@ Service.<br/>
 write here
 
 ## Server / Backend 
+
+### NModels 
+
+***Admin model***
+
+```
+{ 
+    name:{ type:String, required:[true,'Admin name should be provided']},
+    email:{ type:String,  required:[true,'Admin email should be provided', unique:true },   
+}
+```
+***Provider***
+
+```
+```
