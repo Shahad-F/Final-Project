@@ -75,12 +75,12 @@ As a user, I can log out from the website.<br/>
 |
 
 ### 2. Service Provider
-| Path            | Component |Permissions    | Behavior   |
-|-----------------|-----------|---------------|------------|
-|`/ProviderSignUp`|SignupPage | Provider only | signup form,link to login ,navigate to Service Home after signup|
-|`/ProviderLogin` |LoginPage  | Provider only | login form ,link to signup ,navigate to Service Home after login|
-|`/ServiceHome`   | ServiceHomePage | Provider only | display all services |
-|`/AddProviderService/:_id`|AddProviderServicePage  | Provider only|provider can add new info about this service.
+| Path                     | Component               |Permissions          | Behavior   |
+|--------------------------|-------------------------|---------------------|------------|
+|`/ProviderSignUp`         | SignupPage              | Provider only       | signup form,link to login ,navigate to Service Home after signup|
+|`/ProviderLogin`          | LoginPage               | Provider only       | login form ,link to signup ,navigate to Service Home after login|
+|`/ServiceHome`            | ServiceHomePage         | Provider only       | display all services |
+|`/AddProviderService/:_id`| AddProviderServicePage  | Provider only       |provider can add new info about this service.|
 
 
 
