@@ -46,7 +46,7 @@ const handelProvider=()=>{
          
         <Image className="image" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
         
-       </div>
+        </div>
          
       
     

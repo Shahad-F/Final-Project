@@ -53,7 +53,7 @@ let token = localStorage.getItem("token");
 <Navbar bg="light" expand="lg">
  
 <Container fluid>
-<Navbar.Brand href="#"><img src={logo} alt='' width={90}/></Navbar.Brand>
+<Navbar.Brand href="#"><img src={logo} alt='' width={80}/></Navbar.Brand>
 
  <Navbar.Toggle aria-controls="navbarScroll" />
   

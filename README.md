@@ -54,9 +54,17 @@ As a user, I can log out from the website.<br/>
 
  
 ## Client / frontend
-write here
+ 
 ### React Router Routes (React App)
-write here
+
+| Path | Component | Permissions | Behavior |
+|------|-----------|-------------|----------|
+|  `/` | SplashPage|  public     | HomePage|
+
+
+
+
+
 ### Components 
 
 > Home.<br/>
