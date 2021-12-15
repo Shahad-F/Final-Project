@@ -50,6 +50,40 @@ authenticate:(req,res,next)=>{
             });
         }
     })(req,res,next)
+},
+delete:(req,res)=>{
+    let _id = req.params.uid
+
+    User.findByIdAndDelete(_id)
+    .then(()=>{
+
+        res.json({mesage:"This User is Remove !"})
+    })
+    .catch(error =>{
+        res.json({error:error})
+    })
+},
+
+update:(req,res)=>{
+let _id = req.params.uid
+
+let userInfo={ 
+
+    firstName:req.body.firstName,
+    lastName:req.body.lastName,
+    phone:req.body.phone,
+    email:req.body.email,
+    image:req.body.image,
+    city:req.body.city,
+    password:req.body.password 
 }
+User.findByIdAndUpdate(_id,{$set:userInfo})
+.then(user =>{
+    res.json({message:"User Information is updated"})
+})
+.catch(error =>{
+    res.json({error:error})
+})
+},
 
 }
