@@ -188,6 +188,7 @@ onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </Card.Text>
+      
      <Form className="BOX"> 
 
    <Form.Floating className="mb-3" >

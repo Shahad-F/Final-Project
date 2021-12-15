@@ -9,18 +9,21 @@ const ServiceSchema = new Schema({
 nameOfService:{
     type:String,
     required:[true,"Name of service is required ."],
-    // unique:true
+     
 },
 image:{
     type:String,
     required:[true,"Image is required"],
-    // unique:true
+     
+},
+description:{
+    type:String,
+    required:[true,"Description is required"]
 },
  
-
 providers:[providerSchema]
 
-// object of service.
+ 
     
 })
 

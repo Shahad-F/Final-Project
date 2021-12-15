@@ -33,6 +33,7 @@ create:(req,res)=>{
 
         nameOfService:req.body.nameOfService,
         image:req.body.image,
+        description:req.body.description
          
     })
     console.log(newService)
@@ -65,7 +66,8 @@ let _id = req.params.id
 let serviceInfo ={ 
 
     nameOfService:req.body.nameOfService,
-    image:req.body.image
+    image:req.body.image,
+    description:req.body.description
 
 }
 Service.findByIdAndUpdate(_id,{$set:serviceInfo})
