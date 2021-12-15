@@ -53,43 +53,44 @@ let token = localStorage.getItem("token");
 <Navbar bg="light" expand="lg">
  
 <Container fluid>
- 
+<Navbar.Brand href="#"><img src={logo} alt='' width={90}/></Navbar.Brand>
+
  <Navbar.Toggle aria-controls="navbarScroll" />
-
+  
 <Navbar.Collapse id="navbarScroll">
-
+ 
 <Nav
   className="me-auto my-2 my-lg-0"
   style={{ maxHeight: '100px' }}
    navbarScroll>
 
-<Nav.Link href="#home"><Link exact to='/'>Home</Link></Nav.Link>
-<Nav.Link href="#home">  <Link to='/About'>About</Link></Nav.Link>
-<Nav.Link href="#home">  <Link  to='/Contact'>Contact</Link></Nav.Link>
-<Nav.Link href="#home">  <Link to='/Service'>Service</Link></Nav.Link>
+<Nav.Link className="nav" href="#home"><Link exact to='/'>Home</Link></Nav.Link>
+<Nav.Link className="nav" href="#home">  <Link to='/About'>About</Link></Nav.Link>
+<Nav.Link className="nav" href="#home">  <Link  to='/Contact'>Contact</Link></Nav.Link>
+<Nav.Link className="nav" href="#home">  <Link to='/Service'>Service</Link></Nav.Link>
 
 
     {token ? (
         <>
-   <Nav.Link href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>LogOut</Link></Nav.Link>
+   <Nav.Link className="nav" href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>LogOut</Link></Nav.Link>
         </>
     ) : null }
      
      {!token ? (
          <>
-         <Nav.Link href="#home"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
-         <Nav.Link href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
+         <Nav.Link className="nav" href="#home"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
+         <Nav.Link className="nav" href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
          </>
      ) : null}
 
    </Nav>
     
    </Navbar.Collapse>
-   <Navbar.Brand href="#"><img src={logo} alt='' width={90}/></Navbar.Brand>
-
+   
  </Container>
-</Navbar>
   
+</Navbar>
+ 
 
 <Routes>
 
