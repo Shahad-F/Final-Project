@@ -135,7 +135,7 @@ authenticate:(req,res,next)=>{
 
                 data:provider._id,
                 exp:new Date().setDate(new Date().getDate()+1)
-            },'Locorbi86');
+            },'Locorbi86')
 
             res.json({
                 success:true,
