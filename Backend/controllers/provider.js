@@ -5,7 +5,8 @@ const jsonWebToken = require('jsonwebtoken');
 const Provider = require('../models/TypeOfServicer')
 const ProviderofService=require('../models/ProvidorS')
 const Service = require('../models/Service')
-
+const User = require('../models/User')
+const TypeOfServicer =require('../models/TypeOfServicer')
 module.exports ={
 
 show:(req,res)=>{
@@ -36,29 +37,58 @@ show:(req,res)=>{
 
 create: async(req,res)=>{
 
-    console.log("id")
     const id =req.params.uid;
-    const service = await Service.findById({_id:req.params.uid})
-    console.log(service)
-    let newPrivider = new Provider({
-        
-        userName:req.body.userName,
-        phone:req.body.phone,
-        price:req.body.price,
-        profile:req.body.profile,
-        userId:req.body.userId
-        
-    })
-    console.log(newPrivider)
-    service.providers.push(newPrivider);
+    ProviderofService.findById({_id:req.body.userId}).then(user=>{
+        // console.log("user")
+        // console.log(user)
+        TypeOfServicer.create({price:req.body.price,userId:user}).then((Tservice)=>{
+            Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}}).populate('providers').then(async service=>{
 
-    try{
-        await service.save()
-        res.status(201).send(service)
-    }
-    catch(e){
-        console.error(e)
-    }
+                try{
+                await Tservice.save()
+                await service.save()
+                console.log({service,Tservice})
+
+                res.status(201).send(service)
+            }
+            catch(e){
+                console.error(e)
+            }
+         })
+        })
+         
+
+    })
+    // console.log(service)
+    // let newPrivider = new Provider({
+        
+    //     userName:req.body.userName,
+    //     phone:req.body.phone,
+    //     price:req.body.price,
+    //     profile:req.body.profile,
+    //     userId:req.body.userId
+        
+    // })
+    // console.log(newPrivider)
+    // console.log(service)
+    
+    // service.providers.push(newPrivider);
+
+    
+
+},
+
+show: async (req,res)=>{
+    Service.find({_id:req.body.sId}).populate('providers').then(service=>{
+        console.log(service)
+        // res.send(service)
+        // TypeOfServicer.find({userId:service})
+        service.providers.forEach(console.log(provider.))
+    })
+
+
+
+
 
 },
 edit: async(req,res)=>{

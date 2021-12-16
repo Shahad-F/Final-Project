@@ -4,21 +4,21 @@ const Schema = mongoose.Schema
 
 const TypeOfService = new Schema({
 
-userName: {
-    type:String,
-    required:[true,"userName is required ."],
-},
-phone: {
-    type:Number,
-    required:[true,"Phone is required ."],
-},
+// userName: {
+//     type:String,
+//     required:[true,"userName is required ."],
+// },
+// phone: {
+//     type:Number,
+//     required:[true,"Phone is required ."],
+// },
 price: {
-    type:String,
+    type:Number,
     required:[true,"Price is required ."],
 },
-profile:{
-    type:Schema.Types.String, ref:"Provider"
-},
+// profile:{
+//     type:Schema.Types.String, ref:"Provider"
+// },
 userId:{
     type:Schema.Types.ObjectId,ref:'Provider'
 },
