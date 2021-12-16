@@ -65,8 +65,8 @@ change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId}).then(user=>{
 
-TypeOfServicer.find({userId:user})
-.then((Tservice)=>{
+// TypeOfServicer.find({userId:user})
+// .then((Tservice)=>{
 
     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
 
@@ -75,7 +75,8 @@ TypeOfServicer.find({userId:user})
         await Tservice.save()
         await res.send(Tservice)
     })
-})
+// }
+// )
 
 })
 },
@@ -87,7 +88,7 @@ del:async(req, res)=>{
     .then(async (Tservice)=>{
         await console.log({Tservice})
         await Tservice.save()
-        await res.send(Tservice)
+        // await res.send(Tservice)
     })
 
 },
