@@ -4,13 +4,14 @@ import {useParams,useNavigate} from "react-router-dom"
 import axios from 'axios'
 
 import '../Provider/provider.css'
+ 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Card} from "react-bootstrap"
 
 function AllProvider() {
 
-    const {_id}=useParams();
+const {_id}=useParams();
 const[service,setService]=useState([])
 const[newService,setNewService]=useState({})
 const [loading,setLoading]=useState(true)
@@ -47,9 +48,9 @@ if(loading){
 
 return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
 
-<Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header>
-<Card.Text className='Text'>Phone Number:{item.phone}</Card.Text>
-<Card.Text className='Text'>Price:{item.price}</Card.Text>
+<Card.Header className='Header'>Name Of Provider: {item.userName}</Card.Header>
+<Card.Text className='text'>Phone Number: {item.phone}</Card.Text>
+<Card.Text className='text'>Price: {item.price}</Card.Text>
 
 
 </Card>
