@@ -101,9 +101,9 @@ let token = localStorage.getItem("token");
     <Route  path ='/About' element={<About/>}/>
     <Route  path ='/Contact' element={<Contact/>}/>
     <Route  path ='/Service' element={<Service/>}/>
-    <Route path ='/LoginAdmin' element={<Login/>}/>
-    <Route path ='/AdminHome' element={<AdminHome/>}/>
-    <Route path ='/AddNewAdmin' element={<AddNewAdmin />}/>
+    <Route  path ='/LoginAdmin' element={<Login/>}/>
+    <Route  path ='/AdminHome' element={<AdminHome/>}/>
+    <Route  path ='/AddNewAdmin' element={<AddNewAdmin />}/>
     <Route path ='/AddNewService' element={<AddNewService />}/>
     <Route path ='/ProviderSignUp' element={<ProviderSignUp />}/>
     <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
