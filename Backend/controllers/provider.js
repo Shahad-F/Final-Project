@@ -183,11 +183,12 @@ authenticate:(req,res,next)=>{
     passport.authenticate('local',(error,provider)=>{
 
         if(provider){
+
             let signedToken = jsonWebToken.sign({
 
                 data:provider._id,
                 exp:new Date().setDate(new Date().getDate()+1)
-            },'Locorbi86')
+            },'Locorbi86');
 
             res.json({
                 success:true,
@@ -229,7 +230,7 @@ update:(req,res)=>{
             email:req.body.email,
             image:req.body.image,
             city:req.body.city,
-             password:req.body.password
+            password:req.body.password
 
     }
 

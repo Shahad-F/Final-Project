@@ -20,6 +20,6 @@ router.delete('/delete/:uid',ProviderController.delete)
 router.get('/:uid',ProviderController.show)
 
 router.post('/signUp',ProviderController.signUp)
-router.post('/login',ProviderController.authenticate)
+router.post('/ProviderLogin',ProviderController.authenticate)
 
 module.exports = router

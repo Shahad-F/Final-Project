@@ -31,8 +31,6 @@ city:{
     type:String,
     required:[true,'city should be provided'],
 },
- 
-
 })
 
 ProviderSchema.plugin(passportLocalMongoose,{ 
