@@ -10,8 +10,8 @@ import { Col ,Card,Row,FloatingLabel,Button,Form,Image} from 'react-bootstrap';
 
 function Login() {
     const navigate=useNavigate()
-    const [Email ,setEmail] =useState()
-    const [Password ,setPassword] =useState()
+    const [PEmail ,setEmail] =useState()
+    const [PPassword ,setPassword] =useState()
 
 
 const handelLogin=(e)=>{
@@ -19,7 +19,7 @@ const handelLogin=(e)=>{
     e.preventDefault()
 
     axios.post('http://localhost:3030/providers/login', {
-        email:Email,password:Password})
+        email:PEmail,password:PPassword})
 
         .then((res)=>{
             console.log(res.data)
@@ -32,7 +32,7 @@ const handelLogin=(e)=>{
                 localStorage.setItem('token',token);
 
                 swal({
-                    title:'Welcome .'+ Email,
+                    title:'Welcome .'+ PEmail,
                     icon:'success',
                     button: "Ok "
                   })
@@ -47,7 +47,6 @@ const handelLogin=(e)=>{
             }
         })
 }
-
     return ( <>
 
 <Form  style={{

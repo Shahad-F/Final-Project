@@ -13,8 +13,6 @@ import ServiceHome from './components/Provider/ServiceHome'
 import AddProviderService from './components/Provider/AddproviderService';
 import UserHome from './components/User/UserHome'
 import LoginUser from './components/User/LoginUser'
-import SignupUser from './components/User/SignupUser'
-import AllProvider from './components/User/AllProvider'
 import logo from './img/Picture2.png'
 import './CSS/Home.css'
 import axios from "axios"
@@ -82,9 +80,9 @@ let token = localStorage.getItem("token");
      
      {!token ? (
          <>
-         <Nav.Link className="nav" href="#signup"><Link to='/SignupUser'>SignUp</Link></Nav.Link>
-         <Nav.Link className="nav" href="#login"> <Link to='/LoginUser'>Login</Link></Nav.Link>
-        
+         <Nav.Link className="nav" href="#signup"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
+         <Nav.Link className="nav" href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
+    
          </>
      ) : null}
 
@@ -111,10 +109,7 @@ let token = localStorage.getItem("token");
     <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
     <Route path ='/ServiceHome' element={<ServiceHome  />}/>
     <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
-    <Route path ='/LoginUser' element={<LoginUser/>}/>
-    <Route path ='/SignupUser' element={<SignupUser/>}/>
     <Route path ='/UserHome' element={<UserHome/>}/>
-    <Route path ='/AllProvider/:_id' element={<AllProvider data={service}/>}/>
 
 </Routes>
 
