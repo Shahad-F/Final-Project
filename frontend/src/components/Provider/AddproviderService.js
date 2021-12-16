@@ -6,7 +6,6 @@
  import jwt_decode from 'jwt-decode' 
  import swal from 'sweetalert';
  import './provider.css'
- 
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
  import { Form ,Col,Image,Card, Container} from 'react-bootstrap';
@@ -47,10 +46,10 @@ const[UserId,setUserId]=useState(decodedData.data);
     useEffect(()=>{
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
-         console.log(res.data)
+        console.log(res.data)
         setService(res.data.service)
-     setLoading(false)
-         
+        setLoading(false)
+            
 })
 
 },[])
@@ -178,6 +177,7 @@ const habdeldelete =(id)=>{
                  <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
                   
                  <Card.Text className='text'>Price :{item.price}</Card.Text>
+                 <Card.Text className='text'>Price :{item.UserId}</Card.Text>
 
 
     {(function(){

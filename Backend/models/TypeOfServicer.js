@@ -16,6 +16,9 @@ price: {
     type:String,
     required:[true,"Price is required ."],
 },
+profile:{
+    type:Schema.Types.String,ref:"Provider"
+},
 userId:{
     type:Schema.Types.ObjectId,ref:'Provider'
 },
