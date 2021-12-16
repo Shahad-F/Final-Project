@@ -11,6 +11,8 @@ import ProviderSignUp  from './components/Provider/SignupProvider'
 import ProviderLogin from './components/Provider/LoginProvider'
 import ServiceHome from './components/Provider/ServiceHome'
 import AddProviderService from './components/Provider/AddproviderService';
+import UserHome from './components/User/UserHome'
+import LoginUser from './components/User/LoginUser'
 import logo from './img/Picture2.png'
 import './CSS/Home.css'
 import axios from "axios"
@@ -65,21 +67,21 @@ let token = localStorage.getItem("token");
    navbarScroll>
 
 <Nav.Link className="nav" href="#home"><Link exact to='/'>Home</Link></Nav.Link>
-<Nav.Link className="nav" href="#home">  <Link to='/About'>About</Link></Nav.Link>
-<Nav.Link className="nav" href="#home">  <Link  to='/Contact'>Contact</Link></Nav.Link>
-<Nav.Link className="nav" href="#home">  <Link to='/Service'>Service</Link></Nav.Link>
+<Nav.Link className="nav" href="#About">  <Link to='/About'>About</Link></Nav.Link>
+<Nav.Link className="nav" href="#contact">  <Link  to='/Contact'>Contact</Link></Nav.Link>
+<Nav.Link className="nav" href="#service">  <Link to='/Service'>Service</Link></Nav.Link>
 
 
     {token ? (
         <>
-   <Nav.Link className="nav" href="#home">  <Link to='/'onClick={(e)=>logOut(e)}>LogOut</Link></Nav.Link>
+   <Nav.Link className="nav" href="#logout">  <Link to='/'onClick={(e)=>logOut(e)}>LogOut</Link></Nav.Link>
         </>
     ) : null }
      
      {!token ? (
          <>
-         <Nav.Link className="nav" href="#home"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
-         <Nav.Link className="nav" href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
+         <Nav.Link className="nav" href="#signup"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
+         <Nav.Link className="nav" href="#login"> <Link to='/LoginUser'>Login</Link></Nav.Link>
         
          </>
      ) : null}
@@ -107,7 +109,7 @@ let token = localStorage.getItem("token");
     <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
     <Route path ='/ServiceHome' element={<ServiceHome  />}/>
     <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
-
+    <Route path ='/UserHome' element={<UserHome/>}/>
 
 </Routes>
 
