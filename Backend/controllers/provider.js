@@ -62,8 +62,16 @@ create: async(req,res)=>{
     
 },
 change:async (req,res)=>{
-    
-}
+
+ProviderofService.findById({_id:req.body.userId}).then(user=>{
+
+TypeOfServicer.find({userId:user})
+.then((Tservice)=>{
+    console.log({Tservice})
+})
+
+})
+},
 
 show: async (req,res)=>{
     Service.find({_id:req.body.sId}).populate('providers').then(service=>{
