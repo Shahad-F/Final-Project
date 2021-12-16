@@ -36,8 +36,6 @@ show:(req,res)=>{
     },
 
 create: async(req,res)=>{
-
-    const id =req.params.uid;
     ProviderofService.findById({_id:req.body.userId}).then(user=>{
         // console.log("user")
         // console.log(user)

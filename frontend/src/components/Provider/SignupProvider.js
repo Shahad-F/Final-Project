@@ -45,6 +45,8 @@ axios.post('http://localhost:3030/providers/signUp',
             button: "Try again "
           })
     }else {
+        const token =res.data.token;
+        localStorage.setItem('token',token)
         setNewProvider(res.data)
 
         swal({

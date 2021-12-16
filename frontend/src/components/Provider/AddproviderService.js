@@ -61,7 +61,7 @@ const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { userName:UserName,phone:Phone,price:Price ,userId:UserId ,profile:Profile})
+    { price:Price ,userId:"61bae64f037910c7e3d9031f" })
 
     .then((res)=>{
         console.log(res.data)
