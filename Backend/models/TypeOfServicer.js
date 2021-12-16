@@ -17,7 +17,7 @@ price: {
     required:[true,"Price is required ."],
 },
 profile:{
-    type:Schema.Types.String,ref:"Provider"
+    type:Schema.Types.image, ref:"Provider"
 },
 userId:{
     type:Schema.Types.ObjectId,ref:'Provider'

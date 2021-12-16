@@ -179,8 +179,7 @@ update:(req,res)=>{
             email:req.body.email,
             image:req.body.image,
             city:req.body.city,
-            // price:req.body.price,
-            password:req.body.password
+             password:req.body.password
 
     }
 

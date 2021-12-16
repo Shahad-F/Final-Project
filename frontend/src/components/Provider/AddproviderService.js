@@ -18,10 +18,10 @@ function AddProviderService({data}) {
     const [service,setService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
-    const[UserName,setUserName]=useState();
-    const[Phone,setPhone]=useState();
-    const[Price,setPrice]=useState();
-    const[Profile,setProfile]=useState();
+    const [UserName,setUserName]=useState();
+    const [Phone,setPhone]=useState();
+    const [Price,setPrice]=useState();
+    const [Profile,setProfile]=useState();
     // ................................................................................................................................
     
     console.log(data ) 
@@ -49,8 +49,7 @@ const[UserId,setUserId]=useState(decodedData.data);
        .then((res)=>{
         console.log(res.data)
         setService(res.data.service)
-        setLoading(false)
-            
+        setLoading(false)       
 })
 
 },[])
@@ -180,12 +179,14 @@ const habdeldelete =(id)=>{
                  <Card.Text className='text'>Price :{item.price}</Card.Text>
                  <Card.Text className='text'>{item.profile}</Card.Text>
 
+          
 
     {(function(){
 
     if(decodedData != undefined){
         console.log("decodedData "+UserId)
         console.log("decodedData "+item.userId)
+        console.log(item.profile) 
         if(UserId === item.userId){
             console.log("decodedData")
     return(<>
