@@ -67,9 +67,13 @@ ProviderofService.findById({_id:req.body.userId}).then(user=>{
 
 TypeOfServicer.find({userId:user})
 .then((Tservice)=>{
-    console.log({Tservice})
-    
-    TypeOfServicer.findByIdAndUpdate({_id:req.body.uid})
+
+    TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
+    .then(async(Tservice)=>{
+        await console.log({Tservice})
+        await Tservice.save()
+        await res.send(Tservice)
+    })
 })
 
 })
