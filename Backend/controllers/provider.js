@@ -45,6 +45,7 @@ create: async(req,res)=>{
         userName:req.body.userName,
         phone:req.body.phone,
         price:req.body.price,
+        profile:req.body.profile,
         userId:req.body.userId
         
     })
@@ -71,6 +72,7 @@ let editService = new Provider({
         userName:req.body.userName,
         phone:req.body.phone,
         price:req.body.price,
+        profile:req.body.profile,
         userId:req.body.userId
 })
 if(!service){
