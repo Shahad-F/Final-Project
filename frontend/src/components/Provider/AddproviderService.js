@@ -21,6 +21,7 @@ function AddProviderService({data}) {
     const[UserName,setUserName]=useState();
     const[Phone,setPhone]=useState();
     const[Price,setPrice]=useState();
+    const[Profile,setProfile]=useState();
     // ................................................................................................................................
     
     console.log(data ) 
@@ -61,7 +62,7 @@ const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { userName:UserName,phone:Phone,price:Price ,userId:UserId})
+    { userName:UserName,phone:Phone,price:Price ,userId:UserId ,profile:Profile})
 
     .then((res)=>{
         console.log(res.data)
@@ -84,7 +85,7 @@ const habdeledit=(id)=>{
         icon:'success'
       })
     axios.put(`http://localhost:3030/providers/provider/${_id}/${id}`,
-    { userName:UserName,phone:Phone,price:Price,userId:UserId})
+    { userName:UserName,phone:Phone,price:Price,userId:UserId,profile:Profile})
     .then((res=>{
         console.log(res.data)
         setService(res.data)
@@ -177,7 +178,7 @@ const habdeldelete =(id)=>{
                  <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
                   
                  <Card.Text className='text'>Price :{item.price}</Card.Text>
-                 <Card.Text className='text'>Price :{item.UserId}</Card.Text>
+                 <Card.Text className='text'>{item.profile}</Card.Text>
 
 
     {(function(){
