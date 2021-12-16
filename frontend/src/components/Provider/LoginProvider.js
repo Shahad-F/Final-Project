@@ -97,6 +97,8 @@ const handelLogin=(e)=>{
   onClick={(e)=>handelLogin(e)}
   >Login</Button>{' '}
 
+<p >I don't have account <Link to={`/ProviderSignUp`}>SignUp</Link></p>
+
   </Form>
              
     </> );

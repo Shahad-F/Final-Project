@@ -41,7 +41,7 @@
     width: 30%;
      font-family: 'Fuzzy Bubbles', cursive;
  }
-.signupForm p{
+.signupForm ,.loginForm p{
     margin: 1ch;
     color:black;
     font-weight: bolder;

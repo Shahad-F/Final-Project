@@ -6,7 +6,8 @@ import axios from 'axios'
 import swal from 'sweetalert'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col ,Card,Row,FloatingLabel,Button,Form,Image} from 'react-bootstrap';
- 
+import '../Provider/sign.css'
+
 
 
 function LoginUser() {
@@ -95,6 +96,9 @@ const handelLogin=(e)=>{
   <Button variant="outline-danger" 
   onClick={(e)=>handelLogin(e)}
   >Login</Button>{' '}
+
+<p >I don't have account <Link to={`/SignupUser`}>SignUp</Link></p>
+
 
   </Form>
     

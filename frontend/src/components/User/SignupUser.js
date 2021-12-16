@@ -1,9 +1,8 @@
-
 import { Link} from 'react-router-dom'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert';
-import './sign.css'
+import '../Provider/sign.css'
 import{useNavigate} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,10 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  import { Form ,Col ,Row ,FloatingLabel} from 'react-bootstrap';
 
 
- function SignUp() {
+function SignupUser() {
+
     const navigate=useNavigate()
-    const [provider,setProvider]=useState([])
-    const[newProvider,setNewProvider]=useState({})
+    const [user,setUser]=useState([])
+    const[newUser,setNewUser]=useState({})
 
  const [FName ,setFName]=useState();
  const [LName ,setLName]=useState();
@@ -24,14 +24,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
 
- 
 // functions 
 // signUp for provider
 
 const SignUp =(e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/providers/signUp',
+axios.post('http://localhost:3030/users/signUp',
 {firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
 
 .then((res)=>{
@@ -45,36 +44,34 @@ axios.post('http://localhost:3030/providers/signUp',
             button: "Try again "
           })
     }else {
-        setNewProvider(res.data)
+        setNewUser(res.data)
 
         swal({
             title: 'Welcome '+ FName,
             icon:'success'
           })
-          navigate('/ServiceHome')
+          navigate('/UserHome')
     }
 })
 
 }
 
-    return ( <>
-
-<Form  style={{
+    return (  <>
+    
+    <Form  style={{
     backgroundImage:
      `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
      backgroundSize: 'cover',
-      width: "100%",
-      height: "1000px",
-        backgroundPosition: 'center',
-        opacity: 0.8,
+     width: "100%",
+     height: "1000px",
+     backgroundPosition: 'center',
+     opacity: 0.8,
         // backgroundAttachment: 'fixed'
         }}>
           
 
 </Form>
 {/*  */}
- 
-
 <Form className="signupForm">
 
 <h1>SignUp</h1>
@@ -126,10 +123,6 @@ placeholder="fYour image" />
 <label htmlFor="image">Image</label>
 </Form.Floating>
 
-
- 
-
-
 <Form.Floating> 
 <Form.Control type="email" id='email'
 onChange={e=>setEmail(e.target.value)}
@@ -149,12 +142,12 @@ placeholder="pasword" />
 <Button variant="outline-danger"
  onClick={(e)=>SignUp(e)}>Sign up</Button>
   
-<p>I have account <Link to={`/ProviderLogin`}>Login</Link></p>
+<p >I have account <Link to={`/LoginUser`}>Login</Link></p>
 
 
 </Form>
 
-    </> );
+    </>);
 }
 
-export default SignUp;
+export default SignupUser;
