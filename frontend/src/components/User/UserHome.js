@@ -31,7 +31,7 @@ function UserHome() {
     <h1 className="lineTitle">User Home </h1>
     
     <Card className="BigCard">
-    {service.map((item ,index)=>{
+        {service.map((item ,index)=>{
         return <Card key={index} className="box">
        
        <Image src={item.image} alt='' width={200} roundedCircle />
@@ -39,8 +39,8 @@ function UserHome() {
       
       <br></br>
        <Button variant="link" className='link'>
-        <Link to={`/AddProviderService/${item._id}`}>See More</Link></Button>{' '}
-        
+        <Link to={`/AllProvider/${item._id}`}>See More</Link></Button>{' '}
+
         </Card>
     })}
 </Card>
