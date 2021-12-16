@@ -65,8 +65,8 @@ change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId}).then(user=>{
 
-// TypeOfServicer.find({userId:user})
-// .then((Tservice)=>{
+TypeOfServicer.find({userId:user})
+.then((Tservice)=>{
 
     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
 
@@ -75,8 +75,7 @@ ProviderofService.findById({_id:req.body.userId}).then(user=>{
         await Tservice.save()
         await res.send(Tservice)
     })
-// }
-// )
+})
 
 })
 },
