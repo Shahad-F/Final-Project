@@ -162,7 +162,7 @@ let newPrivider = new ProviderofService({
         email:req.body.email,
         image:req.body.image,
         city:req.body.city,
-        
+        roles:req.body.roles
 })
 
 ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
