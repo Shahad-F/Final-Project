@@ -80,7 +80,7 @@ let token = localStorage.getItem("token");
      
      {!token ? (
          <>
-         <Nav.Link className="nav" href="#signup"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
+         <Nav.Link className="nav" href="#signup"><Link to='/ProiderSignUp'>SignUp</Link></Nav.Link>
          <Nav.Link className="nav" href="#login"> <Link to='/LoginUser'>Login</Link></Nav.Link>
         
          </>
@@ -109,6 +109,7 @@ let token = localStorage.getItem("token");
     <Route path ='/ProviderLogin' element={<ProviderLogin />}/>
     <Route path ='/ServiceHome' element={<ServiceHome  />}/>
     <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
+    <Route path ='/LoginUser' element={<LoginUser/>}/>
     <Route path ='/UserHome' element={<UserHome/>}/>
 
 </Routes>
