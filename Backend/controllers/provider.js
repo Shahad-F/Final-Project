@@ -41,8 +41,11 @@ create: async(req,res)=>{
     ProviderofService.findById({_id:req.body.userId}).then(user=>{
         // console.log("user")
         // console.log(user)
-        TypeOfServicer.create({price:req.body.price,userId:user}).then((Tservice)=>{
-            Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}}).populate('providers').then(async service=>{
+        TypeOfServicer.create({price:req.body.price,userId:user})
+        
+        .then((Tservice)=>{
+            Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
+            .populate('providers').then(async service=>{
 
                 try{
                 await Tservice.save()
@@ -56,41 +59,27 @@ create: async(req,res)=>{
             }
          })
         })
-         
-
     })
-    // console.log(service)
-    // let newPrivider = new Provider({
-        
-    //     userName:req.body.userName,
-    //     phone:req.body.phone,
-    //     price:req.body.price,
-    //     profile:req.body.profile,
-    //     userId:req.body.userId
-        
-    // })
-    // console.log(newPrivider)
-    // console.log(service)
     
-    // service.providers.push(newPrivider);
-
-    
-
 },
 
 show: async (req,res)=>{
     Service.find({_id:req.body.sId}).populate('providers').then(service=>{
         console.log(service)
+        console.log(service[0].providers)
         // res.send(service)
         // TypeOfServicer.find({userId:service})
-        service.providers.foreach(res.send(image))
+        service[0].providers.forEach(elm=>
+            TypeOfServicer.find({userId:elm._id}).populate('userId').then(service=>{
+
+                res.send(service)
+            })
+            
+            )
     })
 
-
-
-
-
 },
+
 edit: async(req,res)=>{
 
 
@@ -117,6 +106,7 @@ res.status(200).send(service)
 console.log(service)
 
 },
+
 remove: async(req, res)=>{
 
 const Pid = req.params.Pid;
@@ -131,6 +121,9 @@ await service.save()
 res.status(200).send(service)
 console.log(service)
 },
+
+
+
 
 signUp:(req,res)=>{
 
