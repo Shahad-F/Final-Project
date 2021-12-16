@@ -186,7 +186,7 @@ const habdeldelete =(id)=>{
     if(decodedData != undefined){
         console.log("decodedData "+UserId)
         console.log("decodedData "+item.userId)
-        console.log(item.profile) 
+        console.log("my Profile "+UserId.image) 
         if(UserId === item.userId){
             console.log("decodedData")
     return(<>
