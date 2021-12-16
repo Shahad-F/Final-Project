@@ -174,9 +174,9 @@ const habdeldelete =(id)=>{
 
                  {/* <Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header> */}
                  
-                 {/* <Card.Text className='text'> Phone Number:{item.phone}</Card.Text> */}
+                 <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
                   
-                 <Card.Text className='text'>Price :{item.price}</Card.Text>
+                 {/* <Card.Text className='text'>Price :{item.price}</Card.Text> */}
                  {/* <Card.Text className='text'>{item.profile}</Card.Text> */}
 
           

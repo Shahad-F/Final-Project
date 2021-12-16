@@ -16,7 +16,6 @@ User.find({})
 .catch(error =>{
     res.json({error:error})
 })
-
     },
 // Signup
 signUp: (req,res)=>{

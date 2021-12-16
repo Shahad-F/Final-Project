@@ -21,8 +21,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  const [Phone ,setPhone]=useState();
  const [Image ,setImage]=useState();
  const [City ,setCity]=useState();
-const [Email,setEmail]=useState()
-const [Password,setPassword]=useState()
+ const [Email,setEmail]=useState()
+ const [Password,setPassword]=useState()
 
  
 // functions 
@@ -32,7 +32,7 @@ const SignUp =(e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/providers/signUp',
-{firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
+{firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password})
 
 .then((res)=>{
     console.log(res)
@@ -45,8 +45,8 @@ axios.post('http://localhost:3030/providers/signUp',
             button: "Try again "
           })
     }else {
-        const token =res.data.token;
-        localStorage.setItem('token',token)
+        // const token =res.data.token;
+        // localStorage.setItem('token',token)
         setNewProvider(res.data)
 
         swal({
