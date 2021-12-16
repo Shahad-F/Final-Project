@@ -68,6 +68,8 @@ ProviderofService.findById({_id:req.body.userId}).then(user=>{
 TypeOfServicer.find({userId:user})
 .then((Tservice)=>{
     console.log({Tservice})
+    
+    TypeOfServicer.findByIdAndUpdate({_id:req.body.uid})
 })
 
 })

@@ -7,7 +7,7 @@ router.get('/',ProviderController.index)
 
 router.post('/provider/:uid',ProviderController.create)
 router.get('/display',ProviderController.show)
-
+router.post('/change/:uid',ProviderController.change)
 
 
 
