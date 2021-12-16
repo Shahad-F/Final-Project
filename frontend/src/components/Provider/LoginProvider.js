@@ -32,7 +32,7 @@ const handelLogin=(e)=>{
                 localStorage.setItem('token',token);
 
                 swal({
-                    title:'Welcome .'+Email,
+                    title:'Welcome .'+ Email,
                     icon:'success',
                     button: "Ok "
                   })
@@ -41,7 +41,6 @@ const handelLogin=(e)=>{
             else{
                 swal({
                     title: "Your password or email is incorrect",
-                   
                      icon:'error', 
                      button: "Try again "
                   })  

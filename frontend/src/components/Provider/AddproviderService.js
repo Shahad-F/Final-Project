@@ -61,7 +61,7 @@ const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { price:Price ,userId:"61bae64f037910c7e3d9031f" })
+    { price:Price ,userId:decodedData.data})
 
     .then((res)=>{
         console.log(res.data)
@@ -129,20 +129,20 @@ const habdeldelete =(id)=>{
 
      <Form className="BOX"> 
 
-   <Form.Floating className="mb-3" >
+   {/* <Form.Floating className="mb-3" >
       <Form.Control className="INPUT" type="text" placeholder="UserName" 
      onChange ={e=>setUserName(e.target.value)} />
      <label htmlFor="floatingInputCustom">UserName</label>
 
-  </Form.Floating >
+  </Form.Floating > */}
 
 
-  <Form.Floating className="mb-3" >
+  {/* <Form.Floating className="mb-3" >
       <Form.Control className="INPUT" type="text" placeholder="Phone number" 
     onChange ={e=>setPhone(e.target.value)} />
     <label htmlFor="floatingInputCustom">Enter your phone number</label>
 
-  </Form.Floating>
+  </Form.Floating> */}
 
   <Form.Floating className="mb-3" >
 
@@ -172,9 +172,9 @@ const habdeldelete =(id)=>{
 
              return<Card  border="danger"  style={{ width: '20rem' }}className="smallCard">
 
-                 <Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header>
+                 {/* <Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header> */}
                  
-                 <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
+                 {/* <Card.Text className='text'> Phone Number:{item.phone}</Card.Text> */}
                   
                  <Card.Text className='text'>Price :{item.price}</Card.Text>
                  {/* <Card.Text className='text'>{item.profile}</Card.Text> */}
