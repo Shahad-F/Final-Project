@@ -3,7 +3,7 @@ import React,{useEffect,useState} from 'react'
 import {useParams,useNavigate} from "react-router-dom"
 import axios from 'axios'
 
-import '../Provider/sign.css'
+import '../Provider/provider.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Card} from "react-bootstrap"
@@ -47,8 +47,9 @@ if(loading){
 
 return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
 
-<Card.Header className='Header'>Name Of Provider:{item.UserName}</Card.Header>
-
+<Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header>
+<Card.Text className='Text'>Phone Number:{item.phone}</Card.Text>
+<Card.Text className='Text'>Price:{item.price}</Card.Text>
 
 
 </Card>
