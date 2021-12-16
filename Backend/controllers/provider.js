@@ -69,6 +69,7 @@ TypeOfServicer.find({userId:user})
 .then((Tservice)=>{
 
     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
+
     .then(async(Tservice)=>{
         await console.log({Tservice})
         await Tservice.save()
@@ -77,6 +78,16 @@ TypeOfServicer.find({userId:user})
 })
 
 })
+},
+
+del:async(req, res)=>{
+
+
+    TypeOfServicer.findByIdAndRemove(req.params.uid)
+    .then(async (Tservice)=>{
+        await console.log({Tservice})
+    })
+
 },
 
 show: async (req,res)=>{
