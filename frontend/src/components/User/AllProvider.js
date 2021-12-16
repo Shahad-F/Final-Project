@@ -14,11 +14,52 @@ function AllProvider() {
 const[service,setService]=useState([])
 const[newService,setNewService]=useState({})
 const [loading,setLoading]=useState(true)
+const[UserName,setUserName]=useState()
+const[Phone,setPhone]=useState()
+const[Price,setPrice]=useState()
 
 
+useEffect(()=>{
 
+axios.get(`http://localhost:3030/services/${_id}`)
+
+.then((res)=>{
+    console.log(res.data)
+    setService(res.data.service)
+    setLoading(false)
+})
+
+},[])
+
+if(loading){
+    return(<p>Loading</p>)
+}
     return ( <>
-    <h1>All Provider</h1>
+
+    <br></br>
+    <br></br>
+    <h1 lassName='lineTitle'>All Provider</h1>
+
+
+<Card border ='light' className='BigCard'>
+
+{service.providers.map((item)=>{
+
+return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
+
+<Card.Header className='Header'>Name Of Provider:{item.UserName}</Card.Header>
+
+
+
+</Card>
+
+
+
+})}
+
+</Card>
+
+
     </> );
 }
 

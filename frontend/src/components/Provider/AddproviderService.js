@@ -45,8 +45,6 @@ const[UserId,setUserId]=useState(decodedData.data);
 
 // display all cards
     useEffect(()=>{
-console.log('nsdhfhjdbfhj')
-
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
          console.log(res.data)
@@ -115,67 +113,6 @@ const habdeldelete =(id)=>{
     
      <br/>
     <h1 className='lineTitle'>{service.nameOfService}</h1>
-
-    {/* <div  > */}
-    
-     
-    {/* <Form  style={{
-    backgroundImage:
-     `url(${service.image})`,
-    
-     backgroundSize: 'cover',
-      width: "100%",
-      height: "600px",
-        backgroundPosition: 'center',
-         
-         
-        }}>
-
-        </Form>
-
-
-        <Form  className="loginForm"> 
-
-     <Form.Floating className="mb-3">
-     
-     <Form.Control className="Input"
-       id="floatingInputCustom"
-       type="text"
-       placeholder="UserName"
-       onChange ={e=>setUserName(e.target.value)}
-     />
-     <label htmlFor="floatingInputCustom">UserName</label>
-   
-   </Form.Floating>
-
-   <Form.Floating className="mb-3">
-     
-     <Form.Control className="Input"
-       id="floatingInputCustom"
-       type="email"
-       placeholder="Phone number" 
-       onChange ={e=>setPhone(e.target.value)}
-     />
-     <label htmlFor="floatingInputCustom">Enter your phone number</label>
-   
-   </Form.Floating>
-
-   <Form.Floating className="mb-3">
-     
-     <Form.Control className="Input"
-       id="floatingInputCustom"
-       type="email"
-       placeholder="Price"
-       onChange ={e=>setPrice(e.target.value)}
-     />
-     <label htmlFor="floatingInputCustom">Enter your price</label>
-   
-   </Form.Floating>
-
-   <Button variant="outline-danger" 
-onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
-</Form> */}
-
 
              {/*  */}
          
