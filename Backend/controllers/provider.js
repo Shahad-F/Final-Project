@@ -83,7 +83,7 @@ show: async (req,res)=>{
         console.log(service)
         // res.send(service)
         // TypeOfServicer.find({userId:service})
-        service.providers.forEach(console.log(provider.))
+        service.providers.foreach(res.send(image))
     })
 
 
