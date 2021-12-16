@@ -42,7 +42,7 @@ create: async(req,res)=>{
         // console.log("user")
         // console.log(user)
         TypeOfServicer.create({price:req.body.price,userId:user})
-        
+
         .then((Tservice)=>{
             Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
             .populate('providers').then(async service=>{
@@ -51,7 +51,6 @@ create: async(req,res)=>{
                 await Tservice.save()
                 await service.save()
                 console.log({service,Tservice})
-
                 res.status(201).send(service)
             }
             catch(e){
@@ -62,6 +61,9 @@ create: async(req,res)=>{
     })
     
 },
+change:async (req,res)=>{
+    
+}
 
 show: async (req,res)=>{
     Service.find({_id:req.body.sId}).populate('providers').then(service=>{
