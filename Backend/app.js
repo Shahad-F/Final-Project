@@ -25,25 +25,25 @@ mongoose.connect('mongodb+srv://shahad:Shd2020Shd@cluster0.cdkwi.mongodb.net/tes
 });
 
 
-app.use(cookieParser('myadmin'))
-app.use(expressSession({
+// app.use(cookieParser('myadmin'))
+// app.use(expressSession({
 
-    secret: 'myadmin',
-    saveUninitialized:true,
-    resave:true,
-    cookie:{maxAge : 6000}  
-}))
+//     secret: 'myadmin',
+//     saveUninitialized:true,
+//     resave:true,
+//     cookie:{maxAge : 6000}  
+// }))
 
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
-passport.use(Admin.createStrategy())
-passport.serializeUser(Admin.serializeUser())
-passport.deserializeUser(Admin.deserializeUser())
-// 
-passport.use(Provider.createStrategy())
-passport.serializeUser(Provider.serializeUser())
-passport.deserializeUser(Provider.deserializeUser())
+// passport.use(Admin.createStrategy())
+// passport.serializeUser(Admin.serializeUser())
+// passport.deserializeUser(Admin.deserializeUser())
+// // 
+// passport.use(Provider.createStrategy())
+// passport.serializeUser(Provider.serializeUser())
+// passport.deserializeUser(Provider.deserializeUser())
 // 
 // passport.use(User.createStrategy())
 // passport.serializeUser(User.serializeUser())
@@ -51,20 +51,25 @@ passport.deserializeUser(Provider.deserializeUser())
 
 
 
-app.use(express.json())
+app.use(express.json());
+app.use(cookieParser());
 app.use('/',router)
-app.use('/',authRoutes)
+app.use(authRoutes)
 
 
 // cookies
 app.get('/set-cookies',(req,res)=>{
+// res.setHeader('Set-Cookie','newUser=true');
 
+res.cookie('newUser',false);
+res.send('you got the cookies !');
 
-})
+});
 
 app.get('/read-cookie',(req,res)=>{
-    
-})
+
+
+});
 
 app.listen(3030,()=>{
     console.log('express has started !')
