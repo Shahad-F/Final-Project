@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 module.exports.signup_get =(req, res)=>{
 
     res.render('signup');
@@ -10,8 +12,13 @@ module.exports.login_get =(req, res)=>{
 
 module.exports.signup_post =(req, res)=>{
 const {email,password} =req.body;
-console.log(email,password)
-    res.send('new signup');
+ 
+try{
+
+}
+catch(error){
+
+}
 }
 
 module.exports.login_post =(req, res)=>{

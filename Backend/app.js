@@ -11,7 +11,7 @@ app.use(cors())
 
 const Admin = require('./models/Admen')
 const Provider = require('./models/ProvidorS')
-const User = require('./models/User')
+// const User = require('./models/User')
 
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
