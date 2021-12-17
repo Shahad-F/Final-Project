@@ -38,25 +38,25 @@ const handelLogin=(e)=>{
     .then((res)=>{
         console.log(res.data)
 
-        if(res.data.success === true){
-            const token = res.data.token;
-            const usersign = jwt(token);
-            console.log(usersign)
-            localStorage.setItem('token',token)
+        // if(res.data === true){
+            // const token = res.data.token;
+            // const usersign = jwt(token);
+            // console.log(usersign)
+            // localStorage.setItem('token',token)
             swal({
                 title:'Welcome .'+Email,
                 icon:'success',
                 button: "Ok "
               })
                 navigate('/UserHome');
-        }else{
-            swal({
-                title: "Your password or email is incorrect",
+        // }else{
+            // swal({
+            //     title: "Your password or email is incorrect",
                
-                 icon:'error', 
-                 button: "Try again "
-              })  
-        }
+            //      icon:'error', 
+            //      button: "Try again "
+            //   })  
+        // }
     })
 
 }
