@@ -57,22 +57,22 @@ app.use('/',router)
 app.use(authRoutes)
 
 
-// cookies
-app.get('/set-cookies',(req,res)=>{
-// res.setHeader('Set-Cookie','newUser=true');
+// // cookies
+// app.get('/set-cookies',(req,res)=>{
+// // res.setHeader('Set-Cookie','newUser=true');
 
-res.cookie('newUser',false);
-res.cookie('isEmployee',true,{maxAge:1000*60*60*24 ,httpOnly:true});
-res.send('you got the cookies !');
+// res.cookie('newUser',false);
+// res.cookie('isEmployee',true,{maxAge:1000*60*60*24 ,httpOnly:true});
+// res.send('you got the cookies !');
 
-});
+// });
 
-app.get('/read-cookie',(req,res)=>{
+// app.get('/read-cookie',(req,res)=>{
 
-const cookies = req.cookies;
-console.log(cookies.newUser);
-res.json(cookies);
-});
+// const cookies = req.cookies;
+// console.log(cookies.newUser);
+// res.json(cookies);
+// });
 
 app.listen(3030,()=>{
     console.log('express has started !')

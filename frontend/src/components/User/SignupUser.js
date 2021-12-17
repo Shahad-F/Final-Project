@@ -37,7 +37,7 @@ useEffect(()=>{
 // functions 
 // signUp for provider
 
-const SignUp =(e)=>{
+const SignUp = async (e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/signup',
