@@ -65,10 +65,21 @@ module.exports.signup_post = async (req, res)=>{
 const {email,password} =req.body;
  
 try{
-   const user = await User.create({email,password});
-   const token =createToken(user._id);
-   res.cookie('jwt',token,{httpOnly:true, maxAge: maxAge * 1000});
-   res.status(201).json({user: user._id});
+    const user = await User.create({email,password});
+
+    let signedToken = jwt.sign({
+       data:user._id,
+       exp:new Date().setDate(new Date().getDate()+1)
+    },'Locorbi86');
+    res.json({
+        success:true,
+        token:signedToken
+    });
+
+//    const user = await User.create({email,password});
+//    const token =createToken(user._id);
+//    res.cookie('jwt',token,{httpOnly:true, maxAge: maxAge * 1000});
+//    res.status(201).json({user: user._id});
 }
 catch(err){
 res.json({err:'email is taken'})
