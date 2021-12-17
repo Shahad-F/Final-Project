@@ -66,6 +66,19 @@ UserSchema.pre('save', async function(next){
  next()
 })
 
+
+UserSchema.statics.login =async function(email, password){
+    const user = await this.findOne({ email });
+
+    if(user){
+      const auth= await  bcrypt.compare(password,user.password) ;
+      if(auth){
+          return user;
+      }
+      throw Error('incorrect password');
+    }
+    throw Error('incorrect email')
+}
 // UserSchema.plugin(passportLocalMongoose,{
 //     usernameField:'email'
 // })
