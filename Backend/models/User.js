@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const {isEmail} = require('validator');
+
 
 const Schema = mongoose.Schema
 
@@ -25,9 +27,10 @@ const UserSchema = new Schema({
     // },
     email:{
         type:String, 
-        required:[true,'Admin email should be provided'],
+        required:[true,' please enter an email '],
         unique:true,
-        lowercase: true
+        lowercase: true,
+        validate:[isEmail ,'please enter a valid email']
     },
     // image:{
     //     type:String,
@@ -44,8 +47,8 @@ const UserSchema = new Schema({
     // },
     password:{
         type:String,
-        required:true,
-        minlength:6
+        required:[true ,'please enter an password '],
+        minlength:[6, 'Minimum password length i 6 characters']
     }
 
 })
