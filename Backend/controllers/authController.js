@@ -25,9 +25,9 @@ const handelErrors = (err)=>{
 const maxAge =3*24*60*60;
 const createToken = (id)=>{
 
-    return jwt.sign({id},'not secret ',{
+    return jwt.sign({id},'net secret ',{
         expiresIn:maxAge
-    })
+    });
 }
 
 module.exports.login_get =(req, res)=>{
@@ -65,10 +65,9 @@ const {email,password} =req.body;
  
 try{
    const user = await User.create({email,password});
-   const token =createToken(user._id)
-   res.cookie('jwt',token,{httpOnly:true, maxAge: maxAge * 1000})
-
- res.status(201).json({user: user_id});
+   const token =createToken(user._id);
+   res.cookie('jwt',token,{httpOnly:true, maxAge: maxAge * 1000});
+   res.status(201).json({user: user._id});
 }
 catch(err){
   const errors=  handelErrors(err);
