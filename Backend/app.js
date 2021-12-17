@@ -55,6 +55,17 @@ app.use(express.json())
 app.use('/',router)
 app.use('/',authRoutes)
 
+
+// cookies
+app.get('/set-cookies',(req,res)=>{
+
+
+})
+
+app.get('/read-cookie',(req,res)=>{
+    
+})
+
 app.listen(3030,()=>{
     console.log('express has started !')
 })

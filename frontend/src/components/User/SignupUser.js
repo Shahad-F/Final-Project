@@ -46,16 +46,16 @@ axios.post('http://localhost:3030/signup',
 .then((res)=>{
     // console.log(res)
 
-    // if(res.data.error === 'Email is taken'){
+    if(res.data.error === 'that email is alredy registered'){
           
-    //     swal({
-    //         title: "Your password or email is taken",
-    //         icon:'error', 
-    //         button: "Try again "
-    //       })
-    // }
-//     else
-//      {
+        swal({
+            title: "Your password or email is taken",
+            icon:'error', 
+            button: "Try again "
+          })
+    }
+    else
+     {
         setNewUser(res.data)
 // console.log(Email,Password)
         swal({
@@ -63,7 +63,7 @@ axios.post('http://localhost:3030/signup',
             icon:'success'
           })
           navigate('/UserHome')
-//     }
+    }
 })
 
 }

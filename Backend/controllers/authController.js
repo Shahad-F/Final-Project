@@ -7,7 +7,7 @@ const handelErrors = (err)=>{
 
     
    // duplicate error code
-   if (err.code ===11000){
+   if (err.code === 11000){
        errors.email = "that email is alredy registered";
        return errors;
    }
