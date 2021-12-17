@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
-const jsonWebToken = require('jsonwebtoken');
+ 
 
 // handel errors
 
@@ -9,11 +9,7 @@ const handelErrors = (err)=>{
     console.log(err.message,err.code);
     let errors = {email:'' ,password:''};
     
-   // duplicate error code
-   if (err.code === 11000){
-       errors.email = "that email is alredy registered";
-       return errors;
-   }
+   
 // incoorect email 
 if(err.message === 'incorrect email'){
     errors.email = 'that email is not registered';
@@ -22,6 +18,12 @@ if(err.message === 'incorrect email'){
 // incoorect password 
 if(err.message === 'incorrect password'){
     errors.password = 'that password is incorrect';
+}
+
+ // duplicate error code
+ if (err.code === 11000){
+    errors.email = "that email is alredy registered";
+    return errors;
 }
 
     // validation errors
@@ -75,17 +77,6 @@ module.exports.signup_post = async (req, res)=>{
 const {email,password} =req.body;
  
 try{
-    // const user = await User.create({email,password});
-
-    // let signedToken = jwt.sign({
-    //    data:user._id,
-    //    exp:new Date().setDate(new Date().getDate()+1)
-    // },'Locorbi86');
-    // res.json({
-    //     success:true,
-    //     token:signedToken
-    // });
-
    const user = await User.create({email,password});
    const token = createToken(user._id);
    res.cookie('jwt', token ,{httpOnly:true, maxAge: maxAge * 1000});
@@ -113,4 +104,9 @@ const {email ,password} =req.body;
      const errors = handelErrors(err);
      res.status(400).json({errors})
  }
+}
+
+module.exports =logout_get = (req,res) =>{
+    res.cookie('jwt' ,'',{ maxAge: 1})
+    res.redirect('/');
 }
