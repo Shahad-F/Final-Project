@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {isEmail} = require('validator');
-
+const bcrypt = require('bcrypt');
 
 const Schema = mongoose.Schema
 
@@ -53,8 +53,21 @@ const UserSchema = new Schema({
 
 })
 
-UserSchema.plugin(passportLocalMongoose,{
-    usernameField:'email'
+// fire a function after doc saved to db 
+UserSchema.post("save" ,function (doc, next){
+    console.log('new user was created & saved' ,doc);
+next()
+});
+
+// fire a funct''ion before doc savd to db 
+UserSchema.pre('save', async function(next){
+ const salt = await bcrypt.genSalt();
+ this.password = await bcrypt.hash(this.password,salt);
+ next()
 })
+
+// UserSchema.plugin(passportLocalMongoose,{
+//     usernameField:'email'
+// })
 
 module.exports = mongoose.model('User',UserSchema)
