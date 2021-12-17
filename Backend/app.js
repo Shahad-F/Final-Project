@@ -2,10 +2,11 @@ let express =require('express')
 const cors = require('cors')
 let mongoose = require('mongoose'),
 
+
 app= express()
 
 const router = require('./routes/index')
-
+const authRoutes = require('./routes/authRoutes')
 app.use(cors())
 
 const Admin = require('./models/Admen')
@@ -52,6 +53,7 @@ passport.deserializeUser(Provider.deserializeUser())
 
 app.use(express.json())
 app.use('/',router)
+app.use(authRoutes)
 
 app.listen(3030,()=>{
     console.log('express has started !')
