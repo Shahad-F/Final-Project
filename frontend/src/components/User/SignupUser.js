@@ -44,9 +44,10 @@ axios.post('http://localhost:3030/signup',
 {email:Email,password:Password})
 
 .then((res)=>{
-    // console.log(res)
+    //   
+    console.log(res.data)
 
-    if(res.data.error === 'that email is alredy registered'){
+    if(res.data.err === 'email is taken'){
           
         swal({
             title: "Your password or email is taken",

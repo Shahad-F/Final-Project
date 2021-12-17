@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken')
 // handel errors
 
 const handelErrors = (err)=>{
+
     console.log(err.message,err.code);
     let errors = {email:'' ,password:''};
 
@@ -70,6 +71,8 @@ try{
    res.status(201).json({user: user._id});
 }
 catch(err){
+res.json({err:'email is taken'})
+console.log(err)
   const errors=  handelErrors(err);
   res.status(400).json({errors});
  }
