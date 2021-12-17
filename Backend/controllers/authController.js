@@ -1,18 +1,28 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
+const jsonWebToken = require('jsonwebtoken');
+
 // handel errors
 
 const handelErrors = (err)=>{
 
     console.log(err.message,err.code);
     let errors = {email:'' ,password:''};
-
     
    // duplicate error code
    if (err.code === 11000){
        errors.email = "that email is alredy registered";
        return errors;
    }
+// incoorect email 
+if(err.message === 'incorrect email'){
+    errors.email = 'that email is not registered';
+}
+
+// incoorect password 
+if(err.message === 'incorrect password'){
+    errors.password = 'that password is incorrect';
+}
 
     // validation errors
     if(err.message.includes('User validation failed')){
