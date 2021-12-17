@@ -36,7 +36,7 @@ const handelLogin=(e)=>{
     {email:Email,password:Password})
 
     .then((res)=>{
-        console.log(res.data)
+        console.log(res)
 
         // if(res.data === true){
             // const token = res.data.token;
