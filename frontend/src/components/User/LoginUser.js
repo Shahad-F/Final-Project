@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import {useState} from 'react'
+import {useState ,useEffect} from 'react'
 import{useNavigate} from 'react-router-dom'
 import jwt from 'jwt-decode'
 import axios from 'axios'
@@ -15,6 +15,17 @@ function LoginUser() {
     const navigate=useNavigate()
     const [Email ,setEmail] =useState()
     const [Password ,setPassword] =useState()
+
+
+
+    useEffect(()=>{ 
+ 
+      axios.get('http://localhost:3030/login')
+      .then((res)=>{
+          console.log('hello')
+          
+      })
+       },)
 
 const handelLogin=(e)=>{
 
@@ -58,12 +69,11 @@ const handelLogin=(e)=>{
      backgroundSize: 'cover',
       width: "100%",
       height: "600px",
-        backgroundPosition: 'center',
-        opacity: 0.8,
+      backgroundPosition: 'center',
+      opacity: 0.8,
         // backgroundAttachment: 'fixed'
         }}>
-          
-
+        
 </Form>
 
     {/*  */}

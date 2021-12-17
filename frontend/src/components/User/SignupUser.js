@@ -16,42 +16,54 @@ function SignupUser() {
     const [user,setUser]=useState([])
     const[newUser,setNewUser]=useState({})
 
- const [FName ,setFName]=useState();
- const [LName ,setLName]=useState();
- const [Phone ,setPhone]=useState();
- const [Image ,setImage]=useState();
- const [City ,setCity]=useState();
+//  const [FName ,setFName]=useState();
+//  const [LName ,setLName]=useState();
+//  const [Phone ,setPhone]=useState();
+//  const [Image ,setImage]=useState();
+//  const [City ,setCity]=useState();
 const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
 
+
+
+useEffect(()=>{ 
+ 
+    axios.get('http://localhost:3030/signup')
+    .then((res)=>{
+        console.log('Signup')
+        
+    })
+     },)
 // functions 
 // signUp for provider
 
 const SignUp =(e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/users/signUp',
-{firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password   })
+axios.post('http://localhost:3030/signup',
+{email:Email,password:Password})
 
 .then((res)=>{
-    console.log(res)
+    // console.log(res)
 
-    if(res.data.error === 'Email is taken'){
+    // if(res.data.error === 'Email is taken'){
           
-        swal({
-            title: "Your password or email is taken",
-            icon:'error', 
-            button: "Try again "
-          })
-    }else {
+    //     swal({
+    //         title: "Your password or email is taken",
+    //         icon:'error', 
+    //         button: "Try again "
+    //       })
+    // }
+//     else
+//      {
         setNewUser(res.data)
-
+// console.log(Email,Password)
         swal({
-            title: 'Welcome '+ FName,
+            title: 'Welcome '+ Email,
             icon:'success'
           })
           navigate('/UserHome')
-    }
+//     }
 })
 
 }
@@ -78,50 +90,50 @@ axios.post('http://localhost:3030/users/signUp',
 <Row> 
   <Col md> 
 
-<Form.Floating className="mb-3">
+{/* <Form.Floating className="mb-3">
 <Form.Control type="text"  id="fname" 
 placeholder="first name" 
 onChange={e=>setFName(e.target.value)}/>
 
 <label htmlFor="fname">First Name</label> 
- </Form.Floating>
+ </Form.Floating> */}
 
  </Col>
 
  <Col md>
-<Form.Floating> 
+{/* <Form.Floating> 
 <Form.Control type="text"  id='lname'
 onChange={e=>setLName(e.target.value)} 
 placeholder="last name" />
 <label htmlFor="lname">Last Name</label>
-</Form.Floating>
+</Form.Floating> */}
 </Col>
 </Row>
 <Row> 
 <Col md-1> 
-<Form.Floating> 
+{/* <Form.Floating> 
 <Form.Control type="text"  id="phone"
 onChange={e=>setPhone(e.target.value)}
 placeholder="Phone number"  />
 <label htmlFor="phone">Phone Number</label>
-</Form.Floating>
+</Form.Floating> */}
 </Col>
 <Col md-1> 
-<Form.Floating> 
+{/* <Form.Floating> 
 <Form.Control type="text"  id='city'
 onChange={e=>setCity(e.target.value)}
 placeholder="Your City" />
 <label htmlFor="city">Your City</label>
-</Form.Floating>
+</Form.Floating> */}
 </Col>
 </Row>
 
-<Form.Floating> 
+{/* <Form.Floating> 
 <Form.Control type="text"  id='image'
 onChange={e=>setImage(e.target.value)} 
 placeholder="fYour image" />
 <label htmlFor="image">Image</label>
-</Form.Floating>
+</Form.Floating> */}
 
 <Form.Floating> 
 <Form.Control type="email" id='email'

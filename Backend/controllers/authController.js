@@ -21,7 +21,7 @@ const handelErrors = (err)=>{
     return errors;
 }
 
-module.exports.index =(req, res)=>{
+module.exports.login_get =(req, res)=>{
     User.find({})
     .then(user=>{
         res.json(user);
@@ -32,14 +32,24 @@ module.exports.index =(req, res)=>{
 }
 
 module.exports.signup_get =(req, res)=>{
-
-    res.render('signup');
+    User.find({})
+    .then(user=>{
+        res.json(user);
+    })
+    .catch(err=>{
+        res.json({err:err});
+    })
 }
 
-module.exports.login_get =(req, res)=>{
+// module.exports.signup_get =(req, res)=>{
 
-    res.render('login');
-}
+//     res.render('signup');
+// }
+
+// module.exports.login_get =(req, res)=>{
+
+//     res.render('login');
+// }
 
 module.exports.signup_post = async (req, res)=>{
 const {email,password} =req.body;

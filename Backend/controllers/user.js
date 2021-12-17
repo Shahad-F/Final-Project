@@ -1,7 +1,7 @@
 const passport = require('passport');
 const jsonWebToken = require('jsonwebtoken');
 
-const User = require('../models/User')
+// const User = require('../models/User')
 
 module.exports={
 

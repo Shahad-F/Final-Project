@@ -13,6 +13,7 @@ import ServiceHome from './components/Provider/ServiceHome'
 import AddProviderService from './components/Provider/AddproviderService';
 import UserHome from './components/User/UserHome'
 import LoginUser from './components/User/LoginUser'
+import SignupUser from './components/User/SignupUser'
 import logo from './img/Picture2.png'
 import './CSS/Home.css'
 import axios from "axios"
@@ -111,6 +112,7 @@ let token = localStorage.getItem("token");
     <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
     <Route path ='/UserHome' element={<UserHome/>}/>
     <Route  path ='/LoginUser' element={<LoginUser/>}/>
+    <Route path ='/SignupUser' element={<SignupUser/>}/>
 
 
   </Routes>
