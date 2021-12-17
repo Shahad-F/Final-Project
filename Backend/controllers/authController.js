@@ -21,7 +21,15 @@ const handelErrors = (err)=>{
     return errors;
 }
 
-
+module.exports.index =(req, res)=>{
+    User.find({})
+    .then(user=>{
+        res.json(user);
+    })
+    .catch(err=>{
+        res.json({err:err});
+    })
+}
 
 module.exports.signup_get =(req, res)=>{
 

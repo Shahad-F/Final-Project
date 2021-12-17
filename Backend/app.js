@@ -53,7 +53,7 @@ passport.deserializeUser(Provider.deserializeUser())
 
 app.use(express.json())
 app.use('/',router)
-app.use(authRoutes)
+app.use('/',authRoutes)
 
 app.listen(3030,()=>{
     console.log('express has started !')

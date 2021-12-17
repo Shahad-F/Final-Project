@@ -110,8 +110,10 @@ let token = localStorage.getItem("token");
     <Route path ='/ServiceHome' element={<ServiceHome  />}/>
     <Route path ='/AddProviderService/:_id' element={<AddProviderService data={service}/>}/>
     <Route path ='/UserHome' element={<UserHome/>}/>
+    <Route  path ='/LoginUser' element={<LoginUser/>}/>
 
-</Routes>
+
+  </Routes>
 
          
         

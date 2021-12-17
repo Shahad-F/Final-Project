@@ -9,7 +9,7 @@ module.exports={
 // display all users
     index:(req,res)=>{
 
-User.find({})
+  User.find({})
 .then(user=>{
     res.json(user);
 })

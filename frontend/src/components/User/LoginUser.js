@@ -20,7 +20,8 @@ const handelLogin=(e)=>{
 
     e.preventDefault()
 
-    axios.post("http://localhost:3030/users/login",
+    axios.post("http://localhost:3030/login",
+    
     {email:Email,password:Password})
 
     .then((res)=>{
