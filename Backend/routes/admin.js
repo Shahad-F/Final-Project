@@ -17,7 +17,7 @@ AdminController = require('../controllers/admin')
 
 router.post('/AdSignup',AdController.signup_post)
 
-router.post('/adSignin' ,AdController.signin_post)
+router.post('/AdSignin' ,AdController.signin_post)
 
 
 module.exports = router

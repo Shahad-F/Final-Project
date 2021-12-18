@@ -1,4 +1,4 @@
-const Admin = require("../models/Admen");
+const Provider = require("../models/ProvidorS");
 
 const jwt = require('jsonwebtoken')
 
@@ -19,7 +19,7 @@ const handleErrors = (err) => {
     return errors;
   }
   //validate errors
-  if (err.message.includes("admin validation failed")) {
+  if (err.message.includes("provider validation failed")) {
     Object.values(err.errors).forEach(({properties}) => {
       console.log(properties);
       errors[properties.path]= properties.message
@@ -36,13 +36,13 @@ const createToken = (id)=>{
 } 
 
 module.exports.signup_post = async (req, res) => {
-  const {  name, email,password} = req.body;
+  const {  fullname,userName,image ,phone,email,password} = req.body;
   console.log(req.body)
   try {
-    const admin = await Admin.create({  email, password,name});
-    const token = createToken(admin._id)
+    const provider = await provider.create({ email, password,fullname,userName,image ,phone });
+    const token = createToken(provider._id)
     res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
-    res.status(201).json({admin: token});
+    res.status(201).json({provider: token});
   } catch (err) {
     const errors = handleErrors(err);
     res.status(400).json({errors});
@@ -52,10 +52,10 @@ module.exports.signup_post = async (req, res) => {
 module.exports.signin_post = async (req, res) => {
   const { email, password } = req.body;
   try{
-    const admin= await Admin.login(email, password);
-    const token = createToken(admin._id)
+    const provider= await Provider.login(email, password);
+    const token = createToken(provider._id)
     res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
-    res.status(200).json({admin: token});
+    res.status(200).json({provider: token});
     
 }
   catch(err){

@@ -6,6 +6,7 @@ let mongoose = require('mongoose'),
 app= express()
 app.use(express.json())
 const router = require('./routes/index')
+
 // const authRoutes = require('./routes/authRoutes')
 app.use(cors())
 
@@ -28,17 +29,17 @@ mongoose.connect('mongodb+srv://shahad:Shd2020Shd@cluster0.cdkwi.mongodb.net/tes
 });
 
 
-// app.use(cookieParser('myadmin'))
-// app.use(expressSession({
+app.use(cookieParser('myadmin'))
+app.use(expressSession({
 
-//     secret: 'myadmin',
-//     saveUninitialized:true,
-//     resave:true,
-//     cookie:{maxAge : 6000}  
-// }))
+    secret: 'myadmin',
+    saveUninitialized:true,
+    resave:true,
+    cookie:{maxAge : 6000}  
+}))
 
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
  
 // app.use(passportP.initialize())

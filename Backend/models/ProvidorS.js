@@ -13,10 +13,7 @@ fullName:{
 userName:{
     type:String,
 },
-// lastName:{
-//     type:String,
-//     required:[true,'lasttName should be provided']
-// },
+ 
 phone:{
     type:Number,
     required:[true,'phone should be provided']

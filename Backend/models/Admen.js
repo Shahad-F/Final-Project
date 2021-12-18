@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const bcrypt= require('bcrypt')
 const Schema = mongoose.Schema 
 
 const passportLocalMongoose = require('passport-local-mongoose');
@@ -59,4 +59,6 @@ AdminSchema.post("save", function (doc, next) {
 //     usernameField:'email'
 // })
 
-module.exports =mongoose.model('Admin',AdminSchema)
+const Admin =mongoose.model('Admin',AdminSchema);
+
+module.exports =Admin;
