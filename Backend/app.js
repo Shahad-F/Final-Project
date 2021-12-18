@@ -10,7 +10,7 @@ const router = require('./routes/index')
 // const authRoutes = require('./routes/authRoutes')
 app.use(cors())
 
-const Admin = require('./models/Admen')
+// const Admin = require('./models/Admen')
 // const Provider = require('./models/ProvidorS')
 // const User = require('./models/User')
 

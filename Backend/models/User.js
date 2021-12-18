@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {isEmail} = require('validator');
+// const {isEmail} = require('validator');
 const bcrypt = require('bcrypt');
 
 const Schema = mongoose.Schema
@@ -27,8 +27,8 @@ const UserSchema = new Schema({
         type:String, 
         required:[true,' please enter an email '],
         unique:true,
-        lowercase: true,
-        validate:[isEmail ,'please enter a valid email']
+        // lowercase: true,
+        // validate:[isEmail ,'please enter a valid email']
     },
     image:{
         type:String,
@@ -37,7 +37,7 @@ const UserSchema = new Schema({
     password:{
         type:String,
         required:[true ,'please enter an password '],
-        minlength:[6, 'Minimum password length i 6 characters']
+        // minlength:[6, 'Minimum password length i 6 characters']
     }
 
 })
@@ -53,7 +53,7 @@ UserSchema.post("save", function (doc, next) {
   UserSchema.pre("save", async function (next) {
     const salt = await bcrypt.genSalt();
     this.password = await bcrypt.hash(this.password, salt);
-    console.log("provider about to created and saved ", this);
+    console.log("user about to created and saved ", this);
     next();
   });
   //static method to login author
@@ -61,7 +61,7 @@ UserSchema.post("save", function (doc, next) {
     //this refer to Author model
     const user = await this.findOne({ email });
     if (user) {
-      const user = await bcrypt.compare(password, provider.password);
+      const user = await bcrypt.compare(password, user.password);
       //auth from authenticate, true or false
       if (user) {
         return user;
