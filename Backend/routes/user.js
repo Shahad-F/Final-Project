@@ -1,15 +1,17 @@
 const router = require('express').Router()
 const User = require('../models/User');
-const passportU= require('passport');
+const passport= require('passport');
 UserController = require("../controllers/user")
 
 
-router.use(passportU.initialize())
-router.use(passportU.session())
+// router.use(passportU.initialize());
+// router.use(passportU.session());
 
-passportU.use(User.createStrategy())
-passportU.serializeUser(User.serializeUser())
-passportU.deserializeUser(User.deserializeUser())
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 router.get('/allUsers',UserController.index)
 router.post('/UserSignUp',UserController.signUp)

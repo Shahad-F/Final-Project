@@ -175,10 +175,10 @@ ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
             type:"provider",
             exp:new Date().setDate(new Date().getDate()+1)
         },'Locorbi86');
-
-       res.json({
-                success:true,
-                token:signedToken
+        
+        res.json({
+            success:true,
+            token:signedToken
         });
     }else{
         res.json({error:'Email is taken'})

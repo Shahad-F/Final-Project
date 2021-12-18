@@ -1,17 +1,18 @@
 const router = require("express").Router();
-const passportP = require('passport');
+const passport = require('passport');
 ProviderController = require("../controllers/provider")
+
 const Provider = require('../models/ProvidorS')
 
-router.use(passportP.initialize())
-router.use(passportP.session())
+// router.use(passportP.initialize())
+// router.use(passportP.session())
 
-passportP.use(Provider.createStrategy())
-passportP.serializeUser(Provider.serializeUser())
-passportP.deserializeUser(Provider.deserializeUser())
+passport.use(Provider.createStrategy())
+passport.serializeUser(Provider.serializeUser())
+passport.deserializeUser(Provider.deserializeUser())
+
 
 router.get('/',ProviderController.index)
-
 router.post('/provider/:uid',ProviderController.create)
 router.get('/display',ProviderController.show)
 router.put('/change/:uid',ProviderController.change)

@@ -4,21 +4,20 @@ let mongoose = require('mongoose'),
 
 
 app= express()
-
+app.use(express.json())
 const router = require('./routes/index')
 // const authRoutes = require('./routes/authRoutes')
 app.use(cors())
 
-// const Admin = require('./models/Admen')
+const Admin = require('./models/Admen')
 // const Provider = require('./models/ProvidorS')
 // const User = require('./models/User')
 
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
 
-const passportA = require('passport');
-const passportP = require('passport');
-const passportU = require('passport');
+const passport = require('passport');
+ 
  
 
 mongoose.Promise = global.Promise;
@@ -29,18 +28,19 @@ mongoose.connect('mongodb+srv://shahad:Shd2020Shd@cluster0.cdkwi.mongodb.net/tes
 });
 
 
-app.use(cookieParser('myadmin'))
-app.use(expressSession({
+// app.use(cookieParser('myadmin'))
+// app.use(expressSession({
 
-    secret: 'myadmin',
-    saveUninitialized:true,
-    resave:true,
-    cookie:{maxAge : 6000}  
-}))
+//     secret: 'myadmin',
+//     saveUninitialized:true,
+//     resave:true,
+//     cookie:{maxAge : 6000}  
+// }))
 
-// app.use(passportA.initialize())
-// app.use(passportA.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
+ 
 // app.use(passportP.initialize())
 // app.use(passportP.session())
 
@@ -48,7 +48,8 @@ app.use(expressSession({
 // app.use(passportU.session())
 
  
-// passportA.use(Admin.createStrategy())
+// passport.use(Admin.createStrategy())
+
 // passportA.serializeUser(Admin.serializeUser())
 // passportA.deserializeUser(Admin.deserializeUser())
 // // 
