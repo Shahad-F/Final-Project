@@ -74,7 +74,7 @@ UserSchema.post("save", function (doc, next) {
   };
 
 // UserSchema.plugin(passportLocalMongoose,{
-//     usernameField:'useremail'
+//     usernameField:'email'
 // })
 
 
