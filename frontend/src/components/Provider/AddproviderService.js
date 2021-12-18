@@ -30,7 +30,8 @@ function AddProviderService({data}) {
 
     const storedToken = localStorage.getItem("token");
     if(storedToken){
-        decodedData = jwt_decode(storedToken ,{payload:true});
+        
+    decodedData = jwt_decode(storedToken ,{payload:true});
     console.log(decodedData);
 
     let expirationDate = decodedData.exp;

@@ -5,7 +5,7 @@ const jsonWebToken = require('jsonwebtoken');
 const Provider = require('../models/TypeOfServicer')
 const ProviderofService=require('../models/ProvidorS')
 const Service = require('../models/Service')
- const TypeOfServicer =require('../models/TypeOfServicer')
+const TypeOfServicer =require('../models/TypeOfServicer')
 
 
 module.exports ={

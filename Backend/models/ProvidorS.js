@@ -33,6 +33,11 @@ image:{
 //     type:String,
 //     required:[true,'city should be provided'],
 // },
+roles:{
+        type:String,
+        enum : ['user','provider']
+        ,default:'user'
+    },
 })
 
 ProviderSchema.plugin(passportLocalMongoose,{ 

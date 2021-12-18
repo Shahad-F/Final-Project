@@ -8,10 +8,11 @@ import{useNavigate} from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col ,Row ,FloatingLabel} from 'react-bootstrap';
+ import { Form ,Col ,Row } from 'react-bootstrap';
 
 
  function SignUp() {
+
     const navigate=useNavigate()
     const [provider,setProvider]=useState([])
     const[newProvider,setNewProvider]=useState({})
