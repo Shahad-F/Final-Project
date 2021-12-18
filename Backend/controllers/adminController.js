@@ -54,9 +54,10 @@ module.exports.signin_post = async (req, res) => {
   try{
     const admin= await Admin.login(email, password);
     const token = createToken(admin._id)
+     
     res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
-    res.status(200).json({admin: token});
-    
+    res.status(200).json({success:true,admin: token});
+     
 }
   catch(err){
     const errors = handleErrors(err);

@@ -29,9 +29,10 @@ const handelLogin =(e)=>{
          .then((res)=>{
           console.log(res)
 
-            if(res.data === 200){
+            if(res.data.success === true){
                
-                const token = res.data.token;
+                const token = res.data.admin;
+                
                 const adminsign = jwt(token);
                 console.log(token)
                 console.log(adminsign)
