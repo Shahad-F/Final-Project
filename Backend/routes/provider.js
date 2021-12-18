@@ -1,7 +1,14 @@
-const router = require("express").Router(),
-
+const router = require("express").Router();
+const passportP = require('passport');
 ProviderController = require("../controllers/provider")
+const Provider = require('../models/ProvidorS')
 
+router.use(passportP.initialize())
+router.use(passportP.session())
+
+passportP.use(Provider.createStrategy())
+passportP.serializeUser(Provider.serializeUser())
+passportP.deserializeUser(Provider.deserializeUser())
 
 router.get('/',ProviderController.index)
 
@@ -21,5 +28,11 @@ router.get('/:uid',ProviderController.show)
 
 router.post('/ProviderSignUp',ProviderController.signUp)
 router.post('/ProviderLogin',ProviderController.authenticate)
+
+
+
+
+ 
+
 
 module.exports = router

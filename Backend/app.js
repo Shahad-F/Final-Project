@@ -6,16 +6,20 @@ let mongoose = require('mongoose'),
 app= express()
 
 const router = require('./routes/index')
-const authRoutes = require('./routes/authRoutes')
+// const authRoutes = require('./routes/authRoutes')
 app.use(cors())
 
-const Admin = require('./models/Admen')
-const Provider = require('./models/ProvidorS')
-const User = require('./models/User')
+// const Admin = require('./models/Admen')
+// const Provider = require('./models/ProvidorS')
+// const User = require('./models/User')
 
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
-const passport = require('passport')
+
+const passportA = require('passport');
+const passportP = require('passport');
+const passportU = require('passport');
+ 
 
 mongoose.Promise = global.Promise;
 
@@ -34,20 +38,28 @@ app.use(expressSession({
     cookie:{maxAge : 6000}  
 }))
 
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passportA.initialize())
+// app.use(passportA.session())
 
-passport.use(Admin.createStrategy())
-passport.serializeUser(Admin.serializeUser())
-passport.deserializeUser(Admin.deserializeUser())
+// app.use(passportP.initialize())
+// app.use(passportP.session())
+
+// app.use(passportU.initialize())
+// app.use(passportU.session())
+
+ 
+// passportA.use(Admin.createStrategy())
+// passportA.serializeUser(Admin.serializeUser())
+// passportA.deserializeUser(Admin.deserializeUser())
 // // 
-passport.use(Provider.createStrategy())
-passport.serializeUser(Provider.serializeUser())
-passport.deserializeUser(Provider.deserializeUser())
-// 
-// passport.use(User.createStrategy())
-// passport.serializeUser(User.serializeUser())
-// passport.deserializeUser(User.deserializeUser())
+
+// passportP.use(Provider.createStrategy())
+// passportP.serializeUser(Provider.serializeUser())
+// passportP.deserializeUser(Provider.deserializeUser())
+// // 
+// passportU.use(User.createStrategy())
+// passportU.serializeUser(User.serializeUser())
+// passportU.deserializeUser(User.deserializeUser())
 
 
 
