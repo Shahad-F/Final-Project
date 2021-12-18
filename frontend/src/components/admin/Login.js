@@ -27,9 +27,10 @@ const handelLogin =(e)=>{
         email:Email,password:Password})
 
          .then((res)=>{
-            console.log(res.data)
+          console.log(res)
 
-            if(res.data === admin){
+            if(res.data === 200){
+               
                 const token = res.data.token;
                 const adminsign = jwt(token);
                 console.log(token)
