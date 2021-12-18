@@ -22,10 +22,10 @@ const handelLogin=(e)=>{
         email:PEmail,password:PPassword})
 
         .then((res)=>{
-            console.log(res.data)
+            console.log(res)
 
             if(res.data.success === true){
-                const token = res.data.token;
+                const token = res.data.provider;
                 const providersign = jwt(token);
                 console.log(token)
                 console.log(providersign)

@@ -82,7 +82,7 @@ let token = localStorage.getItem("token");
      {!token ? (
          <>
          <Nav.Link className="nav" href="#signup"><Link to='/ProviderSignUp'>SignUp</Link></Nav.Link>
-         <Nav.Link className="nav" href="#home"> <Link to='/ProviderLogin'>Login</Link></Nav.Link>
+         <Nav.Link className="nav" href="#home"> <Link to='/LoginUser'>Login</Link></Nav.Link>
     
          </>
      ) : null}

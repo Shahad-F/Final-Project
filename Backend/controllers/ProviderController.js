@@ -55,7 +55,7 @@ module.exports.signin_post = async (req, res) => {
     const provider= await Provider.login(email, password);
     const token = createToken(provider._id)
     res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
-    res.status(200).json({provider: token});
+    res.status(200).json({success:true,provider: token});
     
 }
   catch(err){

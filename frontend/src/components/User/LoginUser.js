@@ -31,8 +31,8 @@ const handelLogin=(e)=>{
     .then((res)=>{
         console.log(res)
 
-        if(res.data === true){
-            const token = res.data.token;
+        if(res.data.success === true){
+            const token = res.data.user;
             const usersign = jwt(token);
             console.log(usersign)
             localStorage.setItem('token',token)
