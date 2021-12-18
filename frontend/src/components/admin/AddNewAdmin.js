@@ -3,6 +3,7 @@ import{useNavigate ,useParams} from 'react-router-dom'
 import {useState,useEffect} from 'react'
 // import {Link} from 'react-router-dom'
 // import jwt_decode from 'jwt-decode'
+import jwt from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert';
 import './newAdmin.css'
@@ -61,15 +62,21 @@ useEffect(()=>{
     const handelAdd=(e)=>{ 
     e.preventDefault();
 
-    axios.post('http://localhost:3030/admins/create', 
+    axios.post('http://localhost:3030/admins/AdSignup', 
     {name:Name,email:Email,password:Password})
      
 
  .then((res)=>{
      
     console.log(res)
-if(res.data.error=== "Email is taken"){
 
+if(res.data === 11000){
+  const token = res.data.admin;
+                
+  const adminsign = jwt(token);
+  console.log(token)
+  console.log(adminsign)
+  localStorage.setItem('token',token);
     swal({
 
         title: "Your password or email is taken",
@@ -79,7 +86,6 @@ if(res.data.error=== "Email is taken"){
 }else{
     setNewAdmin(res.data)
      
-    
     swal({
         title: Name+' is admin too now',
         icon:'success'
