@@ -18,45 +18,38 @@ function LoginUser() {
 
 
 
-    useEffect(()=>{ 
- 
-      axios.get('http://localhost:3030/login')
-      .then((res)=>{
-          console.log('hello')
-          
-      })
-       },)
+    
 
 const handelLogin=(e)=>{
 
     e.preventDefault()
 
-    axios.post("http://localhost:3030/login",
+    axios.post("http://localhost:3030/users/UserLogin",
     
     {email:Email,password:Password})
 
     .then((res)=>{
         console.log(res)
 
-        // if(res.data === true){
-            // const token = res.data.token;
-            // const usersign = jwt(token);
-            // console.log(usersign)
-            // localStorage.setItem('token',token)
+        if(res.data === true){
+            const token = res.data.token;
+            const usersign = jwt(token);
+            console.log(usersign)
+            localStorage.setItem('token',token)
             swal({
                 title:'Welcome .'+Email,
                 icon:'success',
                 button: "Ok "
               })
                 navigate('/UserHome');
-        // }else{
-            // swal({
-            //     title: "Your password or email is incorrect",
+        }else{
+            swal({
+                title: "Your password or email is incorrect",
                
-            //      icon:'error', 
-            //      button: "Try again "
-            //   })  
-        // }
+                 icon:'error', 
+                 button: "Try again "
+              })  
+        }
     })
 
 }

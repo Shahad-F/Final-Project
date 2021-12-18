@@ -16,8 +16,8 @@ function SignupUser() {
     const [user,setUser]=useState([])
     const[newUser,setNewUser]=useState({})
 
-//  const [FName ,setFName]=useState();
-//  const [LName ,setLName]=useState();
+ const [FullName ,setFullName]=useState();
+ const [UserName ,setUserName]=useState();
 //  const [Phone ,setPhone]=useState();
 //  const [Image ,setImage]=useState();
 //  const [City ,setCity]=useState();
@@ -26,22 +26,14 @@ const [Password,setPassword]=useState()
 
 
 
-useEffect(()=>{ 
- 
-    axios.get('http://localhost:3030/signup')
-    .then((res)=>{
-        console.log('Signup')
-        
-    })
-     },)
 // functions 
 // signUp for provider
 
 const SignUp = async (e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/signup',
-{email:Email,password:Password})
+axios.post('http://localhost:3030/users/UserSignup',
+{fullName:FullName,userName:UserName, email:Email,password:Password})
 
 .then((res)=>{
     //   
@@ -91,23 +83,23 @@ axios.post('http://localhost:3030/signup',
 <Row> 
   <Col md> 
 
-{/* <Form.Floating className="mb-3">
+<Form.Floating className="mb-3">
 <Form.Control type="text"  id="fname" 
-placeholder="first name" 
-onChange={e=>setFName(e.target.value)}/>
+placeholder="full name" 
+onChange={e=>setFullName(e.target.value)}/>
 
-<label htmlFor="fname">First Name</label> 
- </Form.Floating> */}
+<label htmlFor="fname">Full Name</label> 
+ </Form.Floating>
 
  </Col>
 
  <Col md>
-{/* <Form.Floating> 
+<Form.Floating> 
 <Form.Control type="text"  id='lname'
-onChange={e=>setLName(e.target.value)} 
-placeholder="last name" />
-<label htmlFor="lname">Last Name</label>
-</Form.Floating> */}
+onChange={e=>setUserName(e.target.value)} 
+placeholder="username" />
+<label htmlFor="lname">user Name</label>
+</Form.Floating>
 </Col>
 </Row>
 <Row> 
