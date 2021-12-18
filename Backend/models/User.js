@@ -10,14 +10,14 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const UserSchema = new Schema({
 
 
-    // firstName:{
-    //     type:String,
-    //     required:[true,'firstName should be provided']
-    // },
-    // lastName:{
-    //     type:String,
-    //     required:[true,'lasttName should be provided']
-    // },
+    fullName:{
+        type:String,
+        required:[true,'firstName should be provided']
+    },
+    userName:{
+        type:String,
+        required:[true,'lasttName should be provided']
+    },
     // userName:{
     //     type:String, 
     // },
@@ -45,11 +45,11 @@ const UserSchema = new Schema({
     //     enum : ['user','Admin','provider']
     //     ,default:'user'
     // },
-    password:{
-        type:String,
-        required:[true ,'please enter an password '],
-        minlength:[6, 'Minimum password length i 6 characters']
-    }
+    // password:{
+    //     type:String,
+    //     required:[true ,'please enter an password '],
+    //     minlength:[6, 'Minimum password length i 6 characters']
+    // }
 
 })
 
@@ -79,8 +79,9 @@ UserSchema.statics.login =async function(email, password){
     }
     throw Error('incorrect email')
 }
-// UserSchema.plugin(passportLocalMongoose,{
-//     usernameField:'email'
-// })
+
+UserSchema.plugin(passportLocalMongoose,{
+    usernameField:'email'
+})
 
 module.exports = mongoose.model('User',UserSchema)

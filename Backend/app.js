@@ -11,7 +11,7 @@ app.use(cors())
 
 const Admin = require('./models/Admen')
 const Provider = require('./models/ProvidorS')
-// const User = require('./models/User')
+const User = require('./models/User')
 
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -45,16 +45,16 @@ passport.use(Provider.createStrategy())
 passport.serializeUser(Provider.serializeUser())
 passport.deserializeUser(Provider.deserializeUser())
 // 
-// passport.use(User.createStrategy())
-// passport.serializeUser(User.serializeUser())
-// passport.deserializeUser(User.deserializeUser())
+passport.use(User.createStrategy())
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 
 
 app.use(express.json());
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use('/',router)
-app.use(authRoutes)
+// app.use(authRoutes)
 
 
 // // cookies
