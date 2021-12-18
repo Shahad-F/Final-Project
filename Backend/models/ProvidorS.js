@@ -2,8 +2,7 @@ const mongoose = require('mongoose')
 const bcrypt= require('bcrypt')
 const Schema = mongoose.Schema
 
-const passportLocalMongoose = require('passport-local-mongoose');
-
+ 
 const ProviderSchema = new Schema({ 
 
 fullName:{
@@ -38,7 +37,7 @@ image:{
 
 // fire a function after document saved to DB
 ProviderSchema.post("save", function (doc, next) {
-    console.log("new admin created & saved", doc);
+    console.log("new provider created & saved", doc);
     next();
   });
   //fire a function before document saved to DB
