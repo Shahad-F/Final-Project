@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     //     type:Number,
     //     required:[true,'phone should be provided']
     // },
-    email:{
+    useremail:{
         type:String, 
         required:[true,' please enter an email '],
         unique:true,
@@ -81,7 +81,7 @@ const UserSchema = new Schema({
 // }
 
 UserSchema.plugin(passportLocalMongoose,{
-    usernameField:'email'
+    usernameField:'useremail'
 })
 
 module.exports = mongoose.model('User',UserSchema)

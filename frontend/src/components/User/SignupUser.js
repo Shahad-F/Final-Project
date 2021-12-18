@@ -33,7 +33,7 @@ const SignUp = async (e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/users/UserSignup',
-{fullName:FullName,userName:UserName, email:Email,password:Password})
+{fullName:FullName,userName:UserName, useremail:Email,password:Password})
 
 .then((res)=>{
     //   

@@ -26,7 +26,7 @@ signUp: (req,res)=>{
         fullName:req.body.fullName,
         userName:req.body.userName,
         // phone:req.body.phone,
-        email:req.body.email,
+        useremail:req.body.useremail,
         // image:req.body.image,
         // city:req.body.city,
     })
@@ -85,7 +85,7 @@ let userInfo={
     fullName:req.body.fullName,
     userName:req.body.userName,
     // phone:req.body.phone,
-    email:req.body.email,
+    useremail:req.body.useremail,
     // image:req.body.image,
     // city:req.body.city,
     password:req.body.password 
