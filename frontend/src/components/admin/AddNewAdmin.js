@@ -68,15 +68,16 @@ useEffect(()=>{
 
  .then((res)=>{
      
-    console.log(res)
+    console.log(res.data)
 
-if(res.data === 11000){
+if(res.data.errors === 11000 ){
   const token = res.data.admin;
                 
   const adminsign = jwt(token);
   console.log(token)
   console.log(adminsign)
   localStorage.setItem('token',token);
+
     swal({
 
         title: "Your password or email is taken",
