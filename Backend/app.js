@@ -25,21 +25,21 @@ mongoose.connect('mongodb+srv://shahad:Shd2020Shd@cluster0.cdkwi.mongodb.net/tes
 });
 
 
-// app.use(cookieParser('myadmin'))
-// app.use(expressSession({
+app.use(cookieParser('myadmin'))
+app.use(expressSession({
 
-//     secret: 'myadmin',
-//     saveUninitialized:true,
-//     resave:true,
-//     cookie:{maxAge : 6000}  
-// }))
+    secret: 'myadmin',
+    saveUninitialized:true,
+    resave:true,
+    cookie:{maxAge : 6000}  
+}))
 
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
-// passport.use(Admin.createStrategy())
-// passport.serializeUser(Admin.serializeUser())
-// passport.deserializeUser(Admin.deserializeUser())
+passport.use(Admin.createStrategy())
+passport.serializeUser(Admin.serializeUser())
+passport.deserializeUser(Admin.deserializeUser())
 // // 
 // passport.use(Provider.createStrategy())
 // passport.serializeUser(Provider.serializeUser())
