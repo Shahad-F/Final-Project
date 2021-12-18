@@ -18,7 +18,7 @@ const handelLogin=(e)=>{
 
     e.preventDefault()
 
-    axios.post('http://localhost:3030/providers/login', {
+    axios.post('http://localhost:3030/providers/ProviderLogin', {
         email:PEmail,password:PPassword})
 
         .then((res)=>{

@@ -85,20 +85,20 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 
 <Form.Floating className="mb-3">
 <Form.Control type="text"  id="fname" 
-placeholder="first name" 
+placeholder="full name" 
 onChange={e=>setFullName(e.target.value)}/>
 
-<label htmlFor="fname">First Name</label> 
+<label htmlFor="fname">Full Name</label> 
  </Form.Floating>
 
  </Col>
 
  <Col md>
 <Form.Floating> 
-<Form.Control type="text"  id='lname'
+<Form.Control type="text"  id='uname'
 onChange={e=>setUserName(e.target.value)} 
-placeholder="last name" />
-<label htmlFor="lname">Last Name</label>
+placeholder=" username" />
+<label htmlFor="uname">UserName</label>
 </Form.Floating>
 </Col>
 </Row>
