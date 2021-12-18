@@ -18,70 +18,65 @@ const UserSchema = new Schema({
         type:String,
         required:[true,'lasttName should be provided']
     },
-    // userName:{
-    //     type:String, 
-    // },
-    // phone:{
-    //     type:Number,
-    //     required:[true,'phone should be provided']
-    // },
-    useremail:{
+    
+    phone:{
+        type:Number,
+        required:[true,'phone should be provided']
+    },
+    email:{
         type:String, 
         required:[true,' please enter an email '],
         unique:true,
         lowercase: true,
         validate:[isEmail ,'please enter a valid email']
     },
-    // image:{
-    //     type:String,
-    // },
-    // city:{
-    //     type:String,
-    //     required:[true,'city should be provided'],
-    // },
-
-    // roles:{
-    //     type:String,
-    //     enum : ['user','Admin','provider']
-    //     ,default:'user'
-    // },
-    // password:{
-    //     type:String,
-    //     required:[true ,'please enter an password '],
-    //     minlength:[6, 'Minimum password length i 6 characters']
-    // }
+    image:{
+        type:String,
+    },
+     
+    password:{
+        type:String,
+        required:[true ,'please enter an password '],
+        minlength:[6, 'Minimum password length i 6 characters']
+    }
 
 })
 
-// fire a function after doc saved to db 
-// UserSchema.post("save" ,function (doc, next){
-//     console.log('new user was created & saved' ,doc);
-// next()
-// });
 
-// fire a funct''ion before doc savd to db 
-// UserSchema.pre('save', async function(next){
-//  const salt = await bcrypt.genSalt();
-//  this.password = await bcrypt.hash(this.password,salt);
-//  next()
+// fire a function after document saved to DB
+UserSchema.post("save", function (doc, next) {
+    console.log("new admin created & saved", doc);
+    next();
+  });
+  //fire a function before document saved to DB
+  // this refer to Author that in const author = await Author.create({ email, password });
+  UserSchema.pre("save", async function (next) {
+    const salt = await bcrypt.genSalt();
+    this.password = await bcrypt.hash(this.password, salt);
+    console.log("provider about to created and saved ", this);
+    next();
+  });
+  //static method to login author
+  UserSchema.statics.login = async function (email, password) {
+    //this refer to Author model
+    const user = await this.findOne({ email });
+    if (user) {
+      const user = await bcrypt.compare(password, provider.password);
+      //auth from authenticate, true or false
+      if (user) {
+        return user;
+      }
+      //this what will be print if handleErrors in authController fires
+      throw Error("incorrect password");
+    }
+    //this what will be print if handleErrors in authController fires
+    throw Error("incorrect email");
+  };
+
+// UserSchema.plugin(passportLocalMongoose,{
+//     usernameField:'useremail'
 // })
 
 
-// UserSchema.statics.login =async function(email, password){
-//     const user = await this.findOne({ email });
-
-//     if(user){
-//       const auth= await  bcrypt.compare(password,user.password) ;
-//       if(auth){
-//           return user;
-//       }
-//       throw Error('incorrect password');
-//     }
-//     throw Error('incorrect email')
-// }
-
-UserSchema.plugin(passportLocalMongoose,{
-    usernameField:'useremail'
-})
-
-module.exports = mongoose.model('User',UserSchema)
+const User =mongoose.model('User',UserSchema)
+module.exports =  User;
