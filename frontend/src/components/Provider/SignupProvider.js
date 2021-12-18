@@ -16,11 +16,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     const [provider,setProvider]=useState([])
     const[newProvider,setNewProvider]=useState({})
 
- const [FName ,setFName]=useState();
- const [LName ,setLName]=useState();
+ const [FullName ,setFullName]=useState();
+ const [UserName ,setUserName]=useState();
  const [Phone ,setPhone]=useState();
  const [Image ,setImage]=useState();
- const [City ,setCity]=useState();
+//  const [City ,setCity]=useState();
  const [Email,setEmail]=useState()
  const [Password,setPassword]=useState()
 
@@ -31,8 +31,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const SignUp =(e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/providers/signUp',
-{firstName:FName ,lastName:LName ,phone:Phone ,image:Image ,city:City ,email:Email,password:Password})
+axios.post('http://localhost:3030/providers/ProviderSignUp',
+{fullName:FullName ,userName:UserName ,phone:Phone ,image:Image ,email:Email,password:Password})
 
 .then((res)=>{
     console.log(res)
@@ -50,7 +50,7 @@ axios.post('http://localhost:3030/providers/signUp',
         setNewProvider(res.data)
 
         swal({
-            title: 'Welcome '+ FName,
+            title: 'Welcome '+ FullName,
             icon:'success'
           })
           navigate('/ServiceHome')
@@ -86,7 +86,7 @@ axios.post('http://localhost:3030/providers/signUp',
 <Form.Floating className="mb-3">
 <Form.Control type="text"  id="fname" 
 placeholder="first name" 
-onChange={e=>setFName(e.target.value)}/>
+onChange={e=>setFullName(e.target.value)}/>
 
 <label htmlFor="fname">First Name</label> 
  </Form.Floating>
@@ -96,7 +96,7 @@ onChange={e=>setFName(e.target.value)}/>
  <Col md>
 <Form.Floating> 
 <Form.Control type="text"  id='lname'
-onChange={e=>setLName(e.target.value)} 
+onChange={e=>setUserName(e.target.value)} 
 placeholder="last name" />
 <label htmlFor="lname">Last Name</label>
 </Form.Floating>
@@ -112,12 +112,12 @@ placeholder="Phone number"  />
 </Form.Floating>
 </Col>
 <Col md-1> 
-<Form.Floating> 
+{/* <Form.Floating> 
 <Form.Control type="text"  id='city'
 onChange={e=>setCity(e.target.value)}
 placeholder="Your City" />
 <label htmlFor="city">Your City</label>
-</Form.Floating>
+</Form.Floating> */}
 </Col>
 </Row>
 

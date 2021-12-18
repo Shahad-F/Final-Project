@@ -6,15 +6,17 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const ProviderSchema = new Schema({ 
 
-
-firstName:{
+fullName:{
     type:String,
     required:[true,'firstName should be provided']
 },
-lastName:{
+userName:{
     type:String,
-    required:[true,'lasttName should be provided']
 },
+// lastName:{
+//     type:String,
+//     required:[true,'lasttName should be provided']
+// },
 phone:{
     type:Number,
     required:[true,'phone should be provided']
@@ -27,10 +29,10 @@ email:{
 image:{
     type:String,
     required:[true,'image should be provided']},
-city:{
-    type:String,
-    required:[true,'city should be provided'],
-},
+// city:{
+//     type:String,
+//     required:[true,'city should be provided'],
+// },
 })
 
 ProviderSchema.plugin(passportLocalMongoose,{ 

@@ -5,8 +5,9 @@ const jsonWebToken = require('jsonwebtoken');
 const Provider = require('../models/TypeOfServicer')
 const ProviderofService=require('../models/ProvidorS')
 const Service = require('../models/Service')
-// const User = require('../models/User')
-const TypeOfServicer =require('../models/TypeOfServicer')
+ const TypeOfServicer =require('../models/TypeOfServicer')
+
+
 module.exports ={
 
 show:(req,res)=>{
@@ -156,13 +157,13 @@ signUp:(req,res)=>{
 
 let newPrivider = new ProviderofService({
 
-        firstName:req.body.firstName,
-        lastName:req.body.lastName,
+        fullName:req.body.fullName,
+        userName:req.body.userName,
         phone:req.body.phone,
         email:req.body.email,
         image:req.body.image,
-        city:req.body.city,
-        roles:req.body.roles
+        // city:req.body.city,
+        // roles:req.body.roles
 })
 
 ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
@@ -224,13 +225,12 @@ update:(req,res)=>{
 
     let providerinfo={
 
-            firstName:req.body.firstName,
-            lastName:req.body.lastName,
-            phone:req.body.phone,
-            email:req.body.email,
-            image:req.body.image,
-            city:req.body.city,
-            password:req.body.password
+        fullName:req.body.fullName,
+        userName:req.body.userName,
+        phone:req.body.phone,
+        email:req.body.email,
+        image:req.body.image,
+        password:req.body.password
 
     }
 

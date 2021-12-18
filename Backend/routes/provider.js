@@ -19,7 +19,7 @@ router.put('/update/:uid',ProviderController.update)
 router.delete('/delete/:uid',ProviderController.delete)
 router.get('/:uid',ProviderController.show)
 
-router.post('/signUp',ProviderController.signUp)
+router.post('/ProviderSignUp',ProviderController.signUp)
 router.post('/ProviderLogin',ProviderController.authenticate)
 
 module.exports = router

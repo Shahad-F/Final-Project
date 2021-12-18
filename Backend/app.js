@@ -41,9 +41,9 @@ passport.use(Admin.createStrategy())
 passport.serializeUser(Admin.serializeUser())
 passport.deserializeUser(Admin.deserializeUser())
 // // 
-// passport.use(Provider.createStrategy())
-// passport.serializeUser(Provider.serializeUser())
-// passport.deserializeUser(Provider.deserializeUser())
+passport.use(Provider.createStrategy())
+passport.serializeUser(Provider.serializeUser())
+passport.deserializeUser(Provider.deserializeUser())
 // 
 // passport.use(User.createStrategy())
 // passport.serializeUser(User.serializeUser())

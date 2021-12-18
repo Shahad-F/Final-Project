@@ -1,13 +1,13 @@
 
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import{useNavigate} from 'react-router-dom'
 import jwt from 'jwt-decode'
 import axios from 'axios'
 import swal from 'sweetalert'
-import image from '../../img/carLogin.jpg'
+// import image from '../../img/carLogin.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col ,Card,Row,FloatingLabel,Button,Form,Image} from 'react-bootstrap';
+import { Button,Form} from 'react-bootstrap';
  
 
 
@@ -23,7 +23,7 @@ const handelLogin =(e)=>{
 
     e.preventDefault()
 
-    axios.post('http://localhost:3030/admins/login', {
+    axios.post('http://localhost:3030/admins/AdminLogin', {
         email:Email,password:Password})
 
         .then((res)=>{
