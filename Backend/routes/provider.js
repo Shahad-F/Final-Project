@@ -1,7 +1,7 @@
 const router = require("express").Router();
  
 ProviderController = require("../controllers/provider")
- 
+ ProController = require("../controllers/ProviderController")
 
  
 
@@ -21,8 +21,8 @@ router.put('/update/:uid',ProviderController.update)
 router.delete('/delete/:uid',ProviderController.delete)
 router.get('/:uid',ProviderController.show)
 
-router.post('/ProviderSignUp',ProviderController.signup_post)
-router.post('/ProviderLogin',ProviderController.signin_post)
+router.post('/ProviderSignUp',ProController.signup_post)
+router.post('/ProviderLogin',ProController.signin_post)
 
 
 
