@@ -8,7 +8,7 @@ const ProviderSchema = new Schema({
 
 fullName:{
     type:String,
-    required:[true,'firstName should be provided']
+    required:[true,'fullName should be provided']
 },
 userName:{
     type:String,
@@ -26,16 +26,13 @@ email:{
 image:{
     type:String,
     required:[true,'image should be provided']},
-// city:{
-//     type:String,
-//     required:[true,'city should be provided'],
-// },
 
-// roles:{
-//         type:String,
-//         enum : ['user','provider']
-//         ,default:'user'
-//     },
+    password:{
+        type:String, 
+        required:[true,'provider password should be provided']
+
+    }
+ 
 })
 
 
