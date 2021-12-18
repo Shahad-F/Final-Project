@@ -14,7 +14,17 @@ module.exports ={
         })
         Admin.register(newAdmin ,req.body.password,(error,admin)=>{
             if(admin){
-                res.json({message:"Admin inserted successfully !"})
+                let signedToken = jsonWebToken.sign({
+
+                    data:admin._id,
+                    type:"admin",
+                    exp:new Date().setDate(new Date().getDate()+1)
+                },'Locorbi86');
+    
+                res.json({
+                    success:true,
+                    token:signedToken
+            });
             }else{
                 res.json({error:"Email is taken"})
                 console.log(error)
@@ -37,6 +47,7 @@ authenticate:(req,res,next)=>{
         if(admin){
             let signedToken = jsonWebToken.sign({
                 data:admin._id,
+                type:'admin',
                 exp:new Date().setDate(new Date().getDate()+1)
              },'Locorbi86');
 

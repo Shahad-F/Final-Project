@@ -1,25 +1,25 @@
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
-// const Schema =mongoose.Schema
+const Schema =mongoose.Schema
 
-//  const providerSchema = require('./TypeOfServicer').schema
-// const ServiceSchema = new Schema({
+ const providerSchema = require('./TypeOfServicer').schema
+const ServiceSchema = new Schema({
 
-// nameOfService:{
-//     type:String,
-//  },
-// image:{
-//     type:String,
-//  },
-// description:{
-//     type:String,
-//  },
+nameOfService:{
+    type:String,
+ },
+image:{
+    type:String,
+ },
+description:{
+    type:String,
+ },
  
-// providers:[{type:Schema.Types.ObjectId,ref:'Provider'}]
+providers:[{type:Schema.Types.ObjectId,ref:'Provider'}]
 
  
     
-// })
+})
 
 
-// module.exports =mongoose.model('Service',ServiceSchema)
+module.exports =mongoose.model('Service',ServiceSchema)

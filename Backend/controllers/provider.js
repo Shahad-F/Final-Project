@@ -169,7 +169,17 @@ let newPrivider = new ProviderofService({
 ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
 
     if(provider){
-        res.json({message:"Provider inserted successfully !"})
+        let signedToken = jsonWebToken.sign({
+
+            data:provider._id,
+            type:"provider",
+            exp:new Date().setDate(new Date().getDate()+1)
+        },'Locorbi86');
+
+       res.json({
+                success:true,
+                token:signedToken
+        });
     }else{
         res.json({error:'Email is taken'})
         console.log(error)
@@ -188,6 +198,7 @@ authenticate:(req,res,next)=>{
             let signedToken = jsonWebToken.sign({
 
                 data:provider._id,
+                type:"provider",
                 exp:new Date().setDate(new Date().getDate()+1)
             },'Locorbi86');
 

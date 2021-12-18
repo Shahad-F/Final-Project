@@ -33,7 +33,17 @@ signUp: (req,res)=>{
     User.register(newUser ,req.body.password,(error,user)=>{
 
         if(user){
-            res.json({message:"new User inserted successfully !"})
+            let signedToken = jsonWebToken.sign({
+
+                data:user._id,
+                type:"user",
+                exp:new Date().setDate(new Date().getDate()+1)
+            },'Locorbi86');
+
+            res.json({
+                success:true,
+                token:signedToken
+            });
         }else{
             res.json({error:"Email is taken"})
             console.log(error)
@@ -49,6 +59,7 @@ authenticate:(req,res,next)=>{
             let signedToken = jsonWebToken.sign({
 
                 data:user._id,
+                type:"user",
                 exp:new Date().setDate(new Date().getDate()+1)
             },'Locorbi86')
             res.json({
