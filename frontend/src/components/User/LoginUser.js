@@ -26,7 +26,7 @@ const handelLogin=(e)=>{
 
     axios.post("http://localhost:3030/users/UserLogin",
     
-    {useremail:Email,password:Password})
+    {email:Email,password:Password})
 
     .then((res)=>{
         console.log(res)

@@ -7,12 +7,10 @@ app= express()
 app.use(express.json())
 const router = require('./routes/index')
 
-// const authRoutes = require('./routes/authRoutes')
+ 
 app.use(cors())
 
-// const Admin = require('./models/Admen')
-// const Provider = require('./models/ProvidorS')
-// const User = require('./models/User')
+ 
 
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -42,51 +40,12 @@ app.use(passport.initialize())
 app.use(passport.session())
 
  
-// app.use(passportP.initialize())
-// app.use(passportP.session())
-
-// app.use(passportU.initialize())
-// app.use(passportU.session())
-
  
-// passport.use(Admin.createStrategy())
-
-// passportA.serializeUser(Admin.serializeUser())
-// passportA.deserializeUser(Admin.deserializeUser())
-// // 
-
-// passportP.use(Provider.createStrategy())
-// passportP.serializeUser(Provider.serializeUser())
-// passportP.deserializeUser(Provider.deserializeUser())
-// // 
-// passportU.use(User.createStrategy())
-// passportU.serializeUser(User.serializeUser())
-// passportU.deserializeUser(User.deserializeUser())
-
-
-
+ 
 app.use(express.json());
-// app.use(cookieParser());
+ 
 app.use('/',router)
-// app.use(authRoutes)
-
-
-// // cookies
-// app.get('/set-cookies',(req,res)=>{
-// // res.setHeader('Set-Cookie','newUser=true');
-
-// res.cookie('newUser',false);
-// res.cookie('isEmployee',true,{maxAge:1000*60*60*24 ,httpOnly:true});
-// res.send('you got the cookies !');
-
-// });
-
-// app.get('/read-cookie',(req,res)=>{
-
-// const cookies = req.cookies;
-// console.log(cookies.newUser);
-// res.json(cookies);
-// });
+ 
 
 app.listen(3030,()=>{
     console.log('express has started !')

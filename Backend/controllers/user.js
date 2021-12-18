@@ -26,7 +26,7 @@ signUp: (req,res)=>{
         fullName:req.body.fullName,
         userName:req.body.userName,
         // phone:req.body.phone,
-        useremail:req.body.useremail,
+        email:req.body.email,
         // image:req.body.image,
         // city:req.body.city,
     })

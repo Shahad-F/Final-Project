@@ -6,6 +6,7 @@ ServiceRouter= require('./service')
 ProviderRouter = require('./provider')
 UserRouter = require('./user')
 
+
 router.use('/admins',AdminRouter)
 router.use('/services',ServiceRouter)
 router.use('/providers',ProviderRouter)
