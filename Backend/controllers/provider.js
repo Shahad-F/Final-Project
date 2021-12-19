@@ -38,12 +38,14 @@ show:(req,res)=>{
 
 create: async(req,res)=>{
 
-    // _id is id in service like(towing and teach)
+    // _id is id of [provider].
     ProviderofService.findById({_id:req.body.userId}).then(user=>{
         // console.log("user")
-        // if _id is founded print 
+        // if _id is founded print information of provider.
         console.log(user)
-        // TypeOfServicer.create({price:req.body.price,userId:user})
+        // create a price in provider we chosie it .
+        TypeOfServicer.create({price:req.body.price,userId:user})
+        
 
         // .then((Tservice)=>{
         //     Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
@@ -154,71 +156,6 @@ console.log(service)
 },
 
 
-
-
-signUp:(req,res)=>{
-
-let newPrivider = new ProviderofService({
-
-        fullName:req.body.fullName,
-        userName:req.body.userName,
-        phone:req.body.phone,
-        email:req.body.email,
-        image:req.body.image,
-        // city:req.body.city,
-        // roles:req.body.roles
-})
-
-ProviderofService.register(newPrivider, req.body.password,(error,provider)=>{
-
-    if(provider){
-        let signedToken = jsonWebToken.sign({
-
-            data:provider._id,
-            type:"provider",
-            exp:new Date().setDate(new Date().getDate()+1)
-        },'Locorbi86');
-        
-        res.json({
-            success:true,
-            token:signedToken
-        });
-    }else{
-        res.json({error:'Email is taken'})
-        console.log(error)
-    }
-})
-
-
-},
-
-authenticate:(req,res,next)=>{
-
-    passport.authenticate('local',(error,provider)=>{
-
-        if(provider){
-
-            let signedToken = jsonWebToken.sign({
-
-                data:provider._id,
-                type:"provider",
-                exp:new Date().setDate(new Date().getDate()+1)
-            },'Locorbi86');
-
-            res.json({
-                success:true,
-                token:signedToken
-        });
-        console.log(provider)
-        }else{
-            res.json({
-                success:false, 
-                message:"Your passwor or email is not correct. Please try again"  
-            });
-             
-        }
-    })(req,res,next)
-},
 
 delete:(req,res)=>{
     let _id=req.params.uid
