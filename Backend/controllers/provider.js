@@ -96,9 +96,9 @@ del:async(req, res)=>{
     TypeOfServicer.findByIdAndRemove(req.params.uid)
     .then(async (Tservice)=>{
         await console.log({Tservice})
-        await Tservice.pull({_id:uid})
+        // await Tservice.pull(uid)
         await Tservice.save()
-        // await res.send(Tservice)
+        await res.send(Tservice)
     })
 
 },
