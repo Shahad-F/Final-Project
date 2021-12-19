@@ -62,7 +62,7 @@ const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { price:Price ,userId:decodedData.data})
+    { price:Price ,userId:decodedData.id})
 
     .then((res)=>{
         console.log(res.data)
@@ -148,9 +148,7 @@ const habdeldelete =(id)=>{
   </Card.Body>
    
 </Form>
- 
 
-     
             {/* </div> */}
      
          
@@ -166,13 +164,15 @@ const habdeldelete =(id)=>{
                  {/* <Card.Text className='text'> Phone Number:{item.phone}</Card.Text> */}
                   
                  {/* <Card.Text className='text'>Price :{item.price}</Card.Text> */}
-                 {/* <Card.Text className='text'>{item.profile}</Card.Text> */}
+
+                 {/* <Card.Text className='text'>{item.image}</Card.Text> */}
 
           
 
-    {(function(){
+    {/* {(function(){
 
     if(decodedData != undefined){
+
         console.log("decodedData "+UserId)
         console.log("decodedData "+item.userId)
         console.log("my Profile "+item.profile) 
@@ -187,7 +187,7 @@ const habdeldelete =(id)=>{
     </>)
         }}
 
-    })()}
+    })()} */}
              </Card> 
          })}
      </Card>
