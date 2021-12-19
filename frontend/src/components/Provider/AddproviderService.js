@@ -1,5 +1,4 @@
 
-
  import React, { useEffect ,useState} from "react";
  import { useParams,useNavigate } from "react-router-dom";
  import axios from "axios";
@@ -71,7 +70,7 @@ const handelAdd=(e)=>{
 
     .then((res)=>{
         console.log(res.data)
-        setNewTService(res.data.tservice)
+        setNewTService(res.data)
         // setService(res.data)
     })
 
@@ -109,9 +108,10 @@ const habdeldelete =(id)=>{
       })
     axios.delete(`http://localhost:3030/providers/del/${id}`)
     .then((res=>{
-        console.log("delete")
-        console.log(res)
-        setTService(res.data)
+            console.log(res)    
+            console.log("delete")
+
+        setNewTService(res.data)
         // setService(res.data)
 
     }))
