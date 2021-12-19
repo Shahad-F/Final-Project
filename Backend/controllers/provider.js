@@ -85,11 +85,15 @@ let _id=req.params.eid
 let proInfo={price:req.body.price}
 
 
-TypeOfServicer.findByIdAndUpdate({_id,price:req.body.price})
+TypeOfServicer.findByIdAndUpdate(_id,{$set:req.body.price})
+// res.json(Tservice)
+.then(async (Tservice)=>{
+    // await console.log(Tservice)
+    // await Tservice.save()
+    await res.status(200).send(Tservice)
+    res.json('update ')
 
-.then((Tservice)=>{
-res.json(Tservice)
-console.log(Tservice)
+// console.log(Tservice)
     // TypeOfServicer.create(_id,{$set:req.body.price})
    
 
