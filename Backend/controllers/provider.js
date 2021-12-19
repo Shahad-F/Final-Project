@@ -81,15 +81,25 @@ ProviderofService.findById({_id:req.body.userId})
 // res.json(user)
 // console.log(user)
 
-let _id=req.params.eid
-let proInfo={price:req.body.price}
+const _id=req.params.eid
+// let proInfo=  TypeOfServicer ({price:req.body.price})
+
+let proInfo= {price:req.body.price}
+
+// TypeOfServicer.findById(_id)
 
 TypeOfServicer.findByIdAndUpdate(_id,{$set:req.body.price})
 
 // res.json(Tservice)
 .then(async (Tservice)=>{
+    res.json(Tservice)
+    await Tservice.pull({_id:eid})
+    await Tservice.push(proInfo)
     await Tservice.save()
     await res.status(200).send(Tservice)
+     
+     
+    // await res.status(200).send(Tservice)
     // await console.log(Tservice)
     // await Tservice.save()
     // await res.status(200).send(Tservice)
@@ -106,6 +116,9 @@ TypeOfServicer.findByIdAndUpdate(_id,{$set:req.body.price})
 //     })
 })
 
+})
+.catch(error =>{
+    res.json({error:error})  
 })
 },
 
