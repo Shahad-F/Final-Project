@@ -60,9 +60,9 @@ create: async(req,res)=>{
                 await Tservice.save()
                 await service.save()
                 // console.log({service,Tservice})
-                TypeOfServicer.find({serviceId:service._id})
+                 TypeOfServicer.find({serviceId:service._id})
                 .populate('userId serviceId').then(async service=>
-                res.status(201).send(service))
+                 res.status(201).send(service))
             }
             catch(e){
                 console.error(e)
@@ -93,15 +93,27 @@ TypeOfServicer.find({userId:user})
 
 del:async(req, res)=>{
 
-    TypeOfServicer.findByIdAndRemove(req.params.uid)
-    .then(async (Tservice)=>{
-        
-        await console.log({Tservice})
-        
-        await Tservice.save()
-        await res.send(Tservice)
-    })
+    let _id = req.params.uid;
+    TypeOfServicer.findByIdAndDelete(_id)
 
+    .then(async(Tservice)=>{  
+    res.json({message:"Type is deleted"})
+        // let SId=req.params.sId
+        // TypeOfServicer.find({serviceId:SId})
+        // console.log(SId)
+        // .populate('userId serviceId')
+        // .then(async service=>{
+        // console.log('service')
+        // await Tservice.save()
+        // res.status(201).send(service)
+ 
+        // res.status(200).send(Tservice)
+    // })
+
+})
+.catch(error =>{
+    res.json({error:error})
+})
 },
 
 show: async (req,res)=>{
