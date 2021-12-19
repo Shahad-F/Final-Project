@@ -76,44 +76,22 @@ change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId})
  
-.then(user=>{
 
-// res.json(user)
-// console.log(user)
+.then(async (user)=>{
+ 
 
-const _id=req.params.eid
-// let proInfo=  TypeOfServicer ({price:req.body.price})
-
-let proInfo= {price:req.body.price}
+const _id =req.params.eid
+const proInfo= {price:req.body.price}
 
 // TypeOfServicer.findById(_id)
 
-TypeOfServicer.findByIdAndUpdate(_id,{$set:req.body.price})
+ TypeOfServicer.findByIdAndUpdate(_id,{$set:proInfo})
 
-// res.json(Tservice)
 .then(async (Tservice)=>{
-    res.json(Tservice)
-    await Tservice.pull({_id:eid})
-    await Tservice.push(proInfo)
-    await Tservice.save()
-    await res.status(200).send(Tservice)
-     
-     
-    // await res.status(200).send(Tservice)
-    // await console.log(Tservice)
-    // await Tservice.save()
-    // await res.status(200).send(Tservice)
-    // res.json('update ')
+ 
+     res.json(Tservice)
+     console.log(Tservice)
 
-// console.log(Tservice)
-    // TypeOfServicer.create(_id,{$set:req.body.price})
-   
-
-//     .then(async(Tservice)=>{
-//         await console.log({Tservice})
-//         await Tservice.save()
-//         await res.send(Tservice)
-//     })
 })
 
 })
