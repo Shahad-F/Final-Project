@@ -84,12 +84,14 @@ ProviderofService.findById({_id:req.body.userId})
 let _id=req.params.eid
 let proInfo={price:req.body.price}
 
-TypeOfServicer.findByIdAndUpdate(_id,{$set:proInfo})
+
+TypeOfServicer.findByIdAndUpdate({_id,price:req.body.price})
 
 .then((Tservice)=>{
 res.json(Tservice)
 console.log(Tservice)
-//     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
+    // TypeOfServicer.create(_id,{$set:req.body.price})
+   
 
 //     .then(async(Tservice)=>{
 //         await console.log({Tservice})
