@@ -8,7 +8,7 @@
  import './provider.css'
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col,Image,Card, Container} from 'react-bootstrap';
+ import { Form ,Col,Image,Card,Img, Container} from 'react-bootstrap';
  
 
 function AddProviderService({data}) {
@@ -166,12 +166,12 @@ const habdeldelete =(id)=>{
                  <Card.Text className='text'> Phone Number:{item.userId.phone}</Card.Text>
                   
                  <Card.Text className='text'>Price :{item.price}</Card.Text>
-
-                 <Card.Image  ><img src={item.userId.image} alt=''/></Card.Image>
+                 {/* <img src={item.userId.image} alt=''/> */}
+                 <Card.Img  src={item.userId.image} alt=''/>
 
           
 
-    {/* {(function(){
+    {(function(){
 
     if(decodedData != undefined){
 
@@ -189,7 +189,8 @@ const habdeldelete =(id)=>{
     </>)
         }}
 
-    })()} */}
+    })()}
+
              </Card> 
          })}
      </Card>
