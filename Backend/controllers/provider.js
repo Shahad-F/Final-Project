@@ -49,7 +49,7 @@ create: async(req,res)=>{
         .then((Tservice)=>{
             console.log(Tservice)
 
-            // push o
+            // push object of provider in array of service.
             Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
             .populate('providers').then(async service=>{
 
