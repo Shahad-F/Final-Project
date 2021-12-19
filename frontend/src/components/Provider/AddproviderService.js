@@ -92,6 +92,8 @@ const habdeledit=(id)=>{
 
     }))
 }
+
+
 // delete card
 const habdeldelete =(id)=>{
 
@@ -129,21 +131,8 @@ const habdeldelete =(id)=>{
       <Card.Body>
 
      <Form className="BOX"> 
+ 
 
-   {/* <Form.Floating className="mb-3" >
-      <Form.Control className="INPUT" type="text" placeholder="UserName" 
-     onChange ={e=>setUserName(e.target.value)} />
-     <label htmlFor="floatingInputCustom">UserName</label>
-
-  </Form.Floating > */}
-
-
-  {/* <Form.Floating className="mb-3" >
-      <Form.Control className="INPUT" type="text" placeholder="Phone number" 
-    onChange ={e=>setPhone(e.target.value)} />
-    <label htmlFor="floatingInputCustom">Enter your phone number</label>
-
-  </Form.Floating> */}
 
   <Form.Floating className="mb-3" >
 
@@ -153,8 +142,7 @@ const habdeldelete =(id)=>{
 
   </Form.Floating>
 
-  <Button variant="outline-danger" className="addBTN" onClick={(e)=>handelAdd(e)}
-  >Add</Button>{' '}
+  <Button variant="outline-danger" className="addBTN" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
 
   </Form>
   </Card.Body>
@@ -175,7 +163,7 @@ const habdeldelete =(id)=>{
 
                  {/* <Card.Header className='Header'>Name Of Provider:{item.userName}</Card.Header> */}
                  
-                 <Card.Text className='text'> Phone Number:{item.phone}</Card.Text>
+                 {/* <Card.Text className='text'> Phone Number:{item.phone}</Card.Text> */}
                   
                  {/* <Card.Text className='text'>Price :{item.price}</Card.Text> */}
                  {/* <Card.Text className='text'>{item.profile}</Card.Text> */}

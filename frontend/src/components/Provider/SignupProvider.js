@@ -46,8 +46,8 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
             button: "Try again "
           })
     }else {
-        // const token =res.data.token;
-        // localStorage.setItem('token',token)
+        const token =res.data.provider;
+        localStorage.setItem('token',token)
         setNewProvider(res.data)
 
         swal({
@@ -62,7 +62,7 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 
     return ( <>
 
-<Form  style={{
+{/* <Form  style={{
     backgroundImage:
      `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
      backgroundSize: 'cover',
@@ -70,11 +70,11 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
       height: "1000px",
         backgroundPosition: 'center',
         opacity: 0.8,
-        // backgroundAttachment: 'fixed'
+        
         }}>
           
 
-</Form>
+</Form> */}
 {/*  */}
  
 
