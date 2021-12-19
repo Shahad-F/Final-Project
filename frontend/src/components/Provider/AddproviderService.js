@@ -61,6 +61,7 @@ const[UserId,setUserId]=useState(decodedData.id);
 
 // add new card
 const handelAdd=(e)=>{
+
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
@@ -68,7 +69,8 @@ const handelAdd=(e)=>{
 
     .then((res)=>{
         console.log(res.data)
-        setService(res.data)
+        setTService(res.data)
+        // setService(res.data)
     })
 
     swal({
@@ -106,8 +108,8 @@ const habdeldelete =(id)=>{
     axios.delete(`http://localhost:3030/providers/del/${id}`)
     .then((res=>{
         console.log(res.data)
-        setTService(res.data.tservice)
-        setService(res.data)
+        setTService(res.data)
+        // setService(res.data)
 
     }))
 }
