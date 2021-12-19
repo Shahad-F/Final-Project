@@ -79,15 +79,16 @@ ProviderofService.findById({_id:req.body.userId})
 .then(user=>{
 
 // res.json(user)
+// console.log(user)
 
-console.log(user)
 let _id=req.params.eid
+// let proInfo={price:req.body.price}
 
-TypeOfServicer.findByIdAndUpdate(_id,{$push})
+TypeOfServicer.findById(_id)
 
 .then((Tservice)=>{
 res.json(Tservice)
-
+console.log(Tservice)
 //     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
 
 //     .then(async(Tservice)=>{
