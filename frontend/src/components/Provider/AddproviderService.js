@@ -43,7 +43,7 @@ function AddProviderService({data}) {
     }
 }
 
-const[UserId,setUserId]=useState(decodedData.data);
+const[UserId,setUserId]=useState(decodedData.id);
 
 // display all cards
     useEffect(()=>{
@@ -103,7 +103,7 @@ const habdeldelete =(id)=>{
         title:'Your service is delete ',
         icon:'error'
       })
-    axios.delete(`http://localhost:3030/providers/provider/${_id}/${id}`)
+    axios.delete(`http://localhost:3030/providers/del/${id}`)
     .then((res=>{
         console.log(res.data)
         setService(res.data)
@@ -176,9 +176,9 @@ const habdeldelete =(id)=>{
     if(decodedData != undefined){
 
         console.log("decodedData "+UserId)
-        console.log("decodedData "+item.userId)
-        console.log("my Profile "+item.profile) 
-        if(UserId === item.userId){
+        console.log("decodedData "+item.userId._id)
+        
+        if(UserId === item.userId._id){
             console.log("decodedData")
     return(<>
 <div className="BTN" > 
@@ -190,7 +190,6 @@ const habdeldelete =(id)=>{
         }}
 
     })()}
-
              </Card> 
          })}
      </Card>
