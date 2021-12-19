@@ -9,7 +9,7 @@ ProviderController = require("../controllers/provider")
 router.get('/',ProviderController.index)
 router.post('/provider/:uid',ProviderController.create)
 router.get('/display',ProviderController.show)
-router.put('/change',ProviderController.change)
+router.put('/change/:eid',ProviderController.change)
 router.delete('/del/:uid',ProviderController.del)
 
 

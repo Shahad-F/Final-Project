@@ -75,13 +75,18 @@ create: async(req,res)=>{
 change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId})
+
 .then(user=>{
-    
+
 // res.json(user)
 
 console.log(user)
-// TypeOfServicer.find({userId:user})
-// .then((Tservice)=>{
+let _id=req.params.eid
+
+TypeOfServicer.findByIdAndUpdate(_id,{$push})
+
+.then((Tservice)=>{
+res.json(Tservice)
 
 //     TypeOfServicer.findByIdAndUpdate(req.params.uid,{price:req.body.price})
 
@@ -90,7 +95,7 @@ console.log(user)
 //         await Tservice.save()
 //         await res.send(Tservice)
 //     })
-// })
+})
 
 })
 },
