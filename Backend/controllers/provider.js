@@ -37,26 +37,29 @@ show:(req,res)=>{
     },
 
 create: async(req,res)=>{
+
+    // _id is id in service like(towing and teach)
     ProviderofService.findById({_id:req.body.userId}).then(user=>{
         // console.log("user")
-        // console.log(user)
-        TypeOfServicer.create({price:req.body.price,userId:user})
+        // if _id is founded print 
+        console.log(user)
+        // TypeOfServicer.create({price:req.body.price,userId:user})
 
-        .then((Tservice)=>{
-            Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
-            .populate('providers').then(async service=>{
+        // .then((Tservice)=>{
+        //     Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
+        //     .populate('providers').then(async service=>{
 
-                try{
-                await Tservice.save()
-                await service.save()
-                console.log({service,Tservice})
-                res.status(201).send(service)
-            }
-            catch(e){
-                console.error(e)
-            }
-         })
-        })
+        //         try{
+        //         await Tservice.save()
+        //         await service.save()
+        //         console.log({service,Tservice})
+        //         res.status(201).send(service)
+        //     }
+        //     catch(e){
+        //         console.error(e)
+        //     }
+        //  })
+        // })
     })
     
 },
