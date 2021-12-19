@@ -75,7 +75,7 @@ create: async(req,res)=>{
 change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId})
-
+ 
 .then(user=>{
 
 // res.json(user)
@@ -84,14 +84,16 @@ ProviderofService.findById({_id:req.body.userId})
 let _id=req.params.eid
 let proInfo={price:req.body.price}
 
-
 TypeOfServicer.findByIdAndUpdate(_id,{$set:req.body.price})
+
 // res.json(Tservice)
 .then(async (Tservice)=>{
+    await Tservice.save()
+    await res.status(200).send(Tservice)
     // await console.log(Tservice)
     // await Tservice.save()
-    await res.status(200).send(Tservice)
-    res.json('update ')
+    // await res.status(200).send(Tservice)
+    // res.json('update ')
 
 // console.log(Tservice)
     // TypeOfServicer.create(_id,{$set:req.body.price})
