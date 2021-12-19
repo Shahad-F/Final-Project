@@ -59,6 +59,8 @@ useEffect(()=>{
         navigate('/AdminHome');
 
     }
+
+    
     const handelAdd=(e)=>{ 
     e.preventDefault();
 

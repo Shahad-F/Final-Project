@@ -17,6 +17,8 @@ function AddProviderService({data}) {
      
     const [service,setService]=useState([]);
     const [tservice,setTService]=useState([]);
+    const [newtservice,setNewTService]=({});
+
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
     const [UserName,setUserName]=useState();
@@ -65,7 +67,7 @@ const handelAdd=(e)=>{
     e.preventDefault()
 
     axios.post(`http://localhost:3030/providers/provider/${_id}`,
-    { price:Price ,userId:decodedData.id})
+    {price:Price ,userId:decodedData.id})
 
     .then((res)=>{
         console.log(res.data)
@@ -105,7 +107,7 @@ const habdeldelete =(id)=>{
         title:'Your service is delete ',
         icon:'error'
       })
-    axios.delete(`http://localhost:3030/providers/del/${id}/${_id}`)
+    axios.delete(`http://localhost:3030/providers/del/${id}`)
     .then((res=>{
         console.log("delete")
         console.log(res)
