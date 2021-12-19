@@ -46,22 +46,24 @@ create: async(req,res)=>{
         // create a price in provider we chosie it .
         TypeOfServicer.create({price:req.body.price,userId:user})
         
+        .then((Tservice)=>{
+            console.log(Tservice)
 
-        // .then((Tservice)=>{
-        //     Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
-        //     .populate('providers').then(async service=>{
+            // push o
+            Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
+            .populate('providers').then(async service=>{
 
-        //         try{
-        //         await Tservice.save()
-        //         await service.save()
-        //         console.log({service,Tservice})
-        //         res.status(201).send(service)
-        //     }
-        //     catch(e){
-        //         console.error(e)
-        //     }
-        //  })
-        // })
+                try{
+                await Tservice.save()
+                await service.save()
+                console.log({service,Tservice})
+                res.status(201).send(service)
+            }
+            catch(e){
+                console.error(e)
+            }
+         })
+        })
     })
     
 },
