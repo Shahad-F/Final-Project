@@ -106,6 +106,7 @@ const habdeldelete =(id)=>{
     axios.delete(`http://localhost:3030/providers/del/${id}`)
     .then((res=>{
         console.log(res.data)
+        setTService(res.data.tservice)
         setService(res.data)
 
     }))
