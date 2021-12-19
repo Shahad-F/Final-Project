@@ -17,7 +17,7 @@ function AddProviderService({data}) {
      
     const [service,setService]=useState([]);
     const [tservice,setTService]=useState([]);
-    const [newtservice,setNewTService]=({});
+    const [newTservice,setNewTService]=useState({});
 
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
@@ -57,7 +57,7 @@ const[UserId,setUserId]=useState(decodedData.id);
         setLoading(false)       
 })
 
-},[])
+},[newTservice])
 
 
 
@@ -71,7 +71,7 @@ const handelAdd=(e)=>{
 
     .then((res)=>{
         console.log(res.data)
-        setTService(res.data)
+        setNewTService(res.data.tservice)
         // setService(res.data)
     })
 
