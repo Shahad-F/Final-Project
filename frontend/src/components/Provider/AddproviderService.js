@@ -89,11 +89,11 @@ const habdeledit=(id)=>{
         title:'Your service is edited ',
         icon:'success'
       })
-    axios.put(`http://localhost:3030/providers/provider/${_id}/${id}`,
-    { userName:UserName,phone:Phone,price:Price,userId:UserId,profile:Profile})
+    axios.put(`http://localhost:3030/providers/change/${id}`,
+    { price:Price ,userId:decodedData.id})
     .then((res=>{
         console.log(res.data)
-        setService(res.data)
+        setNewTService(res.data)
 
     }))
 }

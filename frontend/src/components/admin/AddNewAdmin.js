@@ -24,23 +24,7 @@ const [Name ,setName]=useState();
 const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
 
-// ....................
-
-// let decodedData;
-
-// const storedToken = localStorage.getItem('token');
-
-// if(storedToken){
-// decodedData =jwt_decode(storedToken,{payload :true});
-// console.log(decodedData);
-
-// let expirationDate = decodedData.exp;
-// var current_time = Date.now() / 1000;
-// if(expirationDate < current_time){
-//     localStorage.removeItem('token');
-// }
-// }
-// ..................
+  
 
 useEffect(()=>{ 
     axios.get('http://localhost:3030/admins')

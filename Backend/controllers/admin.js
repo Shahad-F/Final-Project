@@ -6,32 +6,7 @@ const Admin = require('../models/Admen')
 module.exports ={
 
 
-    create:(req,res)=>{
-        let newAdmin = new Admin({
-
-            name:req.body.name, 
-            email:req.body.email,
-
-        })
-        Admin.register(newAdmin ,req.body.password,(error,admin)=>{
-            if(admin){
-                let signedToken = jsonWebToken.sign({
-
-                    data:admin._id,
-                    type:"admin",
-                    exp:new Date().setDate(new Date().getDate()+1)
-                },'Locorbi86');
     
-                res.json({
-                    success:true,
-                    token:signedToken
-            });
-            }else{
-                res.json({error:"Email is taken"})
-                console.log(error)
-            }
-        })
-    },
             index:(req,res)=>{
                 Admin.find({})
                 .then(admins=>{
@@ -41,30 +16,8 @@ module.exports ={
             res.json({error:error})
         })
     },
-authenticate:(req,res,next)=>{
 
-    passport.authenticate('local',(error,admin)=>{
-
-        if(admin){
-            let signedToken = jsonWebToken.sign({
-                data:admin._id,
-                type:'admin',
-                exp:new Date().setDate(new Date().getDate()+1)
-             },'Locorbi86');
-
-            res.json({
-                success:true,
-                token:signedToken
-            });
-            console.log(admin)
-        }else{
-            res.json({
-                success:false,
-                message:"Could not authenticate admin"
-            });
-        }
-    })(req,res,next)
-},
+ 
 
 delete:(req,res)=>{
 
