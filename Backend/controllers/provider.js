@@ -42,12 +42,12 @@ create: async(req,res)=>{
     ProviderofService.findById({_id:req.body.userId}).then(user=>{
         // console.log("user")
         // if _id is founded print information of provider.
-        console.log(user)
+        // console.log(user)
         // create a price in provider we chosie it .
         TypeOfServicer.create({price:req.body.price,userId:user})
         
         .then((Tservice)=>{
-            console.log(Tservice)
+            // console.log(Tservice)
 
             // push object of provider in array of service.
             Service.findByIdAndUpdate(req.params.uid,{$push:{providers:user}})
@@ -56,8 +56,10 @@ create: async(req,res)=>{
                 try{
                 await Tservice.save()
                 await service.save()
-                console.log({service,Tservice})
-                res.status(201).send(service)
+                // console.log({service,Tservice})
+                TypeOfServicer.findById({_id:Tservice._id})
+                .populate('userId').then(async service=>
+                res.status(201).send(service))
             }
             catch(e){
                 console.error(e)
