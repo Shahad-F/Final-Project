@@ -16,6 +16,7 @@ function AddProviderService({data}) {
     const {_id} =useParams();
      
     const [service,setService]=useState([]);
+    const [tservice,setTService]=useState([]);
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
     const [UserName,setUserName]=useState();
@@ -48,8 +49,9 @@ const[UserId,setUserId]=useState(decodedData.data);
     useEffect(()=>{
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
-        console.log(res.data)
-        setService(res.data.service)
+        console.log(res)
+        setService(res.data.tservice[0].serviceId)
+        setTService(res.data.tservice)
         setLoading(false)       
 })
 
@@ -125,7 +127,7 @@ const habdeldelete =(id)=>{
 
     <Card.Img variant="top" src={service.image}    />
     <Card.Text className='des'> <span>Description:</span> {service.description}</Card.Text>
-       
+        
     </Card>
 
       <Card.Body>
@@ -155,17 +157,17 @@ const habdeldelete =(id)=>{
         
             <Card border="light" className="BigCard">
 
-         {service.providers.map((item)=>{
+         {tservice.map((item)=>{
 
              return<Card  border="danger"  style={{ width: '20rem' }}className="smallCard">
 
-                 <Card.Header className='Header'>Name Of Provider: {item.fullName}</Card.Header>
+                 <Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
                  
-                 {/* <Card.Text className='text'> Phone Number:{item.phone}</Card.Text> */}
+                 <Card.Text className='text'> Phone Number:{item.userId.phone}</Card.Text>
                   
-                 {/* <Card.Text className='text'>Price :{item.price}</Card.Text> */}
+                 <Card.Text className='text'>Price :{item.price}</Card.Text>
 
-                 {/* <Card.Text className='text'>{item.image}</Card.Text> */}
+                 <Card.Image  ><img src={item.userId.image} alt=''/></Card.Image>
 
           
 

@@ -16,7 +16,10 @@ show:(req,res)=>{
 
     Provider.findById(_id)
     .then(provider=>{
-        res.json({provider})
+        TypeOfServicer.find({serviceId:service._id})
+                .populate('userId serviceId').then(async tservice=>
+                res.status(201).send({provider,tservice}))
+        // res.json({provider})
     })
     .catch(error=>{
 
@@ -44,7 +47,7 @@ create: async(req,res)=>{
         // if _id is founded print information of provider.
         // console.log(user)
         // create a price in provider we chosie it .
-        TypeOfServicer.create({price:req.body.price,userId:user})
+        TypeOfServicer.create({price:req.body.price,userId:user,serviceId:req.params.uid})
         
         .then((Tservice)=>{
             // console.log(Tservice)
@@ -57,8 +60,8 @@ create: async(req,res)=>{
                 await Tservice.save()
                 await service.save()
                 // console.log({service,Tservice})
-                TypeOfServicer.findById({_id:Tservice._id})
-                .populate('userId').then(async service=>
+                TypeOfServicer.find({serviceId:service._id})
+                .populate('userId serviceId').then(async service=>
                 res.status(201).send(service))
             }
             catch(e){

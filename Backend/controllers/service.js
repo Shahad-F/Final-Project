@@ -1,4 +1,5 @@
 const Service = require('../models/Service')
+const TypeOfServicer =require('../models/TypeOfServicer')
 
 module.exports ={
 
@@ -8,7 +9,12 @@ module.exports ={
     
         Service.findById(_id)
         .then(service=>{
-            res.json({service})
+            TypeOfServicer.find({serviceId:service._id})
+            .populate('userId serviceId').then(async tservice=>
+               { console.log(tservice)
+            res.status(201).send({tservice})}
+            )
+            // res.json({service})
         })
         .catch(error=>{
     
