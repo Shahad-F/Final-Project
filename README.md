@@ -180,9 +180,7 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 |------------|-------------|-----------------------|---------------|--------------|----------------|
 | GET        |`/`          |                       |      200      |     400      | Bring all admin|
 | POST       |`/AdSignup`  |{name, email, password}| 201           |     400      |create user with encrypted password, and store user in session|
-
 | POST       |`/AdSignin`  |{email, password}      |  200          |     400      | if user exists (404), and if password matches (404), then stores user in session|
-
 |DELETE      |`/:uid/delete`|                      | 200           |400           | Used to delete one exit point document by id|
 
 ## Links 
