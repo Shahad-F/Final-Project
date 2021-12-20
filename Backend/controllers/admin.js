@@ -6,15 +6,18 @@ const Admin = require('../models/Admen')
 module.exports ={
 
 
-    
-            index:(req,res)=>{
+
+            index:async(req,res)=>{
+
                 Admin.find({})
-                .then(admins=>{
-                    res.json(admins)
-        })
-        .catch(error=>{
-            res.json({error:error})
-        })
+
+                try{(admins=>{
+                 res.json(admins)
+                 res.status(200)
+           })}
+             catch(error){
+            res.status(400).json({error:error})
+        }
     },
 
  

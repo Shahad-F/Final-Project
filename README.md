@@ -158,8 +158,9 @@ AllProvider<br/>
 
 ```
 {
-  nameOfService:{ type:String, required:[true,"Name of service is required ."],},
-  image:{ type:String, required:[true,"Image is required"],},
+  nameOfService: { type:String},
+  image: { type:String },
+  description:{ type:String,},
   providers:[providerSchema]  
 }
 ```
@@ -167,10 +168,9 @@ AllProvider<br/>
 
 ```
 {
-userName: { type:String,required:[true,"userName is required ."],},
-phone: {type:Number,required:[true,"Phone is required ."],},
-price: { type:String,required:[true,"Price is required ."],},
-userId:{  type:Schema.Types.ObjectId,ref:'Provider'},
+price: {type:Number, required:[true,"Price is required ."],},
+userId:{type:Schema.Types.ObjectId,ref:'Provider'},
+serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 }
 ```
 ## Backend router 
