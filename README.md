@@ -183,6 +183,16 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 | POST       |`/AdSignin`  |{email, password}      |  200          |     400      | if user exists (404), and if password matches (404), then stores user in session|
 |DELETE      |`/:uid/delete`|                      | 200           |400           | Used to delete one exit point document by id|
 
+### 2. Provider
+
+|HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
+|------------|-----------------|-----------------------|---------------|--------------|----------------|
+|   POST     |`/ProviderSignUp`|{name, email, password}| 201           |  400         |
+|   POST     |`/ProviderLogin` |{email, password}      | 200           |  400         |
+
+
+
+
 ## Links 
 
 ### Terello 

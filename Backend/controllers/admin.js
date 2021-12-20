@@ -5,8 +5,6 @@ const Admin = require('../models/Admen')
 
 module.exports ={
 
-
-
             index:async(req,res)=>{
 
                 Admin.find({})
