@@ -7,8 +7,9 @@ import '../Provider/provider.css'
  
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Image from 'react-bootstrap/Image'
 import {Card} from "react-bootstrap"
-
+ 
 function AllProvider({data}) {
 
 const {_id}=useParams();
@@ -53,8 +54,7 @@ return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
 <Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
 <Card.Text className='text'>Phone Number: {item.userId.phone}</Card.Text>
 <Card.Text className='text'>Price: {item.price}</Card.Text>
-<Card.Img  src={item.userId.image} alt=''/>
-
+ <img src={item.userId.image} className="profile" rounded alt="..." width={90} height={90}/>
 </Card>
 
 
