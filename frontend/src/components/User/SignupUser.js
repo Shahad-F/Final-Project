@@ -18,9 +18,8 @@ function SignupUser() {
 
  const [FullName ,setFullName]=useState();
  const [UserName ,setUserName]=useState();
-//  const [Phone ,setPhone]=useState();
-//  const [Image ,setImage]=useState();
-//  const [City ,setCity]=useState();
+ const [Phone ,setPhone]=useState();
+ const [Image ,setImage]=useState();
 const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
 
@@ -33,13 +32,13 @@ const SignUp = async (e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/users/UserSignup',
-{fullName:FullName,userName:UserName, useremail:Email,password:Password})
+{fullName:FullName,userName:UserName, email:Email,password:Password})
 
 .then((res)=>{
     //   
-    console.log(res.data)
+    console.log(res)
 
-    if(res.data.err === 'email is taken'){
+    if(res.data.error === 'email is taken'){
           
         swal({
             title: "Your password or email is taken",
@@ -49,6 +48,8 @@ axios.post('http://localhost:3030/users/UserSignup',
     }
     else
      {
+        const token =res.data.user;
+        localStorage.setItem('token',token)
         setNewUser(res.data)
 // console.log(Email,Password)
         swal({
@@ -104,29 +105,24 @@ placeholder="username" />
 </Row>
 <Row> 
 <Col md-1> 
-{/* <Form.Floating> 
+<Form.Floating> 
 <Form.Control type="text"  id="phone"
 onChange={e=>setPhone(e.target.value)}
 placeholder="Phone number"  />
 <label htmlFor="phone">Phone Number</label>
-</Form.Floating> */}
+</Form.Floating>
 </Col>
 <Col md-1> 
-{/* <Form.Floating> 
-<Form.Control type="text"  id='city'
-onChange={e=>setCity(e.target.value)}
-placeholder="Your City" />
-<label htmlFor="city">Your City</label>
-</Form.Floating> */}
+ 
 </Col>
 </Row>
 
-{/* <Form.Floating> 
+<Form.Floating> 
 <Form.Control type="text"  id='image'
 onChange={e=>setImage(e.target.value)} 
 placeholder="fYour image" />
 <label htmlFor="image">Image</label>
-</Form.Floating> */}
+</Form.Floating>
 
 <Form.Floating> 
 <Form.Control type="email" id='email'
