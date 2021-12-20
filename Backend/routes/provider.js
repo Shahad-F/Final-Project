@@ -4,13 +4,7 @@ ProviderController = require("../controllers/provider")
  ProController = require("../controllers/ProviderController")
 
  
- 
 
-router.put('/provider/:Sid/:Pid',ProviderController.edit)
-router.delete('/provider/:Sid/:Pid',ProviderController.remove)
-
-// router.put('/update/:uid',ProviderController.update)
-// router.delete('/delete/:uid',ProviderController.delete)
 router.get('/:uid',ProviderController.show)
 
 // -------------------------------------------------

@@ -15,7 +15,7 @@ app.use(cors())
 const expressSession = require('express-session')
 const cookieParser = require('cookie-parser')
 
-const passport = require('passport');
+// const passport = require('passport');
  
  
 
@@ -36,8 +36,8 @@ app.use(expressSession({
     cookie:{maxAge : 6000}  
 }))
 
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
  
  

@@ -145,20 +145,20 @@ del:async(req, res)=>{
 
 
 
-// remove: async(req, res)=>{
+remove: async(req, res)=>{
 
-// const Pid = req.params.Pid;
-// const service = await Service.findById(req.params.Sid)
+const Pid = req.params.Pid;
+const service = await Service.findById(req.params.Sid)
 
-// if(!service){
-//     return res.status(404).send()
-// }
+if(!service){
+    return res.status(404).send()
+}
 
-// await service.providers.pull({_id: Pid});
-// await service.save()
-// res.status(200).send(service)
-// console.log(service)
-// },
+await service.providers.pull({_id: Pid});
+await service.save()
+res.status(200).send(service)
+console.log(service)
+},
 
 
 
@@ -176,27 +176,27 @@ del:async(req, res)=>{
 // })
 // },
 
-// update:(req,res)=>{
-//     let _id = req.params.uid
+update:(req,res)=>{
+    let _id = req.params.uid
 
-//     let providerinfo={
+    let providerinfo={
 
-//         fullName:req.body.fullName,
-//         userName:req.body.userName,
-//         phone:req.body.phone,
-//         email:req.body.email,
-//         image:req.body.image,
-//         password:req.body.password
+        fullName:req.body.fullName,
+        userName:req.body.userName,
+        phone:req.body.phone,
+        email:req.body.email,
+        image:req.body.image,
+        password:req.body.password
 
-//     }
+    }
 
-//     Provider.findByIdAndUpdate(_id,{$set:providerinfo})
-//     .then(provider=>{
-//         res.json({message:"Provider Information is updated"})
-//     })
-//     .catch(error =>{
-//         res.json({error:error})  
-//     })
-// }
+    Provider.findByIdAndUpdate(_id,{$set:providerinfo})
+    .then(provider=>{
+        res.json({message:"Provider Information is updated"})
+    })
+    .catch(error =>{
+        res.json({error:error})  
+    })
+}
 
 }
