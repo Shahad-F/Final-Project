@@ -172,7 +172,12 @@ Button{
   padding: 1ch;
 }
 
-
+.social-media{
+  /* margin: 1ch; */
+}
+.social-media a{
+  margin: 1ch;
+}
 /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
    

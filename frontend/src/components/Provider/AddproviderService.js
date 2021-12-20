@@ -167,12 +167,12 @@ const habdeldelete =(id)=>{
 
              return<Card  border="danger"  style={{ width: '20rem' }}className="smallCard">
 
-                 <Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
+                 <Card.Header className='Header'>Name: {item.userId.fullName}</Card.Header>
                  
                 <div className='SmBox'> 
                 <img src={item.userId.image} className="profile" rounded alt="..." width={80} height={80}/>
 
-                 <Card.Text className='text'> Phone NO:<span>{item.userId.phone}</span> <br></br>
+                 <Card.Text className='textBox'> Phone NO:<span>{item.userId.phone}</span> <br></br>
                   
                  Price :{item.price}</Card.Text>
             </div>

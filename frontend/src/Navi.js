@@ -70,7 +70,7 @@ let token = localStorage.getItem("token");
 
 <Nav.Link className="nav" href="#home"><Link exact to='/'>Home</Link></Nav.Link>
 <Nav.Link className="nav" href="#About">  <Link to='/About'>About</Link></Nav.Link>
-<Nav.Link className="nav" href="#contact">  <Link  to='/Contact'>Contact</Link></Nav.Link>
+{/* <Nav.Link className="nav" href="#contact">  <Link  to='/Contact'>Contact</Link></Nav.Link> */}
 <Nav.Link className="nav" href="#service">  <Link to='/Service'>Service</Link></Nav.Link>
 
 

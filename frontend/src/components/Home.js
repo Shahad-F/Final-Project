@@ -38,6 +38,13 @@ const handelProvider=()=>{
 <Button variant="danger" onClick={handelAdmin}>Admin</Button>{' '}
 <Button variant="secondary" onClick={handelProvider}>Service Providor</Button>{' '}
 
+<div className="social-media">
+
+<a href=''><img src='https://www.pngkit.com/png/full/2-28059_twitter-logo-png-transparent-background-graphic-freeuse-twitter.png' width={30} alt=''/></a>
+<a href=''><img src='https://www.pngkit.com/png/full/23-235282_gmail-logo-vector-black-and-white.png' width={30} alt=''/></a>
+<a href=''><img src='https://aquilasweb.com.br/wp-content/uploads/2017/07/Aquilas-WEB-Linkedin-Logo.jpg' width={30} alt=''/></a>
+
+</div>
 </div>
         </div>
         
