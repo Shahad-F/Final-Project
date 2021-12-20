@@ -1,6 +1,7 @@
 <!-- # Final-Project -->
 # CALL me
-
+<br/>
+<br/>
 <!-- image for my website -->
 
 ## Description.
@@ -61,8 +62,7 @@ As a user, I can log out from the website.<br/>
 |----------|-----------|-------------|-------------------------|
 |  `/`     | SplashPage| public      | HomePage                |
 |`/About`  | AboutPage | public      | what the idea of website|
-|`/Contact`|ContactPage| public      | social media of website |
-|`/Service`|ServicePage|  puplic     |display all services     |
+|`/Service`|ServicePage| puplic     |display all services      |
  
 ### 1. Admin
 
@@ -92,7 +92,7 @@ As a user, I can log out from the website.<br/>
 
 > Home.<br/>
 > About.<br/>
- >Contact.<br/>
+
 
 > ***Admin***<br/>
 Login.<br/>
@@ -103,7 +103,7 @@ AdminHome.<br/>
 > ***Provider***<br/>
 SignupProvider.<br/>
 LoginProvider.<br/>
-AddorividerService.<br/>
+AddporviderService.<br/>
 ServiceHome.<br/>
 
 > ***User***<br/>

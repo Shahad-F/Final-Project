@@ -16,7 +16,7 @@ import LoginUser from './components/User/LoginUser'
 import SignupUser from './components/User/SignupUser'
 import AllProvider from './components/User/AllProvider'
 import logo from './img/Picture2.png'
-import './CSS/Home.css'
+ import './CSS/Home.css'
 import axios from "axios"
 import { useEffect, useState } from "react";
 import {BrowserRouter as Router ,Routes,Route,Link,useNavigate} from 'react-router-dom'
