@@ -46,7 +46,7 @@ function ServiceHome() {
         <Link to={`/AddProviderService/${item._id}`}>See More</Link></Button>{' '}
 
 
-{/* <p><Link to={`/AddProviderService/${item._id}`}>See More</Link></p> */}
+ 
        
 
         </Card>

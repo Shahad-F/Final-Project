@@ -36,7 +36,7 @@ axios.post('http://localhost:3030/users/UserSignUp',
  
 .then((res)=>{
      
-    console.log(FullName)
+    // console.log(FullName)
 
     if(res.data.error === 'Email is taken'){
           
@@ -51,7 +51,7 @@ axios.post('http://localhost:3030/users/UserSignUp',
         const token =res.data.user;
         localStorage.setItem('token',token)
         setNewUser(res.data)
-console.log(Email,Password)
+// console.log(Email,Password)
         swal({
             title: 'Welcome '+ Email,
             icon:'success'

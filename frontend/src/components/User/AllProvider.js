@@ -9,10 +9,11 @@ import '../Provider/provider.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Card} from "react-bootstrap"
 
-function AllProvider() {
+function AllProvider({data}) {
 
 const {_id}=useParams();
 const[service,setService]=useState([])
+const [tservice,setTService]=useState([]);
 const[newService,setNewService]=useState({})
 const [loading,setLoading]=useState(true)
 const[UserName,setUserName]=useState()
@@ -26,7 +27,8 @@ axios.get(`http://localhost:3030/services/${_id}`)
 
 .then((res)=>{
     console.log(res.data)
-    setService(res.data.service)
+    setService(res.data.tservice[0].serviceId)
+    setTService(res.data.tservice)
     setLoading(false)
 })
 
@@ -39,19 +41,19 @@ if(loading){
 
     <br></br>
     <br></br>
-    <h1 lassName='lineTitle'>All Provider</h1>
+    <h1 className='lineTitle'>{service.nameOfService}</h1>
 
 
 <Card border ='light' className='BigCard'>
 
-{service.providers.map((item)=>{
+{tservice.map((item)=>{
 
 return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
 
-<Card.Header className='Header'>Name Of Provider: {item.userName}</Card.Header>
-<Card.Text className='text'>Phone Number: {item.phone}</Card.Text>
+<Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
+<Card.Text className='text'>Phone Number: {item.userId.phone}</Card.Text>
 <Card.Text className='text'>Price: {item.price}</Card.Text>
-
+<Card.Img  src={item.userId.image} alt=''/>
 
 </Card>
 
