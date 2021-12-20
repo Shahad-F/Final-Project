@@ -10,14 +10,13 @@ module.exports ={
             index:async(req,res)=>{
 
                 Admin.find({})
-
-                try{(admins=>{
-                 res.json(admins)
-                 res.status(200)
-           })}
-             catch(error){
+                
+                .then(admins=>{
+                 res.status(200).json(admins)
+           })
+        .catch(error=>{
             res.status(400).json({error:error})
-        }
+        })
     },
 
  
@@ -28,10 +27,10 @@ delete:(req,res)=>{
 
     Admin.findByIdAndDelete(_id)
     .then(()=>{
-        res.json({message:"This Admin is Remove !"})
+        res.status(200).json({message:"This Admin is Remove !"})
     })
     .catch(error =>{
-        res.json({error:error})
+        res.status(400).json({error:error})
     })
 
 
