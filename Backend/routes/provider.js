@@ -22,7 +22,7 @@ router.get('/:uid',ProviderController.show)
 router.post('/ProviderSignUp',ProController.signup_post)
 router.post('/ProviderLogin',ProController.signin_post)
 router.post('/provider/:uid',ProviderController.create)
-router.get('/display',ProviderController.show)
+router.get('/display',ProviderController.showbyId)
 
 
 

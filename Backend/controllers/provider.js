@@ -11,21 +11,21 @@ const TypeOfServicer =require('../models/TypeOfServicer')
 module.exports ={
 
 
-// show:(req,res)=>{
-//     let _id =req.params.uid
-//     Provider.findById(_id)
-//     .then(provider=>{
-//         console.log('i am here')
-//          TypeOfServicer.find({serviceId:service._id})
-//         .populate('userId serviceId').then(async tservice=>
-//          res.status(201).send({provider,tservice}))
-//         res.json({provider})
-//     })
-//     .catch(error=>{
-//         res.json({error:error})
-//     })
+    showbyId:(req,res)=>{
+    let _id =req.params.uid
+    Provider.findById(_id)
+    .then(provider=>{
+        console.log('i am here')
+         TypeOfServicer.find({serviceId:service._id})
+        .populate('userId serviceId').then(async tservice=>
+         res.status(201).send({provider,tservice}))
+        res.json({provider})
+    })
+    .catch(error=>{
+        res.json({error:error})
+    })
 
-// },
+},
 
     index:(req, res, ) =>{
         Provider.find({})
@@ -126,13 +126,15 @@ del:async(req, res)=>{
 
  show: async (req,res)=>{
     Service.find({_id:req.body.sId})
-    .populate('providers').then(service=>{
-        // console.log('i am here')
+    .populate('providers')
+    .then(service=>{
+        console.log(service)
         console.log(service[0].providers)
-        res.send(service)
+        // res.send(service)
         // TypeOfServicer.find({userId:service})
         service[0].providers.forEach(elm=>
-            TypeOfServicer.find({userId:elm._id}).populate('userId').then(service=>{
+            TypeOfServicer.find({userId:elm._id})
+            .populate('userId').then(service=>{
 
                 res.send(service)
             })
