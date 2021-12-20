@@ -169,13 +169,13 @@ const habdeldelete =(id)=>{
 
                  <Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
                  
-                 <Card.Text className='text'> Phone Number:{item.userId.phone}</Card.Text>
-                  
-                 <Card.Text className='text'>Price :{item.price}</Card.Text>
-                 {/* <img src={item.userId.image} alt=''/> */}
-                 <Card.Img  src={item.userId.image} alt=''/>
+                <div className='SmBox'> 
+                <img src={item.userId.image} className="profile" rounded alt="..." width={80} height={80}/>
 
-          
+                 <Card.Text className='text'> Phone NO:<span>{item.userId.phone}</span> <br></br>
+                  
+                 Price :{item.price}</Card.Text>
+            </div>
 
     {(function(){
 
