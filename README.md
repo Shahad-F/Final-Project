@@ -191,10 +191,14 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 |   POST     |`/ProviderLogin` |{email, password}      | 200           |  400         |check if user exists (404), and if password matches (404), then stores user in session|
 | POST       |`/provider/:uid` |{price ,userId}        | 201           |              |check if userId and uid is exists, user enter the price and store it in session|
 |  GET       | `/`             |                       |               |              | display all providers |
-| PUT        | `/change/:eid`  | {price ,userId}       | 201 | | checkif userId and uid is exists then update the price and store it in session|
-|DELETE      | `'/del/:uid`    |                       |   || check if eid is exists,then delete | 
+| PUT        | `/change/:eid`  | {price ,userId}       | 201           |              | checkif userId and uid is exists then update the price and store it in session|
+|DELETE      | `'/del/:uid`    |                       |  201          |              | check if eid is exists,then delete | 
 
+### 2. User
 
+|HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
+|------------|-----------------|-----------------------|---------------|--------------|----------------|
+| POST       | `/UserSignUp`
 
 ## Links 
 
