@@ -17,64 +17,8 @@ module.exports={
     res.json({error:error})
 })
     },
-// Signup
-signUp: (req,res)=>{
-
-
-    let newUser = new User({
-
-        fullName:req.body.fullName,
-        userName:req.body.userName,
-        // phone:req.body.phone,
-        email:req.body.email,
-        // image:req.body.image,
-        // city:req.body.city,
-    })
-    User.register(newUser ,req.body.password,(error,user)=>{
-
-        if(user){
-            let signedToken = jsonWebToken.sign({
-
-                data:user._id,
-                type:"user",
-                exp:new Date().setDate(new Date().getDate()+1)
-            },'Locorbi86');
-
-            res.json({
-                success:true,
-                token:signedToken
-            });
-        }else{
-            res.json({error:"Email is taken"})
-            console.log(error)
-        }
-    })
-}, 
-
-// Login
-authenticate:(req,res,next)=>{
-
-    passport.authenticate('local',(error,user)=>{
-        if(user){
-            let signedToken = jsonWebToken.sign({
-
-                data:user._id,
-                type:"user",
-                exp:new Date().setDate(new Date().getDate()+1)
-            },'Locorbi86')
-            res.json({
-                success:true,
-                token:signedToken
-            });
-            console.log(user)
-        }else{
-            res.json({
-                success:false,
-                message:"Your passwor or email is not correct. Please try again"
-            });
-        }
-    })(req,res,next)
-},
+ 
+ 
 delete:(req,res)=>{
     let _id = req.params.uid
 
@@ -95,10 +39,9 @@ let userInfo={
 
     fullName:req.body.fullName,
     userName:req.body.userName,
-    // phone:req.body.phone,
+    phone:req.body.phone,
     useremail:req.body.useremail,
-    // image:req.body.image,
-    // city:req.body.city,
+    image:req.body.image,
     password:req.body.password 
 }
 User.findByIdAndUpdate(_id,{$set:userInfo})

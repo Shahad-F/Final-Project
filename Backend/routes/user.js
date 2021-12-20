@@ -6,7 +6,6 @@ UsController = require('../controllers/userController')
 
  
 
- 
 
 // router.get('/allUsers',UserController.index)
 
