@@ -107,8 +107,13 @@ AddporviderService.<br/>
 ServiceHome.<br/>
 
 > ***User***<br/>
+LoginUser<br/>
+SignUpUser<br/>
 Service.<br/>
+AllProvider<br/>
 
+<br/>
+<br/>
  
 
 ## Server / Backend 
@@ -119,22 +124,36 @@ Service.<br/>
 
 ```
 { 
-    name:{ type:String, required:[true,'Admin name should be provided']},
+    name: { type:String, required:[true,'Admin name should be provided']},
     email:{ type:String,  required:[true,'Admin email should be provided', unique:true },   
+    password:{ type:String,  required:[true,'Admin password should be provided']}
 }
 ```
 ***Provider***
 
 ```
 {
-   firstName:{ type:String, required:[true,'firstName should be provided']},
-   lastName:{ type:String, required:[true,'lasttName should be provided']},
-   phone:{ type:Number, required:[true,'phone should be provided']},
-   email:{type:String, required:[true,'Admin email should be provided'],unique:true},
-   image:{ type:String, required:[true,'image should be provided']},
-   city:{ type:String, required:[true,'city should be provided'],},
+   fullName:{ type:String, required:[true,'fullName should be provided'},
+   userName:{ type:String,},
+      phone:{ type:Number, required:[true,'phone should be provided']},
+      email:{ type:String,  required:[true,'Admin email should be provided'],unique:true},
+      image:{ type:String, default:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'},
+  password:{ type:String,  required:[true,'provider password should be provided']}
+}
+ ```
+***User***
+```
+{
+ fullName:{ type:String, required:[true,'fullName should be provided'},
+   userName:{ type:String,},
+      phone:{ type:Number, required:[true,'phone should be provided']},
+      email:{ type:String,  required:[true,'Admin email should be provided'],unique:true},
+      image:{ type:String, default:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'},
+  password:{ type:String,  required:[true,'provider password should be provided']}
+
 }
 ```
+
 ***Service***
 
 ```
