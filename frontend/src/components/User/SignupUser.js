@@ -28,17 +28,17 @@ const [Password,setPassword]=useState()
 // functions 
 // signUp for provider
 
-const SignUp = async (e)=>{
+const SignUp = (e)=>{
     e.preventDefault();
 
-axios.post('http://localhost:3030/users/UserSignup',
-{fullName:FullName,userName:UserName, email:Email,password:Password})
+axios.post('http://localhost:3030/users/UserSignUp',
+{fullName:FullName,userName:UserName, phone:Phone ,image:Image ,email:Email,password:Password})
 
 .then((res)=>{
     //   
     console.log(res)
 
-    if(res.data.error === 'email is taken'){
+    if(res.data.error === 'Email is taken'){
           
         swal({
             title: "Your password or email is taken",

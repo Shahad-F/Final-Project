@@ -62,7 +62,7 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 
     return ( <>
 
-{/* <Form  style={{
+<Form  style={{
     backgroundImage:
      `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
      backgroundSize: 'cover',
@@ -74,7 +74,7 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
         }}>
           
 
-</Form> */}
+</Form>
 {/*  */}
  
 
@@ -113,12 +113,7 @@ placeholder="Phone number"  />
 </Form.Floating>
 </Col>
 <Col md-1> 
-{/* <Form.Floating> 
-<Form.Control type="text"  id='city'
-onChange={e=>setCity(e.target.value)}
-placeholder="Your City" />
-<label htmlFor="city">Your City</label>
-</Form.Floating> */}
+ 
 </Col>
 </Row>
 

@@ -26,8 +26,8 @@ const UserSchema = new Schema({
         type:String, 
         required:[true,' please enter an email '],
         unique:true,
-        lowercase: true,
-        validate:[isEmail ,'please enter a valid email']
+        // lowercase: true,
+        // validate:[isEmail ,'please enter a valid email']
     },
     image:{
         type:String,
@@ -36,7 +36,7 @@ const UserSchema = new Schema({
     password:{
         type:String,
         required:[true ,'please enter an password '],
-        minlength:[6, 'Minimum password length i 6 characters']
+        // minlength:[6, 'Minimum password length i 6 characters']
     }
 
 })
