@@ -28,15 +28,15 @@ const [Password,setPassword]=useState()
 // functions 
 // signUp for provider
 
-const SignUp = (e)=>{
+const userSignUp = (e)=>{
     e.preventDefault();
 
 axios.post('http://localhost:3030/users/UserSignUp',
 {fullName:FullName,userName:UserName, phone:Phone ,image:Image ,email:Email,password:Password})
-
+ 
 .then((res)=>{
-    //   
-    console.log(res)
+     
+    console.log(FullName)
 
     if(res.data.error === 'Email is taken'){
           
@@ -51,7 +51,7 @@ axios.post('http://localhost:3030/users/UserSignUp',
         const token =res.data.user;
         localStorage.setItem('token',token)
         setNewUser(res.data)
-// console.log(Email,Password)
+console.log(Email,Password)
         swal({
             title: 'Welcome '+ Email,
             icon:'success'
@@ -141,7 +141,7 @@ placeholder="pasword" />
 </Form.Floating>
 
 <Button variant="outline-danger"
- onClick={(e)=>SignUp(e)}>Sign up</Button>
+ onClick={(e)=>userSignUp(e)}>Sign up</Button>
   
 <p >I have account <Link to={`/LoginUser`}>Login</Link></p>
 

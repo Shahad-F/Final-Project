@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {isEmail} = require('validator');
+// const {isEmail} = require('validator');
 const bcrypt = require('bcrypt');
 
 const Schema = mongoose.Schema
@@ -31,7 +31,9 @@ const UserSchema = new Schema({
     },
     image:{
         type:String,
-    },
+        required:[true,'image should be provided']
+      },
+    
      
     password:{
         type:String,
@@ -73,9 +75,7 @@ UserSchema.post("save", function (doc, next) {
     throw Error("incorrect email");
   };
 
-// UserSchema.plugin(passportLocalMongoose,{
-//     usernameField:'email'
-// })
+ 
 
 
 const User =mongoose.model('User',UserSchema)
