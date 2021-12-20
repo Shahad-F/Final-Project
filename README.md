@@ -181,14 +181,16 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 | GET        |`/`          |                       |      200      |     400      | Bring all admin|
 | POST       |`/AdSignup`  |{name, email, password}| 201           |     400      |create user with encrypted password, and store user in session|
 | POST       |`/AdSignin`  |{email, password}      |  200          |     400      | if user exists (404), and if password matches (404), then stores user in session|
-|DELETE      |`/:uid/delete`|                      | 200           |400           | Used to delete one exit point document by id|
+|DELETE      |`/:uid/delete`|                      | 200           |400           | Used to delete one exit point document by uid|
 
 ### 2. Provider
 
 |HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
 |------------|-----------------|-----------------------|---------------|--------------|----------------|
-|   POST     |`/ProviderSignUp`|{name, email, password}| 201           |  400         |
-|   POST     |`/ProviderLogin` |{email, password}      | 200           |  400         |
+|   POST     |`/ProviderSignUp`|{name, email, password}| 201           |  400         |reate user with encrypted password, and store user in session|
+|   POST     |`/ProviderLogin` |{email, password}      | 200           |  400         |if user exists (404), and if password matches (404), then stores user in session|
+| POST       |`/provider/:uid` |{price ,userId}        | 201           |              |if userId and uid is exists, user enter the price and store it in session|
+
 
 
 
