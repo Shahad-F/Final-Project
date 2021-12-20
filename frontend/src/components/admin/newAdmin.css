@@ -1,5 +1,6 @@
 .BigCard{
     display: grid;
+    
     grid-template-columns: 1fr 1fr 1fr;
     padding:3ch;
     margin: 3ch;
@@ -10,10 +11,13 @@
      
 }
 .smallCard{
+    /* padding-left: 2ch;
+    padding-right: 2ch; */
      border-radius:10px;
-    margin: 2ch;
+    margin: 3ch;
 }
 .Header{
+  
     font-family: "Exo";
     color:black;
     font-weight:bolder;

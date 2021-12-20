@@ -51,10 +51,14 @@ if(loading){
 
 return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
 
-<Card.Header className='Header'>Name Of Provider: {item.userId.fullName}</Card.Header>
-<Card.Text className='text'>Phone Number: {item.userId.phone}</Card.Text>
-<Card.Text className='text'>Price: {item.price}</Card.Text>
- <img src={item.userId.image} className="profile" rounded alt="..." width={90} height={90}/>
+<Card.Header className='Header'>Name: {item.userId.fullName}</Card.Header>
+
+ <div className='SmBox'> 
+ <img src={item.userId.image} className="profile" rounded alt="..." width={80} height={80}/>
+
+<Card.Text className='textBox'>Phone NO: <span>{item.userId.phone}</span>  <br></br>
+ Price: {item.price} SR</Card.Text>
+  </div>
 </Card>
 
 

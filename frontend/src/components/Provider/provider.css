@@ -71,7 +71,29 @@ margin-left: 9ch;
  .profile{
     border-radius: 50%;
     margin: 1ch;
+    /* border: solid black; */
  }
+ .SmBox{
+     
+     margin: 1ch;
+     padding: 1ch;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     /* border: solid black; */
+ }
+ .textBox{
+     position: relative;
+     right: 20%;
+     width: 130%;
+ /* border: solid black; */
+    margin-right: 1ch;
+    font-family: 'Fuzzy Bubbles', cursive;
+    color:rgb(114, 9, 9);
+    font-weight: bolder;
+     
+    margin-top: 1ch;
+ }
+ 
   /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
     .imageBox{

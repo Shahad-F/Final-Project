@@ -10,11 +10,13 @@
   
 }
 .text{
+    
+  margin-right: 1ch;
     font-family: 'Fuzzy Bubbles', cursive;
     color:rgb(114, 9, 9);
     font-weight: bolder;
     text-align: center;
-    margin-top: 2ch;
+    margin-top: 1ch;
 }
 .texterea{
     /* border: solid black; */
@@ -68,7 +70,8 @@ background:rgba(222, 184, 135, 0.575);
   
   
  .card span{
-    font-family: 'Fuzzy Bubbles', cursive;;
+    font-family: 'Fuzzy Bubbles', cursive;
+    color: blue;
  }
 
  /* Tablet */
