@@ -74,11 +74,9 @@ create: async(req,res)=>{
 change:async (req,res)=>{
 
 ProviderofService.findById({_id:req.body.userId})
- 
 
 .then(async (user)=>{
  
-
 const _id =req.params.eid
 const proInfo= {price:req.body.price}
 
@@ -87,7 +85,6 @@ const proInfo= {price:req.body.price}
  TypeOfServicer.findByIdAndUpdate(_id,{$set:proInfo})
 
 .then(async (Tservice)=>{
- 
      res.json(Tservice)
      console.log(Tservice)
 
@@ -106,6 +103,8 @@ del:async(req, res)=>{
 
     .then(async(Tservice)=>{  
     res.json({message:"Type is deleted"})
+     await Tservice.save()
+    res.status(201).send(service)
         // let SId=req.params.sId
         // TypeOfServicer.find({serviceId:SId})
         // console.log(SId)
@@ -144,85 +143,60 @@ del:async(req, res)=>{
 
 },
 
-edit: async(req,res)=>{
 
 
-const Pid = req.params.Pid;
-const service = await Service.findById(req.params.Sid)
+// remove: async(req, res)=>{
 
-let editService = new Provider({
+// const Pid = req.params.Pid;
+// const service = await Service.findById(req.params.Sid)
 
-        userName:req.body.userName,
-        phone:req.body.phone,
-        price:req.body.price,
-        profile:req.body.profile,
-        userId:req.body.userId
-})
-if(!service){
-    return res.status(404).send()
-}
-console.log(service)
+// if(!service){
+//     return res.status(404).send()
+// }
 
-await service.providers.pull({_id: Pid});
-await service.providers.push(editService);
-await service.save()
-res.status(200).send(service)
-console.log(service)
-
-},
-
-remove: async(req, res)=>{
-
-const Pid = req.params.Pid;
-const service = await Service.findById(req.params.Sid)
-
-if(!service){
-    return res.status(404).send()
-}
-
-await service.providers.pull({_id: Pid});
-await service.save()
-res.status(200).send(service)
-console.log(service)
-},
+// await service.providers.pull({_id: Pid});
+// await service.save()
+// res.status(200).send(service)
+// console.log(service)
+// },
 
 
 
-delete:(req,res)=>{
-    let _id=req.params.uid
+// delete:(req,res)=>{
+//     let _id=req.params.uid
 
-    Provider.findByIdAndDelete(_id)
+//     Provider.findByIdAndDelete(_id)
 
-    .then(()=>{
-        res.json({message:"This Provider is Remove !"})
-    })
-.catch(error=>{
-    res.json({error:error})
+//     .then(()=>{
+//         res.json({message:"This Provider is Remove !"})
+//     })
+// .catch(error=>{
+//     res.json({error:error})
 
-})
-},
+// })
+// },
 
-update:(req,res)=>{
-    let _id = req.params.uid
+// update:(req,res)=>{
+//     let _id = req.params.uid
 
-    let providerinfo={
+//     let providerinfo={
 
-        fullName:req.body.fullName,
-        userName:req.body.userName,
-        phone:req.body.phone,
-        email:req.body.email,
-        image:req.body.image,
-        password:req.body.password
+//         fullName:req.body.fullName,
+//         userName:req.body.userName,
+//         phone:req.body.phone,
+//         email:req.body.email,
+//         image:req.body.image,
+//         password:req.body.password
 
-    }
+//     }
 
-    Provider.findByIdAndUpdate(_id,{$set:providerinfo})
-    .then(provider=>{
-        res.json({message:"Provider Information is updated"})
-    })
-    .catch(error =>{
-        res.json({error:error})  
-    })
-}
+//     Provider.findByIdAndUpdate(_id,{$set:providerinfo})
+//     .then(provider=>{
+//         res.json({message:"Provider Information is updated"})
+//     })
+//     .catch(error =>{
+//         res.json({error:error})  
+//     })
+// }
 
 }
