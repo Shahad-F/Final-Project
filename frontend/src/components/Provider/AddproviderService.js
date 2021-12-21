@@ -174,7 +174,7 @@ const habdeldelete =(id)=>{
 
                  <Card.Text className='textBox'> Phone NO:<span>{item.userId.phone}</span> <br></br>
                   
-                 Price :{item.price}</Card.Text>
+                 Price :{item.price} SR</Card.Text>
             </div>
 
     {(function(){
