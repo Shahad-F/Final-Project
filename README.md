@@ -201,7 +201,9 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 |POST        |`/UserLogin`     | {email, password}     | 200          |400        |check if user exists (404), and if password matches (404), then stores user in session|
 
 <br/>
+
 ## Links 
+
 <br/>
  
 [Terello](https://trello.com/b/szHBEeQq/final-project)<br/>
