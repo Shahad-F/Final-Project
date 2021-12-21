@@ -18,7 +18,6 @@ module.exports ={
     },
 
  
-
 delete:(req,res)=>{
 
     let _id=req.params.uid
