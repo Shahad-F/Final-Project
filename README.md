@@ -1,7 +1,6 @@
 <!-- # Final-Project -->
 # CALL me
-<br/>
-<br/>
+
 <!-- image for my website -->
 
 ## Description.
@@ -200,12 +199,14 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 |------------|-----------------|-----------------------|---------------|--------------|----------------|
 | POST       | `/UserSignUp`   |{fullname,username,image,phone, email, password}| 201 |400 |create user with encrypted password, and store user in session|
 |POST        |`/UserLogin`     | {email, password}     | 200          |400        |check if user exists (404), and if password matches (404), then stores user in session|
+
+<br/>
 ## Links 
 <br/>
  
 [Terello](https://trello.com/b/szHBEeQq/final-project)<br/>
 
-[Figma Link](https://www.figma.com/file/ae7sXgSJa82H73OsIrLAXu/Final-Project?node-id=0%3A1)<br/>
+[Figma](https://www.figma.com/file/ae7sXgSJa82H73OsIrLAXu/Final-Project?node-id=0%3A1)<br/>
 
 [GitHub](https://github.com/Shahad-F/Final-Project)<br/>
 
