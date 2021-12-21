@@ -187,7 +187,7 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 
 |HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
 |------------|-----------------|-----------------------|---------------|--------------|----------------|
-|   POST     |`/ProviderSignUp`|{name, email, password}| 201           |  400         |reate user with encrypted password, and store user in session|
+|   POST     |`/ProviderSignUp`|{fullname,username,image,phone, email, password}| 201           |  400         |create user with encrypted password, and store user in session|
 |   POST     |`/ProviderLogin` |{email, password}      | 200           |  400         |check if user exists (404), and if password matches (404), then stores user in session|
 | POST       |`/provider/:uid` |{price ,userId}        | 201           |              |check if userId and uid is exists, user enter the price and store it in session|
 |  GET       | `/`             |                       |               |              | display all providers |
@@ -198,8 +198,8 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 
 |HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
 |------------|-----------------|-----------------------|---------------|--------------|----------------|
-| POST       | `/UserSignUp`
-
+| POST       | `/UserSignUp`   |{fullname,username,image,phone, email, password}| 201 |400 |create user with encrypted password, and store user in session|
+|POST        |`/UserLogin`     | {email, password}     | 200          |400        |check if user exists (404), and if password matches (404), then stores user in session|
 ## Links 
 
 ### Terello 
