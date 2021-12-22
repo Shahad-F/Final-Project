@@ -1,7 +1,8 @@
-const passport = require('passport');
+//  relation between collections and how to write it in code.
+//  work with mongodb. 
 
-const jsonWebToken = require('jsonwebtoken');
-const Admin = require('../models/Admen')
+
+ const Admin = require('../models/Admen')
 
 module.exports ={
 
@@ -29,9 +30,6 @@ delete:(req,res)=>{
     .catch(error =>{
         res.json({error:error})
     })
-
-
-   
 },
 
 update:(req,res)=>{

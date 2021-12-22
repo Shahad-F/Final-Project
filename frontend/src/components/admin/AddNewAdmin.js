@@ -115,14 +115,13 @@ const handelDelete=(id,name)=>{
 
 
      <Form  style={{
-    backgroundImage:
+     backgroundImage:
      `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
      backgroundSize: 'cover',
-      width: "100%",
-      height: "600px",
-        backgroundPosition: 'center',
-        opacity: 0.8,
-        // backgroundAttachment: 'fixed'
+     width: "100%",
+     height: "600px",
+     backgroundPosition: 'center',
+     opacity: 0.8,
         }}>
           
            

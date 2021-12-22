@@ -43,13 +43,13 @@ As a service provider, I can Edit my services to the website.<br/>
 >***Delete type his service***
 As a service provider, I can delete my services to the website.<br/>
 ---
-#### 3. User
+#### 3. Customer
 > ***Signup:***
-As a user, I can sign up on the website so that I can use it when I need it.<br/>
+As a Customer, I can sign up on the website so that I can use it when I need it.<br/>
 > ***Login:***
-As a user, I can log in on the website so that I can use it when I need it.<br/>
+As a Customer, I can log in on the website so that I can use it when I need it.<br/>
 > ***Logout:***
-As a user, I can log out from the website.<br/>
+As a Customer, I can log out from the website.<br/>
 
 ---
 
@@ -81,9 +81,13 @@ As a user, I can log out from the website.<br/>
 |`/ServiceHome`            | ServiceHomePage         | Provider only       | display all services |
 |`/AddProviderService/:_id`| AddProviderServicePage  | Provider only       |provider can add new info about this service.|
 
-
-
-
+### 3. Customer 
+| Path     | Component | Permissions | Behavior |
+|----------|-----------|-------------|----------|
+|`/SignupUser`|
+|`/LoginUser` |
+|`/UserHome`  |
+|`/AllProvider/:_id`|
 
 
 

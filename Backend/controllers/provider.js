@@ -1,6 +1,4 @@
-
-const passport = require('passport');
-const jsonWebToken = require('jsonwebtoken');
+ 
  
 const Provider = require('../models/TypeOfServicer')
 const ProviderofService=require('../models/ProvidorS')
@@ -162,19 +160,7 @@ console.log(service)
 
 
 
-// delete:(req,res)=>{
-//     let _id=req.params.uid
-
-//     Provider.findByIdAndDelete(_id)
-
-//     .then(()=>{
-//         res.json({message:"This Provider is Remove !"})
-//     })
-// .catch(error=>{
-//     res.json({error:error})
-
-// })
-// },
+ 
 
 update:(req,res)=>{
     let _id = req.params.uid
