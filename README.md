@@ -82,12 +82,12 @@ As a Customer, I can log out from the website.<br/>
 |`/AddProviderService/:_id`| AddProviderServicePage  | Provider only       |provider can add new info about this service.|
 
 ### 3. Customer 
-| Path     | Component | Permissions | Behavior |
-|----------|-----------|-------------|----------|
-|`/SignupUser`|
-|`/LoginUser` |
-|`/UserHome`  |
-|`/AllProvider/:_id`|
+| Path        | Component             | Permissions   | Behavior |
+|-------------|-----------------------|---------------|----------|
+|`/SignupUser`| SignupPage            | Customer only |signup form,link to login ,navigate to Service Home after signup|
+|`/LoginUser` | LoginPage             | Customer only | login form ,link to signup ,navigate to Service Home after login|
+|`/UserHome`  | UserHome for Customer | Customer only | display all services|
+|`/AllProvider/:_id`| AllProviderPage | Customer only | customer can see more info about service by id|
 
 
 
@@ -110,7 +110,7 @@ LoginProvider.<br/>
 AddporviderService.<br/>
 ServiceHome.<br/>
 
-> ***User***<br/>
+> ***Customer***<br/>
 LoginUser<br/>
 SignUpUser<br/>
 Service.<br/>
@@ -145,7 +145,7 @@ AllProvider<br/>
   password:{ type:String,  required:[true,'provider password should be provided']}
 }
  ```
-***User***
+***Customer***
 ```
 {
  fullName:{ type:String, required:[true,'fullName should be provided'},
@@ -198,7 +198,7 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 | PUT        | `/change/:eid`  | {price ,userId}       | 201           |              | checkif userId and uid is exists then update the price and store it in session|
 |DELETE      | `'/del/:uid`    |                       |  201          |              | check if eid is exists,then delete | 
 
-### 2. User
+### 2. Customer
 
 |HTTP Method | URL             |Request Body           | Success status| Error Status | Description    |
 |------------|-----------------|-----------------------|---------------|--------------|----------------|
