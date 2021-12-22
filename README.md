@@ -217,17 +217,15 @@ serviceId:{type:Schema.Types.ObjectId,ref:'Service'},
 
 [GitHub](https://github.com/Shahad-F/Final-Project)<br/>
 
-
+[Slides](https://docs.google.com/presentation/d/1_00VF2FtyhGopN8jsUGsXOn-QljYbS8-IyaxMqZda6Y/edit#slide=id.p)<br/>
 
 
 
  
 [Deployed App Link]<br/>
 
-### Slides
-
-[Slides Link]
-
+ 
+ 
  
  
 
