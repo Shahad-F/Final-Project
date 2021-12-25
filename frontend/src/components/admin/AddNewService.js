@@ -87,17 +87,14 @@ const handelAddNewService =()=>{
 
 
 <Form  style={{
-    backgroundImage:
-     `url("https://d1p2fuior9l0tb.cloudfront.net/wp-content/uploads/2020/02/26075319/LEDE-1.-Bentley-FS_6.jpg")`, 
-    
-    
-     backgroundSize: 'cover',
+      backgroundImage:
+      `url("https://d1p2fuior9l0tb.cloudfront.net/wp-content/uploads/2020/02/26075319/LEDE-1.-Bentley-FS_6.jpg")`, 
+      backgroundSize: 'cover',
       width: "100%",
       height: "600px",
         backgroundPosition: 'center',
         opacity: 0.8,
-        // backgroundAttachment: 'fixed'
-        }}>
+         }}>
 
         </Form>
 
@@ -153,24 +150,41 @@ onClick={(e)=>handelAddNewService(e)}
 <Card className="BigCard">
 
     {service.map((item ,index)=>{
-        return <Card key={index} className="box">
-       
-       <Image src={item.image} alt='' width={200} roundedCircle/>
-       <Card.Title className="title">{item.nameOfService} </Card.Title>
-      
-       <Card.Text className="texterea">{item.description}</Card.Text>
-<br></br>
 
-       <div  > 
-
+        return  <Card style={{ width: '18rem' }} className="boxCard">
+        <Card.Img variant="top" src={item.image}   className="imgCard"/>
+        <Card.Body>
+          <Card.Title className="title">{item.nameOfService}</Card.Title>
+          <Card.Text className="texterea">{item.description}</Card.Text>
+          <div  > 
        <Button variant="outline-warning" className="Cardbtn-1" 
         onClick={()=>handelEditService(item._id)}>Updae</Button>{' '}
        
        <Button variant="outline-danger" className="Cardbtn-1" 
       onClick={()=>handelDeleteService(item._id)}>Delete</Button>{' '}
 </div>
+        </Card.Body>
+      </Card>
+        
+        
+        
+        
+//         <Card key={index} className="box">
+       
+//        <Image src={item.image} alt='' width={200} roundedCircle/>
+//        <Card.Title className="title">{item.nameOfService} </Card.Title>
+//        <Card.Text className="texterea">{item.description}</Card.Text>
+// <br></br>
 
-        </Card>
+//        <div  > 
+//        <Button variant="outline-warning" className="Cardbtn-1" 
+//         onClick={()=>handelEditService(item._id)}>Updae</Button>{' '}
+       
+//        <Button variant="outline-danger" className="Cardbtn-1" 
+//       onClick={()=>handelDeleteService(item._id)}>Delete</Button>{' '}
+// </div>
+
+//         </Card>
     })}
 </Card>
 

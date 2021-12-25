@@ -122,44 +122,36 @@ const habdeldelete =(id)=>{
     return ( <>
     
      <br/>
-    <h1 className='lineTitle'>{service.nameOfService}</h1>
-
-             {/*  */}
+     
          
        
-<Form className='ServiceParent'>
 
-      <Card className="imageBox"> 
-
-    <Card.Img variant="top" src={service.image}    />
-    <Card.Text className='des'> <span>Description:</span> {service.description}</Card.Text>
-        
-    </Card>
-
-      <Card.Body>
-
-     <Form className="BOX"> 
  
 
-
+  <Card className="PriceCard" >
+  <Card.Img src={service.image}alt="Card image" className="imagePrice" />
+  <Card.ImgOverlay>
+    <Card.Title> <h1 className="lineTitle">{service.nameOfService}</h1></Card.Title>
+    <Card.Text className="des">
+    {service.description}
+    </Card.Text>
+    
+    <Card.Body>
+     <Form className="BOX"> 
   <Form.Floating className="mb-3" >
 
       <Form.Control className="INPUT" type="text" placeholder="Price" 
       onChange ={e=>setPrice(e.target.value)} />
      <label htmlFor="floatingInputCustom">Enter your price</label>
-
   </Form.Floating>
-
-  <Button variant="outline-danger" className="addBTN" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
-
+  <Button variant="danger" className="addBTN" onClick={(e)=>handelAdd(e)}>Add</Button>{' '}
   </Form>
   </Card.Body>
-   
-</Form>
+  </Card.ImgOverlay>
+</Card>
 
-            {/* </div> */}
-     
-         
+
+            
         
             <Card border="light" className="BigCard">
 

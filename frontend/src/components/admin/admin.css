@@ -20,10 +20,10 @@
 }
 .texterea{
     /* border: solid black; */
-    width: 60%;
+   
     padding: 2ch;
     font-family: cursive;
-    color:rgb(129, 98, 98);
+    color:rgb(110, 84, 84);
 
 
 }
@@ -42,7 +42,19 @@
      border:block;
       
  }
+ .boxCard{
+    /* border: solid black; */
+margin: 2ch;
+box-shadow: 10px 11px 10px -1px rgba(130,109,109,0.75);
+-webkit-box-shadow: 10px 11px 10px -1px rgba(130,109,109,0.75);
+-moz-box-shadow: 10px 11px 10px -1px rgba(130,109,109,0.75);
+
+ }
+ .imgCard{
+    /* border: solid black; */
  
+height: 200px;
+ }
  .NewForm{
 
  border:solid rgb(109, 89, 63);

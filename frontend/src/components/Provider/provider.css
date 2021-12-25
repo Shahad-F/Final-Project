@@ -20,12 +20,21 @@
  }
 
 .des{
+    
     text-align: left;
     margin: 4ch;
+   font-weight:bolder;
     margin-left: 5ch;
-    margin-right: 5ch;
+    /* margin-right: 5ch; */
     margin-top: 5ch;
+    margin-left:4ch;
      padding-bottom: 1ch; 
+     color:rgb(51, 2, 2);
+     font-family: 'Fuzzy Bubbles', cursive;
+     font-size:xx-large;
+     background:rgb(243, 225, 222);
+     opacity:0.7;
+      background-size: 9ch;
 }
 .des span{
     color:crimson;
@@ -62,11 +71,14 @@ margin-left: 9ch;
      grid-template-columns: 1fr 1fr 1fr
  }
  .lineTitle{
+     margin-top: 1ch;
+     margin-left:2ch;
      font-family: 'Fuzzy Bubbles', curs;
-     text-align: center;
-     color:rgb(190, 68, 68);
+     text-align: left;
+     color:rgb(214, 51, 51);
      font-weight: bolder;
      font-size: 300%;
+     text-decoration: underline;
  }
  .profile{
     border-radius: 50%;
@@ -93,7 +105,18 @@ margin-left: 9ch;
      
     margin-top: 1ch;
  }
- 
+ .PriceCard{
+     /* border: solid black; */
+     margin: 7ch;
+     opacity:0.8;
+     
+ }
+ .imagePrice{
+     /* margin: 3ch; */
+/* width: 200vh; */
+    /* opacity:0.7; */
+    /* height: 500px; */
+ }
   /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
     .imageBox{
