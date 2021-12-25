@@ -32,15 +32,12 @@
      color:rgb(51, 2, 2);
      font-family: 'Fuzzy Bubbles', cursive;
      font-size:xx-large;
-     background:rgb(243, 225, 222);
-     opacity:0.7;
+     background:rgba(165, 42, 42, 0.342);
+     /* opacity:0.8; */
       background-size: 9ch;
+     
 }
-.des span{
-    color:crimson;
-    font-weight: bolder;
-    font-size:150%
-}
+   
  .addBTN{
      width: 20%;
      padding: 1ch;
@@ -114,7 +111,7 @@ margin-left: 9ch;
  .imagePrice{
      /* margin: 3ch; */
 /* width: 200vh; */
-    /* opacity:0.7; */
+    opacity:0.7;
     /* height: 500px; */
  }
   /* Tablet */
