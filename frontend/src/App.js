@@ -1,7 +1,7 @@
   
 import './App.css';
 import Navi from './Navi'
- 
+ import Footer from './components/Footer'
 
  
  
@@ -12,13 +12,12 @@ function App() {
       
        <Navi />
 
-    <div className='footer'>
-      <h2>CALL me</h2>
-<p>&copy; Copyright 2021 CALL me  </p>
-
-    </div>
+       <Footer/>
+     
+    
     </>
   );
+  
 }
 
 export default App;

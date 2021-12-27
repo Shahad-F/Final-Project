@@ -61,17 +61,42 @@ h2{
   
   margin: 1ch;
 }
-.image{
- /* border: 1px solid black; */
-  margin-top: 21ch;
-  margin-left: 33ch;
-  width:400px;
 
+.img-box{
+   width:56%;
+  height:40%;
+  position:absolute;
+  top:18ch;
+  bottom: 1.5;
+  right:100px;
+}
+.img-box img{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom:0;
+  transform: translateX(-60%);
+  transition: bottom 1s, left 2s;
+ }
+.main-img{
+   margin-top: 21ch;
+  margin-left: 33ch;
+  width:60%;
+
+}
+.back-img{
+  margin-left:90px;
+  width: 60%;
+}
+.img-box:hover .back-img{
+  bottom:40px;
+}
+.img-box:hover .main-img{
+  left:30px;
 }
  
 .subject h1{   
-  /* border: 1px solid black; */
-   margin-top: 1ch;
+    margin-top: 1ch;
     margin-left: 1ch;
   font-weight: bolder;
   font-family:  "Exo";
@@ -84,11 +109,10 @@ h2{
   font-size: 100%;
 }
  
-.parent{
-   
+.parent {
+  background:rgb(243, 237, 229);
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: 1fr  1fr */
 }
 .loginForm{ 
   position: absolute;
@@ -176,8 +200,16 @@ Button{
   /* margin: 1ch; */
 }
 .social-media a{
-  margin: 1ch;
+  margin: 2ch;
+  filter: grayscale()
 }
+.social-media a:hover{
+  filter:none;
+}
+
+
+
+
 /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
    
@@ -200,8 +232,6 @@ Button{
   top:45%
    }
   
-
- 
 .homeBTN Button{
    
    width: 20ch;
@@ -213,20 +243,56 @@ Button{
   width: 100%;
  /* border:solid black; */
  }
- .image {
-   /* border:solid black; */
-  width: 450px;
-  margin-left: 11ch;
-  margin-top: 0;
- }
+
+ .img-box{
+  /* border: solid black; */
+  width:56%;
+ height:30%;
+ position:absolute;
+ top:20ch;
+ bottom: 1.5;
+ right:100px;
+}
+.img-box img{
+ height: 100%;
+ position: absolute;
+ left: 50%;
+ bottom:0;
+ transform: translateX(-50%);
+ transition: bottom 1s, left 2s;
+}
+.main-img{
+ margin-top: 21ch;
+ margin-left: 11ch;
+ width:80%;
+
+}
+.back-img{
+ margin-left:90px;
+ width: 90%;
+}
+.img-box:hover .back-img{
+ bottom:40px;
+}
+.img-box:hover .main-img{
+ left:30px;
+}
+
+
 }
 
 /* Phone */
 @media screen and ( max-width: 767px ) {
   
+  .parent{
+    /* border: solid black; */
+    /* display:grid;
+    grid-template-columns: 1fr; */
+  }
   .subject{
     /* border: solid black; */
     margin-left: 5ch;
+    
   }
   .subject h1{   
     font-size:100%;  
@@ -241,15 +307,13 @@ Button{
 }
 .homeBTN{
   margin-left: 0;
-}
- 
-  
- .image {
+} 
+ .main-img {
     
    width: 400px;
-   margin-left: 6ch;
-   margin-top: 2ch;
-/* border: solid black;  */
+   /* margin-left: 6ch;
+   margin-top: 2ch; */
+ 
  }
   
  .loginForm{
@@ -265,4 +329,39 @@ Button{
      margin-left: 8ch;
      width: 30%;
    }
+
+   .img-box{
+    /* border: solid black; */
+   width:36%;
+   height:20%;
+   position:absolute;
+   top:20ch;
+   bottom: 1.5;
+   right:100px;
+  }
+  .img-box img{
+   height: 100%;
+   position: absolute;
+   left: 50%;
+   bottom:0;
+   transform: translateX(-50%);
+   transition: bottom 1s, left 2s;
+  }
+  .main-img{
+   margin-top: 21ch;
+   margin-left: 11ch;
+   width:80%;
+  
+  }
+  .back-img{
+   margin-left:90px;
+   width: 90%;
+  }
+  .img-box:hover .back-img{
+   bottom:40px;
+  }
+  .img-box:hover .main-img{
+   left:30px;
+  }
+  
 }

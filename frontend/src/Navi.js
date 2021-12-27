@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Home from './components/Home';
 import Contact from './components/Contact'
 import About from './components/About'
@@ -70,9 +71,7 @@ let token = localStorage.getItem("token");
 
 <Nav.Link className="nav" href="#home"><Link exact to='/'>Home</Link></Nav.Link>
 <Nav.Link className="nav" href="#About">  <Link to='/About'>About</Link></Nav.Link>
-{/* <Nav.Link className="nav" href="#contact">  <Link  to='/Contact'>Contact</Link></Nav.Link> */}
-<Nav.Link className="nav" href="#service">  <Link to='/Service'>Service</Link></Nav.Link>
-
+ 
 
     {token ? (
         <>
@@ -102,8 +101,7 @@ let token = localStorage.getItem("token");
     <Route exact path ='/' element={<Home/>}/>
     <Route  path ='/About' element={<About/>}/>
     <Route  path ='/Contact' element={<Contact/>}/>
-    <Route  path ='/Service' element={<Service/>}/>
-    <Route  path ='/LoginAdmin' element={<Login/>}/>
+     <Route  path ='/LoginAdmin' element={<Login/>}/>
     <Route  path ='/AdminHome' element={<AdminHome/>}/>
     <Route  path ='/AddNewAdmin' element={<AddNewAdmin />}/>
     <Route path ='/AddNewService' element={<AddNewService />}/>
@@ -119,6 +117,7 @@ let token = localStorage.getItem("token");
 
   </Routes>
 
+ 
          
         
         </>

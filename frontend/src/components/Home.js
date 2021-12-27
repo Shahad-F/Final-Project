@@ -1,17 +1,32 @@
 
  import '../CSS/Home.css'
+ import {useState,useEffect} from 'react'
  import { useNavigate } from "react-router-dom"; 
 
-
+ import axios from 'axios'
  import 'bootstrap/dist/css/bootstrap.min.css';
  
- import { Container ,Row,Image,Button,Col} from 'react-bootstrap';
+ import { Container ,Row,Image,Button,Col,Card} from 'react-bootstrap';
  
 
 
  export default function Home() {
      
+    const [service,setService]=useState();
+    const [newService,setNewService]=useState({});
+    const [loading,setLoading] = useState(true);
 
+    useEffect(()=>{ 
+ 
+        axios.get('http://localhost:3030/services')
+        .then((res)=>{
+            console.log(res.data)
+            setService(res.data)
+            setLoading(false)
+        })
+         },[newService])
+
+         
     const navigate=useNavigate()
 
 
@@ -24,6 +39,9 @@ const handelAdmin=()=>{
 const handelProvider=()=>{
     navigate('/ProviderSignUp')
 }
+if(loading){
+    return(<p>Loading</p>)
+}
     return (  <>
 
 
@@ -35,30 +53,40 @@ const handelProvider=()=>{
 
         <div className="homeBTN">
 
-<Button variant="danger" onClick={handelAdmin}>Admin</Button>{' '}
-<Button variant="secondary" onClick={handelProvider}>Service Providor</Button>{' '}
+<Button variant="outline-danger" onClick={handelAdmin}>Admin</Button>{' '}
+{/* <Button variant="outline-secondary" onClick={handelProvider}>Service Providor</Button>{' '} */}
 
-<div className="social-media">
-
-<a href=''><img src='https://www.pngkit.com/png/full/2-28059_twitter-logo-png-transparent-background-graphic-freeuse-twitter.png' width={30} alt=''/></a>
-<a href=''><img src='https://www.pngkit.com/png/full/23-235282_gmail-logo-vector-black-and-white.png' width={30} alt=''/></a>
-<a href=''><img src='https://aquilasweb.com.br/wp-content/uploads/2017/07/Aquilas-WEB-Linkedin-Logo.jpg' width={30} alt=''/></a>
-
-</div>
-</div>
+ 
+      </div>
+ 
         </div>
         
-        
-        <div>
-         
-        <Image className="image" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
-        
-        </div>
-         
-      
+        <div className="img-box">
+
+         <img className='back-img' src='https://www.pngkit.com/png/full/108-1083468_road-png-images-highway-road-png-images-hd.png' alt='' />
+         <img className="main-img" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
+
+        </div> 
+       
     
         
         </div>
+
+ 
+        <Card className="BigCard">
+    {service.map((item ,index)=>{
+
+        return <Card key={index} className="box">
+       
+       <Image src={item.image} alt='' width={200}/>
+       <Card.Body className="title">{item.nameOfService}</Card.Body>
+       
+        </Card>
+    })}
+    </Card>
+
+
+
     </>);
 }
 

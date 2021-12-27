@@ -1,3 +1,5 @@
+  
+ 
  nav{
      display:grid;
      grid-template-columns: 1fr  1fr;
@@ -12,6 +14,7 @@
     margin-top: 6ch;
     font-family: 'Exo';
      padding: 1ch;
+     text-align: center;
     background:rgb(49, 47, 47);
     
 }
