@@ -1,13 +1,13 @@
 
 import React,{useEffect,useState} from 'react'
-import {useParams,useNavigate} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import axios from 'axios'
 
 import '../Provider/provider.css'
  
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Image from 'react-bootstrap/Image'
+// import Image from 'react-bootstrap/Image'
 import {Card} from "react-bootstrap"
  
 function AllProvider({data}) {
@@ -15,11 +15,11 @@ function AllProvider({data}) {
 const {_id}=useParams();
 const[service,setService]=useState([])
 const [tservice,setTService]=useState([]);
-const[newService,setNewService]=useState({})
+// const[newService,setNewService]=useState({})
 const [loading,setLoading]=useState(true)
-const[UserName,setUserName]=useState()
-const[Phone,setPhone]=useState()
-const[Price,setPrice]=useState()
+// const[UserName,setUserName]=useState()
+// const[Phone,setPhone]=useState()
+// const[Price,setPrice]=useState()
 
 
 useEffect(()=>{
@@ -60,9 +60,6 @@ return<Card border='danger' style={{width:'20rem'}} className='smallCard'>
  Price: {item.price} SR</Card.Text>
   </div>
 </Card>
-
-
-
 })}
 
 </Card>

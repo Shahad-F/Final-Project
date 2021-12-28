@@ -38,10 +38,46 @@ h2{
     margin: 2ch;
     font-size: 150%;
 }
+.middle-header{
+/* border: 1px solid black; */
+margin: 3ch;
+border-radius: 100px;
+   background: rgba(228, 227, 226, 0.507);
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top:6ch ;
+   /* margin-left:1ch; */
+   /* margin-right: 5ch; */
+    
+   
+}
+.one{
+  margin: 5ch;
+  /* border: 1px solid black;  */
+}
+.one img{
+   /* border: 1px solid black;  */
+  margin: 2ch;
+  margin-left: 8ch;
+}
+.one h6{
+  font-family: exo;
+  color: rgb(204, 5, 5);
+  font-weight: bolder;
+  text-align: center;
+  /* margin-top:2ch; */
+}
+.one p{
+  margin-top: 3ch;
+  font-family: 'Fuzzy Bubbles', cursive;
+  text-align: center;
+  color: rgb(20, 1, 1);
+}
   .homeBTN{
     width: 100%;
-    margin-top: 3ch;
-    margin-left:1ch;
+    text-align: center;
+    margin-top: 2ch;
+    margin-left:2ch;
     /* border: 1px solid black; */
   }
  .homeBTN Button{

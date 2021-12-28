@@ -42,10 +42,10 @@ module.exports.signup_post = async (req, res) => {
     const provider = await Provider.create({ email, password,fullName,userName,image ,phone });
     const token = createToken(provider._id)
     res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
-    res.status(201).json({provider: token});
+    res.status(201).json({success:true,provider: token});
   } catch (err) {
     const errors = handleErrors(err);
-    res.status(400).json({errors});
+    res.status(400).json({success:false,errors});
   } 
 };
 
@@ -54,7 +54,7 @@ module.exports.signin_post = async (req, res) => {
   try{
     const provider= await Provider.login(email, password);
     const token = createToken(provider._id)
-    res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge*1000});
+    res.cookie('jwt', token, {httpOnly: true,maxAge:maxAge * 1000});
     res.status(200).json({success:true,provider: token});
     
 }

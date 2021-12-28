@@ -38,14 +38,16 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 .then((res)=>{
     console.log(res)
 
-    if(res.data.error === 'Email is taken'){
+    if(res.data === 'Email is taken'){
           
         swal({
             title: "Your password or email is taken",
             icon:'error', 
             button: "Try again "
           })
+        
     }else {
+        // console.log(res)
         const token =res.data.provider;
         localStorage.setItem('token',token)
         setNewProvider(res.data)

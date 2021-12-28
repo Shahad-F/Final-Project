@@ -38,7 +38,7 @@ function UserHome() {
        <Card.Body className="title">{item.nameOfService} </Card.Body>
       
       <br></br>
-       <Button variant="link" className='link'>
+        <Button variant="link" className='link'>
         <Link to={`/AllProvider/${item._id}`}>See More</Link></Button>{' '}
 
         </Card>
