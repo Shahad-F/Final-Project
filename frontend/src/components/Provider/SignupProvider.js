@@ -38,7 +38,7 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 .then((res)=>{
     console.log(res)
 
-    if(res.data === 'Email is taken'){
+    if(res.data.errors){
           
         swal({
             title: "Your password or email is taken",

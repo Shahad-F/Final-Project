@@ -2,7 +2,7 @@
 import React,{useEffect,useState} from 'react'
 import {useParams} from "react-router-dom"
 import axios from 'axios'
-
+import Loading from '../Loading'
 import '../Provider/provider.css'
  
 
@@ -36,7 +36,7 @@ axios.get(`http://localhost:3030/services/${_id}`)
 },[])
 
 if(loading){
-    return(<p>Loading</p>)
+    return(<Loading/>)
 }
     return ( <>
 

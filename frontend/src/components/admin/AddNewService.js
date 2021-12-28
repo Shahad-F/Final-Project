@@ -5,7 +5,8 @@ import swal from 'sweetalert';
 import './service.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card,Button,Container,Form,CardGroup,Row,Image} from 'react-bootstrap';
- 
+import Loading from '../../components/Loading';
+
 
 export default function AddNewService () {
 
@@ -80,7 +81,7 @@ const handelAddNewService =()=>{
     }
     // ................
     if(loading){
-    return(<p>Loading</p>)
+    return(<Loading/>)
 }
 
     return ( <>

@@ -5,9 +5,10 @@
  import jwt_decode from 'jwt-decode' 
  import swal from 'sweetalert';
  import './provider.css'
+ import Loading from '../../components/Loading'
  import 'bootstrap/dist/css/bootstrap.min.css';
  import Button from 'react-bootstrap/Button';
- import { Form ,Col,Image,Card,Img, Container} from 'react-bootstrap';
+ import { Form ,Col,Spinner,Card,Img, Container} from 'react-bootstrap';
  
 
 function AddProviderService({data}) {
@@ -50,9 +51,14 @@ const[UserId,setUserId]=useState(decodedData.id);
     useEffect(()=>{
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
-        console.log(res)
+           if(res.data.tservice.length > 0){
+
+           
+        console.log(res.data)
         setService(res.data.tservice[0].serviceId)
         setTService(res.data.tservice)
+           }
+           
         setLoading(false)       
 })
 
@@ -117,7 +123,7 @@ const habdeldelete =(id)=>{
     }))
 }
     if(loading){
-    return(<p>Loading </p>);
+    return( <Loading/>);
    }
     return ( <>
     
@@ -126,7 +132,7 @@ const habdeldelete =(id)=>{
          
        
 
- 
+ {tservice.length>0 ? 
 
   <Card className="PriceCard" >
   <Card.Img src={service.image}alt="Card image" className="imagePrice" />
@@ -148,11 +154,9 @@ const habdeldelete =(id)=>{
   </Form>
   </Card.Body>
   </Card.ImgOverlay>
-</Card>
+</Card> : <h1>No Services</h1>}
 
 
-            
-        
             <Card border="light" className="BigCard">
 
          {tservice.map((item)=>{

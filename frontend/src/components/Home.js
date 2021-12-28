@@ -1,12 +1,15 @@
 
- import '../CSS/Home.css'
+ import '../CSS/Home.css';
+ import Loading from '../components/Loading';
+
+ import ReactLoading from "react-loading";
  import {useState,useEffect} from 'react'
  import { useNavigate } from "react-router-dom"; 
  import {Link} from 'react-router-dom'
  import axios from 'axios'
  import 'bootstrap/dist/css/bootstrap.min.css';
  
- import { Container ,Row,Image,Button,Col,Card} from 'react-bootstrap';
+ import { Spinner ,Row,Image,Button,Col,Card} from 'react-bootstrap';
  
 
 
@@ -40,11 +43,11 @@ const handelProvider=()=>{
     navigate('/ProviderSignUp')
 }
 if(loading){
-    return(<p>Loading</p>)
+    return(<Loading/>)
 }
     return (  <>
 
-
+{/* <Loading/> */}
     <div className="parent"> 
 
          <div className="subject"> 
