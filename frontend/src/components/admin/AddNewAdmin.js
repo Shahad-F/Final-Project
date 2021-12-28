@@ -68,7 +68,7 @@ if(res.data.errors === 11000 ){
 
         title: "Your password or email is taken",
         icon:'error', 
-         button: "Try again "
+        button: "Try again "
       })  
 }else{
     setNewAdmin(res.data)

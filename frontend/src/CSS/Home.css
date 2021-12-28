@@ -44,25 +44,26 @@ h2{
 }
 .middle-header{
 /* border: 1px solid black; */
-margin: 3ch;
-border-radius: 100px;
-   background: rgba(228, 227, 226, 0.507);
+  margin: 3ch;
+  border-radius: 100px;
+  background: rgba(221, 168, 168, 0.685);
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top:6ch ;
    /* margin-left:1ch; */
-   /* margin-right: 5ch; */
-    
-   
+   /* margin-right: 5ch; */  
 }
 .one{
-  margin: 5ch;
+  margin: 3ch;
   /* border: 1px solid black;  */
 }
 .one img{
    /* border: 1px solid black;  */
   margin: 2ch;
-  margin-left: 8ch;
+/* width: 45%; */
+/* height: 30%; */
+  margin-left: 5ch;
+  border-radius: 20%;
 }
 .one h6{
   font-family: exo;
@@ -72,7 +73,8 @@ border-radius: 100px;
   /* margin-top:2ch; */
 }
 .one p{
-  margin-top: 3ch;
+  margin-top: 2ch;
+  bottom: 2;
   font-family: 'Fuzzy Bubbles', cursive;
   text-align: center;
   color: rgb(20, 1, 1);
@@ -283,7 +285,12 @@ Button{
   width: 100%;
  /* border:solid black; */
  }
-
+ .middle-header{
+     
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:6ch ; 
+  }
  .img-box{
   /* border: solid black; */
   width:56%;
@@ -334,6 +341,16 @@ Button{
     margin-left: 5ch;
     
   }
+  .middle-header{
+   
+   display:grid;
+   grid-template-columns: 1fr;
+   margin-top:6ch ; 
+ }
+
+ .one img{
+   margin-left :9ch;
+ }
   .subject h1{   
     font-size:100%;  
 }

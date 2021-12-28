@@ -81,24 +81,26 @@ if(loading){
 
  <div className='one'>
      
-    <img src='https://media.istockphoto.com/vectors/girl-calling-carroad-assistance-for-help-burst-wheel-insurance-on-vector-id1158122874?k=20&m=1158122874&s=612x612&w=0&h=KQh_-N38Zci8v3xIbB1vBLAT_EVjAhrONc3B27Ah510=' alt='' width={130}/>
+    <img src='https://media.istockphoto.com/vectors/girl-calling-carroad-assistance-for-help-burst-wheel-insurance-on-vector-id1158122874?k=20&m=1158122874&s=612x612&w=0&h=KQh_-N38Zci8v3xIbB1vBLAT_EVjAhrONc3B27Ah510=' alt='' width={200}/>
    <h6>Easy To Call</h6>
+   
    <p>you only need a few steps to ordering service</p>
 </div>
 
 {/*  */}
    <div className='one'>
-     <br></br>
-    <img src='https://www.jing.fm/clipimg/full/53-537545_delivery-time-2-01.png' alt='' width={100}/>
+      
+    <img src='https://thumbs.dreamstime.com/b/stopwatch-courier-services-time-management-concept-fast-delivery-stay-time-stopwatch-courier-services-time-management-concept-166111425.jpg' alt='' width={200}/>
     <br></br>
     <br></br>
    <h6>Fastest Delivery</h6>
+    
    <p>Delivery that is always ontime even faster.</p>
   </div>
 {/*  */}
 
       <div className='one'>
-        <img src='https://thumbs.dreamstime.com/b/auto-repair-service-wash-vector-illustration-male-female-characters-fixing-washing-automobile-car-wash-auto-mechanic-171635442.jpg' alt='' width={100}/>
+        <img src='https://thumbs.dreamstime.com/b/auto-repair-service-wash-vector-illustration-male-female-characters-fixing-washing-automobile-car-wash-auto-mechanic-171635442.jpg' alt='' width={160} />
     
    <h6>Best Quality</h6>
    <p>Not only fast for us, but the quality is also number one.</p>
@@ -107,9 +109,11 @@ if(loading){
 {/*  */}
 
 <div className='one'>
-        <img src='https://www.revechat.com/wp-content/uploads/2020/12/24x7-customer-support.png' alt='' width={160}/>
+        <img src='https://www.revechat.com/wp-content/uploads/2020/12/24x7-customer-support.png' alt='' width={190} height={90}/>
     
    <h6>Support Team </h6>
+   <br></br>
+   <br></br>
    <p>we have a team that will help you with any issue.</p>
      </div> 
         </div>
