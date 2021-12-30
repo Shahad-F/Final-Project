@@ -11,11 +11,11 @@ const UserSchema = new Schema({
 
     fullName:{
         type:String,
-        required:[true,'firstName should be provided']
+        required:[true,'fullName should be provided']
     },
     userName:{
         type:String,
-        required:[true,'lasttName should be provided']
+        required:[true,'userName should be provided']
     },
     
     phone:{
@@ -24,17 +24,17 @@ const UserSchema = new Schema({
     },
     email:{
         type:String, 
-        required:[true,' please enter an email '],
+        required:[true,' email should be provided '],
         unique:true,
         lowercase: true,
         // validate:[isEmail ,'please enter a valid email']
     },
     image:{
         type:String,
-        required:[true,'image should be provided']
+        default:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
+
+         
       },
-    
-     
     password:{
         type:String,
         required:[true ,'please enter an password '],

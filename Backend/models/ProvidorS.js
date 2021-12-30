@@ -7,10 +7,11 @@ const ProviderSchema = new Schema({
 
 fullName:{
     type:String,
-    required:[true,'fullName should be provided']
+    required:[true,"fullName should be provided"]
 },
 userName:{
     type:String,
+    required:[true,'username should be provided']
 },
  
 phone:{
@@ -19,7 +20,7 @@ phone:{
 },
 email:{
     type:String, 
-    required:[true,'Admin email should be provided'],
+    required:[true,' email should be provided'],
     unique:true
 },
 image:{

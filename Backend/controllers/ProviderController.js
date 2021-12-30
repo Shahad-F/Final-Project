@@ -3,15 +3,31 @@ const Provider = require("../models/ProvidorS");
 const jwt = require('jsonwebtoken')
 
 const handleErrors = (err) => {
-  console.log("ggg",err.message, err.code);
-  let errors = { email: '', password: '' };
-    //incorrect email
+  console.log(err.message, err.code);
+  let errors = {email: '', password: '', fullName:'',userName:'', phone:''};
+   
+  if(err.message.includes('fullName should be provided')){
+    errors.fullName = "fullName should be provided";
+  }
+  if(err.message.includes('username should be provided')){
+    errors.userName = "username should be provided";
+  }
+  if(err.message.includes('phone should be provided')){
+    errors.phone = "phone should be provided";
+  }
+  if(err.message.includes('email should be provided')){
+    errors.email = " email should be provided";
+  }
+   
+  //incorrect email
     if(err.message==="incorrect email"){
-        errors.email = "that email not registered"
+        errors.email = "that email not registered";
+        return errors;
     }
     //incorrect password
-    if(err.message==="incorrect password"){
-        errors.password = "that password is incorrect"
+    if(err.message.includes("provider password should be provided")){
+        errors.password = "provider password should be provided";
+
     }
   // duplicate error code 
   if(err.code === 11000){
@@ -36,7 +52,7 @@ const createToken = (id)=>{
 } 
 
 module.exports.signup_post = async (req, res) => {
-  const {  fullName,userName,image ,phone,email,password} = req.body;
+  const {fullName,userName,image ,phone,email,password} = req.body;
   console.log(req.body)
   try {
     const provider = await Provider.create({ email, password,fullName,userName,image ,phone });

@@ -1,27 +1,94 @@
 .BigCard{
     display: grid;
-    
     grid-template-columns: 1fr 1fr 1fr;
     padding:3ch;
     margin: 3ch;
     margin-left: 10ch;
     margin-right: 10ch;
-    border:none;
-     
+    border:none; 
+    border:solid black;      
+}
+.mb-3{
+  margin: 3ch;   
+}
+.Input{
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 100%;
+    color:rgb(185, 26, 26);
+    font-weight: bold;
+}
+.Lable{
+    font-family: 'Fuzzy Bubbles', cursive;
+   color:rgb(207, 97, 97);
+  font-weight: bold;
+
+}
+.modelTitle{
+    background:rgba(187, 156, 156, 0.267);
+    font-weight: bolder;
+    font-size: 160%;
+    color:rgb(156, 35, 35); 
+    font-family:cursive;
+    text-align: center;
+    padding: 1ch;
+}
+Table{
+   
+    border:solid rgb(17, 12, 12);
+    /* background:rgba(197, 194, 189, 0.658);  */
+}
+ 
+ 
+ 
+ Table td ,th{
+    /* border:solid black;    */
+    text-align:center;
+    /* margin-right: 4ch; */
+    font-weight: bolder;
+    margin-top: 1ch;
+    margin:1ch;
+    font-family:Fuzzy;
+    color:rgb(38, 69, 153); 
+
+}
+.HeaderRow{
+    font-family:'exo';
+    color:rgb(68, 5, 5);     
+    padding: 1ch;
+    margin: 1ch;  
+    background-color: rgba(201, 175, 175, 0.521);
      
 }
+.addbtn{
+   margin: 1ch;
+   margin-left:5ch;
+   /* width: 10%; */
+   background:rgba(165, 42, 42, 0.473);
+   border-radius:10px;
+   /* border:none; */
+   font-family: 'Fuzzy Bubbles', cursive;
+   font-weight: bolder;
+
+}
 .smallCard{
-    /* padding-left: 2ch;
-    padding-right: 2ch; */
+     
      border-radius:10px;
     margin: 3ch;
 }
 .Header{
-  
     font-family: "Exo";
     color:black;
+    padding: 1ch;
+    margin: 2ch; 
     font-weight:bolder;
     font-size: 130%;
+}
+.Trashbtn{
+    margin-left: 15ch; 
+    margin-top: 1ch;  
+}
+.Trashbtn:hover{
+    cursor: pointer; 
 }
 .Cardbtn{
     margin-left: 13ch;
@@ -31,6 +98,7 @@
 /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
 
+    
     .BigCard{
         
         display: grid;

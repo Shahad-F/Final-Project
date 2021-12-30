@@ -9,11 +9,12 @@
  import axios from 'axios'
  import 'bootstrap/dist/css/bootstrap.min.css';
  
- import { Spinner ,Row,Image,Button,Col,Card} from 'react-bootstrap';
+ import { Carousel ,Row,Image,Button,Col,Card} from 'react-bootstrap';
  
 
 
  export default function Home() {
+
      
     const [service,setService]=useState();
     const [newService,setNewService]=useState({});
@@ -66,59 +67,89 @@ if(loading){
         
         <div className="img-box">
 
-         <img className='back-img' src='https://www.pngkit.com/png/full/108-1083468_road-png-images-highway-road-png-images-hd.png' alt='' />
+         {/* <img className='back-img' src='https://www.pngkit.com/png/full/96-969625_vector-red-circle-hand-hollow-red-circle-png.png' alt='' /> */}
          <img className="main-img" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
 
         </div> 
        
-    
-        
         </div>
-
- 
+<br/>
+        <h3 className="title-header">Why we are better than others.</h3>
          
         <div className='middle-header'>
 
- <div className='one'>
+ 
+ <div className='two'>
      
-    <img src='https://media.istockphoto.com/vectors/girl-calling-carroad-assistance-for-help-burst-wheel-insurance-on-vector-id1158122874?k=20&m=1158122874&s=612x612&w=0&h=KQh_-N38Zci8v3xIbB1vBLAT_EVjAhrONc3B27Ah510=' alt='' width={200}/>
-   <h6>Easy To Call</h6>
-   
-   <p>you only need a few steps to ordering service</p>
+    <img src='https://www.pngkit.com/png/full/810-8109349_smartphone-png-transparent-icon-mobile-phone.png' alt='' width={50}/>
+    <h6>Easy To Call</h6>
+    <p>you only need a few steps to ordering service</p>
 </div>
 
 {/*  */}
-   <div className='one'>
+    <div className='one'>
       
-    <img src='https://thumbs.dreamstime.com/b/stopwatch-courier-services-time-management-concept-fast-delivery-stay-time-stopwatch-courier-services-time-management-concept-166111425.jpg' alt='' width={200}/>
-    <br></br>
-    <br></br>
-   <h6>Fastest Delivery</h6>
-    
-   <p>Delivery that is always ontime even faster.</p>
+    <img  src='https://www.pngkit.com/png/full/41-412413_faster-icon-png-0-copy-angel-tube-station.png' alt='' width={80}/>
+    <h6>Fastest Delivery</h6>
+    <p>Delivery that is always ontime even faster.</p>
   </div>
 {/*  */}
 
-      <div className='one'>
-        <img src='https://thumbs.dreamstime.com/b/auto-repair-service-wash-vector-illustration-male-female-characters-fixing-washing-automobile-car-wash-auto-mechanic-171635442.jpg' alt='' width={160} />
+      <div className='two'>
+        <img  src='https://www.pngkit.com/png/full/42-423459_icon-for-office-of-quality-safety-and-value.png' alt='' width={60} />
+        <h6>Best Quality</h6>
+        <p>Not only fast for us, but the quality is also number one.</p>
     
-   <h6>Best Quality</h6>
-   <p>Not only fast for us, but the quality is also number one.</p>
      </div>  
 
 {/*  */}
 
 <div className='one'>
-        <img src='https://www.revechat.com/wp-content/uploads/2020/12/24x7-customer-support.png' alt='' width={190} height={90}/>
-    
+   <img src='https://barbadostoday.bb/wp-content/uploads/2020/04/Phone-_call_contact_us_customer_service_customer_support_helpline-11-512.png' alt='' width={80}/>
    <h6>Support Team </h6>
-   <br></br>
-   <br></br>
    <p>we have a team that will help you with any issue.</p>
+     </div> 
+     {/*  */}
+
+     <div className='one'>
+    <img src='https://www.newneuromarketing.com/media/zoo/images/NNM-2015-019-Cost-consciousness-increase-product-sales-with-Price-Primacy_6a73d15598e2d828b0e141642ebb5de3.png' alt='' width={80}/>
+   <h6>Best Price </h6>
+   <p>We have the best price for all services.</p>
      </div> 
         </div>
 
+{/*  */}
 
+ 
+  
+<div className='Our-customer'>
+
+<div className='partOne'> 
+     <p>OUR SERVICE</p>
+
+<h3>Services That Always <br/>
+ Make You Feel Satisfied</h3>
+
+<div className='scroll'>
+
+    {service.map((item)=>{
+        return ( <>
+               <h4>{item.nameOfService}</h4>
+                
+                 </>)
+    })
+    }
+ 
+</div>
+
+</div>
+
+<div className='partTwo'>
+<h3>What Our Customer Say </h3>
+ 
+</div>
+
+</div>
 
     </>);
 }

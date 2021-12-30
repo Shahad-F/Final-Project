@@ -13,7 +13,7 @@
     display: block;
     text-align: center;
     text-decoration: none;
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 .nav a:hover{ 
@@ -42,37 +42,125 @@ h2{
     margin: 2ch;
     font-size: 150%;
 }
-.middle-header{
-/* border: 1px solid black; */
-  margin: 3ch;
-  border-radius: 100px;
-  background: rgba(221, 168, 168, 0.685);
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top:6ch ;
-   /* margin-left:1ch; */
-   /* margin-right: 5ch; */  
+.title-header{
+  text-align: center;
+  font-family: exo;
+  color:rgb(212, 41, 41);
+  font-weight: bolder;
+  margin-top: 5ch;
+   
 }
-.one{
-  margin: 3ch;
+
+.Our-customer{
+   /* border: 1px solid black;  */
+  /* padding: 15ch; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.partTwo{
+  padding: 15ch;
+  background-color:rgb(221, 98, 98);
+}
+.partOne{
   /* border: 1px solid black;  */
+  margin: 3ch;
+}
+.partOne p{
+  color:rgb(219, 45, 45);
+  font-weight: bolder;
+  font-size: larger;
+  margin: 3ch;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.partOne h3{
+  font-family: arial;
+  font-weight: bolder;
+  margin: 2ch;
+  margin-bottom: 5ch;
+  /* border: solid black; */
+   
+}
+.partOne h4{
+  font-family:Fuzzy;
+  padding: 2ch;
+  margin-left: 3ch;
+  margin-right: 3ch;
+}
+.partOne h4:hover{
+  background:rgb(196, 81, 81);
+  color:#fcf8f8;
+  border-radius: 15%;
+   
+}
+ .scroll{
+
+   margin: 4ch;
+  /* background-color: rgb(241, 221, 221); */
+  width: 350px;
+  height: 410px;
+  overflow: auto;
+  max-height: 250px;
+  padding: 1rem;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+ }
+ .scroll::-webkit-scrollbar {
+  width: 5px;
+   
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+   
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+  
+.middle-header{
+ /* border: 1px solid black;  */
+  display:grid;
+  margin: 13ch;
+   
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.one , .two{
+  
+  /* border: 1px solid black;  */
+  margin: 4ch;
+  border-radius: 20px;
+  background: rgba(226, 197, 197, 0.685);
+  box-shadow: 16px 20px 7px -4px rgba(128,60,60,0.75);
+ -webkit-box-shadow: 16px 20px 7px -4px rgba(128,60,60,0.75);
+ -moz-box-shadow: 16px 20px 7px -4px rgba(128,60,60,0.75);
 }
 .one img{
-   /* border: 1px solid black;  */
+  /* border: 1px solid black;  */
   margin: 2ch;
-/* width: 45%; */
-/* height: 30%; */
-  margin-left: 5ch;
-  border-radius: 20%;
+  margin-left: 12ch;
+  margin-top: 6ch;
 }
-.one h6{
+.two img{
+  margin: 2ch;
+  margin-left:15ch;
+  margin-top: 6ch;
+}
+.one h6,.two  h6{
   font-family: exo;
   color: rgb(204, 5, 5);
   font-weight: bolder;
   text-align: center;
   /* margin-top:2ch; */
 }
-.one p{
+.one p,.two p{
+  margin: 2ch;
+  padding: 1ch;
   margin-top: 2ch;
   bottom: 2;
   font-family: 'Fuzzy Bubbles', cursive;
@@ -105,15 +193,18 @@ h2{
 }
 
 .img-box{
-   width:56%;
+  width:56%;
   height:40%;
   position:absolute;
   top:18ch;
   bottom: 1.5;
   right:100px;
+  /* border: solid black; */
 }
 .img-box img{
+  /* border: solid black; */
   height: 100%;
+  width: 60%;
   position: absolute;
   left: 50%;
   bottom:0;
@@ -122,17 +213,18 @@ h2{
  }
 .main-img{
    margin-top: 21ch;
-  margin-left: 33ch;
+  margin-left: 30ch;
   width:60%;
+  
 
 }
 .back-img{
-  margin-left:90px;
-  width: 60%;
+   
+  margin-left:50px;
+  width:50%;
+   
 }
-.img-box:hover .back-img{
-  bottom:40px;
-}
+ 
 .img-box:hover .main-img{
   left:30px;
 }
@@ -152,9 +244,12 @@ h2{
 }
  
 .parent {
+ 
   background:rgb(243, 237, 229);
   display: flex;
   flex-wrap: wrap;
+ padding-bottom: 10ch;
+ /* border: solid black; */
 }
 .loginForm{ 
   position: absolute;
@@ -238,9 +333,7 @@ Button{
   padding: 1ch;
 }
 
-.social-media{
-  /* margin: 1ch; */
-}
+ 
 .social-media a{
   margin: 2ch;
   filter: grayscale()
@@ -286,10 +379,20 @@ Button{
  /* border:solid black; */
  }
  .middle-header{
-     
     display:grid;
     grid-template-columns: 1fr 1fr;
     margin-top:6ch ; 
+  }
+  .one ,.two{
+    margin: 2ch;
+  }
+  .one img{
+    margin-left:7ch;
+    margin-right: 5ch;
+  }
+  .two img{
+    margin-left:10ch;
+    margin-right: 5ch;
   }
  .img-box{
   /* border: solid black; */
@@ -348,9 +451,17 @@ Button{
    margin-top:6ch ; 
  }
 
- .one img{
-   margin-left :9ch;
- }
+ .one ,.two{
+  margin: 2ch;
+}
+.one img{
+  margin-left:7ch;
+  margin-right: 5ch;
+}
+.two img{
+  margin-left:10ch;
+  margin-right: 5ch;
+}
   .subject h1{   
     font-size:100%;  
 }

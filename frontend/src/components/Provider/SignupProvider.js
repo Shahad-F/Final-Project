@@ -36,12 +36,11 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 {fullName:FullName ,userName:UserName ,phone:Phone ,image:Image ,email:Email,password:Password})
 
 .then((res)=>{
-    console.log(res)
+    console.log(res.data.errors)
 
     if(res.data.errors){
-          
         swal({
-            title: "Your password or email is taken",
+            title:' You have to fill out all the fields',
             icon:'error', 
             button: "Try again "
           })

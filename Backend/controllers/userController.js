@@ -4,15 +4,30 @@ const jwt = require('jsonwebtoken')
 
 const handleErrors = (err) => {
   console.log(err.message, err.code);
-  let errors = { email: '', password: '' };
-    //incorrect email
+  let errors = { email: '', password: '', fullName:'',userName:'', phone:''};
+    
+  
+  if(err.message.includes('fullName should be provided')){
+    errors.fullName = "fullName should be provided";
+  }
+  if(err.message.includes('username should be provided')){
+    errors.userName = "username should be provided";
+  }
+  if(err.message.includes('phone should be provided')){
+    errors.phone = "phone should be provided";
+  }
+  if(err.message.includes('email should be provided')){
+    errors.email = " email should be provided";
+  }
+  //incorrect password
+  if(err.message.includes("please enter an password")){
+    errors.password = "please enter an password"
+}
+  //incorrect email
     if(err.message==="incorrect email"){
         errors.email = "that email not registered"
     }
-    //incorrect password
-    if(err.message==="incorrect password"){
-        errors.password = "that password is incorrect"
-    }
+     
   // duplicate error code 
   if(err.code === 11000){
     errors.email ="the email is already registered";
@@ -46,7 +61,7 @@ module.exports.signup_post = async (req, res) => {
   } catch (err) {
     
     const errors = handleErrors(err);
-    res.status(400).json({errors});
+    res.status(200).json({errors});
      
   } 
 };
@@ -62,7 +77,7 @@ module.exports.signin_post = async (req, res) => {
 }
   catch(err){
     const errors = handleErrors(err);
-    res.status(400).json({errors});
+    res.status(200).json({errors});
      
   }
 };

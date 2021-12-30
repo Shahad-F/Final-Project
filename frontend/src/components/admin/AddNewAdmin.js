@@ -8,7 +8,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import './newAdmin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card,Button,Container,Form,CardGroup,Row} from 'react-bootstrap';
+import { Card,Button,Modal,Form,Table,Row} from 'react-bootstrap';
  
 function AddNewAdmin() {
 
@@ -23,6 +23,7 @@ const [newAdmin,setNewAdmin]=useState({})
 const [Name ,setName]=useState();
 const [Email,setEmail]=useState()
 const [Password,setPassword]=useState()
+const [show,setShow] =useState(false);
 
   
 
@@ -44,6 +45,8 @@ useEffect(()=>{
 
     }
 
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
     
     const handelAdd=(e)=>{ 
     e.preventDefault();
@@ -87,17 +90,26 @@ if(res.data.errors === 11000 ){
 const handelDelete=(id,name)=>{ 
 
     swal({
-        title:'Admin is deleted ',
-        icon:'success'
-      })
-         console.log(name)
-
-    axios.delete(`http://localhost:3030/admins/${id}/delete`)
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Your file has been deleted!", {
+          icon: "success",
+        });
+        axios.delete(`http://localhost:3030/admins/${id}/delete`)
     .then((res)=>{ 
 
       setNewAdmin(res.data)
-       
     })
+      } else {
+        swal("Your file is safe!");
+      }
+    });
 
 }
 
@@ -111,27 +123,24 @@ const handelDelete=(id,name)=>{
     <Button variant="outline-secondary" className='back'
     onClick={handelBack}
     >Back to Homepage</Button>{' '}
+     <br/>
+      
+
+     <button className="addbtn" onClick={handleShow} >
+      <img src='https://www.pngkit.com/png/full/4-41781_free-download-plus-symbol-png.png'
+      alt='' width={20} />
+       &nbsp; Add New</button>
      
 
+{/*  */}
 
-     <Form  style={{
-     backgroundImage:
-     `url("https://i.pinimg.com/originals/27/c1/64/27c1644923ceeb2fbcdce1da05cf366a.jpg")`, 
-     backgroundSize: 'cover',
-     width: "100%",
-     height: "600px",
-     backgroundPosition: 'center',
-     opacity: 0.8,
-        }}>
-          
-           
-     
-</Form>
+<Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton className='modelTitle'>
+        <Modal.Title  >add new admin</Modal.Title>
+        </Modal.Header>
 
-<Form  className="loginForm"> 
-     <h1>New Admin</h1>
-
-     <Form.Floating className="mb-3">
+         
+<Form.Floating className="mb-3">
      
      <Form.Control className="Input"
        id="floatingInputCustom"
@@ -139,11 +148,11 @@ const handelDelete=(id,name)=>{
        placeholder='Enter name.'
        onChange={e=>setName(e.target.value)}
      />
-     <label htmlFor="floatingInputCustom">Admin name</label>
+     <label className='Lable'  htmlFor="floatingInputCustom">Admin name</label>
    
    </Form.Floating>
 
-   <Form.Floating className="mb-3">
+ <Form.Floating className="mb-3">
      
     <Form.Control className="Input"
       id="floatingInputCustom"
@@ -151,48 +160,68 @@ const handelDelete=(id,name)=>{
       placeholder="name@gmail.com"
       onChange={e=>setEmail(e.target.value)}
     />
-    <label htmlFor="floatingInputCustom">Email address</label>
+    <label className='Lable' htmlFor="floatingInputCustom">Email address</label>
   
   </Form.Floating>
 
-
-  <Form.Floating>
+<Form.Floating className="mb-3">
     <Form.Control  className="Input"
       id="floatingPasswordCustom"
       type="password"
       placeholder="Password"
       onChange={e=>setPassword(e.target.value)}
     />
-    <label htmlFor="floatingPasswordCustom">Password</label>
+    <label className='Lable'  htmlFor="floatingPasswordCustom">Password</label>
   </Form.Floating>
 
-  <Button variant="outline-danger" 
-onClick={(e)=>handelAdd(e)}
-  >Add</Button>{' '}
-     </Form>
+        <Modal.Footer>
+          <Button variant="outline-secondary" onClick={handleClose}  >
+            Close
+          </Button>
+          <Button variant="outline-danger" onClick={(e)=>handelAdd(e)}>
+           add
+          </Button>
+        </Modal.Footer>
+      </Modal>
+           
+  
 
-     {/*  */}
- 
+
+<Table striped bordered hover>
+
+<thead> 
+ <tr> 
+ <th>#</th>
+ <th>Name</th>
+ <th>Email</th>
+ <th> Action</th>
+ </tr>
+ </thead>
+
+ {admin.map((get,index)=>{
+
+ return( <tbody> 
+ <tr> 
+ <td>#</td>
+ <td>{get.name}</td>
+ <td>{get.email}</td>
+ <td>
+ <Button variant="outline-danger" onClick={()=>handelDelete(get._id,get.name)}>
+   Danger</Button>{' '}
+   {/* <img  
+     src='https://cdn4.iconfinder.com/data/icons/social-messaging-ui-coloricon-1/21/52-512.png' 
+     alt=''
+     onClick={()=>handelDelete(get._id,get.name)}
+     width={25} className="Trashbtn"/> */}
+     </td>
+</tr>
+ </tbody>
+ )
+ })}
+</Table>
+
+
      
-        <Card border="light"  className="BigCard"  >
-
-        {admin.map((get,index)=>{
-        return <Card key={index} border="danger"  style={{ width: '20rem' }}className="smallCard" >
-        <Card.Header className='Header' >Name : {get.name}</Card.Header>
-        
-        <Card.Body>
-      <Card.Title className='text'> {get.email}</Card.Title>
-       
-      <Button variant="outline-danger" className="Cardbtn" 
-       onClick={()=>handelDelete(get._id,get.name)}
-       >Delete</Button>{' '}
-      </Card.Body>
-
-             </Card>
-})}
-
-     
-</Card>
  
     </> );
 }
