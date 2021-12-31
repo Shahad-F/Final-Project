@@ -115,7 +115,7 @@ setNewService(res.data)
       `url("https://d1p2fuior9l0tb.cloudfront.net/wp-content/uploads/2020/02/26075319/LEDE-1.-Bentley-FS_6.jpg")`, 
       backgroundSize: 'cover',
       width: "100%",
-      height: "600px",
+      height: "700px",
         backgroundPosition: 'center',
         opacity: 0.8,
          }}>
@@ -127,7 +127,7 @@ setNewService(res.data)
 <Form  className="loginForm"> 
      <h1>Add New Service</h1>
 
-     <Form.Floating className="mb-3">
+     <Form.Floating >
      
      <Form.Control className="Input"
        id="floatingInputCustom"
@@ -140,7 +140,7 @@ setNewService(res.data)
    </Form.Floating>
 
 
-     <Form.Floating className="mb-3">
+     <Form.Floating  >
      
      <Form.Control className="Input"
        id="floatingInput1Custom"

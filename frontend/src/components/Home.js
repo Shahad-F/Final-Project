@@ -65,15 +65,16 @@ if(loading){
  
         </div>
         
-        <div className="img-box">
+       
 
-         {/* <img className='back-img' src='https://www.pngkit.com/png/full/96-969625_vector-red-circle-hand-hollow-red-circle-png.png' alt='' /> */}
-         <img className="main-img" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
+          <img className="main-img" src='https://www.pngkit.com/png/full/89-892591_grey-mercedes-benz-e-class-car-png-image.png' alt=''   />
 
-        </div> 
+      
        
         </div>
 <br/>
+
+
         <h3 className="title-header">Why we are better than others.</h3>
          
         <div className='middle-header'>

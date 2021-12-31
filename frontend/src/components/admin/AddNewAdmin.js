@@ -8,7 +8,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import './newAdmin.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card,Button,Modal,Form,Table,Row} from 'react-bootstrap';
+import { OverlayTrigger,Button,Modal,Form,Table,Tooltip} from 'react-bootstrap';
  
 function AddNewAdmin() {
 
@@ -120,9 +120,18 @@ const handelDelete=(id,name)=>{
         
      <>
     
-    <Button variant="outline-secondary" className='back'
-    onClick={handelBack}
-    >Back to Homepage</Button>{' '}
+
+    <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Back to Homepage !</Tooltip>}>
+  <span className="d-inline-block">
+  <img  src='https://www.pngkit.com/png/full/0-6443_image-library-library-arrow-clip-art-at-clker.png'
+    alt='' width={30} className='back' onClick={handelBack}/>
+
+  </span>
+</OverlayTrigger>
+
+     
+    
+
      <br/>
       
 

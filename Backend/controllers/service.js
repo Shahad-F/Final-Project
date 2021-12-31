@@ -6,8 +6,8 @@ module.exports ={
     show:(req,res)=>{
 
         let _id =req.params.uid
-    
         Service.findById(_id)
+
         .then(service=>{
             TypeOfServicer.find({serviceId:service._id})
             .populate('userId serviceId').then(async tservice=>
@@ -22,6 +22,7 @@ module.exports ={
         })
     
     },
+
 // show all services in mongoose
 index:(req,res)=>{
 Service.find({})

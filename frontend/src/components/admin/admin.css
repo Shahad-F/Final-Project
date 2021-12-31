@@ -37,9 +37,11 @@
  margin-left: 12ch;  
 }
  .back{
-     margin: 1ch;
-     margin-left: 12ch;
-     border:block;
+     cursor: pointer;
+     margin: 4ch;
+     margin-left: 9ch;
+     /* border:block; */
+       
       
  }
  .boxCard{

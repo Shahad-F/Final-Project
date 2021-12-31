@@ -21,13 +21,13 @@ function AddProviderService({data}) {
 
     const [newService,setNewService]=useState({});
     const [loading,setLoading]=useState(true);
-    const [UserName,setUserName]=useState();
-    const [Phone,setPhone]=useState();
+     
+     
     const [Price,setPrice]=useState();
-    const [Profile,setProfile]=useState();
+     
     // ................................................................................................................................
     
-    console.log(data ) 
+    // console.log(data) 
     
     let decodedData;
 
@@ -51,20 +51,33 @@ const[UserId,setUserId]=useState(decodedData.id);
     useEffect(()=>{
         axios.get(`http://localhost:3030/services/${_id}`)
        .then((res)=>{
-           if(res.data.tservice.length > 0){
-
-           
         console.log(res.data)
-        setService(res.data.tservice[0].serviceId)
-        setTService(res.data.tservice)
-           }
-           
+         
+           if(res.data.tservice.length > 0){
+            console.log(res.data)
+            setService(res.data.tservice[0].serviceId)
+            setTService(res.data.tservice)
+            }
+            
         setLoading(false)       
 })
 
 },[newTservice])
 
 
+
+// useEffect(()=>{
+//     axios.get(`http://localhost:3030/services/${_id}`)
+//      .then((res)=>{
+//          console.log(res)
+//          setService(res.data.tservice[0].serviceId)
+//          setLoading(false)
+
+//     })
+
+// },[])
+
+console.log({service})
 
 // add new card
 const handelAdd=(e)=>{
@@ -77,7 +90,7 @@ const handelAdd=(e)=>{
     .then((res)=>{
         console.log(res.data)
         setNewTService(res.data)
-        // setService(res.data)
+        setService(res.data)
     })
 
     swal({
@@ -118,7 +131,7 @@ const habdeldelete =(id)=>{
             console.log("delete")
 
         setNewTService(res.data)
-        // setService(res.data)
+        setService(res.data)
 
     }))
 }
@@ -132,19 +145,18 @@ const habdeldelete =(id)=>{
          
        
 
- {tservice.length>0 ? 
+  
 
-  <Card className="PriceCard" >
-  <Card.Img src={service.image}alt="Card image" className="imagePrice" />
-  <Card.ImgOverlay>
+   <Card className="PriceCard" >
+  <Card.Img src={service.image} alt="Card image" className="imagePrice" />
+    <Card.ImgOverlay>
     <Card.Title> <h1 className="lineTitle">{service.nameOfService}</h1></Card.Title>
     <Card.Text className="des">
     {service.description}
     </Card.Text>
-    
     <Card.Body>
      <Form className="BOX"> 
-  <Form.Floating className="mb-3" >
+  <Form.Floating>
 
       <Form.Control className="INPUT" type="text" placeholder="Price" 
       onChange ={e=>setPrice(e.target.value)} />
@@ -154,12 +166,17 @@ const habdeldelete =(id)=>{
   </Form>
   </Card.Body>
   </Card.ImgOverlay>
-</Card> : <h1>No Services</h1>}
+</Card> 
+  
+
+ 
 
 
             <Card border="light" className="BigCard">
 
-         {tservice.map((item)=>{
+         {tservice.length > 0 ?
+
+           tservice.map((item)=>{
 
              return<Card  border="danger"  style={{ width: '20rem' }}className="smallCard">
 
@@ -193,7 +210,7 @@ const habdeldelete =(id)=>{
 
     })()}
              </Card> 
-         })}
+         }): <h1>No Providers</h1>}
      </Card>
       
     

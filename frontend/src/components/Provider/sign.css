@@ -1,12 +1,13 @@
 .signupForm{
     position: absolute;
-    margin: 5ch;
-    padding: 5ch;
+    margin: 1ch;
+    padding: 1ch;
     top: 15%;
-     width: 50%; 
+     width: 45%; 
     border-radius: 20px;
     background-color: rgba(222, 135, 135, 0.281);
 }
+
 .signupForm input{ 
      
     padding: 1.2ch;
@@ -15,6 +16,7 @@
     color:rgb(185, 26, 26);
     font-weight: bold;
     margin: 2ch;
+    margin-right: 9ch;
     border-radius: 8px;
     width: 90%;
  
@@ -22,13 +24,14 @@
  .signupForm label{
     font-family: 'Fuzzy Bubbles', cursive;
     color:rgb(207, 97, 97);
-   font-weight: bold;
-   margin-left: 2ch;
+    font-weight: bold;
+    margin-left: 2ch;
+    font-size: 80%;
  }
 
  .signupForm h1{
     font-weight: bolder;
-    font-size: 300%;
+    font-size: 200%;
     color:rgb(194, 24, 24); 
     font-family: "Exo";
     text-align: center;
@@ -39,7 +42,7 @@
     padding: 1ch;
     margin-left: 15ch;
     width: 30%;
-     font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Fuzzy Bubbles', cursive;
  }
 .signupForm ,.loginForm p{
     margin: 1ch;

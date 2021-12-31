@@ -85,7 +85,7 @@ axios.post('http://localhost:3030/providers/ProviderSignUp',
 <Row> 
   <Col md> 
 
-<Form.Floating className="mb-3">
+<Form.Floating >
 <Form.Control type="text"  id="fname" 
 placeholder="full name" 
 onChange={e=>setFullName(e.target.value)}/>
@@ -114,16 +114,16 @@ placeholder="Phone number"  />
 </Form.Floating>
 </Col>
 <Col md-1> 
- 
-</Col>
-</Row>
-
 <Form.Floating> 
 <Form.Control type="text"  id='image'
 onChange={e=>setImage(e.target.value)} 
 placeholder="fYour image" />
 <label htmlFor="image">Image</label>
 </Form.Floating>
+</Col>
+</Row>
+
+ 
 
 
  

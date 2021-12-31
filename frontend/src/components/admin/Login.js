@@ -75,7 +75,7 @@ const handelLogin =(e)=>{
     {/*  */}
     <Form  className="loginForm"> 
      <h1>Login</h1>
-    <Form.Floating className="mb-3">
+    <Form.Floating >
      
     <Form.Control className="Input"
       id="floatingInputCustom"

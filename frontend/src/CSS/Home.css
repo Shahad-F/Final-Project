@@ -95,9 +95,10 @@ h2{
  .scroll{
 
    margin: 4ch;
-  /* background-color: rgb(241, 221, 221); */
+  background :url('https://www.pngkit.com/png/full/94-942746_gold-confetti-dots-background-png-for-kids-polka.png');
+  
   width: 350px;
-  height: 410px;
+  height: 430px;
   overflow: auto;
   max-height: 250px;
   padding: 1rem;
@@ -126,7 +127,6 @@ h2{
  /* border: 1px solid black;  */
   display:grid;
   margin: 13ch;
-   
   grid-template-columns: 1fr 1fr 1fr;
 
 }
@@ -192,48 +192,20 @@ h2{
   margin: 1ch;
 }
 
-.img-box{
-  width:56%;
-  height:40%;
-  position:absolute;
-  top:18ch;
-  bottom: 1.5;
-  right:100px;
-  /* border: solid black; */
-}
-.img-box img{
-  /* border: solid black; */
-  height: 100%;
-  width: 60%;
-  position: absolute;
-  left: 50%;
-  bottom:0;
-  transform: translateX(-60%);
-  transition: bottom 1s, left 2s;
- }
+ 
+ 
 .main-img{
-   margin-top: 21ch;
-  margin-left: 30ch;
-  width:60%;
-  
-
-}
-.back-img{
-   
-  margin-left:50px;
-  width:50%;
-   
+   margin-top: 12ch;
+  margin-left: 14ch;
+  width:45%;
 }
  
-.img-box:hover .main-img{
-  left:30px;
-}
  
 .subject h1{   
     margin-top: 1ch;
     margin-left: 1ch;
-  font-weight: bolder;
-  font-family:  "Exo";
+    font-weight: bolder;
+   font-family:  "Exo";
    text-shadow: 9px 5px 0px rgba(141,103,103,0.48);
    font-size:200%;
   
@@ -248,17 +220,15 @@ h2{
   background:rgb(243, 237, 229);
   display: flex;
   flex-wrap: wrap;
- padding-bottom: 10ch;
+  padding-bottom: 10ch;
  /* border: solid black; */
 }
 .loginForm{ 
   position: absolute;
- 
   margin: 5ch;
   padding: 5ch;
   top: 20%;
    width: 35%;
-  
   border-radius: 20px;
   background-color: rgba(222, 135, 135, 0.281);
 
@@ -348,12 +318,9 @@ Button{
 /* Tablet */
 @media screen and ( min-width: 768px ) and ( max-width: 1023px ) {
    
-  .parent{
-    /* width: 94%; */
-    /* border:solid black; */
-  }
+   
   .subject h1{   
-     font-size:100%;  
+      font-size:180%;  
       margin-left: 2ch;
      /* border: solid black; */
  }
@@ -394,39 +361,15 @@ Button{
     margin-left:10ch;
     margin-right: 5ch;
   }
- .img-box{
-  /* border: solid black; */
-  width:56%;
- height:30%;
- position:absolute;
- top:20ch;
- bottom: 1.5;
- right:100px;
-}
-.img-box img{
- height: 100%;
- position: absolute;
- left: 50%;
- bottom:0;
- transform: translateX(-50%);
- transition: bottom 1s, left 2s;
-}
-.main-img{
- margin-top: 21ch;
- margin-left: 11ch;
- width:80%;
+  .main-img{
+     /* border:solid black; */
+   width: 50%;
 
-}
-.back-img{
- margin-left:90px;
- width: 90%;
-}
-.img-box:hover .back-img{
- bottom:40px;
-}
-.img-box:hover .main-img{
- left:30px;
-}
+  }
+ 
+ .Our-customer{
+   grid-template-columns: 1fr;
+ }
 
 
 }
@@ -435,13 +378,12 @@ Button{
 @media screen and ( max-width: 767px ) {
   
   .parent{
-    /* border: solid black; */
-    /* display:grid;
-    grid-template-columns: 1fr; */
+         /* border:solid black; */
+ 
   }
   .subject{
-    /* border: solid black; */
-    margin-left: 5ch;
+     margin-left: 1ch;
+     margin-right: 4ch;
     
   }
   .middle-header{
@@ -470,17 +412,20 @@ Button{
 }
  
 .homeBTN >Button{
-    margin: 1ch;
-  width: 18ch;
+  
+  margin: 1ch;
+  width: 15ch;
 }
 .homeBTN{
-  margin-left: 0;
+  /* border:solid black; */
+
+   
 } 
  .main-img {
     
-   width: 400px;
-   /* margin-left: 6ch;
-   margin-top: 2ch; */
+   width: 300px;
+    /* border:solid black; */
+
  
  }
   
@@ -498,38 +443,10 @@ Button{
      width: 30%;
    }
 
-   .img-box{
-    /* border: solid black; */
-   width:36%;
-   height:20%;
-   position:absolute;
-   top:20ch;
-   bottom: 1.5;
-   right:100px;
+   
+   .Our-customer{
+    grid-template-columns: 1fr;
   }
-  .img-box img{
-   height: 100%;
-   position: absolute;
-   left: 50%;
-   bottom:0;
-   transform: translateX(-50%);
-   transition: bottom 1s, left 2s;
-  }
-  .main-img{
-   margin-top: 21ch;
-   margin-left: 11ch;
-   width:80%;
-  
-  }
-  .back-img{
-   margin-left:90px;
-   width: 90%;
-  }
-  .img-box:hover .back-img{
-   bottom:40px;
-  }
-  .img-box:hover .main-img{
-   left:30px;
-  }
+   
   
 }
